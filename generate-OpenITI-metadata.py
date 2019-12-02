@@ -188,7 +188,7 @@ def collectMetadata(folder):
     print("="*80)
 
     for k, v in dataCSV.items():
-        print("\t"+k)
+        #print("\t"+k)
         dataCSV_New.append(v)
 
     dataCSV = sorted(dataCSV_New)
