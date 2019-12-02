@@ -2,7 +2,7 @@
 KITAB metadata automation
 
 ## Shell Script
-1) Delete any local changes made to the corpus (just incase) 
+1) Delete any local changes made to the corpus (just in case) 
 ``ls | xargs -P10 -I{} git -C {} reset --hard ``
 
 2) Fetch all the repos to make sure that metadata is generated based on the lastest version of the corpus
@@ -21,4 +21,4 @@ KITAB metadata automation
 - Log the the process
 
 
-``* 4 * * 0 /shellscript >> output.log``
+``* 4 * * 0 ./run.sh >> output.log``
