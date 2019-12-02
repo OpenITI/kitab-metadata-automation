@@ -1,4 +1,5 @@
 import re, os, shutil, sys, textwrap
+from utility import betaCode
 
 #arRa = re.compile("\b[ذ١٢٣٤٥٦٧٨٩٠ّـضصثقفغعهخحجدًٌَُلإإشسيبلاتنمكطٍِلأأـئءؤرلاىةوزظْلآآ]+\b")
 arRa = re.compile(r"\b[ذّـضصثقفغعهخحجدًٌَُلإإشسيبلاتنمكطٍِلأأـئءؤرلاىةوزظْلآآ]+\b")
