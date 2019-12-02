@@ -16,7 +16,9 @@ ls | xargs -P10 -I{} git -C {} fetch origin
 
 # Path of the folder where python script is located
 ROOTPATH="/mnt/c/Development Work/KITAB/kitab-metadata-automation"
+echo "$ROOTPATH"
 cd "$ROOTPATH"
+
 # exec /bin/bash
 
 echo "Generating corpus metadata  ..."
