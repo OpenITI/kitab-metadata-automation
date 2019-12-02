@@ -13,6 +13,8 @@ KITAB metadata automation
 
 4) Push the file generated (output) to repo (e.g. maintenance)
 
+``git commit -a -m 'output generated' ``
+``git push ``
 
 ## Cron Job
 - Run the Shell Sript on every Sunday at 4:00am
