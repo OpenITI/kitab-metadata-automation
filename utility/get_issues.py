@@ -103,7 +103,7 @@ def print_issues_by_uri(uri_dict, save_fp=""):
 
 
 def get_issues(repo_name, #user=None, password=None,
-               access_token="c69e9264a685506da8803b42973494af39e6f5ae",
+               access_token="",
                issue_labels=None, state="open"):
     """Get all issues connected to a specific github repository.
 
