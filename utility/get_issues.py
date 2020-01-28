@@ -103,7 +103,7 @@ def print_issues_by_uri(uri_dict, save_fp=""):
 
 
 def get_issues(repo_name, #user=None, password=None,
-               access_token="",
+               access_token=None,
                issue_labels=None, state="open"):
     """Get all issues connected to a specific github repository.
 
@@ -121,12 +121,8 @@ def get_issues(repo_name, #user=None, password=None,
     Returns:
         issues (list): a list of github issues. 
     """
-##    if user == None:
-##        user = input("User: ")
-##    if password == None:
-##        password = input("Password: ")
-##
-##    g = Github(user, password)
+    if access_token == None:
+        access_token = input("Insert your GitHub Access token: ")
     g = Github(access_token)
     print("logged in to GitHub to collect issues...")
     repo = g.get_repo(repo_name)
