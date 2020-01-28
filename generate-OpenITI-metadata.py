@@ -127,8 +127,10 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
     Args:
         csv_fp (str): the filepath of the csv with the input data
         out_fp (str): the filepath of the output json file
-        passim_runs (list): a list of names of runs of the
-            text reuse detection algorithm passim
+        passim_runs (list): a list of 2-item lists of the
+            text reuse detection algorithm passim:
+            - first list member: description (date + version number)
+            - second list member: run id
         issues_uri_dict (dict): a dictionary mapping containing the
             GitHub issues, sorted by URI:
                 - key: uri
@@ -138,7 +140,7 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
         None
     """
     json_objects = []
-    webserver_url = 'http://dev.kitab-project.org/'
+    webserver_url = 'http://dev.kitab-project.org'
 
     with open(csv_fp) as csvfile:
         reader = csv.DictReader(csvfile, delimiter='\t')
@@ -146,18 +148,20 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
 
         for row in reader:
             record = row
+            
             # Create a URL for KITAB Web Server for SRT Files
+            
             new_id = row['url'].split('/')[-1].split('.')[-1]
-##            record['srts'] = [
-##                webserver_url+ 'passim1017/' + new_id,
-##                webserver_url+ 'passim01022019/' + new_id,
-##                webserver_url+ 'aggregated01052019/' + new_id
-##            ]
             record['srts'] = []
-            for p in passim_runs:
-                record['srts'].append(webserver_url + p + new_id)
+            for descr, run_id in passim_runs:
+                if "2017" in descr:
+                    srt_link = "/".join([webserver_url, run_id, new_id[:-5]])
+                else:
+                    srt_link = "/".join([webserver_url, run_id, new_id])
+                record['srts'].append([descr, srt_link])
 
             # get issues related to the current book/version:
+            
             uri = URI(row["versionUri"])
             book_issues = []
             if uri("book") in issues_uri_dict:
@@ -307,7 +311,8 @@ def collectMetadata(start_folder, csv_outpth, yml_outpth):
 
                 # - edition information:
                 ed_info = []
-                if not versD["80#VERS#BASED####:"].strip().startswith("perma"):
+                if not versD["80#VERS#BASED####:"].strip().startswith("perma")\
+                   and not versD["80#VERS#BASED####:"].strip().startswith("NO"):
                     ed_info = [versD["80#VERS#BASED####:"].strip(), ]                    
 
                 # - title:
@@ -317,8 +322,7 @@ def collectMetadata(start_folder, csv_outpth, yml_outpth):
                     if not "al-Muʾallif" in bookD[c]:
                         title.append(bookD[c].strip())
                         title.append(betaCodeToArSimple(title[-1]))
-                        print("Title from YML:", title)
-
+                        
                 # - author:
                 authD = zfunc.readYML(authF)
                 shuhra = ""
@@ -511,7 +515,9 @@ issues_uri_dict = get_issues.sort_issues_by_uri(issues)
 # 2b - create a json file from the csv data:
 
 out_fp = output_path+'OpenITI_metadata_light.json'
-passim_runs = ['passim1017/', 'passim01022019/', 'aggregated01052019/']
+passim_runs = [['October 2017 (V1)', 'passim1017'],
+               ['February 2019 (V2)', 'passim01022019'],
+               ['May 2019 (Aggregated)', 'aggregated01052019']]
 createJsonFile(meta_csv_fp, out_fp, passim_runs, issues_uri_dict)
 
 # 3 - Save all metadata in the text file headers to a separate json file:
