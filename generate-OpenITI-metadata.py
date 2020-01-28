@@ -151,13 +151,15 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
             
             # Create a URL for KITAB Web Server for SRT Files
             
-            new_id = row['url'].split('/')[-1].split('.')[-1]
+            #new_id = row['url'].split('/')[-1].split('.')[-1] # may get the extension!
+            uri = URI(row['url'])
+            v_id = uri("version", ext="").split(".")[-1]
             record['srts'] = []
             for descr, run_id in passim_runs:
                 if "2017" in descr:
-                    srt_link = "/".join([webserver_url, run_id, new_id[:-5]])
+                    srt_link = "/".join([webserver_url, run_id, v_id[:-5]])
                 else:
-                    srt_link = "/".join([webserver_url, run_id, new_id])
+                    srt_link = "/".join([webserver_url, run_id, v_id])
                 record['srts'].append([descr, srt_link])
 
             # get issues related to the current book/version:
@@ -399,7 +401,7 @@ def collectMetadata(start_folder, csv_outpth, yml_outpth):
 
                 # - build the path to the full text file on Github: 
                 uri.base_pth = "https://raw.githubusercontent.com/OpenITI"
-                fullTextURL = uri.build_pth("version_file").replace("data", "master/data")
+                fullTextURL = re.sub("data/", "master/data/", uri.build_pth("version_file"))
 
                 # - tags (for extension + "genres")
                 tags = ""
