@@ -45,6 +45,9 @@ from utility import zfunc
 from utility.uri import URI 
 from utility import get_issues
 
+from openiti.helper.uri import check_yml_files
+
+
 
 start = time.time()
 splitter = "##RECORD"+"#"*64+"\n"
@@ -268,9 +271,18 @@ def insert_spaces(s):
     """Split the camel-case string s and insert a space before each capital."""
     return re.sub("([a-z])([A-Z])", r"\1 \2", s)
 
-def collectMetadata(start_folder, csv_outpth, yml_outpth):
+def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth):
     """Collect the metadata from URIs, YML files and text file headers
-    and save the metadata in csv and yml files."""
+    and save the metadata in csv and yml files.
+
+    Args:
+        start_folder (str): path to the parent folder of all folders
+            from which metadata should be collected
+        exclude (list): list of directory names that should be excluded
+            from the metadata collections
+        csv_outpth (str): path to the output csv file
+        yml_outpth (str): path to the output yml file
+    """
 
     print("collecting metadata from OpenITI...")
 
@@ -278,10 +290,8 @@ def collectMetadata(start_folder, csv_outpth, yml_outpth):
     dataCSV = {}  # vers-uri, date, author, book, id, status, length, fullTextURLURL, instantiationURL, tags, localPath
     statusDic = {}
 
-        
-
     for root, dirs, files in os.walk(start_folder):
-        dirs = [d for d in dirs if d not in zfunc.exclude]
+        dirs = [d for d in dirs if d not in exclude]
         
         for file in files:
             # select only the version yml files:
@@ -488,15 +498,32 @@ def collectMetadata(start_folder, csv_outpth, yml_outpth):
 
 
 
-# 1- collect metadata and save to csv:
+# 0- first, check and update yml files:
 
 corpus_path = "../OpenITI"
 corpus_path = r"D:\London\OpenITI\25Y_repos"
 
+exclude = (["OpenITI.github.io", "Annotation", "maintenance", "i.mech00",
+            "i.mech01", "i.mech02", "i.mech03", "i.mech04", "i.mech05",
+            "i.mech06", "i.mech07", "i.mech08", "i.mech09", "i.logic",
+            "i.cex", "i.cex_Temp", "i.mech", "i.mech_Temp", ".git"])
+
+
+# execute=False forces the script to show you all changes it wants to make
+# before prompting you whether to execute the proposed changes:
+print("Checking yml files before collecting metadata...")
+print("This may take a minute")
+check_yml_files(corpus_path, exclude=exclude, execute=False)
+print()
+
+
+# 1- collect metadata and save to csv:
+
+
 output_path = "./output/"
 meta_csv_fp = output_path + "OpenITI_metadata_light.csv"
 meta_yml_fp = output_path + "OpenITI_metadata_complete.yml"
-collectMetadata(corpus_path, meta_csv_fp, meta_yml_fp)
+collectMetadata(corpus_path, exclude, meta_csv_fp, meta_yml_fp)
 end = time.time()
 print("Processing time: {0:.2f} sec".format(end - start))
 
@@ -506,7 +533,19 @@ print("="*80)
 
 # 2a - collect issues from GitHub:
 
+# try reading the github access token from file:
+# NB: if you put the access token in a file, make sure
+#     to put the filename into the .gitignore file,
+#     in order not to expose it: 
+try:
+    with open("GitHub personalAccessTokenReadOnly.txt",
+              mode="r", encoding="utf-8") as file:
+        github_token = file.read().strip()
+except:
+    github_token = None # you will be prompted to insert the token manually
+
 issues = get_issues.get_issues("OpenITI/Annotation",
+                               access_token=github_token,
                                issue_labels=["URI change suggestion",
                                              "text quality",
                                              "PRI & SEC Versions"])
