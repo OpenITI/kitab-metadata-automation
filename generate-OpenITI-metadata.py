@@ -500,8 +500,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth):
 
 # 0- first, check and update yml files:
 
-corpus_path = "../OpenITI"
-corpus_path = r"D:\London\OpenITI\25Y_repos"
+#corpus_path = "/home/admin-kitab/Documents/OpenITI/GitHub_clone/"
+corpus_path = "/home/admin-kitab/Documents/OpenITI/GitHub_clone/0025AH/"
 
 exclude = (["OpenITI.github.io", "Annotation", "maintenance", "i.mech00",
             "i.mech01", "i.mech02", "i.mech03", "i.mech04", "i.mech05",
@@ -513,12 +513,13 @@ exclude = (["OpenITI.github.io", "Annotation", "maintenance", "i.mech00",
 # before prompting you whether to execute the proposed changes:
 print("Checking yml files before collecting metadata...")
 print("This may take a minute")
-check_yml_files(corpus_path, exclude=exclude, execute=False)
+
+check_yml_files(corpus_path, exclude=exclude, execute=True)
+#check_yml_files(corpus_path)
 print()
 
 
 # 1- collect metadata and save to csv:
-
 
 output_path = "./output/"
 meta_csv_fp = output_path + "OpenITI_metadata_light.csv"
@@ -563,7 +564,7 @@ createJsonFile(meta_csv_fp, out_fp, passim_runs, issues_uri_dict)
 
 # 3 - Save all metadata in the text file headers to a separate json file:
 
-outfp = r"output\OpenITI_header_metadata.json"
+outfp = output_path + "OpenITI_header_metadata.json"
 with open(outfp, mode="w", encoding="utf-8") as file:
     json.dump(all_header_meta, file, ensure_ascii=False)
 
