@@ -42,10 +42,10 @@ import time
 #from utility import betaCode
 from utility.betaCode import deNoise, betaCodeToArSimple
 from utility import zfunc
-from utility.uri import URI 
+from utility.uri import URI, check_yml_files
 from utility import get_issues
 
-from openiti.helper.uri import check_yml_files
+#from openiti.helper.uri import check_yml_files
 
 
 
@@ -295,7 +295,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth):
         
         for file in files:
             # select only the version yml files:
-            if re.search("^\d{4}[A-Za-z]+\.[A-Za-z\d]+\.\w+-(ara|per)\d\.yml$", file):
+            if re.search("^\d{4}[A-Za-z]+\.[A-Za-z\d]+\.\w+-(ara|per)\d\.yml$",
+                         file):
                 uri = URI(os.path.join(root, file))
 
                 # build the filepaths to all yml files related
@@ -320,6 +321,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth):
                 # - length in number of characters:
                 versD = zfunc.readYML(versF)
                 length = versD["00#VERS#LENGTH###:"].strip()
+                char_length = versD["00#VERS#CLENGTH##:"].strip()
 
                 # - edition information:
                 ed_info = []
@@ -370,7 +372,9 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth):
 
                 # - make a provisional (i.e., without extension)
                 #   local filepath  to the current version:
+                uri.extension = ""
                 local_pth = uri.build_pth("version_file")
+                #print(local_pth)
 
                 # - set temporary secondary status for every book.
                 #   the primary version of a book is the one that
@@ -397,8 +401,13 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth):
                     uri.extension = "mARkdown"
                 elif "Sham30K" in local_pth: # give Sham30K files lowest priority
                     lenTemp = 0
+                    uri.extension = ""
                 else:
-                    lenTemp = length
+                    uri.extension = ""
+                    if length:
+                        lenTemp = length
+                    else:
+                        lenTemp = 0
 
                 if bookURI in statusDic:
                     statusDic[bookURI].append("%012d##" % int(lenTemp) + versURI)
@@ -426,6 +435,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth):
                 #    from the text file headers:
                 
                 header_meta = extract_metadata_from_header(local_pth)
+                #print(local_pth, header_meta)
 
                 # - author name (combine with the uri's author component)
                 add_arabic_name = True
@@ -461,7 +471,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth):
                 
                 # compile the data in a tsv line and store in dataCSV dict: 
                 value = "\t".join([versURI, date, author, bookURI, title, ed_info,
-                                   uri.version, status, length, fullTextURL, tags])
+                                   uri.version, status, length, fullTextURL, tags,
+                                   char_length])
                 dataCSV[versURI] = value
 
     # Give primary status to "longest" version:
@@ -486,7 +497,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth):
                         "title", "ed_info", "id", "status",
                         "length", "url",
                         #"instantiation", "localPath",
-                        "tags"])
+                        "tags", "char_length"])
     
     with open(csv_outpth, "w", encoding="utf8") as outfile:
         outfile.write(header+"\n"+"\n".join(dataCSV))#.replace(" ", ""))
@@ -498,10 +509,10 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth):
 
 
 
-# 0- first, check and update yml files:
-
 corpus_path = "../OpenITI"
 corpus_path = r"D:\London\OpenITI\25Y_repos"
+msg = "Insert the path to the parent folder of the 25-years repos: "
+corpus_path = input(msg)
 
 exclude = (["OpenITI.github.io", "Annotation", "maintenance", "i.mech00",
             "i.mech01", "i.mech02", "i.mech03", "i.mech04", "i.mech05",
@@ -509,18 +520,33 @@ exclude = (["OpenITI.github.io", "Annotation", "maintenance", "i.mech00",
             "i.cex", "i.cex_Temp", "i.mech", "i.mech_Temp", ".git"])
 
 
-# execute=False forces the script to show you all changes it wants to make
-# before prompting you whether to execute the proposed changes:
-print("Checking yml files before collecting metadata...")
-print("This may take a minute")
-check_yml_files(corpus_path, exclude=exclude, execute=False)
-print()
+# 0- first, check and update yml files:
+
+print("Do you want to check completeness of the yml files?")
+resp = input("Y/N: ")
+if resp == "Y":
+    print("Do you want to re-calculate the Arabic token length of every text?")
+    print("This may take up to an hour on a slow machine.")
+    resp = input("Y/N: ")
+    if resp == "Y":
+        check_token_counts = True
+    else:
+        check_token_counts = False
+
+    print("Checking yml files before collecting metadata...")
+    # execute=False forces the script to show you all changes it wants to make
+    # before prompting you whether to execute the proposed changes:
+    check_yml_files(corpus_path, exclude=exclude,
+                    execute=False, check_token_counts=check_token_counts)
+    print()
 
 
 # 1- collect metadata and save to csv:
 
 
 output_path = "./output/"
+#output_path = "./output/test/"
+
 meta_csv_fp = output_path + "OpenITI_metadata_light.csv"
 meta_yml_fp = output_path + "OpenITI_metadata_complete.yml"
 collectMetadata(corpus_path, exclude, meta_csv_fp, meta_yml_fp)
@@ -563,7 +589,7 @@ createJsonFile(meta_csv_fp, out_fp, passim_runs, issues_uri_dict)
 
 # 3 - Save all metadata in the text file headers to a separate json file:
 
-outfp = r"output\OpenITI_header_metadata.json"
+outfp = output_path+"OpenITI_header_metadata.json"
 with open(outfp, mode="w", encoding="utf-8") as file:
     json.dump(all_header_meta, file, ensure_ascii=False)
 
