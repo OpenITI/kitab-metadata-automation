@@ -4,6 +4,8 @@ The script takes as inputs:
 * the uris of all text versions in the corpus
 * all yml files for authors, books and versions in the corpus
 * all issues in the OpenITI/Annotation GitHub repository
+* a tsv file ID_TAGS.txt containing normalized tags from the source libraries
+  and Brockelmann
 
 NB: Arabic author names and book titles are taken from the yml files alone
     if the yml files contain this info; otherwise they are taken from the
@@ -289,6 +291,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
     dataYML = []
     dataCSV = {}  # vers-uri, date, author, book, id, status, length, fullTextURLURL, instantiationURL, tags, localPath
     statusDic = {}
+    split_files = dict()
 
     for root, dirs, files in os.walk(start_folder):
         dirs = [d for d in sorted(dirs) if d not in exclude]
@@ -423,11 +426,13 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
                         statusDic[bookURI].append("%012d##" % int(lenTemp) + versURI)
 
 
-                # - build the path to the full text file on Github: 
-                ##uri.base_pth = "https://raw.githubusercontent.com/OpenITI"
-                ##fullTextURL = re.sub("data/", "master/data/", uri.build_pth("version_file"))
-                uri.base_pth = "data"
-                fullTextURL = uri.build_pth("version_file")
+                # - build the path to the full text file on Github:
+                if URI.data_in_25_year_repos:
+                    uri.base_pth = "https://raw.githubusercontent.com/OpenITI"
+                    fullTextURL = re.sub("data/", "master/data/", uri.build_pth("version_file"))
+                else:
+                    uri.base_pth = "data"
+                    fullTextURL = uri.build_pth("version_file")
 
                 # - tags (for extension + "genres")
                 tags = ""
@@ -488,12 +493,54 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
                     value = "\t".join(v)
                     dataCSV[versURI] = value
 
+                # Deal with files split into multiple parts because
+                # they were too big: 
+                if re.search("Vols[A-Z]-", versURI):
+                    print(versURI)
+                    m = re.sub("Vols[A-Z]", "", versURI)
+                    if m not in split_files:
+                        split_files[m] = []
+                    split_files[m].append(versURI)
+
+
     # Give primary status to "longest" version:
     for k, v in statusDic.items():
         v = sorted(v, reverse=True)
         key = v[0].split("##")[1]
         dataCSV[key] = dataCSV[key].replace("\tsec\t", "\tpri\t")
 
+
+    # Write a json file containing all texts that have been split
+    # into parts because they were too big (URIs with VolsA, VolsB, ...):
+    split_files_fp = re.sub("metadata_light.csv", "split_files.json", csv_outpth)
+    with open(split_files_fp, mode='w', encoding='utf-8') as outfile:
+        json.dump(split_files, outfile, indent=4)  
+
+    # add data for files split into multiple parts:
+    for file in split_files:
+##        print(file, "consists of mutltiple files:")
+##        print(split_files[file])
+        first_part = split_files[file][0]
+        file_length = 0
+        file_clength = 0
+        for part in split_files[file]:
+            # make each part a primary version: 
+            dataCSV[part] = dataCSV[part].replace("\tsec\t", "\tpri\t")
+            # collect the token and character length from each part
+            file_length += int(dataCSV[part].split("\t")[8])
+            if incl_char_length:
+                file_clength += int(dataCSV[part].split("\t")[-1])
+        # add an extra line to the csv data with metadata of the compound file: 
+        file_csv_line = dataCSV[first_part].split("\t")
+        file_csv_line[0] = file
+        file_csv_line[6] = re.sub("Vols[A-Z]", "", file_csv_line[6])
+        file_csv_line[7] = "sec"
+        file_csv_line[8] = str(file_length)
+        file_csv_line[9] = re.sub("Vols[A-Z]", "", file_csv_line[9]) # fullTextURL
+        if incl_char_length:
+            file_csv_line[-1] = str(file_clength)
+        file_csv_line = "\t".join(file_csv_line)
+        dataCSV[file] = file_csv_line      
 
     # Sort the tsv data and save it to file: 
     dataCSV_New = []
@@ -508,7 +555,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
 
     h = ["versionUri", "date", "author", "book",
                         "title", "ed_info", "id", "status",
-                        "length", "url",
+                        "tok_length", "url",
                         #"instantiation", "localPath",
                         "tags", ]
     if incl_char_length:
@@ -524,13 +571,26 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
 
 
 
-URI.data_in_25_year_repos = False
+
+        
+        
+
+
+
+#URI.data_in_25_year_repos = False
 
 corpus_path = "../OpenITI"
 corpus_path = r"D:\London\OpenITI\25Y_repos"
-msg = "Insert the path to the parent folder of the 25-years repos: "
+msg = "Insert the path to the parent folder of the repos: "
 corpus_path = input(msg)
 print("Metadata will be collected in", corpus_path)
+
+print("Is the data in 25-years folders? (press 'N' for RELEASE data)")
+resp = input("Y/N: ")
+if resp.upper() == "N":
+    URI.data_in_25_year_repos = False
+else:
+    URI.data_in_25_year_repos = True
 
 exclude = (["OpenITI.github.io", "Annotation", "maintenance", "i.mech00",
             "i.mech01", "i.mech02", "i.mech03", "i.mech04", "i.mech05",
@@ -561,12 +621,24 @@ if resp == "Y":
 
 # 1- collect metadata and save to csv:
 
+print("Do you want to include character count in addition to token count?")
+resp = input("Y/N: ")
+if resp.upper() == "Y":
+    incl_char_length = True
+else:
+    incl_char_length = False
 
 output_path = "./output/"
-
-meta_csv_fp = output_path + "RELEASE_metadata_light.csv"
-meta_yml_fp = output_path + "RELEASE_metadata_complete.yml"
-collectMetadata(corpus_path, exclude, meta_csv_fp, meta_yml_fp)
+##parent_folder = os.path.split(corpus_path)[-1]
+##if not parent_folder:
+##    parent_folder = os.path.split(os.path.split(corpus_path)[0])[-1]
+pth_string = re.sub("\.+[\\/]", "", corpus_path)
+pth_string = re.sub(r"[\\/]", "_", pth_string)
+meta_csv_fp = output_path + pth_string + "_metadata_light.csv"
+meta_yml_fp = output_path + pth_string + "_metadata_complete.yml"
+print(meta_csv_fp)
+collectMetadata(corpus_path, exclude, meta_csv_fp, meta_yml_fp,
+                incl_char_length=incl_char_length)
 end = time.time()
 print("Processing time: {0:.2f} sec".format(end - start))
 
@@ -598,7 +670,7 @@ issues_uri_dict = get_issues.sort_issues_by_uri(issues)
 
 # 2b - create a json file from the csv data:
 
-out_fp = output_path+'RELEASE_metadata_light.json'
+out_fp = output_path + pth_string + '_metadata_light.json'
 passim_runs = [['October 2017 (V1)', 'passim1017'],
                ['February 2019 (V2)', 'passim01022019'],
                ['May 2019 (Aggregated)', 'aggregated01052019']]
@@ -606,8 +678,32 @@ createJsonFile(meta_csv_fp, out_fp, passim_runs, issues_uri_dict)
 
 # 3 - Save all metadata in the text file headers to a separate json file:
 
-outfp = output_path+"RELEASE_header_metadata.json"
+outfp = output_path + pth_string + "_header_metadata.json"
 with open(outfp, mode="w", encoding="utf-8") as file:
     json.dump(all_header_meta, file, ensure_ascii=False)
 
 print("Tada!")
+
+# commit changes in repos
+resp = input("Commit changes in repos and push to GitHub? Y/N: ")
+
+if resp.upper() == "Y":
+    print("Use default commit message?")
+    msg = "Updated yml files during automatic metadata creation."
+    print("    '{}'".format(msg))
+    resp = input("Y/N: ")
+    if resp.upper() == "N":
+        msg = input("Write commit message: ")
+        
+
+    import subprocess
+    for repo in os.listdir(corpus_path):
+        repo_pth = os.path.join(corpus_path, repo)
+        p = subprocess.Popen(["git", "add", "."], cwd=repo_pth)
+        p.wait()
+        p = subprocess.Popen(["git", "commit", "-m", msg], cwd=repo_pth)
+        p.wait()
+        p = subprocess.Popen(["git", "push", "origin", "master"], cwd=repo_pth)
+        p.wait()
+        print()
+
