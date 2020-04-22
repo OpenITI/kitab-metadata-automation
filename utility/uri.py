@@ -1794,20 +1794,26 @@ def check_yml_files(start_folder, exclude=[],
             print("    ", file)
 
     cnt = len(missing_tok_count)
-    if not execute and (missing_ymls!=[] or missing_tok_count !=[]):
-        print()
+    if missing_ymls!=[] or missing_tok_count !=[]:
         print("Token count must be changed in {} files".format(cnt))
-        print("Execute these changes?")
-        resp = input("Press OK+Enter to execute; press Enter to abort: ")
-        if resp == "OK":
+        print()
+        if not execute:   
+            print("Execute these changes?")
+            resp = input("Press OK+Enter to execute; press Enter to abort: ")
+            if resp == "OK":
+                doit = True
+            else:
+                print("Changes aborted by user")
+                doit = False
+        else:
+            doit = True
+        if doit:
             replace_tok_counts(missing_tok_count)
             check_yml_files(start_folder, exclude=exclude,
                             execute=True, check_token_counts=False)
             print()
             print("Token count changed in {} files".format(cnt))
             print()
-        else:
-            print("Changes aborted by user")
     else:
         print("No missing yml files.")
 
