@@ -1,5 +1,79 @@
 """Generate OpenITI metadata files.
 
+The script is best run from the command line.
+
+You can adapt the parameters in a number of ways:
+
+* by adapting the default config file (utility/config.py)
+  (restore default by running `python generate-metadata.py -d`)
+* by providing a custom config file:
+  `python generate-metadata.py -c D:/OpenITI/RELEASE_config.py`
+* by specifying command-line arguments (see example below)
+* by running the script with default configurations
+  (`python generate-metadata.py`)
+  and replying to the questions when prompted (see example below)
+
+
+Examples:
+    $ python3 generate-metadata.py --help
+    Command line arguments for generate-metadata.py:
+
+    -h, --help : print help info
+    -t, --token_counts : update token counts
+                         => sets check_token_counts variable to True
+    -l, --char_length : update character counts
+                        => sets incl_char_length to True
+    -f, --flat_data : data not in 25 year repos
+                      => sets data_in_25_year_repos to False
+    -d, --restore_default : restore values in config.py to default
+    -r, --recheck_yml : include a check of whether all yml files are complete
+
+    -i, --input_folder : (str) path to the input folder
+                               => sets corpus_path variable
+    -o, --output_folder : (str) path to the output folder for metadata files
+                                => sets output_path variable
+                                (default = "./output/")
+    -t, --tsv_fp : (str) file path to the tsv output file
+                         (only if you do not want it in the defined output folder)
+                         => sets meta_tsv_fp variable
+    -y, --yml_fp : (str) file path to the yml output file
+                         (only if you do not want it in the defined output folder)
+                         => sets meta_yml_fp variable
+    -j, --json_fp : (str) file path to the json output file
+                          (only if you do not want it in the defined output folder)
+                          => sets out_fp variable
+    -a, --arab_header_fp: (str) file path to the json file 
+                                that will contain all Arabic metadata 
+                                extracted from text file headers.
+                                (only if you do not want it in the defined output folder)
+                                => sets meta_header_fp variable
+    -x, --exclude : (list) list of folder names to exclude from metadata
+    -c, --config : (str) name of a python file with custom configuration variables
+                         (default: ./utility/config.py)
+
+    # run the script with custom config file (model: utility/config.py):
+    
+    $ python3 generate-metadata.py -c utility/config_RELEASE.py
+
+    # run the script with default configuration and add variables:
+    
+    $ python3 generate-metadata.py -i ../RELEASE/data_temp -f -r -t -l
+
+    # run the script with default configuration; you will be prompted
+    # to provide answers to configure the metadata generation:
+    
+    $ python3 generate-metadata.py    
+    Metadata will be collected in ../RELEASE/data_temp
+    Is the data in 25-years folders? (press 'N' for RELEASE data)
+    N/Y? N
+    Do you want to check completeness of the yml files?
+    N/Y? Y
+    Do you want to re-calculate the Arabic token length of every text?
+    This may take up to an hour on a slow machine.
+    Y/N: Y
+    Do you want to include character count in addition to token count?
+    N/Y? Y
+
 The script takes as inputs:
 * the uris of all text versions in the corpus
 * all yml files for authors, books and versions in the corpus
@@ -38,6 +112,7 @@ import shutil
 import sys
 import textwrap
 import time
+import getopt
 
 # (in a later stage to be imported from the openiti python library):
 
@@ -51,7 +126,6 @@ from utility import get_issues
 
 
 
-start = time.time()
 splitter = "##RECORD"+"#"*64+"\n"
 all_header_meta = dict()
 VERBOSE = False
@@ -160,12 +234,13 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
             uri = URI(row['url'])
             v_id = uri("version", ext="").split(".")[-1]
             record['srts'] = []
-            for descr, run_id in passim_runs:
-                if "2017" in descr:
-                    srt_link = "/".join([webserver_url, run_id, v_id[:-5]])
-                else:
-                    srt_link = "/".join([webserver_url, run_id, v_id])
-                record['srts'].append([descr, srt_link])
+            if passim_runs:
+                for descr, run_id in passim_runs:
+                    if "2017" in descr:
+                        srt_link = "/".join([webserver_url, run_id, v_id[:-5]])
+                    else:
+                        srt_link = "/".join([webserver_url, run_id, v_id])
+                    record['srts'].append([descr, srt_link])
 
             # get issues related to the current book/version:
             
@@ -569,141 +644,333 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
     with open(yml_outpth, "w", encoding="utf8") as outfile:
         outfile.write("\n".join(dataYML))
 
+def restore_config_to_default():
+    def_config = """\
+# RESTORED DEFAULTS:
 
+# Path to the input folder:
+corpus_path = ""
 
-
-        
-        
-
-
-
-#URI.data_in_25_year_repos = False
-
-corpus_path = "../OpenITI"
-corpus_path = r"D:\London\OpenITI\25Y_repos"
-msg = "Insert the path to the parent folder of the repos: "
-corpus_path = input(msg)
-print("Metadata will be collected in", corpus_path)
-
-print("Is the data in 25-years folders? (press 'N' for RELEASE data)")
-resp = input("Y/N: ")
-if resp.upper() == "N":
-    URI.data_in_25_year_repos = False
-else:
-    URI.data_in_25_year_repos = True
-
+# list of folder names to be excluded from metadata generation:
 exclude = (["OpenITI.github.io", "Annotation", "maintenance", "i.mech00",
             "i.mech01", "i.mech02", "i.mech03", "i.mech04", "i.mech05",
             "i.mech06", "i.mech07", "i.mech08", "i.mech09", "i.logic",
             "i.cex", "i.cex_Temp", "i.mech", "i.mech_Temp", ".git"])
 
+# Set to True if the data is in 25-year folders, False if they are not:
+data_in_25_year_repos = None  # True/False
 
-# 0- first, check and update yml files:
+# Set to True if the script needs to check completeness of the yml files:
+perform_yml_check = None  # True/False
 
-print("Do you want to check completeness of the yml files?")
-resp = input("Y/N: ")
-if resp == "Y":
-    print("Do you want to re-calculate the Arabic token length of every text?")
-    print("This may take up to an hour on a slow machine.")
-    resp = input("Y/N: ")
-    if resp == "Y":
-        check_token_counts = True
-    else:
-        check_token_counts = False
+# Set to True if the script needs to update the token counts in the yml files:
+check_token_counts = None  # True/False
 
-    print("Checking yml files before collecting metadata...")
-    # execute=False forces the script to show you all changes it wants to make
-    # before prompting you whether to execute the proposed changes:
-    check_yml_files(corpus_path, exclude=exclude,
-                    execute=False, check_token_counts=check_token_counts)
-    print()
+# Set to True if the script needs to include character length in the yml files:
+incl_char_length = None  # True/False
 
-
-# 1- collect metadata and save to csv:
-
-print("Do you want to include character count in addition to token count?")
-resp = input("Y/N: ")
-if resp.upper() == "Y":
-    incl_char_length = True
-else:
-    incl_char_length = False
-
+# path to the output folder:
 output_path = "./output/"
-##parent_folder = os.path.split(corpus_path)[-1]
-##if not parent_folder:
-##    parent_folder = os.path.split(os.path.split(corpus_path)[0])[-1]
-pth_string = re.sub("\.+[\\/]", "", corpus_path)
-pth_string = re.sub(r"[\\/]", "_", pth_string)
-meta_csv_fp = output_path + pth_string + "_metadata_light.csv"
-meta_yml_fp = output_path + pth_string + "_metadata_complete.yml"
-print(meta_csv_fp)
-collectMetadata(corpus_path, exclude, meta_csv_fp, meta_yml_fp,
-                incl_char_length=incl_char_length)
-end = time.time()
-print("Processing time: {0:.2f} sec".format(end - start))
 
-print("="*80)
-print("CREATING JSON FILE...")
-print("="*80)
+# path to the output files (default: in the folder at output_path)
+meta_tsv_fp = None
+meta_yml_fp = None
+meta_json_fp = None
+meta_header_fp = None
 
-# 2a - collect issues from GitHub:
-
-# try reading the github access token from file:
-# NB: if you put the access token in a file, make sure
-#     to put the filename into the .gitignore file,
-#     in order not to expose it: 
-try:
-    with open("GitHub personalAccessTokenReadOnly.txt",
-              mode="r", encoding="utf-8") as file:
-        github_token = file.read().strip()
-except:
-    github_token = None # you will be prompted to insert the token manually
-
-issues = get_issues.get_issues("OpenITI/Annotation",
-                               access_token=github_token,
-                               issue_labels=["URI change suggestion",
-                                             "text quality",
-                                             "PRI & SEC Versions"])
-issues = get_issues.define_text_uris(issues)
-issues_uri_dict = get_issues.sort_issues_by_uri(issues)
-
-
-# 2b - create a json file from the csv data:
-
-out_fp = output_path + pth_string + '_metadata_light.json'
+# List of lists (description, run_id on server):  
 passim_runs = [['October 2017 (V1)', 'passim1017'],
                ['February 2019 (V2)', 'passim01022019'],
-               ['May 2019 (Aggregated)', 'aggregated01052019']]
-createJsonFile(meta_csv_fp, out_fp, passim_runs, issues_uri_dict)
+               ['May 2019 (Aggregated)', 'aggregated01052019'],
+               ['February 2020', 'passim01022020']]
 
-# 3 - Save all metadata in the text file headers to a separate json file:
+# Set to True to allow the script to make changes to yml files without asking:
+silent = False  # True/False"""
+    
+    with open("utility/config.py", mode="w", encoding="utf-8") as file:
+        file.write(def_config)
 
-outfp = output_path + pth_string + "_header_metadata.json"
-with open(outfp, mode="w", encoding="utf-8") as file:
-    json.dump(all_header_meta, file, ensure_ascii=False)
+def check_input(msg, responses={"Y": True, "N": False}):
+    print(msg)
+    responses = {k.upper(): v for k,v in responses.items()}
+    r = input("{}? ".format("/".join(responses.keys())))
+    if r.upper() in responses:
+        return responses[r.upper()]
+    else:
+        print("Response not recognized. Try again:")
+        return check_input(msg, responses)
 
-print("Tada!")
+def get_github_issues(token_fp="GitHub personalAccessTokenReadOnly.txt"):
+    try:
+        with open(token_fp, mode="r", encoding="utf-8") as file:
+            github_token = file.read().strip()
+    except:
+        github_token = None # you will be prompted to insert the token manually
 
-# commit changes in repos
-resp = input("Commit changes in repos and push to GitHub? Y/N: ")
+    issues = get_issues.get_issues("OpenITI/Annotation",
+                                   access_token=github_token,
+                                   issue_labels=["URI change suggestion",
+                                                 "text quality",
+                                                 "PRI & SEC Versions"])
+    issues = get_issues.define_text_uris(issues)
+    issues_uri_dict = get_issues.sort_issues_by_uri(issues)
+    return issues_uri_dict
+ 
 
-if resp.upper() == "Y":
-    print("Use default commit message?")
-    msg = "Updated yml files during automatic metadata creation."
-    print("    '{}'".format(msg))
-    resp = input("Y/N: ")
-    if resp.upper() == "N":
-        msg = input("Write commit message: ")
+def main():
+    
+    info = """\
+Command line arguments for generate-metadata.py:
+
+-h, --help : print help info
+-t, --token_counts : update token counts
+                     => sets check_token_counts variable to True
+-l, --char_length : update character counts
+                    => sets incl_char_length to True
+-f, --flat_data : data not in 25 year repos
+                  => sets data_in_25_year_repos to False
+-d, --restore_default : restore values in config.py to default
+-r, --recheck_yml : include a check of whether all yml files are complete
+-s, --silent : execute changes to yml files without asking questions
+
+-i, --input_folder : (str) path to the input folder
+                           => sets corpus_path variable
+-o, --output_folder : (str) path to the output folder for metadata files
+                            => sets output_path variable
+                            (default = "./output/")
+-t, --tsv_fp : (str) file path to the tsv output file
+                     (only if you do not want it in the defined output folder)
+                     => sets meta_tsv_fp variable
+-y, --yml_fp : (str) file path to the yml output file
+                     (only if you do not want it in the defined output folder)
+                     => sets meta_yml_fp variable
+-j, --json_fp : (str) file path to the json output file
+                      (only if you do not want it in the defined output folder)
+                      => sets out_fp variable
+-a, --arab_header_fp: (str) file path to the json file 
+                            that will contain all Arabic metadata 
+                            extracted from text file headers.
+                            (only if you do not want it in the defined output folder)
+                            => sets meta_header_fp variable
+-x, --exclude : (list) list of folder names to exclude from metadata
+-c, --config : (str) name of a python file with custom configuration variables
+                     (default: ./utility/config.py)
+"""
+    argv = sys.argv[1:]
+    opt_str = "htlfdri:o:t:y:j:a:x:c:"
+    opt_list = ["help", "token_counts", "char_length", "flat_data",
+                "restore_default", "recheck_yml", "input_folder=",
+                "output_folder=", "csv_fp=", "yml_fp=", "json_fp=",
+                "arab_header_fp=", "exclude=", "config="]
+    try:
+        opts, args = getopt.getopt(argv, opt_str, opt_list)
+    except:
+        print("Input incorrect: \n"+info)
+        sys.exit(2)
+
+    # 0a- import variables from config file
+
+    configured = False
+    for opt, arg in opts:
+        if opt in ["-c", "--config"]:
+            # load variables from custom config file provided in command line:
+            print ("config", arg)
+            shutil.copy(arg, "utility/temp_config.py")
+            from utility.temp_config import corpus_path, \
+                               exclude, data_in_25_year_repos, \
+                               perform_yml_check, check_token_counts, \
+                               incl_char_length, output_path, \
+                               meta_tsv_fp, meta_yml_fp, \
+                               meta_json_fp, meta_header_fp, \
+                               passim_runs, silent
+            os.remove("utility/temp_config.py")
+            configured = True
+        elif opt in ["-d", "--restore_default"]:
+            restore_config_to_default()
+            print("default values in config.py restored")
+    if not configured: # load variables from default configuration file
+        from utility.config import corpus_path, exclude, \
+                               data_in_25_year_repos, \
+                               perform_yml_check, check_token_counts, \
+                               incl_char_length, output_path, \
+                               meta_tsv_fp, meta_yml_fp, \
+                               meta_json_fp, meta_header_fp, \
+                               passim_runs, silent
+
+    # 0b- override config variables from command line arguments:
+
+    for opt, arg in opts:
+        if opt in ["-h", "--help"]:
+            print(info)
+            return
+        elif opt in ["-t", "--token_counts"]:
+            check_token_counts = True
+            print("check_token_counts", check_token_counts)
+        elif opt in ["-l", "--char_length"]:
+            incl_char_length = True
+            print("incl_char_length", incl_char_length)
+        elif opt in ["-f", "--flat_data"]:
+            data_in_25_year_repos = False
+            print("data_in_25_year_repos", data_in_25_year_repos)
+        elif opt in ["-r", "--recheck_yml"]:
+            perform_yml_check = True
+            print("perform_yml_check", perform_yml_check)
+        elif opt in ["-s", "--silent"]:
+            silent = True
+            print("silent", silent)
+        elif opt in ["-i", "--input_folder"]:
+            corpus_path = arg
+            print("corpus_path", corpus_path)
+        elif opt in ["-o", "--output_folder"]:
+            output_path = arg
+            print("output_path", output_path)
+        elif opt in ["-t", "--tsv_fp"]:
+            meta_tsv_fp = arg
+            print("meta_tsv_fp", meta_tsv_fp)
+        elif opt in ["-y", "--yml_fp"]:
+            meta_yml_fp = arg
+            print("meta_yml_fp", meta_yml_fp)
+        elif opt in ["-j", "--json_fp"]:
+            meta_json_fp = arg
+            print("out_fp", out_fp)
+        elif opt in ["-a", "--arab_header_fp"]:
+            meta_header_fp = arg
+            print("meta_header_fp", meta_header_fp)
+        elif opt in ["-x", "--exclude"]:
+            exclude = arg
+            print("exclude", exclude)
+
+    # 0c- deal with variables that remain undefined:
+    
+    if not corpus_path:
+        msg = "Insert the path to the parent folder of the repos: "
+        corpus_path = input(msg)
+        print("Metadata will be collected in", corpus_path)
+    
+    if data_in_25_year_repos == None:
+##        print("Is the data in 25-years folders? (press 'N' for RELEASE data)")
+##        resp = input("Y/N: ")
+##        check_input(msg, responses={"Y": True, "N": False})
+##        if resp.upper() == "N":
+##            data_in_25_year_repos = False
+##        else:
+##            data_in_25_year_repos = True
+        msg = "Is the data in 25-years folders? (press 'N' for RELEASE data)"
+        data_in_25_year_repos = check_input(msg)
+    URI.data_in_25_year_repos = data_in_25_year_repos
+
+    if perform_yml_check == None:
+##        print("Do you want to check completeness of the yml files?")
+##        resp = input("Y/N: ")
+##        if resp.upper() == "Y":
+##            perform_yml_check = True
+        msg = "Do you want to check completeness of the yml files?"
+        perform_yml_check = check_input(msg)
+        if perform_yml_check:
+            print("Do you want to re-calculate the Arabic token length of every text?")
+            print("This may take up to an hour on a slow machine.")
+            resp = input("Y/N: ")
+            if resp == "Y":
+                check_token_counts = True
+            else:
+                check_token_counts = False
         
+    if incl_char_length == None:
+##        print("Do you want to include character count in addition to token count?")
+##        resp = input("Y/N: ")
+##        if resp.upper() == "Y":
+##            incl_char_length = True
+##        else:
+##            incl_char_length = False
+        msg = "Do you want to include character count in addition to token count?"
+        incl_char_length = check_input(msg)
 
-    import subprocess
-    for repo in os.listdir(corpus_path):
-        repo_pth = os.path.join(corpus_path, repo)
-        p = subprocess.Popen(["git", "add", "."], cwd=repo_pth)
-        p.wait()
-        p = subprocess.Popen(["git", "commit", "-m", msg], cwd=repo_pth)
-        p.wait()
-        p = subprocess.Popen(["git", "push", "origin", "master"], cwd=repo_pth)
-        p.wait()
+
+    pth_string = re.sub("\.+[\\/]", "", corpus_path)
+    pth_string = re.sub(r"[\\/]", "_", pth_string)
+    pth_string = os.path.join(output_path, pth_string)
+    if meta_yml_fp == None: 
+        meta_yml_fp = pth_string + "_metadata_complete.yml"
+    if meta_tsv_fp == None: 
+        meta_tsv_fp = pth_string + "_metadata_light.csv"
+    if meta_json_fp == None:
+        meta_json_fp = pth_string + "_metadata_light.json"
+    if meta_header_fp == None:
+        meta_header_fp = pth_string + "_header_metadata.json"
+
+    print("corpus_path", corpus_path)
+    print("exclude", exclude)
+    print("data_in_25_year_repos", data_in_25_year_repos)
+    print("perform_yml_check", perform_yml_check)
+    print("check_token_counts", check_token_counts)
+    print("incl_char_length", incl_char_length)
+    print("output_path", output_path)
+    print("meta_tsv_fp", meta_tsv_fp)
+    print("meta_yml_fp", meta_yml_fp)
+    print("meta_json_fp", meta_json_fp)
+    print("meta_header_fp", meta_header_fp)
+    print("silent", silent)
+
+    input("Press Enter to start generating metadata ")
+
+    start = time.time()
+        
+    # 1a- check and update yml files:
+
+    if perform_yml_check:
+
+        print("Checking yml files before collecting metadata...")
+        # execute=False forces the script to show you all changes it wants to make
+        # before prompting you whether to execute the proposed changes:
+        check_yml_files(corpus_path, exclude=exclude,
+                        execute=silent, check_token_counts=check_token_counts)
         print()
+        end = time.time()
+        print("Processing time: {0:.2f} sec".format(end - start))
 
+    # 1b- collect metadata and save to csv:
+
+    end = time.time()
+    print("="*80)
+    print("Collecting metadata...")
+    collectMetadata(corpus_path, exclude, meta_tsv_fp, meta_yml_fp,
+                    incl_char_length=incl_char_length)
+    temp = end
+    end = time.time()
+    print("Processing time: {0:.2f} sec".format(end - start))
+
+    # 1c - get github issues:
+
+    print("="*80)
+    print("Collecting issues from GitHub...")
+    issues_uri_dict = get_github_issues()
+    temp = end
+    end = time.time()
+    print("GitHub fetching time: {0:.2f} sec".format(end - temp))
+
+    # 2a - Save main metadata
+
+    print("="*80)
+    print("Saving metadata...")
+    print("="*80)
+
+##    passim_runs = [['October 2017 (V1)', 'passim1017'],
+##                   ['February 2019 (V2)', 'passim01022019'],
+##                   ['May 2019 (Aggregated)', 'aggregated01052019'],
+##                   ['February 2020', 'passim01022020']]
+    createJsonFile(meta_tsv_fp, meta_json_fp, passim_runs, issues_uri_dict)
+
+    
+    # 2b- Save header metadata
+
+    with open(meta_header_fp, mode="w", encoding="utf-8") as file:
+        json.dump(all_header_meta, file, ensure_ascii=False)
+
+    print("Tada!")
+    print("Total processing time: {0:.2f} sec".format(end - start))
+
+
+
+
+if __name__ == "__main__":
+    main()
