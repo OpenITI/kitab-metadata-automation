@@ -62,7 +62,8 @@ Examples:
     # run the script with default configuration; you will be prompted
     # to provide answers to configure the metadata generation:
     
-    $ python3 generate-metadata.py    
+    $ python3 generate-metadata.py
+    Insert the path to the parent folder of the repos: ../RELEASE/data_temp
     Metadata will be collected in ../RELEASE/data_temp
     Is the data in 25-years folders? (press 'N' for RELEASE data)
     N/Y? N
