@@ -758,14 +758,15 @@ Command line arguments for generate-metadata.py:
                      (default: ./utility/config.py)
 """
     argv = sys.argv[1:]
-    opt_str = "htlfdri:o:t:y:j:a:x:c:"
+    opt_str = "htlfdrsi:o:t:y:j:a:x:c:"
     opt_list = ["help", "token_counts", "char_length", "flat_data",
-                "restore_default", "recheck_yml", "input_folder=",
+                "restore_default", "recheck_yml", "silent", "input_folder=",
                 "output_folder=", "csv_fp=", "yml_fp=", "json_fp=",
                 "arab_header_fp=", "exclude=", "config="]
     try:
         opts, args = getopt.getopt(argv, opt_str, opt_list)
-    except:
+    except Exception as e:
+        print(e)
         print("Input incorrect: \n"+info)
         sys.exit(2)
 
@@ -912,7 +913,8 @@ Command line arguments for generate-metadata.py:
     print("meta_header_fp", meta_header_fp)
     print("silent", silent)
 
-    input("Press Enter to start generating metadata ")
+    if not silent:
+        input("Press Enter to start generating metadata ")
 
     start = time.time()
         
