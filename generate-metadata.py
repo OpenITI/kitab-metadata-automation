@@ -106,6 +106,7 @@ And creates the following outputs:
 """
 
 import csv
+import configparser
 import json
 import os
 import re
@@ -140,7 +141,7 @@ def LoadTags():
 
         for d in data:
             d = d.split("\t")
-            dic[d[0]] = d[1]
+            dic[d[0]] = re.sub(";", " :: ", d[1])
     return dic
 
 tagsDic = LoadTags()
@@ -349,7 +350,8 @@ def insert_spaces(s):
     """Split the camel-case string s and insert a space before each capital."""
     return re.sub("([a-z])([A-Z])", r"\1 \2", s)
 
-def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_length=False):
+def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
+                    incl_char_length=False, split_ar_lat=False):
     """Collect the metadata from URIs, YML files and text file headers
     and save the metadata in csv and yml files.
 
@@ -360,6 +362,10 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
             from the metadata collections
         csv_outpth (str): path to the output csv file
         yml_outpth (str): path to the output yml file
+        incl_char_length (bool): if True, a column for character length
+            will be included in the metadata
+        split_ar_lat (bool): if True, Arabic and transliterated data on
+            title and author will be put into separate columns
     """
 
     print("collecting metadata from OpenITI...")
@@ -411,11 +417,15 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
 
                 # - title:
                 bookD = zfunc.readYML(bookF)
-                title = []
+                #title = []
+                title_lat = []
+                title_ar = []
                 for c in ["10#BOOK#TITLEA#AR:", "10#BOOK#TITLEB#AR:"]:
                     if not "al-Muʾallif" in bookD[c]:
-                        title.append(bookD[c].strip())
-                        title.append(betaCodeToArSimple(title[-1]))
+##                        title.append(bookD[c].strip())
+##                        title.append(betaCodeToArSimple(title[-1]))
+                        title_lat.append(bookD[c].strip())
+                        title_ar.append(betaCodeToArSimple(title[-1]))
                         
                 # - author:
                 authD = zfunc.readYML(authF)
@@ -438,17 +448,24 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
                 date = uri.date
 
                 # - author:
-                author = insert_spaces(uri.author)
+##                author = insert_spaces(uri.author)
+                author_lat = [insert_spaces(uri.author), ]
+                author_ar = []
 
                 # - book title:
-                if not title:
-                    title.append(insert_spaces(uri.title))
+##                if not title:
+##                    title.append(insert_spaces(uri.title))
+                if not title_lat:
+                    title_lat.append(insert_spaces(uri.title))
 
                 # - book URI
                 bookURI = uri.build_uri("book")
 
                 # - version URI:
                 versURI = uri.build_uri("version")
+
+                # - collection ID:
+                coll_id = re.findall("[A-Za-z]+", versURI.split(".")[-1])[0]
 
                 # - make a provisional (i.e., without extension)
                 #   local filepath  to the current version:
@@ -530,22 +547,26 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
                     #print(local_pth, header_meta)
 
                     # - author name (combine with the uri's author component)
-                    add_arabic_name = True
+                    #add_arabic_name = True
                     if shuhra:
-                        author.append(shuhra)
-                        author.append(betaCodeToArSimple(shuhra))
+                        author_lat.append(shuhra)
+                        author_ar.append(betaCodeToArSimple(shuhra))
                         print(betaCodeToArSimple(shuhra))
-                        add_arabic_name = False
+                        #add_arabic_name = False
                     if full_name:
-                        author.append(full_name)
-                        author.append(betaCodeToArSimple(full_name))
-                        add_arabic_name = False
-                    if add_arabic_name:
-                        author = [author,] + list(set(header_meta["AuthorName"]))
+                        author_lat.append(full_name)
+                        author_ar.append(betaCodeToArSimple(full_name))
+                        #add_arabic_name = False
+                    #if add_arabic_name:
+##                        author = [author,] + list(set(header_meta["AuthorName"]))
+                    if not author_ar: # if no Arabic author name was taken from YML files:
+                        author_ar = list(set(header_meta["AuthorName"]))
 
                     # - book title (combine with the uri's title component)
-                    if len(title) < 2: # if no title was taken from the YML file
-                        title += list(set(header_meta["Title"]))
+##                    if len(title) < 2: # if no title was taken from the YML file
+##                        title += list(set(header_meta["Title"]))
+                    if not title_ar: # if no title was taken from the YML file
+                        title_ar += list(set(header_meta["Title"]))
 
                     # - information about the current version's edition: 
                     ed_info = header_meta["Edition:Editor"] +\
@@ -554,16 +575,31 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
                               header_meta["Edition:Publisher"] +\
                               ed_info
 
-                    # - additional genre tags: 
-                    tags = tags.split(",") + list(set(header_meta["Genre"]))
+                    # - additional genre tags:
+##                    tags = tags.split(",") + list(set(header_meta["Genre"]))
+                    tags = tags.split(",")
+                    for el in header_meta["Genre"]:
+                        for t in el.split(" :: "):
+                            if coll_id+"@"+t not in tags:
+                                tags.append(coll_id+"@"+t)
+                    
 
                     # if there are multiple values: separate with " :: ":
-                    cats = [author, title, ed_info, tags]
-                    author, title, ed_info, tags = [" :: ".join(x) for x in cats]
+##                    cats = [author, title, ed_info, tags]
+##                    author, title, ed_info, tags = [" :: ".join(x) for x in cats]
+                    cats = [author_ar, author_lat, title_ar, title_lat, ed_info, tags]
+                    author_ar, author_lat, title_ar, title_lat, ed_info, tags = [" :: ".join(x) for x in cats]
                     
                     # compile the data in a tsv line and store in dataCSV dict:
-                    v = [versURI, date, author, bookURI, title, ed_info,
-                         uri.version, status, length, fullTextURL, tags,]
+                    if not split_ar_lat:
+                        title = " :: ".join([title_lat, title_ar])
+                        author = " :: ".join([author_lat,author_ar])
+                        v = [versURI, date, author, bookURI, title, ed_info,
+                             uri.version, status, length, fullTextURL, tags,]
+                    else:
+                        v = [versURI, date, author_ar, author_lat, bookURI,
+                             title_ar, title_lat, ed_info,
+                             uri.version, status, length, fullTextURL, tags,]
                     if incl_char_length:
                         v.append(char_length)
                     value = "\t".join(v)
@@ -586,6 +622,23 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
         dataCSV[key] = dataCSV[key].replace("\tsec\t", "\tpri\t")
 
 
+    # define the file header: 
+    if not split_ar_lat:
+        h = ["versionUri", "date", "author", "book",
+             "title", "ed_info", "id", "status",
+             "tok_length", "url",
+             #"instantiation", "localPath",
+             "tags", ]
+    else:
+        h = ["versionUri", "date", "author_ar", "author_lat", "book",
+             "title_ar", "title_lat", "ed_info", "id", "status",
+             "tok_length", "url",
+             #"instantiation", "localPath",
+             "tags", ]
+    if incl_char_length:
+        h.append("char_length")
+    header = "\t".join(h)
+
     # Write a json file containing all texts that have been split
     # into parts because they were too big (URIs with VolsA, VolsB, ...):
     split_files_fp = re.sub("metadata_light.csv", "split_files.json", csv_outpth)
@@ -593,6 +646,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
         json.dump(split_files, outfile, indent=4)  
 
     # add data for files split into multiple parts:
+    
     for file in split_files:
 ##        print(file, "consists of mutltiple files:")
 ##        print(split_files[file])
@@ -603,16 +657,17 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
             # make each part a primary version: 
             dataCSV[part] = dataCSV[part].replace("\tsec\t", "\tpri\t")
             # collect the token and character length from each part
-            file_length += int(dataCSV[part].split("\t")[8])
+            file_length += int(dataCSV[part].split("\t")[h.index("tok_length")])
             if incl_char_length:
                 file_clength += int(dataCSV[part].split("\t")[-1])
         # add an extra line to the csv data with metadata of the compound file: 
         file_csv_line = dataCSV[first_part].split("\t")
-        file_csv_line[0] = file
-        file_csv_line[6] = re.sub("Vols[A-Z]", "", file_csv_line[6])
-        file_csv_line[7] = "sec"
-        file_csv_line[8] = str(file_length)
-        file_csv_line[9] = re.sub("Vols[A-Z]", "", file_csv_line[9]) # fullTextURL
+        file_csv_line[h.index("versionUri")] = file
+        file_csv_line[h.index("id")] = re.sub("Vols[A-Z]", "", file_csv_line[h.index("id")])
+        file_csv_line[h.index("status")] = "sec"
+        file_csv_line[h.index("tok_length")] = str(file_length)
+        file_csv_line[h.index("url")] = re.sub("Vols[A-Z]", "",
+                                               file_csv_line[h.index("url")]) # fullTextURL
         if incl_char_length:
             file_csv_line[-1] = str(file_clength)
         file_csv_line = "\t".join(file_csv_line)
@@ -629,14 +684,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth, incl_char_len
     print("COLLECTING INTO A CSV FILE ({} LINES)...".format(len(dataCSV)))
     print("="*80)
 
-    h = ["versionUri", "date", "author", "book",
-                        "title", "ed_info", "id", "status",
-                        "tok_length", "url",
-                        #"instantiation", "localPath",
-                        "tags", ]
-    if incl_char_length:
-        h.append("char_length")
-    header = "\t".join(h)
+
     
     with open(csv_outpth, "w", encoding="utf8") as outfile:
         outfile.write(header+"\n"+"\n".join(dataCSV))#.replace(" ", ""))
@@ -669,6 +717,9 @@ check_token_counts = None  # True/False
 
 # Set to True if the script needs to include character length in the yml files:
 incl_char_length = None  # True/False
+
+# Split title and author data in Arabic and Latin script into separate columns:
+split_ar_lat = None # True/False
 
 # path to the output folder:
 output_path = "./output/"
@@ -716,7 +767,44 @@ def get_github_issues(token_fp="GitHub personalAccessTokenReadOnly.txt"):
     issues = get_issues.define_text_uris(issues)
     issues_uri_dict = get_issues.sort_issues_by_uri(issues)
     return issues_uri_dict
- 
+
+def supplement_config_variables(cfg_dict, v_list):
+    """Check if all vars in v_list are in config_dict; \
+    add missing vars with value None."""
+    for v in v_list:
+        if v not in cfg_dict:
+            cfg_dict[v] = None
+            
+
+def read_config(config_pth):
+    """Read the config file into a dictionary
+
+    NB: Python's ConfigParser works with config files that contain sections.
+        Since our config files do not have sections, a dummy section is added.
+        See https://stackoverflow.com/a/25493615.
+    """
+    with open(config_pth, mode="r") as file:
+        config_string = "[dummy_section]\n" + file.read()
+    cp = configparser.ConfigParser(inline_comment_prefixes=["#"])
+    cp.read_string(config_string)
+    cfg_dict = dict(cp["dummy_section"])
+    for k,v in cfg_dict.items():
+        if v.strip() == "True":
+            cfg_dict[k] = True
+        elif v.strip() == "False":
+            cfg_dict[k] = False
+        elif v.strip() == "None":
+            cfg_dict[k] = None
+        elif v.strip().startswith(("(", "[", "{")):
+            #cfg_dict[k] = json.loads(v.strip())
+            cfg_dict[k] = eval(v.strip())
+        elif v.strip().startswith(("r'", 'r"')):
+            cfg_dict[k] = v.strip()[2:-1].replace("\\", "/")
+            print(v, ">", v.strip()[2:-1].replace("\\", "/"))
+        elif v.strip().startswith(("'", '"')):
+            cfg_dict[k] = v.strip()[1:-1]
+    return cfg_dict
+    
 
 def main():
     
@@ -724,14 +812,15 @@ def main():
 Command line arguments for generate-metadata.py:
 
 -h, --help : print help info
--t, --token_counts : update token counts
+-t, --token_counts : update character and token counts
                      => sets check_token_counts variable to True
--l, --char_length : update character counts
+-l, --char_length : include character counts in metadata
                     => sets incl_char_length to True
 -f, --flat_data : data not in 25 year repos
                   => sets data_in_25_year_repos to False
 -d, --restore_default : restore values in config.py to default
 -r, --recheck_yml : include a check of whether all yml files are complete
+-p, --split_ar_lat : put arabic and latin info in separate columns
 -s, --silent : execute changes to yml files without asking questions
 
 -i, --input_folder : (str) path to the input folder
@@ -758,11 +847,11 @@ Command line arguments for generate-metadata.py:
                      (default: ./utility/config.py)
 """
     argv = sys.argv[1:]
-    opt_str = "htlfdrsi:o:t:y:j:a:x:c:"
+    opt_str = "htlfdprsi:o:t:y:j:a:x:c:"
     opt_list = ["help", "token_counts", "char_length", "flat_data",
-                "restore_default", "recheck_yml", "silent", "input_folder=",
-                "output_folder=", "csv_fp=", "yml_fp=", "json_fp=",
-                "arab_header_fp=", "exclude=", "config="]
+                "restore_default", "split_ar_lat", "recheck_yml", "silent",
+                "input_folder=", "output_folder=", "csv_fp=", "yml_fp=",
+                "json_fp=", "arab_header_fp=", "exclude=", "config="]
     try:
         opts, args = getopt.getopt(argv, opt_str, opt_list)
     except Exception as e:
@@ -778,26 +867,55 @@ Command line arguments for generate-metadata.py:
             # load variables from custom config file provided in command line:
             print ("config", arg)
             shutil.copy(arg, "utility/temp_config.py")
-            from utility.temp_config import corpus_path, \
-                               exclude, data_in_25_year_repos, \
-                               perform_yml_check, check_token_counts, \
-                               incl_char_length, output_path, \
-                               meta_tsv_fp, meta_yml_fp, \
-                               meta_json_fp, meta_header_fp, \
-                               passim_runs, silent
+##            from utility.temp_config import corpus_path, \
+##                               exclude, data_in_25_year_repos, \
+##                               perform_yml_check, check_token_counts, \
+##                               incl_char_length, output_path, \
+##                               meta_tsv_fp, meta_yml_fp, \
+##                               meta_json_fp, meta_header_fp, \
+##                               passim_runs, silent, split_ar_lat
+            cfg_dict = read_config("utility/temp_config.py")
             os.remove("utility/temp_config.py")
             configured = True
         elif opt in ["-d", "--restore_default"]:
             restore_config_to_default()
             print("default values in config.py restored")
     if not configured: # load variables from default configuration file
-        from utility.config import corpus_path, exclude, \
-                               data_in_25_year_repos, \
-                               perform_yml_check, check_token_counts, \
-                               incl_char_length, output_path, \
-                               meta_tsv_fp, meta_yml_fp, \
-                               meta_json_fp, meta_header_fp, \
-                               passim_runs, silent
+        cfg_dict = read_config("utility/config.py")
+##        from utility.config import corpus_path, exclude, \
+##                               data_in_25_year_repos, \
+##                               perform_yml_check, check_token_counts, \
+##                               incl_char_length, output_path, \
+##                               meta_tsv_fp, meta_yml_fp, \
+##                               meta_json_fp, meta_header_fp, \
+##                               passim_runs, silent, split_ar_lat
+
+##    for k,v in cfg_dict.items():
+##        print([k,v])
+##    input("continue?")
+
+    v_list = ["corpus_path", "exclude", "data_in_25_year_repos",
+              "perform_yml_check", "check_token_counts",
+              "incl_char_length", "output_path",
+              "meta_tsv_fp", "meta_yml_fp", "meta_json_fp", "meta_header_fp",
+              "passim_runs", "silent", "split_ar_lat"]
+    supplement_config_variables(cfg_dict, v_list)
+    
+    corpus_path = cfg_dict["corpus_path"]
+    exclude = cfg_dict["exclude"]
+    data_in_25_year_repos = cfg_dict["data_in_25_year_repos"]
+    perform_yml_check = cfg_dict["perform_yml_check"]
+    check_token_counts = cfg_dict["check_token_counts"]
+    incl_char_length = cfg_dict["incl_char_length"]
+    output_path = cfg_dict["output_path"]
+    meta_tsv_fp = cfg_dict["meta_tsv_fp"]
+    meta_yml_fp = cfg_dict["meta_yml_fp"]
+    meta_json_fp = cfg_dict["meta_json_fp"]
+    meta_header_fp = cfg_dict["meta_header_fp"]
+    passim_runs = cfg_dict["passim_runs"]
+    silent = cfg_dict["silent"]
+    split_ar_lat = cfg_dict["split_ar_lat"]
+
 
     # 0b- override config variables from command line arguments:
 
@@ -814,6 +932,9 @@ Command line arguments for generate-metadata.py:
         elif opt in ["-f", "--flat_data"]:
             data_in_25_year_repos = False
             print("data_in_25_year_repos", data_in_25_year_repos)
+        elif opt in ["-p", "--split_ar_lat"]:
+            split_ar_lat = True
+            print("split_ar_lat", split_ar_lat)
         elif opt in ["-r", "--recheck_yml"]:
             perform_yml_check = True
             print("perform_yml_check", perform_yml_check)
@@ -937,7 +1058,8 @@ Command line arguments for generate-metadata.py:
     print("="*80)
     print("Collecting metadata...")
     collectMetadata(corpus_path, exclude, meta_tsv_fp, meta_yml_fp,
-                    incl_char_length=incl_char_length)
+                    incl_char_length=incl_char_length,
+                    split_ar_lat=split_ar_lat)
     temp = end
     end = time.time()
     print("Processing time: {0:.2f} sec".format(end - start))

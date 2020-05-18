@@ -7,6 +7,7 @@ data_in_25_year_repos = False
 perform_yml_check = False
 check_token_counts = False
 incl_char_length = True
+split_ar_lat = False
 output_path = "./output/"
 meta_tsv_fp = None
 meta_yml_fp = None

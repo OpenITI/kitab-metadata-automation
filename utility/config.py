@@ -21,6 +21,9 @@ check_token_counts = None  # True/False
 # Set to True if the script needs to include character length in the yml files:
 incl_char_length = None  # True/False
 
+# Split title and author data in Arabic and Latin script into separate columns:
+split_ar_lat = None # True/False
+
 # path to the output folder:
 output_path = "./output/"
 
