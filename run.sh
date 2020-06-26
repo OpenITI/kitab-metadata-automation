@@ -24,7 +24,7 @@ cd "$ROOTPATH"
 # exec /bin/bash
 
 echo "Generating corpus metadata  ..."
-python3 generate-OpenITI-metadata.py
+python3 generate-metadata.py
 
 echo "Committing changes to repo ..."
 git commit -a -m 'output generated'
