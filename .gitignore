@@ -4,3 +4,4 @@ old/
 .DS_Store
 test/
 output/test/
+output.log
