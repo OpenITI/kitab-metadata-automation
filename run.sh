@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 
-Path of the folder where corpus files are stored
+#Path of the folder where corpus files are stored
 #echo "Enter the path to the corpus "
 CORPUSPATH="/home/admin-kitab/Documents/OpenITI/GitHub_clone"
 echo $CORPUSPATH
