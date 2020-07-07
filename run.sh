@@ -10,10 +10,10 @@ cd $CORPUSPATH
 pwd
 
 echo "Resetting local changes ..."
-#ls | xargs -P10 -I{} git -C {} reset --hard
+ls | xargs -P10 -I{} git -C {} reset --hard
 
 echo "Fetching changes from corpus ..."
-#ls | xargs -P10 -I{} git -C {} pull origin 
+ls | xargs -P10 -I{} git -C {} pull origin 
 
 #Path of the folder where python script is located
 #echo "Enter the path to the script "
