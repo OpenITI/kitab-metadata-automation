@@ -1,6 +1,7 @@
 #!/bin/bash
 clear
-
+echo "******************************START**********************************"
+echo "******************************START**********************************"
 #Path of the folder where corpus files are stored
 #echo "Enter the path to the corpus "
 CORPUSPATH="/home/admin-kitab/Documents/OpenITI/GitHub_clone"
@@ -11,10 +12,10 @@ cd $CORPUSPATH
 pwd
 
 echo "Resetting local changes ..."
-#ls | xargs -P10 -I{} git -C {} reset --hard
+ls | xargs -P10 -I{} git -C {} reset --hard
 
 echo "Fetching changes from corpus ..."
-#ls | xargs -P10 -I{} git -C {} pull origin 
+ls | xargs -P10 -I{} git -C {} pull origin 
 
 #Path of the folder where python script is located
 #echo "Enter the path to the script "
@@ -34,4 +35,8 @@ git add .
 git commit -m 'output generated' 
 git push
 
+date
+
+echo "*****************************END***********************************"
+echo "*****************************END***********************************"
 
