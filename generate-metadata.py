@@ -119,14 +119,16 @@ import getopt
 # (in a later stage to be imported from the openiti python library):
 
 #from utility import betaCode
-from utility.betaCode import deNoise, betaCodeToArSimple
-from utility import zfunc
-from utility.uri import URI, check_yml_files
-from utility import get_issues
+#from utility.betaCode import deNoise, betaCodeToArSimple
+#from utility import zfunc  # functions used: zfunc.readYML, zfunc.dicToYML
+#from utility.uri import URI, check_yml_files
+#from utility import get_issues
 
-#from openiti.helper.uri import check_yml_files
-
-
+from openiti.helper.uri import URI, check_yml_files
+from openiti.git import get_issues
+from openiti.helper.yml import readYML, dicToYML
+from openiti.helper.ara import deNoise
+from utility.betaCode import betaCodeToArSimple
 
 splitter = "##RECORD"+"#"*64+"\n"
 all_header_meta = dict()
@@ -392,9 +394,12 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
                 # bring together all yml data related to the current version
                 # and store in the master dataYML variable:
-                versD = zfunc.dicToYML(zfunc.readYML(versF)) + "\n"
-                bookD = zfunc.dicToYML(zfunc.readYML(bookF)) + "\n"
-                authD = zfunc.dicToYML(zfunc.readYML(authF)) + "\n"
+##                versD = zfunc.dicToYML(zfunc.readYML(versF)) + "\n"
+##                bookD = zfunc.dicToYML(zfunc.readYML(bookF)) + "\n"
+##                authD = zfunc.dicToYML(zfunc.readYML(authF)) + "\n"
+                versD = dicToYML(readYML(versF)) + "\n"
+                bookD = dicToYML(readYML(bookF)) + "\n"
+                authD = dicToYML(readYML(authF)) + "\n"
                 record = splitter + versD + bookD + authD
                 dataYML.append(record)
 
@@ -404,7 +409,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 # 1) from the YML files:
 
                 # - length in number of characters:
-                versD = zfunc.readYML(versF)
+##                versD = zfunc.readYML(versF)
+                versD = readYML(versF)
                 length = versD["00#VERS#LENGTH###:"].strip()
                 if incl_char_length:
                     char_length = versD["00#VERS#CLENGTH##:"].strip()
@@ -416,7 +422,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     ed_info = [versD["80#VERS#BASED####:"].strip(), ]                    
 
                 # - title:
-                bookD = zfunc.readYML(bookF)
+##                bookD = zfunc.readYML(bookF)
+                bookD = readYML(bookF)
                 #title = []
                 title_lat = []
                 title_ar = []
@@ -428,7 +435,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                         title_ar.append(betaCodeToArSimple(title_lat[-1]))
                         
                 # - author:
-                authD = zfunc.readYML(authF)
+##                authD = zfunc.readYML(authF)
+                authD = readYML(authF)
                 shuhra = ""
                 if not "Fulān" in authD["10#AUTH#SHUHRA#AR:"]:
                     shuhra = authD["10#AUTH#SHUHRA#AR:"].strip()
