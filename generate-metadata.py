@@ -424,8 +424,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     if not "al-Muʾallif" in bookD[c]:
 ##                        title.append(bookD[c].strip())
 ##                        title.append(betaCodeToArSimple(title[-1]))
-                        title_lat.append(bookD[c].strip())
-                        title_ar.append(betaCodeToArSimple(title[-1]))
+                        title_ar.append(bookD[c].strip())
+                        title_ar.append(betaCodeToArSimple(title_ar[-1]))
                         
                 # - author:
                 authD = zfunc.readYML(authF)
@@ -1007,6 +1007,10 @@ Command line arguments for generate-metadata.py:
 ##            incl_char_length = False
         msg = "Do you want to include character count in addition to token count?"
         incl_char_length = check_input(msg)
+
+    if split_ar_lat == None:
+        msg = "Do you want to keep Arabic and Latin metadata in separate columns?"
+        split_ar_lat = check_input(msg)
 
 
     pth_string = re.sub("\.+[\\/]", "", corpus_path)
