@@ -424,8 +424,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     if not "al-Muʾallif" in bookD[c]:
 ##                        title.append(bookD[c].strip())
 ##                        title.append(betaCodeToArSimple(title[-1]))
-                        title_ar.append(bookD[c].strip())
-                        title_ar.append(betaCodeToArSimple(title_ar[-1]))
+                        title_lat.append(bookD[c].strip())
+                        title_ar.append(betaCodeToArSimple(title_lat[-1]))
                         
                 # - author:
                 authD = zfunc.readYML(authF)
