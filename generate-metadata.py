@@ -422,7 +422,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                             version_fp = pth + ext
                             if os.path.exists(version_fp):
                                 char_length = ar_cnt_file(version_fp, mode="char")
-                                versD["00#VERS#CLENGTH##:"] = str(char_length)
+                                char_length = str(char_length)
+                                versD["00#VERS#CLENGTH##:"] = char_length
                                 ymlS = dicToYML(versD)
                                 with open(versF, mode="w", encoding="utf-8") as file:
                                     file.write(ymlS)
