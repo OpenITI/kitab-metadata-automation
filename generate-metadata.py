@@ -127,7 +127,7 @@ import getopt
 from openiti.helper.uri import URI, check_yml_files
 from openiti.git import get_issues
 from openiti.helper.yml import readYML, dicToYML
-from openiti.helper.ara import deNoise
+from openiti.helper.ara import deNoise, ar_cnt_file
 from utility.betaCode import betaCodeToArSimple
 
 splitter = "##RECORD"+"#"*64+"\n"
@@ -413,7 +413,20 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 versD = readYML(versF)
                 length = versD["00#VERS#LENGTH###:"].strip()
                 if incl_char_length:
-                    char_length = versD["00#VERS#CLENGTH##:"].strip()
+                    try:
+                        char_length = versD["00#VERS#CLENGTH##:"].strip()
+                    except:
+                        uri.extension = ""
+                        pth = uri.build_pth(uri_type="version_file")
+                        for ext in [".mARkdown", ".completed", ".inProgress", ""]:
+                            version_fp = pth + ext
+                            if os.path.exists(version_fp):
+                                char_length = ar_cnt_file(version_fp, mode="char")
+                                versD["00#VERS#CLENGTH##:"] = str(char_length)
+                                ymlS = dicToYML(versD)
+                                with open(versF, mode="w", encoding="utf-8") as file:
+                                    file.write(ymlS)
+                                break
 
                 # - edition information:
                 ed_info = []
