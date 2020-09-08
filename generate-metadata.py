@@ -514,7 +514,9 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 # - make a provisional (i.e., without extension)
                 #   local filepath  to the current version:
                 uri.extension = ""
-                local_pth = uri.build_pth("version_file")
+                #local_pth = uri.build_pth("version_file")
+                local_pth = versF[:-4]
+                print("local_pth:", local_pth)
                 #print(local_pth)
 
                 # - set temporary secondary status for every book.
@@ -551,7 +553,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                         lenTemp = 0
 
                 # - rebuild the local_path, with the extension:
-                local_pth = uri.build_pth("version_file")
+                #local_pth = uri.build_pth("version_file")
+                local_pth+= "." + uri.extension
 
                 # - add the uri to the statusDic if the file is not missing:
                 if os.path.exists(local_pth):
