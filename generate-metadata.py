@@ -464,7 +464,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                             title_lat.append(bookD[c].strip())
                             title_ar.append(betaCodeToArSimple(title_lat[-1]))
                 except:
-                    continue
+                    print("No book yml file found")
                     
                         
                 # - author:
@@ -484,7 +484,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                                  if "Fulān" not in authD[x]]
                     full_name = " ".join(full_name)
                 except:
-                    continue
+                    print("No author yml file found")
                     
 
                 print("still there")
