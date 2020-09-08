@@ -404,8 +404,14 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 ##                bookD = zfunc.dicToYML(zfunc.readYML(bookF)) + "\n"
 ##                authD = zfunc.dicToYML(zfunc.readYML(authF)) + "\n"
                 versD = dicToYML(readYML(versF)) + "\n"
-                bookD = dicToYML(readYML(bookF)) + "\n"
-                authD = dicToYML(readYML(authF)) + "\n"
+                try:
+                    bookD = dicToYML(readYML(bookF)) + "\n"
+                except:
+                    bookD = ""
+                try:
+                    authD = dicToYML(readYML(authF)) + "\n"
+                except:
+                    authD = ""
                 record = splitter + versD + bookD + authD
                 dataYML.append(record)
 
@@ -443,31 +449,41 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
                 # - title:
 ##                bookD = zfunc.readYML(bookF)
-                bookD = readYML(bookF)
-                #title = []
                 title_lat = []
                 title_ar = []
-                for c in ["10#BOOK#TITLEA#AR:", "10#BOOK#TITLEB#AR:"]:
-                    if not "al-Muʾallif" in bookD[c]:
-##                        title.append(bookD[c].strip())
-##                        title.append(betaCodeToArSimple(title[-1]))
-                        title_lat.append(bookD[c].strip())
-                        title_ar.append(betaCodeToArSimple(title_lat[-1]))
+                try:
+                    bookD = readYML(bookF)
+                    #title = []
+
+                    for c in ["10#BOOK#TITLEA#AR:", "10#BOOK#TITLEB#AR:"]:
+                        if not "al-Muʾallif" in bookD[c]:
+    ##                        title.append(bookD[c].strip())
+    ##                        title.append(betaCodeToArSimple(title[-1]))
+                            title_lat.append(bookD[c].strip())
+                            title_ar.append(betaCodeToArSimple(title_lat[-1]))
+                except:
+                    continue
+                    
                         
                 # - author:
 ##                authD = zfunc.readYML(authF)
-                authD = readYML(authF)
                 shuhra = ""
-                if not "Fulān" in authD["10#AUTH#SHUHRA#AR:"]:
-                    shuhra = authD["10#AUTH#SHUHRA#AR:"].strip()
-                name_comps = ["10#AUTH#LAQAB##AR:",
-                              "10#AUTH#KUNYA##AR:",
-                              "10#AUTH#ISM####AR:",
-                              "10#AUTH#NASAB##AR:",
-                              "10#AUTH#NISBA##AR:"]
-                full_name = [authD[x] for x in name_comps \
-                             if "Fulān" not in authD[x]]
-                full_name = " ".join(full_name)
+                full_name = ""
+                try:
+                    authD = readYML(authF)
+                    if not "Fulān" in authD["10#AUTH#SHUHRA#AR:"]:
+                        shuhra = authD["10#AUTH#SHUHRA#AR:"].strip()
+                    name_comps = ["10#AUTH#LAQAB##AR:",
+                                  "10#AUTH#KUNYA##AR:",
+                                  "10#AUTH#ISM####AR:",
+                                  "10#AUTH#NASAB##AR:",
+                                  "10#AUTH#NISBA##AR:"]
+                    full_name = [authD[x] for x in name_comps \
+                                 if "Fulān" not in authD[x]]
+                    full_name = " ".join(full_name)
+                except:
+                    continue
+                    
 
 
                 # 2) from the URI: 
