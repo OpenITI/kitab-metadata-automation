@@ -651,6 +651,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     if incl_char_length:
                         v.append(char_length)
                     value = "\t".join(v)
+                    print("value:", value)
                     dataCSV[versURI] = value
 
                 # Deal with files split into multiple parts because
