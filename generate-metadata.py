@@ -655,9 +655,9 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
                 # Deal with files split into multiple parts because
                 # they were too big: 
-                if re.search("Vols[A-Z]-", versURI):
+                if re.search("[A-Z]-", versURI):
                     print(versURI)
-                    m = re.sub("Vols[A-Z]", "", versURI)
+                    m = re.sub("[A-Z]-", "-", versURI)
                     if m not in split_files:
                         split_files[m] = []
                     split_files[m].append(versURI)
