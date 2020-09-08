@@ -397,7 +397,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     versF = os.path.join(root, file)
                     bookF = os.path.join(root, uri.build_uri(uri_type="book")+".yml")
                     authF = os.path.join(root, uri.build_uri(uri_type="author")+".yml")
-                print(versF)
+                print("versF:", versF)
 
                 # bring together all yml data related to the current version
                 # and store in the master dataYML variable:
