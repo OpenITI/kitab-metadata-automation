@@ -556,7 +556,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
                 # - rebuild the local_path, with the extension:
                 #local_pth = uri.build_pth("version_file")
-                local_pth+= "." + uri.extension
+                if uri.extension:
+                    local_pth+= "." + uri.extension
 
                 # - add the uri to the statusDic if the file is not missing:
                 if os.path.exists(local_pth):
