@@ -397,7 +397,9 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     versF = os.path.join(root, file)
                     bookF = os.path.join(root, uri.build_uri(uri_type="book")+".yml")
                     authF = os.path.join(root, uri.build_uri(uri_type="author")+".yml")
-                print("versF:", versF)
+                #print("versF:", versF)
+                #print("bookF:", bookF)
+                #print("authF:", authF)
 
                 # bring together all yml data related to the current version
                 # and store in the master dataYML variable:
@@ -487,7 +489,6 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     print("No author yml file found")
                     
 
-                print("still there")
                 # 2) from the URI: 
 
                 # - date:
@@ -518,7 +519,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 uri.extension = ""
                 #local_pth = uri.build_pth("version_file")
                 local_pth = versF[:-4]
-                print("local_pth:", local_pth)
+                #print("local_pth:", local_pth)
                 #print(local_pth)
 
                 # - set temporary secondary status for every book.
@@ -653,7 +654,6 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     if incl_char_length:
                         v.append(char_length)
                     value = "\t".join(v)
-                    print("value:", value)
                     dataCSV[versURI] = value
 
                 # Deal with files split into multiple parts because
