@@ -430,7 +430,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                         char_length = versD["00#VERS#CLENGTH##:"].strip()
                     except:
                         uri.extension = ""
-                        pth = uri.build_pth(uri_type="version_file")
+                        #pth = uri.build_pth(uri_type="version_file")
+                        pth = versF[:-4]
                         for ext in [".mARkdown", ".completed", ".inProgress", ""]:
                             version_fp = pth + ext
                             if os.path.exists(version_fp):
@@ -486,7 +487,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     continue
                     
 
-
+                print("still there")
                 # 2) from the URI: 
 
                 # - date:
