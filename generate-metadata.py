@@ -353,7 +353,8 @@ def insert_spaces(s):
     return re.sub("([a-z])([A-Z])", r"\1 \2", s)
 
 def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
-                    incl_char_length=False, split_ar_lat=False):
+                    incl_char_length=False, split_ar_lat=False,
+                    flat_folder=False):
     """Collect the metadata from URIs, YML files and text file headers
     and save the metadata in csv and yml files.
 
@@ -388,9 +389,14 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
                 # build the filepaths to all yml files related
                 # to the current version yml file: 
-                versF = uri.build_pth(uri_type="version_yml")
-                bookF = uri.build_pth(uri_type="book_yml")
-                authF = uri.build_pth(uri_type="author_yml")
+                if not flat_folder:
+                    versF = uri.build_pth(uri_type="version_yml")
+                    bookF = uri.build_pth(uri_type="book_yml")
+                    authF = uri.build_pth(uri_type="author_yml")
+                else:
+                    versF = os.path.join(root, file)
+                    bookF = os.path.join(root, uri.build_uri(uri_type="book")+".yml")
+                    authF = os.path.join(root, uri.build_uri(uri_type="author")+".yml")
 
                 # bring together all yml data related to the current version
                 # and store in the master dataYML variable:
@@ -828,6 +834,7 @@ def read_config(config_pth):
     return cfg_dict
     
 
+
 def main():
     
     info = """\
@@ -992,6 +999,7 @@ Command line arguments for generate-metadata.py:
         corpus_path = input(msg)
         print("Metadata will be collected in", corpus_path)
     
+    flat_folder = False
     if data_in_25_year_repos == None:
 ##        print("Is the data in 25-years folders? (press 'N' for RELEASE data)")
 ##        resp = input("Y/N: ")
@@ -1002,6 +1010,9 @@ Command line arguments for generate-metadata.py:
 ##            data_in_25_year_repos = True
         msg = "Is the data in 25-years folders? (press 'N' for RELEASE data)"
         data_in_25_year_repos = check_input(msg)
+        if not data_in_25_year_repos:
+            msg = "Is the folder structure entirely flat? "
+            flat_folder = check_input(msg)
     URI.data_in_25_year_repos = data_in_25_year_repos
 
     if perform_yml_check == None:
@@ -1068,7 +1079,6 @@ Command line arguments for generate-metadata.py:
     # 1a- check and update yml files:
 
     if perform_yml_check:
-
         print("Checking yml files before collecting metadata...")
         # execute=False forces the script to show you all changes it wants to make
         # before prompting you whether to execute the proposed changes:
@@ -1085,7 +1095,7 @@ Command line arguments for generate-metadata.py:
     print("Collecting metadata...")
     collectMetadata(corpus_path, exclude, meta_tsv_fp, meta_yml_fp,
                     incl_char_length=incl_char_length,
-                    split_ar_lat=split_ar_lat)
+                    split_ar_lat=split_ar_lat, flat_folder=flat_folder)
     temp = end
     end = time.time()
     print("Processing time: {0:.2f} sec".format(end - start))
