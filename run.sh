@@ -4,7 +4,7 @@ echo "******************************START**********************************"
 echo "******************************START**********************************"
 #Path of the folder where corpus files are stored
 #echo "Enter the path to the corpus "
-CORPUSPATH="/home/admin-kitab/Documents/OpenITI/GitHub_clone"
+CORPUSPATH="/home/admin-kitab/Documents/OpenITI/Github_clone"
 #echo $CORPUSPATH
 date
 
