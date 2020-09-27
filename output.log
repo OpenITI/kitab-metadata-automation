@@ -2602,3 +2602,708 @@ Saving metadata...
 ================================================================================
 Tada!
 Total processing time: 1601.56 sec
+[master 91e02e0] output generated
+ 3 files changed, 1939 insertions(+), 1234 deletions(-)
+Sat 26 Sep 2020 10:01:52 PM UTC
+*****************************END***********************************
+*****************************END***********************************
+******************************START**********************************
+******************************START**********************************
+Sun 27 Sep 2020 09:35:01 PM UTC
+/home/admin-kitab/Documents/OpenITI/Github_clone
+Resetting local changes ...
+HEAD is now at bd36192 YML Templates updated for all VERSION files: three more keys added (Annotator; Date; Issues)
+HEAD is now at 0cded58 YML Templates updated for all VERSION files: three more keys added (Annotator; Date; Issues)
+HEAD is now at 1446f35 ms update
+HEAD is now at 4740286 ms update
+HEAD is now at a194197 ms update
+HEAD is now at 85398ce ms update
+HEAD is now at 6eeb735 ms update
+HEAD is now at 7eb797d ms update
+HEAD is now at d819e72 rm duplicate folder data/0216IbnQuraybAsmaci.KhalqInsan including Shamela0005405-ara1, readme, questionaire files (no existing yaml file for Shamela0005405-ara1)
+HEAD is now at 75f8810 ms update
+HEAD is now at cfd2e35 ms update
+HEAD is now at 72cefe0 ms updated, few metadata fixes
+HEAD is now at 4dfa154 ms update
+HEAD is now at a128387 ms update
+HEAD is now at c04b17a yml updates
+HEAD is now at d587032 0400KatibMajhu moved to 8001AH
+HEAD is now at 6757318 ms update
+HEAD is now at 5e0fa5c ms update
+HEAD is now at 0488c93 ms updated, few metadata fixes
+HEAD is now at 42fb070 ms update
+HEAD is now at e0105df ms update
+HEAD is now at dd8bff1 ms update
+HEAD is now at 79c0fe5 ms update
+HEAD is now at 2e62509 ms update
+HEAD is now at 839ed4a ms update
+HEAD is now at 696bd66 Update yml files with source file info + number of vols + issues
+HEAD is now at 90d3e37 ms update
+HEAD is now at 1f47b73 ms update
+HEAD is now at f2e87ac ms updated, few metadata fixes
+HEAD is now at f69073b ms update
+HEAD is now at 49628fd ms update
+HEAD is now at 80f7e00 ms update
+HEAD is now at 9666feb ms update
+HEAD is now at 087900d rm JK001220-ara.completed with wrong file name and header splitter
+HEAD is now at 7b01b46 ms update
+HEAD is now at a10bbf5 ms update
+HEAD is now at ac279ba ms updated, few metadata fixes
+HEAD is now at e1bc645 ms updated, few metadata fixes
+HEAD is now at c14068c ms update
+HEAD is now at 7e97284 few yml file fixes
+HEAD is now at 94d3b32 working version of Sakhawi's DawLamic in mdSimple
+HEAD is now at 48645e4 ms update
+HEAD is now at adc7227 yml updates
+HEAD is now at 54fa6fc ms update
+HEAD is now at 15b0a01 ms update
+HEAD is now at dc3455e ms updated, few metadata fixes
+HEAD is now at 7b711fe ms update
+HEAD is now at bfffb5a ms update
+HEAD is now at fe1f681 ms update
+HEAD is now at 90399ea ms update
+HEAD is now at 077b5cc ms update
+HEAD is now at a333c60 ms update
+HEAD is now at 2778c61 ms updated, few metadata fixes
+HEAD is now at 25ef902 ms updated, few metadata fixes
+HEAD is now at f9b8846 ms update
+HEAD is now at 5fb066d ms update
+HEAD is now at b0318de ms update
+HEAD is now at 101927a ms update
+HEAD is now at 03a101a ms update
+HEAD is now at 3aa9e0f ms update
+Fetching changes from corpus ...
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+/home/admin-kitab/Documents/Projects/kitab-metadata-automation
+Generating corpus metadata  ...
+config ./utility/config-automated-do-not-remove-or-change.py
+corpus_path ../../OpenITI/Github_clone
+exclude ['OpenITI.github.io', 'Annotation', 'maintenance', 'i.mech00', 'i.mech01', 'i.mech02', 'i.mech03', 'i.mech04', 'i.mech05', 'i.mech06', 'i.mech07', 'i.mech08', 'i.mech09', 'i.logic', 'i.cex', 'i.cex_Temp', 'i.mech', 'i.mech_Temp', '.git']
+data_in_25_year_repos True
+perform_yml_check True
+check_token_counts True
+incl_char_length True
+output_path ./output/
+meta_tsv_fp ./output/OpenITI_Github_clone_metadata_light.csv
+meta_yml_fp ./output/OpenITI_Github_clone_metadata_complete.yml
+meta_json_fp ./output/OpenITI_Github_clone_metadata_light.json
+meta_header_fp ./output/OpenITI_Github_clone_header_metadata.json
+silent True
+Checking yml files before collecting metadata...
+No missing yml files.
+
+The following files could have problems with their URI:
+
+     .Rhistory
+     0310Tabari.JamicBayan.Shamela0007798-ara1.inProgress_mARkdownSimple
+     0310Tabari.JamicBayan.Shamela0007798-ara1.notes
+     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple
+     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple.IDs
+     Bayrut_1995_001.pdff
+     Bayrut_1995_002.pdff
+     Bayrut_1995_003.pdff
+     Bayrut_1995_004.pdff
+     Tunis_2011_000.pdff
+     Tunis_2011_001.pdff
+     Tunis_2011_002.pdff
+     Tunis_2011_003.pdff
+     Tunis_2011_004.pdff
+
+Processing time: 1595.27 sec
+================================================================================
+Collecting metadata...
+collecting metadata from OpenITI...
+عمارة اليمني
+العوتبي، الصحاري
+العوتبي، الصحاري
+شافع بن علي
+شافع بن علي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+الإصطخري
+الإصطخري
+الإصطخري
+إبن مروان الدينوري
+إبن مروان الدينوري
+(مؤلف مجهول)
+(مؤلف مجهول)
+خميس شقصي
+يوسف المحلي
+أبو بكر المالكي
+إبن قيصر
+إبن قيصر
+نجم الدين محمد الغزي
+نجم الدين محمد الغزي
+(مترجم مجهول)
+مكي بن حموش القيسي
+مكي بن حموش القيسي
+مكي بن حموش القيسي
+مكي بن حموش القيسي
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+1111Majlisi.BiharAnwar.Zaydiyya0000202A-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsB-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsC-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsA-ara1
+1111Majlisi.BiharAnwar.Zaydiyya0000202B-ara1
+1111Majlisi.BiharAnwar.Zaydiyya0000202C-ara1
+أبو زكريا يحيى بن عدي
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+أبو الحسن البسيوي
+أبو الحسن البسيوي
+أبو سعيد الكدمي
+أبو سعيد الكدمي
+أبو سعيد الكدمي
+أبو سعيد الكدمي
+أبو سعد الآبي
+أبو سعد الآبي
+إبن سوار
+خير الدين إبن إليس
+يحيى بن البطريق
+يحيى بن البطريق
+يحيى بن البطريق
+إبن رضوان
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+شيخعمي سعيد
+عبد القادر بن محمد النعيمي الدمشقي
+عبد القادر بن محمد النعيمي الدمشقي
+منصور الكهروصي
+عبد المسيح الناعمي
+(مؤلف مجهول)
+إبن أبي نبهان الكهروصي
+إبن أبي نبهان الكهروصي
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+أبو العباس النيريزي
+أبو العباس النيريزي
+أبو العباس النيريزي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو الحواري الأعمى
+أسطاث (eستتهس)
+محمد إبن إسحاق الفاكهي
+محمد إبن إسحاق الفاكهي
+(مترجم مجهول)
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+ثيادورس إبن بسيل
+إصطفن إبن بسيل
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+(مترجم مجهول)
+قسطا بن لوقا
+قسطا بن لوقا
+قسطا بن لوقا
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن شهدا الكرخي
+إبن شهدا الكرخي
+إسحاق بن علي الرهاوي
+عيسى بن يحيى
+عيسى بن يحيى
+عيسى بن يحيى
+ثابت إبن قرة
+ثابت إبن قرة
+ثابت إبن قرة
+أحمد الدرجيني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+(مترجم مجهول)
+الرماني
+الرماني
+الرماني
+الرماني
+الرماني
+إبن زرع
+================================================================================
+COLLECTING INTO A CSV FILE (7725 LINES)...
+================================================================================
+Processing time: 1607.77 sec
+================================================================================
+Collecting issues from GitHub...
+logged in
+issue labels in this repo:
+   Label(name="Development")
+   Label(name="PRI & SEC Versions")
+   Label(name="URI change suggestion")
+   Label(name="discrepancies")
+   Label(name="in progress")
+   Label(name="no edition found")
+   Label(name="review finished")
+   Label(name="text quality")
+   Label(name="text tagged")
+   Label(name="urgent")
+getting relevant issues from GitHub...
+GitHub fetching time: 3.99 sec
+================================================================================
+Saving metadata...
+================================================================================
+Tada!
+Total processing time: 1611.77 sec
