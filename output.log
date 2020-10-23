@@ -17134,3 +17134,181 @@ URI in yml file wrong! XXXShuhra.IsmKitab (autoupdated) != 0354IbnCabdJabbarNiff
 URI in yml file wrong! XXXShuhra.IsmKitab (autoupdated) != 0750IbnLuyunTujibi.InalaCilmiyya
 URI in yml file wrong! XXXShuhra (autoupdated) != 0750IbnLuyunTujibi
 ../../OpenITI/Github_clone/0400AH/data/0400KatibMajhul/0400KatibMajhul.AlladhiFarisWaRajil/0400KatibMajhul.AlladhiFarisWaRajil.NLIAG000190-ara1.yml missing
+[master 462f147] output generated
+ 1 file changed, 155 insertions(+)
+Thu 22 Oct 2020 10:05:39 PM UTC
+*****************************END***********************************
+*****************************END***********************************
+******************************START**********************************
+******************************START**********************************
+Fri 23 Oct 2020 09:35:02 PM UTC
+/home/admin-kitab/Documents/OpenITI/Github_clone
+Resetting local changes ...
+HEAD is now at 1fdf36f Added new files from Barzakh
+HEAD is now at 9de487e Added new files from Barzakh
+HEAD is now at 4740286 ms update
+HEAD is now at 5670aaa Added new files from Barzakh
+HEAD is now at 67ff030 Added new files from Barzakh
+HEAD is now at 1ca1a01 Added new files from Barzakh
+HEAD is now at b5ec898 Added new files from Barzakh
+HEAD is now at 05b2579 Added new files from Barzakh
+HEAD is now at 03cf697 Added new files from Barzakh
+HEAD is now at 5649340 Added new files from Barzakh
+HEAD is now at 6166c89 Added new files from Barzakh
+HEAD is now at 0c89ab3 Added new files from Barzakh
+HEAD is now at e0105df ms update
+HEAD is now at 570b41f Added new files from Barzakh
+HEAD is now at 0b57f1b Added new files from Barzakh
+HEAD is now at 117a73e Added new files from Barzakh
+HEAD is now at e21c903 Added new files from Barzakh
+HEAD is now at fba45f2 Added new files from Barzakh
+HEAD is now at 03a28a2 Added new files from Barzakh
+HEAD is now at 455727b Added new files from Barzakh
+HEAD is now at da7cba4 Added new files from Barzakh
+HEAD is now at a3a6184 Added new files from Barzakh
+HEAD is now at 98f99af Added new files from Barzakh
+HEAD is now at 0f48a2b Added new files from Barzakh
+HEAD is now at 603eacc Added new files from Barzakh
+HEAD is now at 2073ace Added new files from Barzakh
+HEAD is now at 2c7ea36 Added new files from Barzakh
+HEAD is now at f37720f Added new files from Barzakh
+HEAD is now at 93fbff5 Added new files from Barzakh
+HEAD is now at 2976ba5 Added new files from Barzakh
+HEAD is now at cd59245 Added new files from Barzakh
+HEAD is now at f69073b ms update
+HEAD is now at 29c3296 Added new files from Barzakh
+HEAD is now at 0f23144 Added new files from Barzakh
+HEAD is now at cf9cf6a Added new files from Barzakh
+HEAD is now at fc252ac Added new files from Barzakh
+HEAD is now at c14068c ms update
+HEAD is now at a10bbf5 ms update
+HEAD is now at 4f1bec3 correction to transciption: tārīkh > tārīḫ
+HEAD is now at a0dd9ea Added new files from Barzakh
+HEAD is now at ef08040 Added new files from Barzakh
+HEAD is now at c37921f Added new files from Barzakh
+HEAD is now at 76c122a Added new files from Barzakh
+HEAD is now at 408b5f9 Added new files from Barzakh
+HEAD is now at adc7227 yml updates
+HEAD is now at a676307 Added new files from Barzakh
+HEAD is now at 90399ea ms update
+HEAD is now at 7b711fe ms update
+HEAD is now at 54fa6fc ms update
+HEAD is now at a333c60 ms update
+HEAD is now at 42a23de Added new files from Barzakh
+HEAD is now at 2ec9a18 Added new files from Barzakh
+HEAD is now at ca90ea6 Added new files from Barzakh
+HEAD is now at 6c83d46 Added new files from Barzakh
+HEAD is now at f9b8846 ms update
+HEAD is now at 39b4059 Added new files from Barzakh
+HEAD is now at 246ef3c Added new files from Barzakh
+HEAD is now at 15a1c8d Added new files from Barzakh
+HEAD is now at 5fb066d ms update
+HEAD is now at 03a101a ms update
+HEAD is now at a27b68b ms updated, few metadata fixes
+Fetching changes from corpus ...
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Updating 15a1c8d..d94d939
+Fast-forward
+ ...354HasanSadr.Takmila.Shia002979-ara1.completed} |  920 ++--
+ .../1354HasanSadr.Takmila.Shia002979-ara1.yml      |   18 +-
+ ...albasi.SamaMaqal.Shia002980Vols-ara1.completed} |  405 +-
+ ...buHudaKalbasi.SamaMaqal.Shia002980Vols-ara1.yml |   18 +-
+ ...CabbasQummi.Kuna.Shia003764Vols-ara1.completed} | 3064 ++++++------
+ .../1359CabbasQummi.Kuna.Shia003764Vols-ara1.yml   |   18 +-
+ ...khluf.ShajaraNur.Shamela9007669-ara1.completed} | 5079 ++++++++++----------
+ ...QasimMakhluf.ShajaraNur.Shamela9007669-ara1.yml |   18 +-
+ ...n.MustadrakatAcyanShica.Shia003634Vols-ara1.yml |   14 +-
+ ...amili.AcyanShica.Shia003636Vols-ara1.inProgress | 3384 ++++++++-----
+ ...dCali.KhitatSham.Shamela0037063-ara1.completed} | 2731 ++++++-----
+ ...1372KurdCali.KhitatSham.Shamela0037063-ara1.yml |   18 +-
+ 12 files changed, 8512 insertions(+), 7175 deletions(-)
+ rename data/1354HasanSadr/1354HasanSadr.Takmila/{1354HasanSadr.Takmila.Shia002979-ara1 => 1354HasanSadr.Takmila.Shia002979-ara1.completed} (93%)
+ mode change 100755 => 100644
+ rename data/1356AbuHudaKalbasi/1356AbuHudaKalbasi.SamaMaqal/{1356AbuHudaKalbasi.SamaMaqal.Shia002980Vols-ara1 => 1356AbuHudaKalbasi.SamaMaqal.Shia002980Vols-ara1.completed} (99%)
+ mode change 100755 => 100644
+ rename data/1359CabbasQummi/1359CabbasQummi.Kuna/{1359CabbasQummi.Kuna.Shia003764Vols-ara1 => 1359CabbasQummi.Kuna.Shia003764Vols-ara1.completed} (94%)
+ mode change 100755 => 100644
+ rename data/1360IbnQasimMakhluf/1360IbnQasimMakhluf.ShajaraNur/{1360IbnQasimMakhluf.ShajaraNur.Shamela9007669-ara1 => 1360IbnQasimMakhluf.ShajaraNur.Shamela9007669-ara1.completed} (98%)
+ rename data/1372KurdCali/1372KurdCali.KhitatSham/{1372KurdCali.KhitatSham.Shamela0037063-ara1 => 1372KurdCali.KhitatSham.Shamela0037063-ara1.completed} (98%)
+ mode change 100755 => 100644
+/home/admin-kitab/Documents/Projects/kitab-metadata-automation
+Generating corpus metadata  ...
+config ./utility/config-automated-do-not-remove-or-change.py
+corpus_path ../../OpenITI/Github_clone
+exclude ['OpenITI.github.io', 'Annotation', 'maintenance', 'i.mech00', 'i.mech01', 'i.mech02', 'i.mech03', 'i.mech04', 'i.mech05', 'i.mech06', 'i.mech07', 'i.mech08', 'i.mech09', 'i.logic', 'i.cex', 'i.cex_Temp', 'i.mech', 'i.mech_Temp', '.git']
+data_in_25_year_repos True
+perform_yml_check True
+check_token_counts True
+incl_char_length True
+output_path ./output/
+meta_tsv_fp ./output/OpenITI_Github_clone_metadata_light.csv
+meta_yml_fp ./output/OpenITI_Github_clone_metadata_complete.yml
+meta_json_fp ./output/OpenITI_Github_clone_metadata_light.json
+meta_header_fp ./output/OpenITI_Github_clone_header_metadata.json
+silent True
+Checking yml files before collecting metadata...
+URI in yml file wrong! XXXShuhra.IsmKitab (autoupdated) != 0341MansurBiAllah.TathbitImama
+URI in yml file wrong! XXXShuhra (autoupdated) != 0341MansurBiAllah
+URI in yml file wrong! XXXShuhra.IsmKitab (autoupdated) != 0354IbnCabdJabbarNiffari.MawqifMawaqif
+URI in yml file wrong! XXXShuhra.IsmKitab (autoupdated) != 0750IbnLuyunTujibi.InalaCilmiyya
+URI in yml file wrong! XXXShuhra (autoupdated) != 0750IbnLuyunTujibi
+../../OpenITI/Github_clone/0400AH/data/0400KatibMajhul/0400KatibMajhul.AlladhiFarisWaRajil/0400KatibMajhul.AlladhiFarisWaRajil.NLIAG000190-ara1.yml missing
