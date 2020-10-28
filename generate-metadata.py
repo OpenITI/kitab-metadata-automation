@@ -388,15 +388,20 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 uri = URI(os.path.join(root, file))
 
                 # build the filepaths to all yml files related
-                # to the current version yml file: 
+                # to the current version yml file:
                 if not flat_folder:
-                    versF = uri.build_pth(uri_type="version_yml")
-                    bookF = uri.build_pth(uri_type="book_yml")
-                    authF = uri.build_pth(uri_type="author_yml")
+                    #versF = uri.build_pth(uri_type="version_yml")
+                    #bookF = uri.build_pth(uri_type="book_yml")
+                    #authF = uri.build_pth(uri_type="author_yml")
+                    auth_folder = os.path.dirname(root)
                 else:
-                    versF = os.path.join(root, file)
-                    bookF = os.path.join(root, uri.build_uri(uri_type="book")+".yml")
-                    authF = os.path.join(root, uri.build_uri(uri_type="author")+".yml")
+                    #versF = os.path.join(root, file)
+                    #bookF = os.path.join(root, uri.build_uri(uri_type="book")+".yml")
+                    #authF = os.path.join(root, uri.build_uri(uri_type="author")+".yml")
+                    auth_folder = root
+                versF = os.path.join(root, file)
+                bookF = os.path.join(root, uri.build_uri(uri_type="book")+".yml")
+                authF = os.path.join(auth_folder, uri.build_uri(uri_type="author")+".yml")
                 #print("versF:", versF)
                 #print("bookF:", bookF)
                 #print("authF:", authF)
@@ -449,7 +454,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 ed_info = []
                 if not versD["80#VERS#BASED####:"].strip().startswith("perma")\
                    and not versD["80#VERS#BASED####:"].strip().startswith("NO"):
-                    ed_info = [versD["80#VERS#BASED####:"].strip(), ]                    
+                    ed_info = [versD["80#VERS#BASED####:"].strip(), ]
 
                 # - title:
 ##                bookD = zfunc.readYML(bookF)
@@ -467,8 +472,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                             title_ar.append(betaCodeToArSimple(title_lat[-1]))
                 except:
                     print("No book yml file found")
-                    
-                        
+
+ 
                 # - author:
 ##                authD = zfunc.readYML(authF)
                 shuhra = ""
@@ -487,7 +492,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     full_name = " ".join(full_name)
                 except:
                     print("No author yml file found")
-                    
+
 
                 # 2) from the URI: 
 
@@ -825,7 +830,6 @@ def supplement_config_variables(cfg_dict, v_list):
     for v in v_list:
         if v not in cfg_dict:
             cfg_dict[v] = None
-            
 
 def read_config(config_pth):
     """Read the config file into a dictionary
@@ -952,7 +956,7 @@ Command line arguments for generate-metadata.py:
               "meta_tsv_fp", "meta_yml_fp", "meta_json_fp", "meta_header_fp",
               "passim_runs", "silent", "split_ar_lat"]
     supplement_config_variables(cfg_dict, v_list)
-    
+
     corpus_path = cfg_dict["corpus_path"]
     exclude = cfg_dict["exclude"]
     data_in_25_year_repos = cfg_dict["data_in_25_year_repos"]
@@ -1016,12 +1020,12 @@ Command line arguments for generate-metadata.py:
             print("exclude", exclude)
 
     # 0c- deal with variables that remain undefined:
-    
+ 
     if not corpus_path:
         msg = "Insert the path to the parent folder of the repos: "
         corpus_path = input(msg)
         print("Metadata will be collected in", corpus_path)
-    
+ 
     flat_folder = False
     if data_in_25_year_repos == None:
 ##        print("Is the data in 25-years folders? (press 'N' for RELEASE data)")
@@ -1053,7 +1057,7 @@ Command line arguments for generate-metadata.py:
                 check_token_counts = True
             else:
                 check_token_counts = False
-        
+ 
     if incl_char_length == None:
 ##        print("Do you want to include character count in addition to token count?")
 ##        resp = input("Y/N: ")
