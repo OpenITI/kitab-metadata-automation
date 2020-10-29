@@ -18545,3 +18545,13 @@ No author yml file found
 الخطيب البغدادي
 ../../OpenITI/Github_clone/0875AH/data/0852IbnHajarCasqalani/0852IbnHajarCasqalani.InbaGhumr/0852IbnHajarCasqalani.InbaGhumr.Shamela0026317-ara1.yml
 ('../../OpenITI/Github_clone/0875AH/data/0852IbnHajarCasqalani/0852IbnHajarCasqalani.InbaGhumr/0852IbnHajarCasqalani.InbaGhumr.Shamela0026317-ara1.yml', 'no valid yml key in line', '\xa0 \xa0 entries, and I have also numbered them consistently w/ the printed edition')
+[master 5e79056] output generated
+ 7 files changed, 1931 insertions(+), 16 deletions(-)
+ create mode 100644 output/test_header_metadata.json
+ create mode 100644 output/test_metadata_complete.yml
+ create mode 100644 output/test_metadata_light.csv
+ create mode 100644 output/test_metadata_light.json
+ create mode 100644 output/test_split_files.json
+Wed 28 Oct 2020 10:05:50 PM UTC
+*****************************END***********************************
+*****************************END***********************************
