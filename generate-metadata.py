@@ -576,12 +576,16 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
 
                 # - build the path to the full text file on Github:
+                #print(local_pth)
                 if URI.data_in_25_year_repos:
                     uri.base_pth = "https://raw.githubusercontent.com/OpenITI"
-                    fullTextURL = re.sub("data/", "master/data/", uri.build_pth("version_file"))
+                    #fullTextURL = re.sub("data/", "master/data/", uri.build_pth("version_file"))
+                    fullTextURL = re.sub("data/", "master/data/", local_pth) 
                 else:
                     uri.base_pth = "data"
-                    fullTextURL = uri.build_pth("version_file")
+                    #fullTextURL = uri.build_pth("version_file")
+                    fullTextURL = re.sub(".+?/data/", "data/", local_pth)
+                #print(fullTextURL)
 
                 # - tags (for extension + "genres")
                 tags = ""
@@ -594,8 +598,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
                 # 3) collect additional metadata (mostly in Arabic!)
                 #    from the text file headers:
-                
-                
+
                 if not os.path.exists(local_pth):
                     print("MISSING FILE? {} does not exist".format(local_pth))
                 else:
@@ -638,14 +641,13 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                         for t in el.split(" :: "):
                             if coll_id+"@"+t not in tags:
                                 tags.append(coll_id+"@"+t)
-                    
 
                     # if there are multiple values: separate with " :: ":
 ##                    cats = [author, title, ed_info, tags]
 ##                    author, title, ed_info, tags = [" :: ".join(x) for x in cats]
                     cats = [author_ar, author_lat, title_ar, title_lat, ed_info, tags]
                     author_ar, author_lat, title_ar, title_lat, ed_info, tags = [" :: ".join(x) for x in cats]
-                    
+
                     # compile the data in a tsv line and store in dataCSV dict:
                     if not split_ar_lat:
                         title = " :: ".join([title_lat, title_ar])
@@ -710,24 +712,29 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
         file_length = 0
         file_clength = 0
         for part in split_files[file]:
-            # make each part a primary version: 
+            # make each part a primary version:
             dataCSV[part] = dataCSV[part].replace("\tsec\t", "\tpri\t")
             # collect the token and character length from each part
             file_length += int(dataCSV[part].split("\t")[h.index("tok_length")])
             if incl_char_length:
                 file_clength += int(dataCSV[part].split("\t")[-1])
-        # add an extra line to the csv data with metadata of the compound file: 
+        # add an extra line to the csv data with metadata of the compound file:
         file_csv_line = dataCSV[first_part].split("\t")
         file_csv_line[h.index("versionUri")] = file
-        file_csv_line[h.index("id")] = re.sub("Vols[A-Z]", "", file_csv_line[h.index("id")])
+        #file_csv_line[h.index("id")] = re.sub("Vols[A-Z]", "", file_csv_line[h.index("id")])
+        file_csv_line[h.index("id")] = file_csv_line[h.index("id")][:-1]
         file_csv_line[h.index("status")] = "sec"
         file_csv_line[h.index("tok_length")] = str(file_length)
-        file_csv_line[h.index("url")] = re.sub("Vols[A-Z]", "",
+        print(file_csv_line[h.index("url")])
+        #file_csv_line[h.index("url")] = re.sub("Vols[A-Z]", "",
+        file_csv_line[h.index("url")] = re.sub("[A-Z](-[a-z]{3}\d)", r"\1",
                                                file_csv_line[h.index("url")]) # fullTextURL
+        print(file_csv_line[h.index("url")])
+        print("---")
         if incl_char_length:
             file_csv_line[-1] = str(file_clength)
         file_csv_line = "\t".join(file_csv_line)
-        dataCSV[file] = file_csv_line      
+        dataCSV[file] = file_csv_line
 
     # Sort the tsv data and save it to file: 
     dataCSV_New = []

@@ -1,4 +1,4 @@
-corpus_path = "../RELEASE/data_temp"
+corpus_path = "../../OpenITI/RELEASE_git/RELEASE/data"
 exclude = (["OpenITI.github.io", "Annotation", "maintenance", "i.mech00",
             "i.mech01", "i.mech02", "i.mech03", "i.mech04", "i.mech05",
             "i.mech06", "i.mech07", "i.mech08", "i.mech09", "i.logic",
