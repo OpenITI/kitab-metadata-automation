@@ -65650,3 +65650,1306 @@ Saving metadata...
 ================================================================================
 Tada!
 Total processing time: 2163.51 sec
+[master 2ff807b] output generated
+ 3 files changed, 3782 insertions(+), 2909 deletions(-)
+Sun 13 Dec 2020 10:11:17 PM UTC
+*****************************END***********************************
+*****************************END***********************************
+******************************START**********************************
+******************************START**********************************
+Mon 14 Dec 2020 09:35:02 PM UTC
+/home/admin-kitab/Documents/OpenITI/Github_clone
+Resetting local changes ...
+HEAD is now at 42508b3 Add new texts from barzakh
+HEAD is now at f38639a Merge pull request #3 from Simonpeterloynes/master
+HEAD is now at 8f8d2ea Add new texts from barzakh
+HEAD is now at 76e5223 Add new texts from barzakh
+HEAD is now at 0851eb2 Add new texts from barzakh
+HEAD is now at 1ca1a01 Added new files from Barzakh
+HEAD is now at 0a4fc4a Remove spelling mistakes in transcription
+HEAD is now at 5a5f987 Remove spelling mistakes in transcription
+HEAD is now at 19ea3c3 Add new texts from barzakh
+HEAD is now at 2bb10c1 Add new texts from barzakh
+HEAD is now at 4b6a338 Add new texts from barzakh
+HEAD is now at 6f735a7 Merge pull request #2 from Simonpeterloynes/master
+HEAD is now at d470dc6 Add new texts from barzakh
+HEAD is now at 67aa68f Add new texts from barzakh
+HEAD is now at b62b15c Add new texts from barzakh
+HEAD is now at 01fca95 Merge pull request #18 from hamidrh66/master
+HEAD is now at cd2759c Merge pull request #11 from hamidrh66/master
+HEAD is now at e6f7cdc Merge pull request #10 from hamidrh66/master
+HEAD is now at 3e6e852 Add new texts from barzakh
+HEAD is now at 6e2c60b Merge pull request #17 from hamidrh66/master
+HEAD is now at 3ae97a8 Update 0571IbnCasakir.TarikhDimashq.JK000916-ara1.yml
+HEAD is now at f620d3c Remove test line
+HEAD is now at 38d91d7 Merge pull request #6 from hamidrh66/master
+HEAD is now at 20896fa Merge pull request #6 from hamidrh66/master
+HEAD is now at 31176ff Merge pull request #16 from hamidrh66/master
+HEAD is now at 00ea15b Merge pull request #6 from hamidrh66/master
+HEAD is now at 94ed28d Merge pull request #10 from hamidrh66/master
+HEAD is now at 230ccb3 Merge pull request #12 from Gowaart/master
+HEAD is now at 3c27b0d Merge pull request #4 from Gowaart/master
+HEAD is now at b40f7cd Add new texts from barzakh
+HEAD is now at 6af07fa Add new texts from barzakh
+HEAD is now at 565c72a Add new texts from barzakh
+HEAD is now at ad97996 Add new texts from barzakh
+HEAD is now at 92ff167 Merge pull request #2 from Simonpeterloynes/master
+HEAD is now at 4f5037f Add new texts from barzakh
+HEAD is now at 4feec95 Merge pull request #5 from Simonpeterloynes/master
+HEAD is now at a659798 Merge pull request #2 from Simonpeterloynes/master
+HEAD is now at 6a97e70 Add new texts from barzakh
+HEAD is now at 4222f2b Merge pull request #1 from Simonpeterloynes/master
+HEAD is now at e25dd5b Merge pull request #2 from Simonpeterloynes/master
+HEAD is now at 43af3e5 Add new texts from barzakh
+HEAD is now at a10d548 Add new texts from barzakh
+HEAD is now at 25ee4d0 Add new texts from barzakh
+HEAD is now at 0163809 Add new texts from barzakh
+HEAD is now at a409ba7 Merge pull request #2 from Simonpeterloynes/master
+HEAD is now at c8526f8 Add new texts from barzakh
+HEAD is now at 238394e Add new texts from barzakh
+HEAD is now at 5e71780 Add new texts from barzakh
+HEAD is now at 32c2f5e Merge pull request #4 from hamidrh66/master
+HEAD is now at d793506 Add new texts from barzakh
+HEAD is now at f9e04ef Add new texts from barzakh
+HEAD is now at f9b8846 ms update
+HEAD is now at a27b68b ms updated, few metadata fixes
+HEAD is now at 0c93294 Add new texts from barzakh
+HEAD is now at 5fb066d ms update
+HEAD is now at 5a466db Add new texts from barzakh
+HEAD is now at bf76907 Correct transcription mistakes
+HEAD is now at 85e3137 tag numbered books
+HEAD is now at 630a507 new folder structure
+HEAD is now at d424c05 Add new texts from barzakh
+HEAD is now at 0251008 Merge pull request #1 from hamidrh66/master
+HEAD is now at bc7ee3e Merge pull request #3 from hamidrh66/master
+Fetching changes from corpus ...
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Updating 0a4fc4a..95be26d
+Fast-forward
+ ...dusi.HadhfMinNasabQuraysh.Shamela0000496-ara1.markdown} |  0
+ ...rrijSadusi.HadhfMinNasabQuraysh.Shamela0000496-ara1.yml |  2 +-
+ .../0195MuarrijSadusi.HadhfMinNasabQuraysh.yml             |  4 ++--
+ data/0195MuarrijSadusi/0195MuarrijSadusi.yml               | 14 +++++++-------
+ 4 files changed, 10 insertions(+), 10 deletions(-)
+ rename data/0195MuarrijSadusi/0195MuarrijSadusi.HadhfMinNasabQuraysh/{0195MuarrijSadusi.HadhfMinNasabQuraysh.Shamela0000496-ara1.completed => 0195MuarrijSadusi.HadhfMinNasabQuraysh.Shamela0000496-ara1.markdown} (100%)
+Updating 1ca1a01..05a29b8
+Fast-forward
+Updating 19ea3c3..24aae7b
+Fast-forward
+ data/0241IbnHanbal/0241IbnHanbal.yml | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ ...Basri.FadailMakka.Shamela0005722-ara1.markdown} | 105 +++++++++++----------
+ ...0HasanBasri.FadailMakka.Shamela0005722-ara1.yml |   5 +-
+ .../0110HasanBasri.FadailMakka.yml                 |   4 +-
+ data/0110HasanBasri/0110HasanBasri.yml             |  12 +--
+ 4 files changed, 63 insertions(+), 63 deletions(-)
+ rename data/0110HasanBasri/0110HasanBasri.FadailMakka/{0110HasanBasri.FadailMakka.Shamela0005722-ara1.completed => 0110HasanBasri.FadailMakka.Shamela0005722-ara1.markdown} (94%)
+Updating 76e5223..b026a51
+Fast-forward
+ ... => 0150AbuHanifa.FiqhAbsat.Shamela0006387-ara1.markdown} |  4 ++--
+ .../0150AbuHanifa.FiqhAbsat.Shamela0006387-ara1.yml          |  4 ++--
+ .../0150AbuHanifa.FiqhAbsat/0150AbuHanifa.FiqhAbsat.yml      |  4 ++--
+ ...pleted => 0150AbuHanifa.FiqhAkbar.JK001085-ara1.markdown} |  0
+ .../0150AbuHanifa.FiqhAkbar.JK001085-ara1.yml                |  2 +-
+ .../0150AbuHanifa.FiqhAkbar/0150AbuHanifa.FiqhAkbar.yml      |  4 ++--
+ data/0150AbuHanifa/0150AbuHanifa.yml                         | 12 ++++++------
+ 7 files changed, 15 insertions(+), 15 deletions(-)
+ rename data/0150AbuHanifa/0150AbuHanifa.FiqhAbsat/{0150AbuHanifa.FiqhAbsat.Shamela0006387-ara1.completed => 0150AbuHanifa.FiqhAbsat.Shamela0006387-ara1.markdown} (99%)
+ rename data/0150AbuHanifa/0150AbuHanifa.FiqhAkbar/{0150AbuHanifa.FiqhAkbar.JK001085-ara1.completed => 0150AbuHanifa.FiqhAkbar.JK001085-ara1.markdown} (100%)
+Updating f38639a..5d84f79
+Fast-forward
+Already up to date.
+ ...0151IbnIshaq.Sira.Shamela0009862-ara2.markdown} | 1683 --------------------
+ .../0151IbnIshaq.Sira.Shamela0009862-ara2.yml      |    2 +-
+ .../0151IbnIshaq.Sira/0151IbnIshaq.Sira.yml        |    4 +-
+ data/0151IbnIshaq/0151IbnIshaq.yml                 |   12 +-
+ 4 files changed, 9 insertions(+), 1692 deletions(-)
+ rename data/0151IbnIshaq/0151IbnIshaq.Sira/{0151IbnIshaq.Sira.Shamela0009862-ara2.completed => 0151IbnIshaq.Sira.Shamela0009862-ara2.markdown} (86%)
+Updating 67aa68f..7208e2f
+Fast-forward
+ data/0327IbnAbiHatimRazi/0327IbnAbiHatimRazi.yml   | 8 ++++----
+ data/0329IbnYacqubKulayni/0329IbnYacqubKulayni.yml | 6 +++---
+ 2 files changed, 7 insertions(+), 7 deletions(-)
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Updating f620d3c..c458759
+Fast-forward
+Already up to date.
+ data/0310Tabari/0310Tabari.yml                   | 36 ++++++++++++++++--------
+ data/0313IbnZakariyaRazi/0313IbnZakariyaRazi.yml |  6 ++--
+ 2 files changed, 27 insertions(+), 15 deletions(-)
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Updating 01fca95..d0e98d0
+Fast-forward
+ ...381IbnBabawayh.Muqnic.Shia000003-ara1.completed | 19985 -------------------
+ ...0381IbnBabawayh.Muqnic.Shia000003-ara1.mARkdown |  5449 +++++
+ .../0381IbnBabawayh.Muqnic.Shia000003-ara1.yml     |    13 +-
+ .../0381IbnBabawayh.Muqnic.yml                     |     4 +-
+ data/0381IbnBabawayh/0381IbnBabawayh.yml           |    27 +-
+ 5 files changed, 5470 insertions(+), 20008 deletions(-)
+ delete mode 100644 data/0381IbnBabawayh/0381IbnBabawayh.Muqnic/0381IbnBabawayh.Muqnic.Shia000003-ara1.completed
+ create mode 100644 data/0381IbnBabawayh/0381IbnBabawayh.Muqnic/0381IbnBabawayh.Muqnic.Shia000003-ara1.mARkdown
+Already up to date.
+Already up to date.
+Already up to date.
+Updating b62b15c..0b930a9
+Fast-forward
+Already up to date.
+Already up to date.
+Already up to date.
+ data/0279Baladhuri/0279Baladhuri.yml               |     8 +-
+ ...rrad.KamilFiLugha.Shamela0008505-ara1.mARkdown} | 13787 +++++++++----------
+ ...idMubarrad.KamilFiLugha.Shamela0008505-ara1.yml |    15 +-
+ .../0285IbnYazidMubarrad.KamilFiLugha.yml          |     4 +-
+ ...Mubarrad.Muqtadab.Shamela0006965-ara1.mARkdown} |  6030 ++++----
+ ...nYazidMubarrad.Muqtadab.Shamela0006965-ara1.yml |     9 +-
+ .../0285IbnYazidMubarrad.Muqtadab.yml              |     4 +-
+ data/0285IbnYazidMubarrad/0285IbnYazidMubarrad.yml |    25 +-
+ 8 files changed, 9926 insertions(+), 9956 deletions(-)
+ rename data/0285IbnYazidMubarrad/0285IbnYazidMubarrad.KamilFiLugha/{0285IbnYazidMubarrad.KamilFiLugha.Shamela0008505-ara1.completed => 0285IbnYazidMubarrad.KamilFiLugha.Shamela0008505-ara1.mARkdown} (74%)
+ rename data/0285IbnYazidMubarrad/0285IbnYazidMubarrad.Muqtadab/{0285IbnYazidMubarrad.Muqtadab.Shamela0006965-ara1.completed => 0285IbnYazidMubarrad.Muqtadab.Shamela0006965-ara1.mARkdown} (90%)
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Updating 43af3e5..32c719c
+Fast-forward
+ ...Karabisi.IklilManhaj.Shia002959-ara1.completed} | 3299 ++++++++++----------
+ ...uhammadKarabisi.IklilManhaj.Shia002959-ara1.yml |   18 +-
+ 2 files changed, 1733 insertions(+), 1584 deletions(-)
+ rename data/1175MuhammadKarabisi/1175MuhammadKarabisi.IklilManhaj/{1175MuhammadKarabisi.IklilManhaj.Shia002959-ara1 => 1175MuhammadKarabisi.IklilManhaj.Shia002959-ara1.completed} (91%)
+ mode change 100755 => 100644
+Updating 0c93294..b480132
+Fast-forward
+ ...aynKunturi.KashfHajb.Shia003358-ara1.completed} | 9788 +++++++++++++-------
+ ...cjazHusaynKunturi.KashfHajb.Shia003358-ara1.yml |   18 +-
+ ...razi.FawaidRijaliyya.Shia002968-ara1.completed} |  448 +-
+ ...juriShirazi.FawaidRijaliyya.Shia002968-ara1.yml |   18 +-
+ 4 files changed, 6535 insertions(+), 3737 deletions(-)
+ rename data/1286IcjazHusaynKunturi/1286IcjazHusaynKunturi.KashfHajb/{1286IcjazHusaynKunturi.KashfHajb.Shia003358-ara1 => 1286IcjazHusaynKunturi.KashfHajb.Shia003358-ara1.completed} (74%)
+ mode change 100755 => 100644
+ rename data/1293MahdiKujuriShirazi/1293MahdiKujuriShirazi.FawaidRijaliyya/{1293MahdiKujuriShirazi.FawaidRijaliyya.Shia002968-ara1 => 1293MahdiKujuriShirazi.FawaidRijaliyya.Shia002968-ara1.completed} (96%)
+ mode change 100755 => 100644
+Already up to date.
+Updating 0251008..89c8fcc
+Fast-forward
+ ...shaBaghdadi.IdahMaknun.JK000845-ara1.completed} | 45013 +++++++++++--------
+ ...macilBashaBaghdadi.IdahMaknun.JK000845-ara1.yml |    18 +-
+ 2 files changed, 25899 insertions(+), 19132 deletions(-)
+ rename data/1339IsmacilBashaBaghdadi/1339IsmacilBashaBaghdadi.IdahMaknun/{1339IsmacilBashaBaghdadi.IdahMaknun.JK000845-ara1 => 1339IsmacilBashaBaghdadi.IdahMaknun.JK000845-ara1.completed} (57%)
+ mode change 100755 => 100644
+Already up to date.
+Already up to date.
+Already up to date.
+Updating 5a466db..1cb766c
+Fast-forward
+Updating e25dd5b..ca1516c
+Fast-forward
+Updating bc7ee3e..57f5dbd
+Fast-forward
+ ...umari.RawdaFayha.Shamela0005455-ara1.completed} |  474 ++--
+ ...KhatibCumari.RawdaFayha.Shamela0005455-ara1.yml |   18 +-
+ ...237Jabarti.CajaibAthar.JK000394-ara1.completed} | 2760 +++++++++++---------
+ .../1237Jabarti.CajaibAthar.JK000394-ara1.yml      |   18 +-
+ ...CaliShawkani.BadrTalic.JK000998-ara1.completed} | 1351 +++++-----
+ ...1250IbnCaliShawkani.BadrTalic.JK000998-ara1.yml |   18 +-
+ 6 files changed, 2343 insertions(+), 2296 deletions(-)
+ rename data/1232IbnKhatibCumari/1232IbnKhatibCumari.RawdaFayha/{1232IbnKhatibCumari.RawdaFayha.Shamela0005455-ara1 => 1232IbnKhatibCumari.RawdaFayha.Shamela0005455-ara1.completed} (98%)
+ mode change 100755 => 100644
+ rename data/1237Jabarti/1237Jabarti.CajaibAthar/{1237Jabarti.CajaibAthar.JK000394-ara1 => 1237Jabarti.CajaibAthar.JK000394-ara1.completed} (97%)
+ mode change 100755 => 100644
+ rename data/1250IbnCaliShawkani/1250IbnCaliShawkani.BadrTalic/{1250IbnCaliShawkani.BadrTalic.JK000998-ara1 => 1250IbnCaliShawkani.BadrTalic.JK000998-ara1.completed} (96%)
+ mode change 100755 => 100644
+ ...11Suyuti.AlfiyaFiCilmHadith.Shamela0010483-ara1 | 3102 ++++------
+ ...yuti.AlfiyaFiCilmHadith.Shamela0010483-ara1.yml |   18 +-
+ ...uyuti.BughyaWucat.Shamela0006744-ara1.mARkdown} | 6002 ++++++++++----------
+ .../0911Suyuti.BughyaWucat.Shamela0006744-ara1.yml |   16 +-
+ .../0911Suyuti.BughyaWucat.yml                     |    4 +-
+ data/0911Suyuti/0911Suyuti.yml                     |   27 +-
+ 6 files changed, 4080 insertions(+), 5089 deletions(-)
+ rename data/0911Suyuti/0911Suyuti.BughyaWucat/{0911Suyuti.BughyaWucat.Shamela0006744-ara1.completed => 0911Suyuti.BughyaWucat.Shamela0006744-ara1.mARkdown} (90%)
+Updating f9e04ef..e3187ec
+Fast-forward
+ ...aliKanni.TawdihMaqal.Shia002969-ara1.completed} |  334 ++--
+ ...6MullaCaliKanni.TawdihMaqal.Shia002969-ara1.yml |   18 +-
+ ...307Qannawji.AbjadCulum.JK000676-ara1.completed} | 1652 ++++++++++----------
+ .../1307Qannawji.AbjadCulum.JK000676-ara1.yml      |   18 +-
+ ...wji.HittaFiDhikr.Shamela0010717-ara1.completed} |  193 +--
+ ...07Qannawji.HittaFiDhikr.Shamela0010717-ara1.yml |   18 +-
+ 6 files changed, 1197 insertions(+), 1036 deletions(-)
+ rename data/1306MullaCaliKanni/1306MullaCaliKanni.TawdihMaqal/{1306MullaCaliKanni.TawdihMaqal.Shia002969-ara1 => 1306MullaCaliKanni.TawdihMaqal.Shia002969-ara1.completed} (98%)
+ mode change 100755 => 100644
+ rename data/1307Qannawji/1307Qannawji.AbjadCulum/{1307Qannawji.AbjadCulum.JK000676-ara1 => 1307Qannawji.AbjadCulum.JK000676-ara1.completed} (98%)
+ mode change 100755 => 100644
+ rename data/1307Qannawji/1307Qannawji.HittaFiDhikr/{1307Qannawji.HittaFiDhikr.Shamela0010717-ara1 => 1307Qannawji.HittaFiDhikr.Shamela0010717-ara1.completed} (99%)
+ mode change 100755 => 100644
+ ...m.FawaidRijaliya.Shia002964Vols-ara1.completed} | 486 ++++++++++++---------
+ ...ahrCulum.FawaidRijaliya.Shia002964Vols-ara1.yml |  18 +-
+ ...ahani.FawaidRijaliya.Shia002961-ara1.completed} |  29 +-
+ ...hidBahbahani.FawaidRijaliya.Shia002961-ara1.yml |  18 +-
+ ...ulani.QatfThamar.Shamela0010730-ara1.completed} |  21 +-
+ ...8SalihFulani.QatfThamar.Shamela0010730-ara1.yml |  18 +-
+ 6 files changed, 323 insertions(+), 267 deletions(-)
+ rename data/1212BahrCulum/1212BahrCulum.FawaidRijaliya/{1212BahrCulum.FawaidRijaliya.Shia002964Vols-ara1 => 1212BahrCulum.FawaidRijaliya.Shia002964Vols-ara1.completed} (99%)
+ mode change 100755 => 100644
+ rename data/1212WahidBahbahani/1212WahidBahbahani.FawaidRijaliya/{1212WahidBahbahani.FawaidRijaliya.Shia002961-ara1 => 1212WahidBahbahani.FawaidRijaliya.Shia002961-ara1.completed} (99%)
+ mode change 100755 => 100644
+ rename data/1218SalihFulani/1218SalihFulani.QatfThamar/{1218SalihFulani.QatfThamar.Shamela0010730-ara1 => 1218SalihFulani.QatfThamar.Shamela0010730-ara1.completed} (99%)
+ mode change 100755 => 100644
+Already up to date.
+Already up to date.
+Updating 85e3137..6e191f3
+Fast-forward
+ ...hazzi.NahrDhahab.Shamela0011788-ara1.completed} | 3642 ++++++++++----------
+ ...HusaynGhazzi.NahrDhahab.Shamela0011788-ara1.yml |   18 +-
+ ...fIlyanSarkis.MucjamMatbucat.Shamela0001242-ara1 | 2708 +++++++++------
+ ...anSarkis.MucjamMatbucat.Shamela0001242-ara1.yml |    3 +-
+ 4 files changed, 3536 insertions(+), 2835 deletions(-)
+ rename data/1351IbnHusaynGhazzi/1351IbnHusaynGhazzi.NahrDhahab/{1351IbnHusaynGhazzi.NahrDhahab.Shamela0011788-ara1 => 1351IbnHusaynGhazzi.NahrDhahab.Shamela0011788-ara1.completed} (97%)
+ mode change 100755 => 100644
+Updating d793506..d564e7a
+Fast-forward
+ ...Casimi.SamtNujum.Shamela0006617-ara1.completed} | 563 ++++++++++-----------
+ ...bdMalikCasimi.SamtNujum.Shamela0006617-ara1.yml |  18 +-
+ 2 files changed, 270 insertions(+), 311 deletions(-)
+ rename data/1269CabdMalikCasimi/1269CabdMalikCasimi.SamtNujum/{1269CabdMalikCasimi.SamtNujum.Shamela0006617-ara1 => 1269CabdMalikCasimi.SamtNujum.Shamela0006617-ara1.completed} (99%)
+ mode change 100755 => 100644
+/home/admin-kitab/Documents/Projects/kitab-metadata-automation
+Generating corpus metadata  ...
+config ./utility/config-automated-do-not-remove-or-change.py
+corpus_path ../../OpenITI/Github_clone
+exclude ['OpenITI.github.io', 'Annotation', 'maintenance', 'i.mech00', 'i.mech01', 'i.mech02', 'i.mech03', 'i.mech04', 'i.mech05', 'i.mech06', 'i.mech07', 'i.mech08', 'i.mech09', 'i.logic', 'i.cex', 'i.cex_Temp', 'i.mech', 'i.mech_Temp', '.git']
+data_in_25_year_repos True
+perform_yml_check True
+check_token_counts True
+incl_char_length True
+output_path ./output/
+meta_tsv_fp ./output/OpenITI_Github_clone_metadata_light.csv
+meta_yml_fp ./output/OpenITI_Github_clone_metadata_complete.yml
+meta_json_fp ./output/OpenITI_Github_clone_metadata_light.json
+meta_header_fp ./output/OpenITI_Github_clone_header_metadata.json
+silent True
+Checking yml files before collecting metadata...
+URI in yml file wrong! 0168MufaddalDabbi.Mufaddaliyat.Shamela0006904-ara1.completed != 0168MufaddalDabbi.Mufaddaliyat.Shamela0006904-ara1
+URI in yml file wrong! XXXShuhra.IsmKitab (autoupdated) != 0341MansurBiAllah.TathbitImama
+URI in yml file wrong! XXXShuhra (autoupdated) != 0341MansurBiAllah
+URI in yml file wrong! XXXShuhra.IsmKitab (autoupdated) != 0354IbnCabdJabbarNiffari.MawqifMawaqif
+URI in yml file wrong!  != 0748Dhahabi.Nubdha.LMN20201019-ara1
+URI in yml file wrong! XXXShuhra.IsmKitab (autoupdated) != 0748Dhahabi.Nubdha
+URI in yml file wrong! XXXShuhra.IsmKitab (autoupdated) != 0750IbnLuyunTujibi.InalaCilmiyya
+URI in yml file wrong! XXXShuhra (autoupdated) != 0750IbnLuyunTujibi
+URI in yml file wrong! 0841BurhanDinSibtIbnCajami.KashfHathith.Shamela0005832-ara1.completed != 0841BurhanDinSibtIbnCajami.KashfHathith.Shamela0005832-ara1
+URI in yml file wrong! 0852IbnHajarCasqalani.TabaqatMudallisin.Shia003340-ara1.completed != 0852IbnHajarCasqalani.TabaqatMudallisin.Shia003340-ara1
+URI in yml file wrong! 0852IbnHajarCasqalani.TacjilManfaca.Shamela0001893-ara1.completed != 0852IbnHajarCasqalani.TacjilManfaca.Shamela0001893-ara1
+URI in yml file wrong! 0852IbnHajarCasqalani.TaghliqTacliq.Shamela0000347-ara1.completed != 0852IbnHajarCasqalani.TaghliqTacliq.Shamela0000347-ara1
+URI in yml file wrong! 0854IbnDiyaMakki.TarikhMakka.Shamela0005539-ara1.completed != 0854IbnDiyaMakki.TarikhMakka.Shamela0005539-ara1
+URI in yml file wrong! 0855BadrDinCayni.CumdatQari.Shamela0005756-ara1.completed != 0855BadrDinCayni.CumdatQari.Shamela0005756-ara1
+URI in yml file wrong! 0855BadrDinCayni.MaghaniAkhyar.Shamela0010452-ara1.completed != 0855BadrDinCayni.MaghaniAkhyar.Shamela0010452-ara1
+URI in yml file wrong! 0874IbnTaghribirdi.MawridLatafa.Shamela0006669-ara1.completed != 0874IbnTaghribirdi.MawridLatafa.Shamela0006669-ara1
+URI in yml file wrong! 0879IbnQutlubugha.TajTarajim.Shamela0010925-ara1.completed != 0879IbnQutlubugha.TajTarajim.Shamela0010925-ara1
+URI in yml file wrong! 0902Sakhawi.DawLamic.JK003608-ara1.completed != 0902Sakhawi.DawLamic.JK003608-ara1
+URI in yml file wrong! 0904Burayhi.TabaqatSulahaYaman.Shamela0006641-ara1.completed != 0904Burayhi.TabaqatSulahaYaman.Shamela0006641-ara1
+URI in yml file wrong! 0905Basrawi.Tarikh.Shamela0006637-ara1.completed != 0905Basrawi.Tarikh.Shamela0006637-ara1
+URI in yml file wrong! 0911Samhudi.KhulasatWafa.Shamela0031372-ara1.completed != 0911Samhudi.KhulasatWafa.Shamela0031372-ara1
+URI in yml file wrong! 0911Samhudi.WafaWafa.Shamela0023695-ara1.completed != 0911Samhudi.WafaWafa.Shamela0023695-ara1
+URI in yml file wrong! 0911Suyuti.AsmaMudallisin.Shamela0000005-ara1.completed != 0911Suyuti.AsmaMudallisin.Shamela0000005-ara1
+URI in yml file wrong! 0911Suyuti.DurrManthur.Shamela0012884-ara1.completed != 0911Suyuti.DurrManthur.Shamela0012884-ara1
+URI in yml file wrong! 0911Suyuti.GhurarFiFadailCumar.Shamela0000193-ara1.completed != 0911Suyuti.GhurarFiFadailCumar.Shamela0000193-ara1
+URI in yml file wrong! 0911Suyuti.HusnMuhadara.Shamela0003283-ara1.completed != 0911Suyuti.HusnMuhadara.Shamela0003283-ara1
+URI in yml file wrong! 0911Suyuti.NazmCiqyan.Shamela0009061-ara1.completed != 0911Suyuti.NazmCiqyan.Shamela0009061-ara1
+URI in yml file wrong! 0911Suyuti.TabaqatMufassirin.Shamela0006234-ara1.completed != 0911Suyuti.TabaqatMufassirin.Shamela0006234-ara1
+URI in yml file wrong! 0921JibrailIbnQulaci.QissatMarNuhra.PES20201020-ara1 != 0921JibrailIbnQilaci.QissatMarNuhra.PES20201020-ara1
+URI in yml file wrong! 0922IbnShaykhTarabulusi.IscafAwqaf.Shamela0096262-ara1.completed != 0922IbnShaykhTarabulusi.IscafAwqaf.Shamela0096262-ara1
+URI in yml file wrong! 0929IbnKayyal.KawakibNayyirat.Shamela0000309-ara1.completed != 0929IbnKayyal.KawakibNayyirat.Shamela0000309-ara1
+URI in yml file wrong! 0938IbnCaliBalawi.Thabat.Shamela0010736-ara1.completed != 0938IbnCaliBalawi.Thabat.Shamela0010736-ara1
+URI in yml file wrong! 0945ShamsDinDawudi.TabaqatMufassirin.Shamela0027084-ara1.completed != 0945ShamsDinDawudi.TabaqatMufassirin.Shamela0027084-ara1
+URI in yml file wrong! 0953IbnTulun.MufakahaKhillan.Shamela0026578-ara1.completed != 0953IbnTulun.MufakahaKhillan.Shamela0026578-ara1
+URI in yml file wrong! 0968Tashkubruizadah.ShaqaiqNucmaniyya.Shamela0006723-ara1.completed != 0968Tashkubruizadah.ShaqaiqNucmaniyya.Shamela0006723-ara1
+URI in yml file wrong! 1041Maqqari.AzharRiyad.Shamela0026350-ara1.completed != 1041Maqqari.AzharRiyad.Shamela0026350-ara1
+URI in yml file wrong! 1051Cimadi.RawdaRayya.Shamela0005864-ara1.completed != 1051Cimadi.RawdaRayya.Shamela0005864-ara1
+URI in yml file wrong! 1069ShihabDinKhafaji.RayhanaAlibba.Shamela0001522-ara1.completed != 1069ShihabDinKhafaji.RayhanaAlibba.Shamela0001522-ara1
+URI in yml file wrong! 1070MuhammadKibrit.RihlaShita.Shamela0037345-ara1.completed != 1070MuhammadKibrit.RihlaShita.Shamela0037345-ara1
+Token count must be changed in 75 files
+
+replacing token count in 75 files
+No missing yml files.
+
+The following files could have problems with their URI:
+
+     .Rhistory
+     0110HasanBasri.FadailMakka.Shamela0005722-ara1.markdown
+     0150AbuHanifa.FiqhAbsat.Shamela0006387-ara1.markdown
+     0150AbuHanifa.FiqhAkbar.JK001085-ara1.markdown
+     0151IbnIshaq.Sira.Shamela0009862-ara2.markdown
+     0195MuarrijSadusi.HadhfMinNasabQuraysh.Shamela0000496-ara1.markdown
+     0310Tabari.JamicBayan.Shamela0007798-ara1.inProgress_mARkdownSimple
+     0310Tabari.JamicBayan.Shamela0007798-ara1.notes
+     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple
+     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple.IDs
+     1408CumarKahhala.MucjamQabail.Shamela0012402-ara1.inprogress
+     Bayrut_1995_001.pdff
+     Bayrut_1995_002.pdff
+     Bayrut_1995_003.pdff
+     Bayrut_1995_004.pdff
+     OpenITI-9001AH_metadata_2020-2-3.csv
+     OpenITI_metadata_2020-2-3_wNoor.csv
+     OpenITI_metadata_2020-2-3_wNoor_merged.csv
+     Tunis_2011_000.pdff
+     Tunis_2011_001.pdff
+     Tunis_2011_002.pdff
+     Tunis_2011_003.pdff
+     Tunis_2011_004.pdff
+     move_into_author_folder.py
+
+Token count changed in 75 files
+
+
+The following files could have problems with their URI:
+
+     .Rhistory
+     0110HasanBasri.FadailMakka.Shamela0005722-ara1.markdown
+     0150AbuHanifa.FiqhAbsat.Shamela0006387-ara1.markdown
+     0150AbuHanifa.FiqhAkbar.JK001085-ara1.markdown
+     0151IbnIshaq.Sira.Shamela0009862-ara2.markdown
+     0195MuarrijSadusi.HadhfMinNasabQuraysh.Shamela0000496-ara1.markdown
+     0310Tabari.JamicBayan.Shamela0007798-ara1.inProgress_mARkdownSimple
+     0310Tabari.JamicBayan.Shamela0007798-ara1.notes
+     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple
+     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple.IDs
+     1408CumarKahhala.MucjamQabail.Shamela0012402-ara1.inprogress
+     Bayrut_1995_001.pdff
+     Bayrut_1995_002.pdff
+     Bayrut_1995_003.pdff
+     Bayrut_1995_004.pdff
+     OpenITI-9001AH_metadata_2020-2-3.csv
+     OpenITI_metadata_2020-2-3_wNoor.csv
+     OpenITI_metadata_2020-2-3_wNoor_merged.csv
+     Tunis_2011_000.pdff
+     Tunis_2011_001.pdff
+     Tunis_2011_002.pdff
+     Tunis_2011_003.pdff
+     Tunis_2011_004.pdff
+     move_into_author_folder.py
+
+Processing time: 2406.55 sec
+================================================================================
+Collecting metadata...
+collecting metadata from OpenITI...
+عمارة اليمني
+العوتبي، الصحاري
+العوتبي، الصحاري
+العوتبي، الصحاري
+شافع بن علي
+شافع بن علي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+إبن ليون
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+المنصور بالله
+الإصطخري
+الإصطخري
+الإصطخري
+إبن مروان الدينوري
+إبن مروان الدينوري
+إبن مروان الدينوري
+إبن مروان الدينوري
+(مؤلف مجهول)
+(مؤلف مجهول)
+خميس شقصي
+يوسف المحلي
+أبو بكر المالكي
+إبن قيصر
+إبن قيصر
+نجم الدين محمد الغزي
+نجم الدين محمد الغزي
+نجم الدين محمد الغزي
+إبن الرفعة
+إبن الرفعة
+(مترجم مجهول)
+مكي بن حموش القيسي
+مكي بن حموش القيسي
+مكي بن حموش القيسي
+مكي بن حموش القيسي
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+1111Majlisi.BiharAnwar.Zaydiyya0000202A-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsB-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsC-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsA-ara1
+1111Majlisi.BiharAnwar.Zaydiyya0000202B-ara1
+1111Majlisi.BiharAnwar.Zaydiyya0000202C-ara1
+أبو زكريا يحيى بن عدي
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+أبو الحسن البسيوي
+أبو الحسن البسيوي
+أبو سعيد الكدمي
+أبو سعيد الكدمي
+أبو سعيد الكدمي
+أبو سعيد الكدمي
+MISSING FILE? ../../OpenITI/Github_clone/0175AH/data/0151IbnIshaq/0151IbnIshaq.Sira/0151IbnIshaq.Sira.Shamela0009862-ara2 does not exist
+ابن إسحاق
+ابن إسحاق
+أبو سعد الآبي
+أبو سعد الآبي
+إبن سوار
+حسان البصري
+حسان البصري
+MISSING FILE? ../../OpenITI/Github_clone/0125AH/data/0110HasanBasri/0110HasanBasri.FadailMakka/0110HasanBasri.FadailMakka.Shamela0005722-ara1 does not exist
+حسان البصري
+خير الدين إبن إليس
+MISSING FILE? ../../OpenITI/Github_clone/0200AH/data/0195MuarrijSadusi/0195MuarrijSadusi.HadhfMinNasabQuraysh/0195MuarrijSadusi.HadhfMinNasabQuraysh.Shamela0000496-ara1 does not exist
+يحيى بن البطريق
+يحيى بن البطريق
+يحيى بن البطريق
+إبن رضوان
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+شيخعمي سعيد
+عبد القادر بن محمد النعيمي الدمشقي
+عبد القادر بن محمد النعيمي الدمشقي
+محيي الدين إبن عبد الظاهر
+محيي الدين إبن عبد الظاهر
+منصور الخروصي
+عبد المسيح الناعمي
+(مؤلف مجهول)
+إبن أبي نبهان الخروصي
+إبن أبي نبهان الخروصي
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+MISSING FILE? ../../OpenITI/Github_clone/0325AH/data/0310Tabari/0310Tabari.Tarikh/0310Tabari.Tarikh.SBS20191023-ara1 does not exist
+الطبري
+الطبري
+الطبري
+أبو العباس النيريزي
+أبو العباس النيريزي
+أبو العباس النيريزي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو حنيفة
+أبو حنيفة
+MISSING FILE? ../../OpenITI/Github_clone/0150AH/data/0150AbuHanifa/0150AbuHanifa.FiqhAbsat/0150AbuHanifa.FiqhAbsat.Shamela0006387-ara1 does not exist
+أبو حنيفة
+MISSING FILE? ../../OpenITI/Github_clone/0150AH/data/0150AbuHanifa/0150AbuHanifa.FiqhAkbar/0150AbuHanifa.FiqhAkbar.JK001085-ara1 does not exist
+أبو حنيفة
+أبو الحواري الأعمى
+أسطاث (eستتهس)
+محمد إبن إسحاق الفاكهي
+محمد إبن إسحاق الفاكهي
+(مترجم مجهول)
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+ثيادورس إبن بسيل
+إصطفن إبن بسيل
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+(مترجم مجهول)
+قسطا بن لوقا
+قسطا بن لوقا
+قسطا بن لوقا
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن شهدا الكرخي
+إبن شهدا الكرخي
+إسحاق بن علي الرهاوي
+عيسى بن يحيى
+عيسى بن يحيى
+عيسى بن يحيى
+ثابت إبن قرة
+ثابت إبن قرة
+ثابت إبن قرة
+أحمد الدرجيني
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+(مترجم مجهول)
+الرماني
+الرماني
+الرماني
+الرماني
+الرماني
+الرماني
+الرماني
+الرماني
+إبن الجزار
+إبن زرع
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+../../OpenITI/Github_clone/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Zaydiyya0000202A-ara1
+../../OpenITI/Github_clone/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Zaydiyya0000202-ara1
+---
+../../OpenITI/Github_clone/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Shia001432VolsB-ara1
+../../OpenITI/Github_clone/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Shia001432Vols-ara1
+---
+================================================================================
+COLLECTING INTO A CSV FILE (10072 LINES)...
+================================================================================
+Processing time: 2431.29 sec
+================================================================================
+Collecting issues from GitHub...
+logged in
+issue labels in this repo:
+   Label(name="Development")
+   Label(name="PRI & SEC Versions")
+   Label(name="URI change suggestion")
+   Label(name="discrepancies")
+   Label(name="in progress")
+   Label(name="no edition found")
+   Label(name="review finished")
+   Label(name="text quality")
+   Label(name="text tagged")
+   Label(name="urgent")
+getting relevant issues from GitHub...
+GitHub fetching time: 8.15 sec
+================================================================================
+Saving metadata...
+================================================================================
+Tada!
+Total processing time: 2439.44 sec
