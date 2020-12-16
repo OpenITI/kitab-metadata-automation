@@ -73861,3 +73861,1746 @@ Saving metadata...
 ================================================================================
 Tada!
 Total processing time: 2106.52 sec
+[master 650c582] output generated
+ 5 files changed, 63322 insertions(+), 56396 deletions(-)
+Tue 15 Dec 2020 10:10:59 PM UTC
+*****************************END***********************************
+*****************************END***********************************
+******************************START**********************************
+******************************START**********************************
+Wed 16 Dec 2020 09:35:01 PM UTC
+/home/admin-kitab/Documents/OpenITI/Github_clone
+Resetting local changes ...
+HEAD is now at 8f8d2ea Add new texts from barzakh
+HEAD is now at ee00347 Change URI
+HEAD is now at 42508b3 Add new texts from barzakh
+HEAD is now at 2bb10c1 Add new texts from barzakh
+HEAD is now at 05a29b8 Merge pull request #3 from Simonpeterloynes/master
+HEAD is now at b026a51 Merge pull request #1 from Simonpeterloynes/master
+HEAD is now at 95be26d Merge pull request #6 from Simonpeterloynes/master
+HEAD is now at 6095878 Change URI
+HEAD is now at 24aae7b Merge pull request #13 from hamidrh66/master
+HEAD is now at c13e40a Change URI
+HEAD is now at 670bb5e Change URI
+HEAD is now at 0d575ad Change URI
+HEAD is now at 3e6e852 Add new texts from barzakh
+HEAD is now at 84f8b8a Change URI
+HEAD is now at 05671c4 Change URI
+HEAD is now at d44c332 Change URI
+HEAD is now at e88b4cf Change URI
+HEAD is now at 40caa2b Change URI
+HEAD is now at 748f4d1 Change URI
+HEAD is now at 7baffe8 Change URI
+HEAD is now at 2cfdadd Change URI
+HEAD is now at 9471b36 Change URI
+HEAD is now at 80534d0 Change URI
+HEAD is now at 565c72a Add new texts from barzakh
+HEAD is now at 531523d Change URI
+HEAD is now at ffb9052 Change URI
+HEAD is now at 35ec399 Change URI
+HEAD is now at 6238746 Change URI
+HEAD is now at d88f3c2 Change URI
+HEAD is now at a659798 Merge pull request #2 from Simonpeterloynes/master
+HEAD is now at c744597 Change URI
+HEAD is now at 0106f96 Change URI
+HEAD is now at 92ff167 Merge pull request #2 from Simonpeterloynes/master
+HEAD is now at d8a9fc9 Change URI
+HEAD is now at a10d548 Add new texts from barzakh
+HEAD is now at a409ba7 Merge pull request #2 from Simonpeterloynes/master
+HEAD is now at fc611cf Change URI
+HEAD is now at 13b758d Change URI
+HEAD is now at 2db74e3 Change URI
+HEAD is now at ff96f28 Change URI
+HEAD is now at a1af686 Change URI
+HEAD is now at c53588b Change URI
+HEAD is now at bfb2f18 Change URI
+HEAD is now at 6c6e941 Change URI
+HEAD is now at d5fd58d Change URI
+HEAD is now at 6e191f3 Merge pull request #3 from hamidrh66/master
+HEAD is now at 6a4278c Change URI
+HEAD is now at 4966e2d Change URI
+HEAD is now at 4eb8e41 Change URI
+HEAD is now at f9b8846 ms update
+HEAD is now at 8b9f0e0 Change URI
+HEAD is now at b84814d Change URI
+HEAD is now at a27b68b ms updated, few metadata fixes
+HEAD is now at 630a507 new folder structure
+HEAD is now at bd562dd Change URI
+HEAD is now at 4b494b1 Change URI
+HEAD is now at 2015312 Change URI
+HEAD is now at 9e0ed16 Change URI
+HEAD is now at f6a7fe5 Change URI
+HEAD is now at 845dfca Change URI
+HEAD is now at bd97d3a Change URI
+HEAD is now at 4ae3612 Change URI
+Fetching changes from corpus ...
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Updating 670bb5e..017f53f
+Fast-forward
+Already up to date.
+ .../0364IbnSunniDinawari.Qinaca.JK000040-ara1      | 446 ----------------
+ .../0364IbnSunniDinawari.Qinaca.JK000040-ara1.yml  |  14 -
+ ...0364IbnSunniDinawari.Qinaca.Shamela0013054-ara1 | 566 ---------------------
+ ...IbnSunniDinawari.Qinaca.Shamela0013054-ara1.yml |  14 -
+ .../0364IbnSunniDinawari.Qinaca.yml                |  19 -
+ .../0364IbnSunniDinawari.Qinaca/README.md          |   5 -
+ .../text_questionnaire.md                          |  25 -
+ 7 files changed, 1089 deletions(-)
+ delete mode 100755 data/0364IbnSunniDinawari/0364IbnSunniDinawari.Qinaca/0364IbnSunniDinawari.Qinaca.JK000040-ara1
+ delete mode 100644 data/0364IbnSunniDinawari/0364IbnSunniDinawari.Qinaca/0364IbnSunniDinawari.Qinaca.JK000040-ara1.yml
+ delete mode 100755 data/0364IbnSunniDinawari/0364IbnSunniDinawari.Qinaca/0364IbnSunniDinawari.Qinaca.Shamela0013054-ara1
+ delete mode 100644 data/0364IbnSunniDinawari/0364IbnSunniDinawari.Qinaca/0364IbnSunniDinawari.Qinaca.Shamela0013054-ara1.yml
+ delete mode 100644 data/0364IbnSunniDinawari/0364IbnSunniDinawari.Qinaca/0364IbnSunniDinawari.Qinaca.yml
+ delete mode 100644 data/0364IbnSunniDinawari/0364IbnSunniDinawari.Qinaca/README.md
+ delete mode 100644 data/0364IbnSunniDinawari/0364IbnSunniDinawari.Qinaca/text_questionnaire.md
+Already up to date.
+Updating 7baffe8..698ed56
+Fast-forward
+ .../0333IbnMarwanDinawari.Qinaca.JK000040-ara1     | 446 ++++++++++++++++
+ .../0333IbnMarwanDinawari.Qinaca.JK000040-ara1.yml |  14 +
+ ...333IbnMarwanDinawari.Qinaca.Shamela0013054-ara1 | 566 +++++++++++++++++++++
+ ...bnMarwanDinawari.Qinaca.Shamela0013054-ara1.yml |  14 +
+ .../0333IbnMarwanDinawari.Qinaca/README.md         |   8 +-
+ .../text_questionnaire.md                          |   1 -
+ 6 files changed, 1044 insertions(+), 5 deletions(-)
+ create mode 100644 data/0333IbnMarwanDinawari/0333IbnMarwanDinawari.Qinaca/0333IbnMarwanDinawari.Qinaca.JK000040-ara1
+ create mode 100644 data/0333IbnMarwanDinawari/0333IbnMarwanDinawari.Qinaca/0333IbnMarwanDinawari.Qinaca.JK000040-ara1.yml
+ create mode 100644 data/0333IbnMarwanDinawari/0333IbnMarwanDinawari.Qinaca/0333IbnMarwanDinawari.Qinaca.Shamela0013054-ara1
+ create mode 100644 data/0333IbnMarwanDinawari/0333IbnMarwanDinawari.Qinaca/0333IbnMarwanDinawari.Qinaca.Shamela0013054-ara1.yml
+Updating c53588b..7e822f5
+Fast-forward
+ .../0320HakimTirmidhi.KhatmAwliya.ShamAY0033732-ara1}                   | 0
+ .../0320HakimTirmidhi.KhatmAwliya.ShamAY0033732-ara1.yml}               | 2 +-
+ .../0320HakimTirmidhi.KhatmAwliya.yml}                                  | 2 +-
+ .../README.md                                                           | 0
+ .../text_questionnaire.md                                               | 0
+ 5 files changed, 2 insertions(+), 2 deletions(-)
+ rename data/0320HakimTirmidhi/{0320HakimTirmidhi.KhitamAwliya/0320HakimTirmidhi.KhitamAwliya.ShamAY0033732-ara1 => 0320HakimTirmidhi.KhatmAwliya/0320HakimTirmidhi.KhatmAwliya.ShamAY0033732-ara1} (100%)
+ rename data/0320HakimTirmidhi/{0320HakimTirmidhi.KhitamAwliya/0320HakimTirmidhi.KhitamAwliya.ShamAY0033732-ara1.yml => 0320HakimTirmidhi.KhatmAwliya/0320HakimTirmidhi.KhatmAwliya.ShamAY0033732-ara1.yml} (82%)
+ rename data/0320HakimTirmidhi/{0320HakimTirmidhi.KhitamAwliya/0320HakimTirmidhi.KhitamAwliya.yml => 0320HakimTirmidhi.KhatmAwliya/0320HakimTirmidhi.KhatmAwliya.yml} (91%)
+ rename data/0320HakimTirmidhi/{0320HakimTirmidhi.KhitamAwliya => 0320HakimTirmidhi.KhatmAwliya}/README.md (100%)
+ rename data/0320HakimTirmidhi/{0320HakimTirmidhi.KhitamAwliya => 0320HakimTirmidhi.KhatmAwliya}/text_questionnaire.md (100%)
+Updating ffb9052..53779a4
+Fast-forward
+Updating 05671c4..d71db51
+Fast-forward
+Updating 42508b3..440fb06
+Fast-forward
+Updating 9471b36..b076ded
+Fast-forward
+ .../0430AbuNucaymIsbahani.AhadithMusnada.Shamela0009853-ara1}           | 0
+ .../0430AbuNucaymIsbahani.AhadithMusnada.Shamela0009853-ara1.yml}       | 2 +-
+ .../0430AbuNucaymIsbahani.AhadithMusnada.yml}                           | 2 +-
+ .../README.md                                                           | 0
+ .../text_questionnaire.md                                               | 0
+ ...buNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin.ShamAY0035231-ara1} | 0
+ ...caymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin.ShamAY0035231-ara1.yml} | 2 +-
+ ...uNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin.Shamela0008246-ara1} | 0
+ ...aymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin.Shamela0008246-ara1.yml} | 2 +-
+ .../0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin.yml}          | 2 +-
+ .../README.md                                                           | 0
+ .../text_questionnaire.md                                               | 0
+ 12 files changed, 5 insertions(+), 5 deletions(-)
+ rename data/0430AbuNucaymIsbahani/{0430AbuNucaymIsbahani.AhadithMusnadaFiAbwabQada/0430AbuNucaymIsbahani.AhadithMusnadaFiAbwabQada.Shamela0009853-ara1 => 0430AbuNucaymIsbahani.AhadithMusnada/0430AbuNucaymIsbahani.AhadithMusnada.Shamela0009853-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/0430AbuNucaymIsbahani/{0430AbuNucaymIsbahani.AhadithMusnadaFiAbwabQada/0430AbuNucaymIsbahani.AhadithMusnadaFiAbwabQada.Shamela0009853-ara1.yml => 0430AbuNucaymIsbahani.AhadithMusnada/0430AbuNucaymIsbahani.AhadithMusnada.Shamela0009853-ara1.yml} (80%)
+ rename data/0430AbuNucaymIsbahani/{0430AbuNucaymIsbahani.AhadithMusnadaFiAbwabQada/0430AbuNucaymIsbahani.AhadithMusnadaFiAbwabQada.yml => 0430AbuNucaymIsbahani.AhadithMusnada/0430AbuNucaymIsbahani.AhadithMusnada.yml} (90%)
+ rename data/0430AbuNucaymIsbahani/{0430AbuNucaymIsbahani.AhadithMusnadaFiAbwabQada => 0430AbuNucaymIsbahani.AhadithMusnada}/README.md (100%)
+ rename data/0430AbuNucaymIsbahani/{0430AbuNucaymIsbahani.AhadithMusnadaFiAbwabQada => 0430AbuNucaymIsbahani.AhadithMusnada}/text_questionnaire.md (100%)
+ rename data/0430AbuNucaymIsbahani/{0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqinMinSufiyya/0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqinMinSufiyya.ShamAY0035231-ara1 => 0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin/0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin.ShamAY0035231-ara1} (100%)
+ rename data/0430AbuNucaymIsbahani/{0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqinMinSufiyya/0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqinMinSufiyya.ShamAY0035231-ara1.yml => 0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin/0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin.ShamAY0035231-ara1.yml} (87%)
+ rename data/0430AbuNucaymIsbahani/{0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqinMinSufiyya/0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqinMinSufiyya.Shamela0008246-ara1 => 0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin/0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin.Shamela0008246-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/0430AbuNucaymIsbahani/{0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqinMinSufiyya/0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqinMinSufiyya.Shamela0008246-ara1.yml => 0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin/0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin.Shamela0008246-ara1.yml} (87%)
+ rename data/0430AbuNucaymIsbahani/{0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqinMinSufiyya/0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqinMinSufiyya.yml => 0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin/0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin.yml} (95%)
+ rename data/0430AbuNucaymIsbahani/{0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqinMinSufiyya => 0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin}/README.md (100%)
+ rename data/0430AbuNucaymIsbahani/{0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqinMinSufiyya => 0430AbuNucaymIsbahani.ArbacunaCalaMadhhabMutahaqqiqin}/text_questionnaire.md (100%)
+ ...bnCabdBarr.AdabMujalasa.JK000035-ara1.mARkdown} | 221 ++-------------------
+ .../0463IbnCabdBarr.AdabMujalasa.JK000035-ara1.yml |   6 +-
+ .../0463IbnCabdBarr.AdabMujalasa.yml               |   4 +-
+ data/0463IbnCabdBarr/0463IbnCabdBarr.yml           |  16 +-
+ 4 files changed, 29 insertions(+), 218 deletions(-)
+ rename data/0463IbnCabdBarr/0463IbnCabdBarr.AdabMujalasa/{0463IbnCabdBarr.AdabMujalasa.JK000035-ara1.completed => 0463IbnCabdBarr.AdabMujalasa.JK000035-ara1.mARkdown} (97%)
+ .../0094ZaynCabidin.SahifaSajjadiya.yml            | 26 ----------------------
+ .../0094ZaynCabidin.SahifaSajjadiya/README.md      |  5 -----
+ .../text_questionnaire.md                          | 25 ---------------------
+ ...din.SahifaSajjadiyya.Shia001111-ara2.completed} |  0
+ ...ynCabidin.SahifaSajjadiyya.Shia001111-ara2.yml} |  2 +-
+ ...din.SahifaSajjadiyya.Shia001112-ara1.completed} |  0
+ ...ynCabidin.SahifaSajjadiyya.Shia001112-ara1.yml} |  2 +-
+ .../0094ZaynCabidin.SahifaSajjadiyya.yml           | 17 +++++++++-----
+ .../0094ZaynCabidin.SahifaSajjadiyya/README.md     |  8 +++----
+ .../text_questionnaire.md                          |  1 -
+ 10 files changed, 18 insertions(+), 68 deletions(-)
+ delete mode 100644 data/0094ZaynCabidin/0094ZaynCabidin.SahifaSajjadiya/0094ZaynCabidin.SahifaSajjadiya.yml
+ delete mode 100644 data/0094ZaynCabidin/0094ZaynCabidin.SahifaSajjadiya/README.md
+ delete mode 100644 data/0094ZaynCabidin/0094ZaynCabidin.SahifaSajjadiya/text_questionnaire.md
+ rename data/0094ZaynCabidin/{0094ZaynCabidin.SahifaSajjadiya/0094ZaynCabidin.SahifaSajjadiya.Shia001111-ara2.completed => 0094ZaynCabidin.SahifaSajjadiyya/0094ZaynCabidin.SahifaSajjadiyya.Shia001111-ara2.completed} (100%)
+ rename data/0094ZaynCabidin/{0094ZaynCabidin.SahifaSajjadiya/0094ZaynCabidin.SahifaSajjadiya.Shia001111-ara2.yml => 0094ZaynCabidin.SahifaSajjadiyya/0094ZaynCabidin.SahifaSajjadiyya.Shia001111-ara2.yml} (88%)
+ rename data/0094ZaynCabidin/{0094ZaynCabidin.SahifaSajjadiya/0094ZaynCabidin.SahifaSajjadiya.Shia001112-ara1.completed => 0094ZaynCabidin.SahifaSajjadiyya/0094ZaynCabidin.SahifaSajjadiyya.Shia001112-ara1.completed} (100%)
+ rename data/0094ZaynCabidin/{0094ZaynCabidin.SahifaSajjadiya/0094ZaynCabidin.SahifaSajjadiya.Shia001112-ara1.yml => 0094ZaynCabidin.SahifaSajjadiyya/0094ZaynCabidin.SahifaSajjadiyya.Shia001112-ara1.yml} (91%)
+Already up to date.
+Already up to date.
+ .../0279Tirmidhi.JamicSahih.JK000140-ara1          | 30300 ------------
+ .../0279Tirmidhi.JamicSahih.JK000140-ara1.yml      |    14 -
+ .../0279Tirmidhi.JamicSahih.Shamela0000782-ara1    | 43402 -----------------
+ ...0279Tirmidhi.JamicSahih.Shamela0000782-ara1.yml |    14 -
+ .../0279Tirmidhi.JamicSahih.Shamela0001435-ara1    | 40761 ----------------
+ ...0279Tirmidhi.JamicSahih.Shamela0001435-ara1.yml |    14 -
+ .../0279Tirmidhi.JamicSahih.Shamela0007895-ara1    | 45988 -------------------
+ ...0279Tirmidhi.JamicSahih.Shamela0007895-ara1.yml |    14 -
+ .../0279Tirmidhi.JamicSahih.Shia001735Vols-ara1    | 31875 -------------
+ ...0279Tirmidhi.JamicSahih.Shia001735Vols-ara1.yml |    14 -
+ .../0279Tirmidhi.JamicSahih.yml                    |    19 -
+ .../0279Tirmidhi/0279Tirmidhi.JamicSahih/README.md |     5 -
+ ...fMajhul.RisalataHashimiWaKindi.Kalema00001-ara1 |  2123 +
+ ...hul.RisalataHashimiWaKindi.Kalema00001-ara1.yml |    10 +
+ ....RisalataHashimiWaKindi.SyriacStudies00001-ara1 |  2572 ++
+ ...alataHashimiWaKindi.SyriacStudies00001-ara1.yml |    11 +
+ .../0300MuallifMajhul.RisalataHashimiWaKindi.yml   |    22 +
+ .../README.md                                      |     5 +
+ .../text_questionnaire.md                          |     1 +
+ 19 files changed, 4744 insertions(+), 192420 deletions(-)
+ delete mode 100755 data/0279Tirmidhi/0279Tirmidhi.JamicSahih/0279Tirmidhi.JamicSahih.JK000140-ara1
+ delete mode 100644 data/0279Tirmidhi/0279Tirmidhi.JamicSahih/0279Tirmidhi.JamicSahih.JK000140-ara1.yml
+ delete mode 100755 data/0279Tirmidhi/0279Tirmidhi.JamicSahih/0279Tirmidhi.JamicSahih.Shamela0000782-ara1
+ delete mode 100644 data/0279Tirmidhi/0279Tirmidhi.JamicSahih/0279Tirmidhi.JamicSahih.Shamela0000782-ara1.yml
+ delete mode 100755 data/0279Tirmidhi/0279Tirmidhi.JamicSahih/0279Tirmidhi.JamicSahih.Shamela0001435-ara1
+ delete mode 100644 data/0279Tirmidhi/0279Tirmidhi.JamicSahih/0279Tirmidhi.JamicSahih.Shamela0001435-ara1.yml
+ delete mode 100755 data/0279Tirmidhi/0279Tirmidhi.JamicSahih/0279Tirmidhi.JamicSahih.Shamela0007895-ara1
+ delete mode 100644 data/0279Tirmidhi/0279Tirmidhi.JamicSahih/0279Tirmidhi.JamicSahih.Shamela0007895-ara1.yml
+ delete mode 100755 data/0279Tirmidhi/0279Tirmidhi.JamicSahih/0279Tirmidhi.JamicSahih.Shia001735Vols-ara1
+ delete mode 100644 data/0279Tirmidhi/0279Tirmidhi.JamicSahih/0279Tirmidhi.JamicSahih.Shia001735Vols-ara1.yml
+ delete mode 100644 data/0279Tirmidhi/0279Tirmidhi.JamicSahih/0279Tirmidhi.JamicSahih.yml
+ delete mode 100644 data/0279Tirmidhi/0279Tirmidhi.JamicSahih/README.md
+ create mode 100644 data/0300MuallifMajhul/0300MuallifMajhul.RisalataHashimiWaKindi/0300MuallifMajhul.RisalataHashimiWaKindi.Kalema00001-ara1
+ create mode 100644 data/0300MuallifMajhul/0300MuallifMajhul.RisalataHashimiWaKindi/0300MuallifMajhul.RisalataHashimiWaKindi.Kalema00001-ara1.yml
+ create mode 100644 data/0300MuallifMajhul/0300MuallifMajhul.RisalataHashimiWaKindi/0300MuallifMajhul.RisalataHashimiWaKindi.SyriacStudies00001-ara1
+ create mode 100644 data/0300MuallifMajhul/0300MuallifMajhul.RisalataHashimiWaKindi/0300MuallifMajhul.RisalataHashimiWaKindi.SyriacStudies00001-ara1.yml
+ create mode 100644 data/0300MuallifMajhul/0300MuallifMajhul.RisalataHashimiWaKindi/0300MuallifMajhul.RisalataHashimiWaKindi.yml
+ create mode 100644 data/0300MuallifMajhul/0300MuallifMajhul.RisalataHashimiWaKindi/README.md
+ rename data/{0279Tirmidhi/0279Tirmidhi.JamicSahih => 0300MuallifMajhul/0300MuallifMajhul.RisalataHashimiWaKindi}/text_questionnaire.md (99%)
+Already up to date.
+Updating c744597..64c4630
+Fast-forward
+ ...ashyakhatIbnSasra.Shamela0010076-ara1.completed | 137 +++++++++++++++++++++
+ ...i.JuzMashyakhatIbnSasra.Shamela0010076-ara1.yml |  15 +++
+ .../0698SunqurMughani.JuzMashyakhatIbnSasra.yml    |  19 +++
+ .../README.md                                      |   5 +
+ .../text_questionnaire.md                          |  25 ++++
+ data/0698SunqurMughani/0698SunqurMughani.yml       |  20 +++
+ 6 files changed, 221 insertions(+)
+ create mode 100644 data/0698SunqurMughani/0698SunqurMughani.JuzMashyakhatIbnSasra/0698SunqurMughani.JuzMashyakhatIbnSasra.Shamela0010076-ara1.completed
+ create mode 100644 data/0698SunqurMughani/0698SunqurMughani.JuzMashyakhatIbnSasra/0698SunqurMughani.JuzMashyakhatIbnSasra.Shamela0010076-ara1.yml
+ create mode 100644 data/0698SunqurMughani/0698SunqurMughani.JuzMashyakhatIbnSasra/0698SunqurMughani.JuzMashyakhatIbnSasra.yml
+ create mode 100644 data/0698SunqurMughani/0698SunqurMughani.JuzMashyakhatIbnSasra/README.md
+ create mode 100644 data/0698SunqurMughani/0698SunqurMughani.JuzMashyakhatIbnSasra/text_questionnaire.md
+ create mode 100644 data/0698SunqurMughani/0698SunqurMughani.yml
+Updating 35ec399..b8f31e1
+Fast-forward
+Updating 2cfdadd..622925b
+Fast-forward
+ .../0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya.ShamAY0032758-ara1}   | 0
+ ...671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya.ShamAY0032758-ara1.yml} | 2 +-
+ .../0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya.Shamela0029466-ara1}  | 0
+ ...71AbuMuzaffarNabulusi.AhadithSittaCiraqiyya.Shamela0029466-ara1.yml} | 2 +-
+ .../0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya.yml}                  | 2 +-
+ .../0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya}/README.md            | 0
+ .../text_questionnaire.md                                               | 0
+ .../0671AbuMuzaffarNabulusi.yml}                                        | 2 +-
+ 8 files changed, 4 insertions(+), 4 deletions(-)
+ rename data/{0671IbnHasanSharafDinDimashqiNabulusi/0671IbnHasanSharafDinDimashqiNabulusi.AhadithSittaCiraqiyya/0671IbnHasanSharafDinDimashqiNabulusi.AhadithSittaCiraqiyya.ShamAY0032758-ara1 => 0671AbuMuzaffarNabulusi/0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya/0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya.ShamAY0032758-ara1} (100%)
+ rename data/{0671IbnHasanSharafDinDimashqiNabulusi/0671IbnHasanSharafDinDimashqiNabulusi.AhadithSittaCiraqiyya/0671IbnHasanSharafDinDimashqiNabulusi.AhadithSittaCiraqiyya.ShamAY0032758-ara1.yml => 0671AbuMuzaffarNabulusi/0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya/0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya.ShamAY0032758-ara1.yml} (79%)
+ rename data/{0671IbnHasanSharafDinDimashqiNabulusi/0671IbnHasanSharafDinDimashqiNabulusi.AhadithSittaCiraqiyya/0671IbnHasanSharafDinDimashqiNabulusi.AhadithSittaCiraqiyya.Shamela0029466-ara1 => 0671AbuMuzaffarNabulusi/0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya/0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya.Shamela0029466-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{0671IbnHasanSharafDinDimashqiNabulusi/0671IbnHasanSharafDinDimashqiNabulusi.AhadithSittaCiraqiyya/0671IbnHasanSharafDinDimashqiNabulusi.AhadithSittaCiraqiyya.Shamela0029466-ara1.yml => 0671AbuMuzaffarNabulusi/0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya/0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya.Shamela0029466-ara1.yml} (78%)
+ rename data/{0671IbnHasanSharafDinDimashqiNabulusi/0671IbnHasanSharafDinDimashqiNabulusi.AhadithSittaCiraqiyya/0671IbnHasanSharafDinDimashqiNabulusi.AhadithSittaCiraqiyya.yml => 0671AbuMuzaffarNabulusi/0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya/0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya.yml} (89%)
+ rename data/{0671IbnHasanSharafDinDimashqiNabulusi/0671IbnHasanSharafDinDimashqiNabulusi.AhadithSittaCiraqiyya => 0671AbuMuzaffarNabulusi/0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya}/README.md (100%)
+ rename data/{0671IbnHasanSharafDinDimashqiNabulusi/0671IbnHasanSharafDinDimashqiNabulusi.AhadithSittaCiraqiyya => 0671AbuMuzaffarNabulusi/0671AbuMuzaffarNabulusi.AhadithSittaCiraqiyya}/text_questionnaire.md (100%)
+ rename data/{0671IbnHasanSharafDinDimashqiNabulusi/0671IbnHasanSharafDinDimashqiNabulusi.yml => 0671AbuMuzaffarNabulusi/0671AbuMuzaffarNabulusi.yml} (91%)
+ ...bnSasra.Mashyakha.Shamela0010076-ara1.completed | 137 ---------------------
+ ...msDinIbnSasra.Mashyakha.Shamela0010076-ara1.yml |  10 --
+ ...0626IbnAbiGhanaimShamsDinIbnSasra.Mashyakha.yml |  19 ---
+ ...tifBaghdadi.IfadaWaIctibar.Shamela0037031-ara1} |   0
+ ...aghdadi.IfadaWaIctibar.Shamela0037031-ara1.yml} |   2 +-
+ .../0629CabdLatifBaghdadi.IfadaWaIctibar.yml}      |   2 +-
+ .../README.md                                      |   0
+ .../text_questionnaire.md                          |   0
+ .../0629CabdLatifBaghdadi.yml                      |  20 +++
+ .../0629IbnNuqta.IfadaWaIctibar/README.md          |   5 -
+ .../text_questionnaire.md                          |  25 ----
+ 11 files changed, 22 insertions(+), 198 deletions(-)
+ delete mode 100644 data/0626IbnAbiGhanaimShamsDinIbnSasra/0626IbnAbiGhanaimShamsDinIbnSasra.Mashyakha/0626IbnAbiGhanaimShamsDinIbnSasra.Mashyakha.Shamela0010076-ara1.completed
+ delete mode 100644 data/0626IbnAbiGhanaimShamsDinIbnSasra/0626IbnAbiGhanaimShamsDinIbnSasra.Mashyakha/0626IbnAbiGhanaimShamsDinIbnSasra.Mashyakha.Shamela0010076-ara1.yml
+ delete mode 100644 data/0626IbnAbiGhanaimShamsDinIbnSasra/0626IbnAbiGhanaimShamsDinIbnSasra.Mashyakha/0626IbnAbiGhanaimShamsDinIbnSasra.Mashyakha.yml
+ rename data/{0629IbnNuqta/0629IbnNuqta.IfadaWaIctibar/0629IbnNuqta.IfadaWaIctibar.Shamela0037031-ara1 => 0629CabdLatifBaghdadi/0629CabdLatifBaghdadi.IfadaWaIctibar/0629CabdLatifBaghdadi.IfadaWaIctibar.Shamela0037031-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{0629IbnNuqta/0629IbnNuqta.IfadaWaIctibar/0629IbnNuqta.IfadaWaIctibar.Shamela0037031-ara1.yml => 0629CabdLatifBaghdadi/0629CabdLatifBaghdadi.IfadaWaIctibar/0629CabdLatifBaghdadi.IfadaWaIctibar.Shamela0037031-ara1.yml} (81%)
+ rename data/{0629IbnNuqta/0629IbnNuqta.IfadaWaIctibar/0629IbnNuqta.IfadaWaIctibar.yml => 0629CabdLatifBaghdadi/0629CabdLatifBaghdadi.IfadaWaIctibar/0629CabdLatifBaghdadi.IfadaWaIctibar.yml} (91%)
+ rename data/{0626IbnAbiGhanaimShamsDinIbnSasra/0626IbnAbiGhanaimShamsDinIbnSasra.Mashyakha => 0629CabdLatifBaghdadi/0629CabdLatifBaghdadi.IfadaWaIctibar}/README.md (100%)
+ rename data/{0626IbnAbiGhanaimShamsDinIbnSasra/0626IbnAbiGhanaimShamsDinIbnSasra.Mashyakha => 0629CabdLatifBaghdadi/0629CabdLatifBaghdadi.IfadaWaIctibar}/text_questionnaire.md (100%)
+ create mode 100644 data/0629CabdLatifBaghdadi/0629CabdLatifBaghdadi.yml
+ delete mode 100644 data/0629IbnNuqta/0629IbnNuqta.IfadaWaIctibar/README.md
+ delete mode 100644 data/0629IbnNuqta/0629IbnNuqta.IfadaWaIctibar/text_questionnaire.md
+Updating 80534d0..ba94dda
+Fast-forward
+Updating e88b4cf..0cb54d5
+Fast-forward
+ ...asiti.HatkAstarFusus.LMN20201127-ara1.completed | 603 +++++++++++++++++++++
+ ...adDinWasiti.HatkAstarFusus.LMN20201127-ara1.yml |  16 +
+ ...0711IbnIbrahimCimadDinWasiti.HatkAstarFusus.yml |  19 +
+ .../README.md                                      |   5 +
+ .../text_questionnaire.md                          |  26 +
+ 5 files changed, 669 insertions(+)
+ create mode 100644 data/0711IbnIbrahimCimadDinWasiti/0711IbnIbrahimCimadDinWasiti.HatkAstarFusus/0711IbnIbrahimCimadDinWasiti.HatkAstarFusus.LMN20201127-ara1.completed
+ create mode 100644 data/0711IbnIbrahimCimadDinWasiti/0711IbnIbrahimCimadDinWasiti.HatkAstarFusus/0711IbnIbrahimCimadDinWasiti.HatkAstarFusus.LMN20201127-ara1.yml
+ create mode 100644 data/0711IbnIbrahimCimadDinWasiti/0711IbnIbrahimCimadDinWasiti.HatkAstarFusus/0711IbnIbrahimCimadDinWasiti.HatkAstarFusus.yml
+ create mode 100644 data/0711IbnIbrahimCimadDinWasiti/0711IbnIbrahimCimadDinWasiti.HatkAstarFusus/README.md
+ create mode 100644 data/0711IbnIbrahimCimadDinWasiti/0711IbnIbrahimCimadDinWasiti.HatkAstarFusus/text_questionnaire.md
+ ...bnHusaynBaquliIsbahani.IcrabQuran.JK011943-ara1 | 1244 --------------------
+ ...saynBaquliIsbahani.IcrabQuran.JK011943-ara1.yml |   14 -
+ 2 files changed, 1258 deletions(-)
+ delete mode 100755 data/0543IbnHusaynBaquliIsbahani/0543IbnHusaynBaquliIsbahani.IcrabQuran/0543IbnHusaynBaquliIsbahani.IcrabQuran.JK011943-ara1
+ delete mode 100644 data/0543IbnHusaynBaquliIsbahani/0543IbnHusaynBaquliIsbahani.IcrabQuran/0543IbnHusaynBaquliIsbahani.IcrabQuran.JK011943-ara1.yml
+Updating 748f4d1..c26dcaf
+Fast-forward
+ .../0611IbnMufaddalMuqaddasi.AhadithMuqtabasa.Shamela0030243-ara1}      | 0
+ .../0611IbnMufaddalMuqaddasi.AhadithMuqtabasa.Shamela0030243-ara1.yml}  | 2 +-
+ .../0611IbnMufaddalMuqaddasi.AhadithMuqtabasa.yml}                      | 2 +-
+ .../0611IbnMufaddalMuqaddasi.AhadithMuqtabasa}/README.md                | 0
+ .../0611IbnMufaddalMuqaddasi.AhadithMuqtabasa}/text_questionnaire.md    | 0
+ .../0611IbnMufaddalMuqaddasi.Arbacuna.Shamela0010441-ara1}              | 0
+ .../0611IbnMufaddalMuqaddasi.Arbacuna.Shamela0010441-ara1.yml}          | 2 +-
+ .../0611IbnMufaddalMuqaddasi.Arbacuna.yml}                              | 2 +-
+ .../0611IbnMufaddalMuqaddasi.Arbacuna}/README.md                        | 0
+ .../0611IbnMufaddalMuqaddasi.Arbacuna}/text_questionnaire.md            | 0
+ ...0611IbnMufaddalMuqaddasi.JuzFihiTuruqCabdRahman.Shamela0003981-ara1} | 0
+ ...IbnMufaddalMuqaddasi.JuzFihiTuruqCabdRahman.Shamela0003981-ara1.yml} | 2 +-
+ .../0611IbnMufaddalMuqaddasi.JuzFihiTuruqCabdRahman.yml}                | 2 +-
+ .../0611IbnMufaddalMuqaddasi.JuzFihiTuruqCabdRahman}/README.md          | 0
+ .../text_questionnaire.md                                               | 0
+ .../0611IbnMufaddalMuqaddasi.yml}                                       | 2 +-
+ 16 files changed, 7 insertions(+), 7 deletions(-)
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.AhadithMuqtabasa/0611IbnMufaddalSharafDinMuqaddasi.AhadithMuqtabasa.Shamela0030243-ara1 => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.AhadithMuqtabasa/0611IbnMufaddalMuqaddasi.AhadithMuqtabasa.Shamela0030243-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.AhadithMuqtabasa/0611IbnMufaddalSharafDinMuqaddasi.AhadithMuqtabasa.Shamela0030243-ara1.yml => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.AhadithMuqtabasa/0611IbnMufaddalMuqaddasi.AhadithMuqtabasa.Shamela0030243-ara1.yml} (79%)
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.Arbacuna/0611IbnMufaddalSharafDinMuqaddasi.Arbacuna.yml => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.AhadithMuqtabasa/0611IbnMufaddalMuqaddasi.AhadithMuqtabasa.yml} (90%)
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.AhadithMuqtabasa => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.AhadithMuqtabasa}/README.md (100%)
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.AhadithMuqtabasa => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.AhadithMuqtabasa}/text_questionnaire.md (100%)
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.Arbacuna/0611IbnMufaddalSharafDinMuqaddasi.Arbacuna.Shamela0010441-ara1 => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.Arbacuna/0611IbnMufaddalMuqaddasi.Arbacuna.Shamela0010441-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.Arbacuna/0611IbnMufaddalSharafDinMuqaddasi.Arbacuna.Shamela0010441-ara1.yml => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.Arbacuna/0611IbnMufaddalMuqaddasi.Arbacuna.Shamela0010441-ara1.yml} (80%)
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.AhadithMuqtabasa/0611IbnMufaddalSharafDinMuqaddasi.AhadithMuqtabasa.yml => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.Arbacuna/0611IbnMufaddalMuqaddasi.Arbacuna.yml} (90%)
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.Arbacuna => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.Arbacuna}/README.md (100%)
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.Arbacuna => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.Arbacuna}/text_questionnaire.md (100%)
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.JuzFihiTuruqCabdRahman/0611IbnMufaddalSharafDinMuqaddasi.JuzFihiTuruqCabdRahman.Shamela0003981-ara1 => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.JuzFihiTuruqCabdRahman/0611IbnMufaddalMuqaddasi.JuzFihiTuruqCabdRahman.Shamela0003981-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.JuzFihiTuruqCabdRahman/0611IbnMufaddalSharafDinMuqaddasi.JuzFihiTuruqCabdRahman.Shamela0003981-ara1.yml => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.JuzFihiTuruqCabdRahman/0611IbnMufaddalMuqaddasi.JuzFihiTuruqCabdRahman.Shamela0003981-ara1.yml} (79%)
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.JuzFihiTuruqCabdRahman/0611IbnMufaddalSharafDinMuqaddasi.JuzFihiTuruqCabdRahman.yml => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.JuzFihiTuruqCabdRahman/0611IbnMufaddalMuqaddasi.JuzFihiTuruqCabdRahman.yml} (89%)
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.JuzFihiTuruqCabdRahman => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.JuzFihiTuruqCabdRahman}/README.md (100%)
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.JuzFihiTuruqCabdRahman => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.JuzFihiTuruqCabdRahman}/text_questionnaire.md (100%)
+ rename data/{0611IbnMufaddalSharafDinMuqaddasi/0611IbnMufaddalSharafDinMuqaddasi.yml => 0611IbnMufaddalMuqaddasi/0611IbnMufaddalMuqaddasi.yml} (91%)
+Already up to date.
+Updating 2db74e3..d4fde19
+Fast-forward
+Already up to date.
+ ...ymiyya.MukhtasarMinhajSunna.Shamela0021512-ara1 | 14262 -------------------
+ ...ya.MukhtasarMinhajSunna.Shamela0021512-ara1.yml |    14 -
+ .../0728IbnTaymiyya.MukhtasarMinhajSunna.yml       |    19 -
+ .../0739Birzali.Juz.ShamAY0033673-ara1}            |     0
+ .../0739Birzali.Juz.ShamAY0033673-ara1.yml}        |     2 +-
+ .../0739Birzali.Juz/0739Birzali.Juz.yml}           |     2 +-
+ .../0739Birzali.Juz}/README.md                     |     0
+ .../0739Birzali.Juz}/text_questionnaire.md         |     0
+ .../0739Birzali.Mashyakha.JK001188-ara1}           |     0
+ .../0739Birzali.Mashyakha.JK001188-ara1.yml}       |     2 +-
+ ...irzali.Mashyakha.Shamela0005724-ara1.completed} |     0
+ .../0739Birzali.Mashyakha.Shamela0005724-ara1.yml} |     2 +-
+ .../0739Birzali.Mashyakha.yml}                     |     2 +-
+ .../0739Birzali.Mashyakha}/README.md               |     0
+ .../0739Birzali.Mashyakha}/text_questionnaire.md   |     0
+ .../0739Birzali.yml}                               |     2 +-
+ .../0739IbnMuhammadBirzali.Mashyakha/README.md     |     5 -
+ .../text_questionnaire.md                          |    25 -
+ 18 files changed, 6 insertions(+), 14331 deletions(-)
+ delete mode 100755 data/0728IbnTaymiyya/0728IbnTaymiyya.MukhtasarMinhajSunna/0728IbnTaymiyya.MukhtasarMinhajSunna.Shamela0021512-ara1
+ delete mode 100644 data/0728IbnTaymiyya/0728IbnTaymiyya.MukhtasarMinhajSunna/0728IbnTaymiyya.MukhtasarMinhajSunna.Shamela0021512-ara1.yml
+ delete mode 100644 data/0728IbnTaymiyya/0728IbnTaymiyya.MukhtasarMinhajSunna/0728IbnTaymiyya.MukhtasarMinhajSunna.yml
+ rename data/{0739IbnMuhammadBirzali/0739IbnMuhammadBirzali.Juz/0739IbnMuhammadBirzali.Juz.ShamAY0033673-ara1 => 0739Birzali/0739Birzali.Juz/0739Birzali.Juz.ShamAY0033673-ara1} (100%)
+ rename data/{0739IbnMuhammadBirzali/0739IbnMuhammadBirzali.Juz/0739IbnMuhammadBirzali.Juz.ShamAY0033673-ara1.yml => 0739Birzali/0739Birzali.Juz/0739Birzali.Juz.ShamAY0033673-ara1.yml} (82%)
+ rename data/{0739IbnMuhammadBirzali/0739IbnMuhammadBirzali.Juz/0739IbnMuhammadBirzali.Juz.yml => 0739Birzali/0739Birzali.Juz/0739Birzali.Juz.yml} (92%)
+ rename data/{0739IbnMuhammadBirzali/0739IbnMuhammadBirzali.Juz => 0739Birzali/0739Birzali.Juz}/README.md (100%)
+ rename data/{0739IbnMuhammadBirzali/0739IbnMuhammadBirzali.Juz => 0739Birzali/0739Birzali.Juz}/text_questionnaire.md (100%)
+ rename data/{0739IbnMuhammadBirzali/0739IbnMuhammadBirzali.Mashyakha/0739IbnMuhammadBirzali.Mashyakha.JK001188-ara1 => 0739Birzali/0739Birzali.Mashyakha/0739Birzali.Mashyakha.JK001188-ara1} (100%)
+ rename data/{0739IbnMuhammadBirzali/0739IbnMuhammadBirzali.Mashyakha/0739IbnMuhammadBirzali.Mashyakha.JK001188-ara1.yml => 0739Birzali/0739Birzali.Mashyakha/0739Birzali.Mashyakha.JK001188-ara1.yml} (82%)
+ rename data/{0739IbnMuhammadBirzali/0739IbnMuhammadBirzali.Mashyakha/0739IbnMuhammadBirzali.Mashyakha.Shamela0005724-ara1.completed => 0739Birzali/0739Birzali.Mashyakha/0739Birzali.Mashyakha.Shamela0005724-ara1.completed} (100%)
+ rename data/{0739IbnMuhammadBirzali/0739IbnMuhammadBirzali.Mashyakha/0739IbnMuhammadBirzali.Mashyakha.Shamela0005724-ara1.yml => 0739Birzali/0739Birzali.Mashyakha/0739Birzali.Mashyakha.Shamela0005724-ara1.yml} (83%)
+ rename data/{0739IbnMuhammadBirzali/0739IbnMuhammadBirzali.Mashyakha/0739IbnMuhammadBirzali.Mashyakha.yml => 0739Birzali/0739Birzali.Mashyakha/0739Birzali.Mashyakha.yml} (91%)
+ rename data/{0728IbnTaymiyya/0728IbnTaymiyya.MukhtasarMinhajSunna => 0739Birzali/0739Birzali.Mashyakha}/README.md (100%)
+ rename data/{0728IbnTaymiyya/0728IbnTaymiyya.MukhtasarMinhajSunna => 0739Birzali/0739Birzali.Mashyakha}/text_questionnaire.md (100%)
+ rename data/{0739IbnMuhammadBirzali/0739IbnMuhammadBirzali.yml => 0739Birzali/0739Birzali.yml} (92%)
+ delete mode 100644 data/0739IbnMuhammadBirzali/0739IbnMuhammadBirzali.Mashyakha/README.md
+ delete mode 100644 data/0739IbnMuhammadBirzali/0739IbnMuhammadBirzali.Mashyakha/text_questionnaire.md
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Updating 6a4278c..9e75a2e
+Fast-forward
+ .../0860ShihabUbbadhi.HududFiCilmNahw.Shamela0010340-ara1}              | 0
+ .../0860ShihabUbbadhi.HududFiCilmNahw.Shamela0010340-ara1.yml}          | 2 +-
+ .../0860ShihabUbbadhi.HududFiCilmNahw.yml}                              | 2 +-
+ .../0860ShihabUbbadhi.HududFiCilmNahw}/README.md                        | 0
+ .../0860ShihabUbbadhi.HududFiCilmNahw}/text_questionnaire.md            | 0
+ .../0860ShihabUbbadhi.yml}                                              | 2 +-
+ 6 files changed, 3 insertions(+), 3 deletions(-)
+ rename data/{0860IbnMuhammadShihabDinAndalusiBijai/0860IbnMuhammadShihabDinAndalusiBijai.HududFiCilmNahw/0860IbnMuhammadShihabDinAndalusiBijai.HududFiCilmNahw.Shamela0010340-ara1 => 0860ShihabUbbadhi/0860ShihabUbbadhi.HududFiCilmNahw/0860ShihabUbbadhi.HududFiCilmNahw.Shamela0010340-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{0860IbnMuhammadShihabDinAndalusiBijai/0860IbnMuhammadShihabDinAndalusiBijai.HududFiCilmNahw/0860IbnMuhammadShihabDinAndalusiBijai.HududFiCilmNahw.Shamela0010340-ara1.yml => 0860ShihabUbbadhi/0860ShihabUbbadhi.HududFiCilmNahw/0860ShihabUbbadhi.HududFiCilmNahw.Shamela0010340-ara1.yml} (79%)
+ rename data/{0860IbnMuhammadShihabDinAndalusiBijai/0860IbnMuhammadShihabDinAndalusiBijai.HududFiCilmNahw/0860IbnMuhammadShihabDinAndalusiBijai.HududFiCilmNahw.yml => 0860ShihabUbbadhi/0860ShihabUbbadhi.HududFiCilmNahw/0860ShihabUbbadhi.HududFiCilmNahw.yml} (90%)
+ rename data/{0860IbnMuhammadShihabDinAndalusiBijai/0860IbnMuhammadShihabDinAndalusiBijai.HududFiCilmNahw => 0860ShihabUbbadhi/0860ShihabUbbadhi.HududFiCilmNahw}/README.md (100%)
+ rename data/{0860IbnMuhammadShihabDinAndalusiBijai/0860IbnMuhammadShihabDinAndalusiBijai.HududFiCilmNahw => 0860ShihabUbbadhi/0860ShihabUbbadhi.HududFiCilmNahw}/text_questionnaire.md (100%)
+ rename data/{0860IbnMuhammadShihabDinAndalusiBijai/0860IbnMuhammadShihabDinAndalusiBijai.yml => 0860ShihabUbbadhi/0860ShihabUbbadhi.yml} (91%)
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Updating d88f3c2..8de32aa
+Fast-forward
+ ...ZaynDinCamili.SiratMustaqim.Shia001392Vols-ara1 | 25002 +++++++++++++++++++
+ ...DinCamili.SiratMustaqim.Shia001392Vols-ara1.yml |    14 +
+ .../0877IbnYusufZaynDinCamili.SiratMustaqim.yml    |    19 +
+ .../README.md                                      |     5 +
+ .../text_questionnaire.md                          |    25 +
+ 5 files changed, 25065 insertions(+)
+ create mode 100644 data/0877IbnYusufZaynDinCamili/0877IbnYusufZaynDinCamili.SiratMustaqim/0877IbnYusufZaynDinCamili.SiratMustaqim.Shia001392Vols-ara1
+ create mode 100644 data/0877IbnYusufZaynDinCamili/0877IbnYusufZaynDinCamili.SiratMustaqim/0877IbnYusufZaynDinCamili.SiratMustaqim.Shia001392Vols-ara1.yml
+ create mode 100644 data/0877IbnYusufZaynDinCamili/0877IbnYusufZaynDinCamili.SiratMustaqim/0877IbnYusufZaynDinCamili.SiratMustaqim.yml
+ create mode 100644 data/0877IbnYusufZaynDinCamili/0877IbnYusufZaynDinCamili.SiratMustaqim/README.md
+ create mode 100644 data/0877IbnYusufZaynDinCamili/0877IbnYusufZaynDinCamili.SiratMustaqim/text_questionnaire.md
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Updating d8a9fc9..0b580b7
+Fast-forward
+Already up to date.
+ .../0756CadudDinIji.Mawaqif.JK001335-ara1}           |  0
+ .../0756CadudDinIji.Mawaqif.JK001335-ara1.yml}       |  2 +-
+ .../0756CadudDinIji.Mawaqif.ShamAY0033881-ara1}      |  0
+ .../0756CadudDinIji.Mawaqif.ShamAY0033881-ara1.yml}  |  2 +-
+ .../0756CadudDinIji.Mawaqif.Shia002215Vols-ara1}     |  0
+ .../0756CadudDinIji.Mawaqif.Shia002215Vols-ara1.yml} |  2 +-
+ .../0756CadudDinIji.Mawaqif.yml}                     |  2 +-
+ .../0756CadudDinIji.Mawaqif}/README.md               |  0
+ .../0756CadudDinIji.Mawaqif}/text_questionnaire.md   |  0
+ ...khmimi.RisalaFiRaddCalaIbnTaymiyya.JK001468-ara1} |  0
+ ...mi.RisalaFiRaddCalaIbnTaymiyya.JK001468-ara1.yml} |  2 +-
+ ....RisalaFiRaddCalaIbnTaymiyya.Shamela0006538-ara1} |  0
+ ...alaFiRaddCalaIbnTaymiyya.Shamela0006538-ara1.yml} |  2 +-
+ ...64BahaDinIkhmimi.RisalaFiRaddCalaIbnTaymiyya.yml} |  2 +-
+ .../README.md                                        |  0
+ .../text_questionnaire.md                            |  0
+ .../0764BahaDinIkhmimi.yml}                          |  2 +-
+ .../0764IbnCabdRahmanIkhmimiMaraghi.yml              | 20 --------------------
+ 18 files changed, 8 insertions(+), 28 deletions(-)
+ rename data/{0756IbnAhmadCadudDinIji/0756IbnAhmadCadudDinIji.Mawaqif/0756IbnAhmadCadudDinIji.Mawaqif.JK001335-ara1 => 0756CadudDinIji/0756CadudDinIji.Mawaqif/0756CadudDinIji.Mawaqif.JK001335-ara1} (100%)
+ rename data/{0756IbnAhmadCadudDinIji/0756IbnAhmadCadudDinIji.Mawaqif/0756IbnAhmadCadudDinIji.Mawaqif.JK001335-ara1.yml => 0756CadudDinIji/0756CadudDinIji.Mawaqif/0756CadudDinIji.Mawaqif.JK001335-ara1.yml} (82%)
+ rename data/{0756IbnAhmadCadudDinIji/0756IbnAhmadCadudDinIji.Mawaqif/0756IbnAhmadCadudDinIji.Mawaqif.ShamAY0033881-ara1 => 0756CadudDinIji/0756CadudDinIji.Mawaqif/0756CadudDinIji.Mawaqif.ShamAY0033881-ara1} (100%)
+ rename data/{0756IbnAhmadCadudDinIji/0756IbnAhmadCadudDinIji.Mawaqif/0756IbnAhmadCadudDinIji.Mawaqif.ShamAY0033881-ara1.yml => 0756CadudDinIji/0756CadudDinIji.Mawaqif/0756CadudDinIji.Mawaqif.ShamAY0033881-ara1.yml} (82%)
+ rename data/{0756IbnAhmadCadudDinIji/0756IbnAhmadCadudDinIji.Mawaqif/0756IbnAhmadCadudDinIji.Mawaqif.Shia002215Vols-ara1 => 0756CadudDinIji/0756CadudDinIji.Mawaqif/0756CadudDinIji.Mawaqif.Shia002215Vols-ara1} (100%)
+ rename data/{0756IbnAhmadCadudDinIji/0756IbnAhmadCadudDinIji.Mawaqif/0756IbnAhmadCadudDinIji.Mawaqif.Shia002215Vols-ara1.yml => 0756CadudDinIji/0756CadudDinIji.Mawaqif/0756CadudDinIji.Mawaqif.Shia002215Vols-ara1.yml} (82%)
+ rename data/{0756IbnAhmadCadudDinIji/0756IbnAhmadCadudDinIji.Mawaqif/0756IbnAhmadCadudDinIji.Mawaqif.yml => 0756CadudDinIji/0756CadudDinIji.Mawaqif/0756CadudDinIji.Mawaqif.yml} (91%)
+ rename data/{0756IbnAhmadCadudDinIji/0756IbnAhmadCadudDinIji.Mawaqif => 0756CadudDinIji/0756CadudDinIji.Mawaqif}/README.md (100%)
+ rename data/{0756IbnAhmadCadudDinIji/0756IbnAhmadCadudDinIji.Mawaqif => 0756CadudDinIji/0756CadudDinIji.Mawaqif}/text_questionnaire.md (100%)
+ rename data/{0764IbnCabdRahmanIkhmimiMaraghi/0764IbnCabdRahmanIkhmimiMaraghi.RisalaFiRaddCalaIbnTaymiyya/0764IbnCabdRahmanIkhmimiMaraghi.RisalaFiRaddCalaIbnTaymiyya.JK001468-ara1 => 0764BahaDinIkhmimi/0764BahaDinIkhmimi.RisalaFiRaddCalaIbnTaymiyya/0764BahaDinIkhmimi.RisalaFiRaddCalaIbnTaymiyya.JK001468-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{0764IbnCabdRahmanIkhmimiMaraghi/0764IbnCabdRahmanIkhmimiMaraghi.RisalaFiRaddCalaIbnTaymiyya/0764IbnCabdRahmanIkhmimiMaraghi.RisalaFiRaddCalaIbnTaymiyya.JK001468-ara1.yml => 0764BahaDinIkhmimi/0764BahaDinIkhmimi.RisalaFiRaddCalaIbnTaymiyya/0764BahaDinIkhmimi.RisalaFiRaddCalaIbnTaymiyya.JK001468-ara1.yml} (79%)
+ rename data/{0764IbnCabdRahmanIkhmimiMaraghi/0764IbnCabdRahmanIkhmimiMaraghi.RisalaFiRaddCalaIbnTaymiyya/0764IbnCabdRahmanIkhmimiMaraghi.RisalaFiRaddCalaIbnTaymiyya.Shamela0006538-ara1 => 0764BahaDinIkhmimi/0764BahaDinIkhmimi.RisalaFiRaddCalaIbnTaymiyya/0764BahaDinIkhmimi.RisalaFiRaddCalaIbnTaymiyya.Shamela0006538-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{0764IbnCabdRahmanIkhmimiMaraghi/0764IbnCabdRahmanIkhmimiMaraghi.RisalaFiRaddCalaIbnTaymiyya/0764IbnCabdRahmanIkhmimiMaraghi.RisalaFiRaddCalaIbnTaymiyya.Shamela0006538-ara1.yml => 0764BahaDinIkhmimi/0764BahaDinIkhmimi.RisalaFiRaddCalaIbnTaymiyya/0764BahaDinIkhmimi.RisalaFiRaddCalaIbnTaymiyya.Shamela0006538-ara1.yml} (78%)
+ rename data/{0764IbnCabdRahmanIkhmimiMaraghi/0764IbnCabdRahmanIkhmimiMaraghi.RisalaFiRaddCalaIbnTaymiyya/0764IbnCabdRahmanIkhmimiMaraghi.RisalaFiRaddCalaIbnTaymiyya.yml => 0764BahaDinIkhmimi/0764BahaDinIkhmimi.RisalaFiRaddCalaIbnTaymiyya/0764BahaDinIkhmimi.RisalaFiRaddCalaIbnTaymiyya.yml} (89%)
+ rename data/{0764IbnCabdRahmanIkhmimiMaraghi/0764IbnCabdRahmanIkhmimiMaraghi.RisalaFiRaddCalaIbnTaymiyya => 0764BahaDinIkhmimi/0764BahaDinIkhmimi.RisalaFiRaddCalaIbnTaymiyya}/README.md (100%)
+ rename data/{0764IbnCabdRahmanIkhmimiMaraghi/0764IbnCabdRahmanIkhmimiMaraghi.RisalaFiRaddCalaIbnTaymiyya => 0764BahaDinIkhmimi/0764BahaDinIkhmimi.RisalaFiRaddCalaIbnTaymiyya}/text_questionnaire.md (100%)
+ rename data/{0756IbnAhmadCadudDinIji/0756IbnAhmadCadudDinIji.yml => 0764BahaDinIkhmimi/0764BahaDinIkhmimi.yml} (92%)
+ delete mode 100644 data/0764IbnCabdRahmanIkhmimiMaraghi/0764IbnCabdRahmanIkhmimiMaraghi.yml
+Already up to date.
+Already up to date.
+Already up to date.
+Updating bd562dd..6eaaa6f
+Fast-forward
+ ...nayman.MukhtasarMinhajSunna.Shamela0021512-ara1 | 14262 +++++++++++++++++++
+ ...an.MukhtasarMinhajSunna.Shamela0021512-ara1.yml |    14 +
+ ...1450CabdAllahGhunayman.MukhtasarMinhajSunna.yml |    19 +
+ .../README.md                                      |     5 +
+ .../text_questionnaire.md                          |    25 +
+ .../1450CabdAllahGhunayman.yml                     |    20 +
+ 6 files changed, 14345 insertions(+)
+ create mode 100644 data/1450CabdAllahGhunayman/1450CabdAllahGhunayman.MukhtasarMinhajSunna/1450CabdAllahGhunayman.MukhtasarMinhajSunna.Shamela0021512-ara1
+ create mode 100644 data/1450CabdAllahGhunayman/1450CabdAllahGhunayman.MukhtasarMinhajSunna/1450CabdAllahGhunayman.MukhtasarMinhajSunna.Shamela0021512-ara1.yml
+ create mode 100644 data/1450CabdAllahGhunayman/1450CabdAllahGhunayman.MukhtasarMinhajSunna/1450CabdAllahGhunayman.MukhtasarMinhajSunna.yml
+ create mode 100644 data/1450CabdAllahGhunayman/1450CabdAllahGhunayman.MukhtasarMinhajSunna/README.md
+ create mode 100644 data/1450CabdAllahGhunayman/1450CabdAllahGhunayman.MukhtasarMinhajSunna/text_questionnaire.md
+ create mode 100644 data/1450CabdAllahGhunayman/1450CabdAllahGhunayman.yml
+Already up to date.
+Already up to date.
+Updating 2015312..5b579f4
+Fast-forward
+ ...aqirWahidBahbahani.HashiyatMajmacFaidaWaBurhan.yml | 19 -------------------
+ ...5MuhammadBaqirWahidBahbahani.TacliqaCalaManhaj.yml | 19 -------------------
+ .../1205WahidBihbahani.FawaidHairiya.Shia002963-ara1} |  0
+ ...5WahidBihbahani.FawaidHairiya.Shia002963-ara1.yml} |  2 +-
+ .../1205WahidBihbahani.FawaidHairiya.yml}             |  2 +-
+ .../1205WahidBihbahani.FawaidHairiya}/README.md       |  0
+ .../text_questionnaire.md                             |  0
+ ...ahani.HashiyatMajmacFaidaWaBurhan.Shia000260-ara1} |  0
+ ...i.HashiyatMajmacFaidaWaBurhan.Shia000260-ara1.yml} |  2 +-
+ ...205WahidBihbahani.HashiyatMajmacFaidaWaBurhan.yml} |  2 +-
+ .../README.md                                         |  0
+ .../text_questionnaire.md                             |  0
+ ...1205WahidBihbahani.RasailFiqhiyya.Shia000259-ara1} |  0
+ ...WahidBihbahani.RasailFiqhiyya.Shia000259-ara1.yml} |  2 +-
+ .../1205WahidBihbahani.RasailFiqhiyya.yml}            |  2 +-
+ .../1205WahidBihbahani.RasailFiqhiyya}/README.md      |  0
+ .../text_questionnaire.md                             |  0
+ ...5WahidBihbahani.TacliqaCalaManhaj.Shia002962-ara1} |  0
+ ...idBihbahani.TacliqaCalaManhaj.Shia002962-ara1.yml} |  2 +-
+ .../1205WahidBihbahani.TacliqaCalaManhaj.yml}         |  2 +-
+ .../1205WahidBihbahani.TacliqaCalaManhaj}/README.md   |  0
+ .../text_questionnaire.md                             |  0
+ .../1205WahidBihbahani.yml}                           |  2 +-
+ ...mmadMahdiNaraqi.JamicJawamicCulum.Shia002396-ara1} |  0
+ ...MahdiNaraqi.JamicJawamicCulum.Shia002396-ara1.yml} |  2 +-
+ .../1209MuhammadMahdiNaraqi.JamicJawamicCulum.yml     | 19 +++++++++++++++++++
+ .../README.md                                         |  0
+ .../text_questionnaire.md                             |  0
+ ...ammadMahdiNaraqi.JamicSacadat.Shia004042Vols-ara1} |  0
+ ...dMahdiNaraqi.JamicSacadat.Shia004042Vols-ara1.yml} |  2 +-
+ .../1209MuhammadMahdiNaraqi.JamicSacadat.yml          | 19 +++++++++++++++++++
+ .../1209MuhammadMahdiNaraqi.JamicSacadat}/README.md   |  0
+ .../text_questionnaire.md                             |  0
+ .../1209MuhammadMahdiNaraqi.yml}                      |  2 +-
+ 34 files changed, 50 insertions(+), 50 deletions(-)
+ delete mode 100644 data/1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.HashiyatMajmacFaidaWaBurhan/1205MuhammadBaqirWahidBahbahani.HashiyatMajmacFaidaWaBurhan.yml
+ delete mode 100644 data/1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.TacliqaCalaManhaj/1205MuhammadBaqirWahidBahbahani.TacliqaCalaManhaj.yml
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.FawaidHairiya/1205MuhammadBaqirWahidBahbahani.FawaidHairiya.Shia002963-ara1 => 1205WahidBihbahani/1205WahidBihbahani.FawaidHairiya/1205WahidBihbahani.FawaidHairiya.Shia002963-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.FawaidHairiya/1205MuhammadBaqirWahidBahbahani.FawaidHairiya.Shia002963-ara1.yml => 1205WahidBihbahani/1205WahidBihbahani.FawaidHairiya/1205WahidBihbahani.FawaidHairiya.Shia002963-ara1.yml} (80%)
+ rename data/{1209MuhammadMahdiNiraqi/1209MuhammadMahdiNiraqi.JamicSacadat/1209MuhammadMahdiNiraqi.JamicSacadat.yml => 1205WahidBihbahani/1205WahidBihbahani.FawaidHairiya/1205WahidBihbahani.FawaidHairiya.yml} (91%)
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.FawaidHairiya => 1205WahidBihbahani/1205WahidBihbahani.FawaidHairiya}/README.md (100%)
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.FawaidHairiya => 1205WahidBihbahani/1205WahidBihbahani.FawaidHairiya}/text_questionnaire.md (100%)
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.HashiyatMajmacFaidaWaBurhan/1205MuhammadBaqirWahidBahbahani.HashiyatMajmacFaidaWaBurhan.Shia000260-ara1 => 1205WahidBihbahani/1205WahidBihbahani.HashiyatMajmacFaidaWaBurhan/1205WahidBihbahani.HashiyatMajmacFaidaWaBurhan.Shia000260-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.HashiyatMajmacFaidaWaBurhan/1205MuhammadBaqirWahidBahbahani.HashiyatMajmacFaidaWaBurhan.Shia000260-ara1.yml => 1205WahidBihbahani/1205WahidBihbahani.HashiyatMajmacFaidaWaBurhan/1205WahidBihbahani.HashiyatMajmacFaidaWaBurhan.Shia000260-ara1.yml} (79%)
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.RasailFiqhiyya/1205MuhammadBaqirWahidBahbahani.RasailFiqhiyya.yml => 1205WahidBihbahani/1205WahidBihbahani.HashiyatMajmacFaidaWaBurhan/1205WahidBihbahani.HashiyatMajmacFaidaWaBurhan.yml} (90%)
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.HashiyatMajmacFaidaWaBurhan => 1205WahidBihbahani/1205WahidBihbahani.HashiyatMajmacFaidaWaBurhan}/README.md (100%)
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.HashiyatMajmacFaidaWaBurhan => 1205WahidBihbahani/1205WahidBihbahani.HashiyatMajmacFaidaWaBurhan}/text_questionnaire.md (100%)
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.RasailFiqhiyya/1205MuhammadBaqirWahidBahbahani.RasailFiqhiyya.Shia000259-ara1 => 1205WahidBihbahani/1205WahidBihbahani.RasailFiqhiyya/1205WahidBihbahani.RasailFiqhiyya.Shia000259-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.RasailFiqhiyya/1205MuhammadBaqirWahidBahbahani.RasailFiqhiyya.Shia000259-ara1.yml => 1205WahidBihbahani/1205WahidBihbahani.RasailFiqhiyya/1205WahidBihbahani.RasailFiqhiyya.Shia000259-ara1.yml} (80%)
+ rename data/{1209MuhammadMahdiNiraqi/1209MuhammadMahdiNiraqi.JamicJawamicCulum/1209MuhammadMahdiNiraqi.JamicJawamicCulum.yml => 1205WahidBihbahani/1205WahidBihbahani.RasailFiqhiyya/1205WahidBihbahani.RasailFiqhiyya.yml} (91%)
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.RasailFiqhiyya => 1205WahidBihbahani/1205WahidBihbahani.RasailFiqhiyya}/README.md (100%)
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.RasailFiqhiyya => 1205WahidBihbahani/1205WahidBihbahani.RasailFiqhiyya}/text_questionnaire.md (100%)
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.TacliqaCalaManhaj/1205MuhammadBaqirWahidBahbahani.TacliqaCalaManhaj.Shia002962-ara1 => 1205WahidBihbahani/1205WahidBihbahani.TacliqaCalaManhaj/1205WahidBihbahani.TacliqaCalaManhaj.Shia002962-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.TacliqaCalaManhaj/1205MuhammadBaqirWahidBahbahani.TacliqaCalaManhaj.Shia002962-ara1.yml => 1205WahidBihbahani/1205WahidBihbahani.TacliqaCalaManhaj/1205WahidBihbahani.TacliqaCalaManhaj.Shia002962-ara1.yml} (80%)
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.FawaidHairiya/1205MuhammadBaqirWahidBahbahani.FawaidHairiya.yml => 1205WahidBihbahani/1205WahidBihbahani.TacliqaCalaManhaj/1205WahidBihbahani.TacliqaCalaManhaj.yml} (90%)
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.TacliqaCalaManhaj => 1205WahidBihbahani/1205WahidBihbahani.TacliqaCalaManhaj}/README.md (100%)
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.TacliqaCalaManhaj => 1205WahidBihbahani/1205WahidBihbahani.TacliqaCalaManhaj}/text_questionnaire.md (100%)
+ rename data/{1209MuhammadMahdiNiraqi/1209MuhammadMahdiNiraqi.yml => 1205WahidBihbahani/1205WahidBihbahani.yml} (92%)
+ rename data/{1209MuhammadMahdiNiraqi/1209MuhammadMahdiNiraqi.JamicJawamicCulum/1209MuhammadMahdiNiraqi.JamicJawamicCulum.Shia002396-ara1 => 1209MuhammadMahdiNaraqi/1209MuhammadMahdiNaraqi.JamicJawamicCulum/1209MuhammadMahdiNaraqi.JamicJawamicCulum.Shia002396-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{1209MuhammadMahdiNiraqi/1209MuhammadMahdiNiraqi.JamicJawamicCulum/1209MuhammadMahdiNiraqi.JamicJawamicCulum.Shia002396-ara1.yml => 1209MuhammadMahdiNaraqi/1209MuhammadMahdiNaraqi.JamicJawamicCulum/1209MuhammadMahdiNaraqi.JamicJawamicCulum.Shia002396-ara1.yml} (83%)
+ create mode 100644 data/1209MuhammadMahdiNaraqi/1209MuhammadMahdiNaraqi.JamicJawamicCulum/1209MuhammadMahdiNaraqi.JamicJawamicCulum.yml
+ rename data/{1209MuhammadMahdiNiraqi/1209MuhammadMahdiNiraqi.JamicJawamicCulum => 1209MuhammadMahdiNaraqi/1209MuhammadMahdiNaraqi.JamicJawamicCulum}/README.md (100%)
+ rename data/{1209MuhammadMahdiNiraqi/1209MuhammadMahdiNiraqi.JamicJawamicCulum => 1209MuhammadMahdiNaraqi/1209MuhammadMahdiNaraqi.JamicJawamicCulum}/text_questionnaire.md (100%)
+ rename data/{1209MuhammadMahdiNiraqi/1209MuhammadMahdiNiraqi.JamicSacadat/1209MuhammadMahdiNiraqi.JamicSacadat.Shia004042Vols-ara1 => 1209MuhammadMahdiNaraqi/1209MuhammadMahdiNaraqi.JamicSacadat/1209MuhammadMahdiNaraqi.JamicSacadat.Shia004042Vols-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{1209MuhammadMahdiNiraqi/1209MuhammadMahdiNiraqi.JamicSacadat/1209MuhammadMahdiNiraqi.JamicSacadat.Shia004042Vols-ara1.yml => 1209MuhammadMahdiNaraqi/1209MuhammadMahdiNaraqi.JamicSacadat/1209MuhammadMahdiNaraqi.JamicSacadat.Shia004042Vols-ara1.yml} (83%)
+ create mode 100644 data/1209MuhammadMahdiNaraqi/1209MuhammadMahdiNaraqi.JamicSacadat/1209MuhammadMahdiNaraqi.JamicSacadat.yml
+ rename data/{1209MuhammadMahdiNiraqi/1209MuhammadMahdiNiraqi.JamicSacadat => 1209MuhammadMahdiNaraqi/1209MuhammadMahdiNaraqi.JamicSacadat}/README.md (100%)
+ rename data/{1209MuhammadMahdiNiraqi/1209MuhammadMahdiNiraqi.JamicSacadat => 1209MuhammadMahdiNaraqi/1209MuhammadMahdiNaraqi.JamicSacadat}/text_questionnaire.md (100%)
+ rename data/{1205MuhammadBaqirWahidBahbahani/1205MuhammadBaqirWahidBahbahani.yml => 1209MuhammadMahdiNaraqi/1209MuhammadMahdiNaraqi.yml} (92%)
+Updating 4ae3612..1ef3c41
+Fast-forward
+ ...nAlbani.SahihWaDacifSunanTirmidhi.JK000140-ara1 | 30300 ++++++++++++
+ ...ani.SahihWaDacifSunanTirmidhi.JK000140-ara1.yml |    14 +
+ ...i.SahihWaDacifSunanTirmidhi.Shamela0000782-ara1 | 43402 +++++++++++++++++
+ ...hihWaDacifSunanTirmidhi.Shamela0000782-ara1.yml |    14 +
+ ...i.SahihWaDacifSunanTirmidhi.Shamela0001435-ara1 | 40761 ++++++++++++++++
+ ...hihWaDacifSunanTirmidhi.Shamela0001435-ara1.yml |    14 +
+ ...i.SahihWaDacifSunanTirmidhi.Shamela0007895-ara1 | 45988 +++++++++++++++++++
+ ...hihWaDacifSunanTirmidhi.Shamela0007895-ara1.yml |    14 +
+ ...i.SahihWaDacifSunanTirmidhi.Shia001735Vols-ara1 | 31875 +++++++++++++
+ ...hihWaDacifSunanTirmidhi.Shia001735Vols-ara1.yml |    14 +
+ ...madNasirDinAlbani.SahihWaDacifSunanTirmidhi.yml |    19 +
+ .../README.md                                      |     5 +
+ .../text_questionnaire.md                          |    25 +
+ .../1420MuhammadNasirDinAlbani.yml                 |    20 +
+ 14 files changed, 192465 insertions(+)
+ create mode 100644 data/1420MuhammadNasirDinAlbani/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi.JK000140-ara1
+ create mode 100644 data/1420MuhammadNasirDinAlbani/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi.JK000140-ara1.yml
+ create mode 100644 data/1420MuhammadNasirDinAlbani/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi.Shamela0000782-ara1
+ create mode 100644 data/1420MuhammadNasirDinAlbani/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi.Shamela0000782-ara1.yml
+ create mode 100644 data/1420MuhammadNasirDinAlbani/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi.Shamela0001435-ara1
+ create mode 100644 data/1420MuhammadNasirDinAlbani/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi.Shamela0001435-ara1.yml
+ create mode 100644 data/1420MuhammadNasirDinAlbani/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi.Shamela0007895-ara1
+ create mode 100644 data/1420MuhammadNasirDinAlbani/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi.Shamela0007895-ara1.yml
+ create mode 100644 data/1420MuhammadNasirDinAlbani/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi.Shia001735Vols-ara1
+ create mode 100644 data/1420MuhammadNasirDinAlbani/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi.Shia001735Vols-ara1.yml
+ create mode 100644 data/1420MuhammadNasirDinAlbani/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi.yml
+ create mode 100644 data/1420MuhammadNasirDinAlbani/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi/README.md
+ create mode 100644 data/1420MuhammadNasirDinAlbani/1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi/text_questionnaire.md
+ create mode 100644 data/1420MuhammadNasirDinAlbani/1420MuhammadNasirDinAlbani.yml
+Updating 92ff167..426aeb6
+Fast-forward
+ .../0954HattabRucayniMaghribi.MawahibJalil.JK000281-ara1}               | 0
+ .../0954HattabRucayniMaghribi.MawahibJalil.JK000281-ara1.yml}           | 2 +-
+ .../0954HattabRucayniMaghribi.MawahibJalil.ShamAY0034227-ara1}          | 0
+ .../0954HattabRucayniMaghribi.MawahibJalil.ShamAY0034227-ara1.yml}      | 2 +-
+ .../0954HattabRucayniMaghribi.MawahibJalil.Shamela0000569-ara1}         | 0
+ .../0954HattabRucayniMaghribi.MawahibJalil.Shamela0000569-ara1.yml}     | 2 +-
+ .../0954HattabRucayniMaghribi.MawahibJalil.Shia000906Vols-ara1}         | 0
+ .../0954HattabRucayniMaghribi.MawahibJalil.Shia000906Vols-ara1.yml}     | 2 +-
+ .../0954HattabRucayniMaghribi.MawahibJalil.yml}                         | 2 +-
+ .../0954HattabRucayniMaghribi.MawahibJalil}/README.md                   | 0
+ .../0954HattabRucayniMaghribi.MawahibJalil}/text_questionnaire.md       | 0
+ .../0954HattabRucayniMaghribi.MutammimatAjrumiyya.Shamela0004234-ara1}  | 0
+ ...54HattabRucayniMaghribi.MutammimatAjrumiyya.Shamela0004234-ara1.yml} | 2 +-
+ .../0954HattabRucayniMaghribi.MutammimatAjrumiyya.yml}                  | 2 +-
+ .../0954HattabRucayniMaghribi.MutammimatAjrumiyya}/README.md            | 0
+ .../text_questionnaire.md                                               | 0
+ .../0954HattabRucayniMaghribi.QurratCayn.ShamAY0037540-ara1}            | 0
+ .../0954HattabRucayniMaghribi.QurratCayn.ShamAY0037540-ara1.yml}        | 2 +-
+ .../0954HattabRucayniMaghribi.QurratCayn.yml}                           | 2 +-
+ .../0954HattabRucayniMaghribi.QurratCayn}/README.md                     | 0
+ .../0954HattabRucayniMaghribi.QurratCayn}/text_questionnaire.md         | 0
+ .../0954HattabRucayniMaghribi.TahrirKalam.Sham19Y0014552-ara1}          | 0
+ .../0954HattabRucayniMaghribi.TahrirKalam.Sham19Y0014552-ara1.yml}      | 2 +-
+ .../0954HattabRucayniMaghribi.TahrirKalam.yml}                          | 2 +-
+ .../0954HattabRucayniMaghribi.TahrirKalam}/README.md                    | 0
+ .../0954HattabRucayniMaghribi.TahrirKalam}/text_questionnaire.md        | 0
+ .../0954HattabRucayniMaghribi.yml}                                      | 2 +-
+ 27 files changed, 12 insertions(+), 12 deletions(-)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil.JK000281-ara1 => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MawahibJalil/0954HattabRucayniMaghribi.MawahibJalil.JK000281-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil.JK000281-ara1.yml => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MawahibJalil/0954HattabRucayniMaghribi.MawahibJalil.JK000281-ara1.yml} (80%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil.ShamAY0034227-ara1 => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MawahibJalil/0954HattabRucayniMaghribi.MawahibJalil.ShamAY0034227-ara1} (100%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil.ShamAY0034227-ara1.yml => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MawahibJalil/0954HattabRucayniMaghribi.MawahibJalil.ShamAY0034227-ara1.yml} (80%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil.Shamela0000569-ara1 => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MawahibJalil/0954HattabRucayniMaghribi.MawahibJalil.Shamela0000569-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil.Shamela0000569-ara1.yml => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MawahibJalil/0954HattabRucayniMaghribi.MawahibJalil.Shamela0000569-ara1.yml} (80%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil.Shia000906Vols-ara1 => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MawahibJalil/0954HattabRucayniMaghribi.MawahibJalil.Shia000906Vols-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil.Shia000906Vols-ara1.yml => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MawahibJalil/0954HattabRucayniMaghribi.MawahibJalil.Shia000906Vols-ara1.yml} (80%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.QurratCayn/0954IbnMuhammadHattabRucayniMaghribi.QurratCayn.yml => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MawahibJalil/0954HattabRucayniMaghribi.MawahibJalil.yml} (90%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MawahibJalil}/README.md (100%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MawahibJalil}/text_questionnaire.md (100%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MutammimatAjrumiyya/0954IbnMuhammadHattabRucayniMaghribi.MutammimatAjrumiyya.Shamela0004234-ara1 => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MutammimatAjrumiyya/0954HattabRucayniMaghribi.MutammimatAjrumiyya.Shamela0004234-ara1} (100%)
+ mode change 100755 => 100644
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MutammimatAjrumiyya/0954IbnMuhammadHattabRucayniMaghribi.MutammimatAjrumiyya.Shamela0004234-ara1.yml => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MutammimatAjrumiyya/0954HattabRucayniMaghribi.MutammimatAjrumiyya.Shamela0004234-ara1.yml} (79%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.TahrirKalam/0954IbnMuhammadHattabRucayniMaghribi.TahrirKalam.yml => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MutammimatAjrumiyya/0954HattabRucayniMaghribi.MutammimatAjrumiyya.yml} (90%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MutammimatAjrumiyya => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MutammimatAjrumiyya}/README.md (100%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MutammimatAjrumiyya => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.MutammimatAjrumiyya}/text_questionnaire.md (100%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.QurratCayn/0954IbnMuhammadHattabRucayniMaghribi.QurratCayn.ShamAY0037540-ara1 => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.QurratCayn/0954HattabRucayniMaghribi.QurratCayn.ShamAY0037540-ara1} (100%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.QurratCayn/0954IbnMuhammadHattabRucayniMaghribi.QurratCayn.ShamAY0037540-ara1.yml => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.QurratCayn/0954HattabRucayniMaghribi.QurratCayn.ShamAY0037540-ara1.yml} (80%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil/0954IbnMuhammadHattabRucayniMaghribi.MawahibJalil.yml => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.QurratCayn/0954HattabRucayniMaghribi.QurratCayn.yml} (90%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.QurratCayn => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.QurratCayn}/README.md (100%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.QurratCayn => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.QurratCayn}/text_questionnaire.md (100%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.TahrirKalam/0954IbnMuhammadHattabRucayniMaghribi.TahrirKalam.Sham19Y0014552-ara1 => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.TahrirKalam/0954HattabRucayniMaghribi.TahrirKalam.Sham19Y0014552-ara1} (100%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.TahrirKalam/0954IbnMuhammadHattabRucayniMaghribi.TahrirKalam.Sham19Y0014552-ara1.yml => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.TahrirKalam/0954HattabRucayniMaghribi.TahrirKalam.Sham19Y0014552-ara1.yml} (80%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.MutammimatAjrumiyya/0954IbnMuhammadHattabRucayniMaghribi.MutammimatAjrumiyya.yml => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.TahrirKalam/0954HattabRucayniMaghribi.TahrirKalam.yml} (89%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.TahrirKalam => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.TahrirKalam}/README.md (100%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.TahrirKalam => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.TahrirKalam}/text_questionnaire.md (100%)
+ rename data/{0954IbnMuhammadHattabRucayniMaghribi/0954IbnMuhammadHattabRucayniMaghribi.yml => 0954HattabRucayniMaghribi/0954HattabRucayniMaghribi.yml} (91%)
+/home/admin-kitab/Documents/Projects/kitab-metadata-automation
+Generating corpus metadata  ...
+config ./utility/config-automated-do-not-remove-or-change.py
+corpus_path ../../OpenITI/Github_clone
+exclude ['OpenITI.github.io', 'Annotation', 'maintenance', 'i.mech00', 'i.mech01', 'i.mech02', 'i.mech03', 'i.mech04', 'i.mech05', 'i.mech06', 'i.mech07', 'i.mech08', 'i.mech09', 'i.logic', 'i.cex', 'i.cex_Temp', 'i.mech', 'i.mech_Temp', '.git']
+data_in_25_year_repos True
+perform_yml_check True
+check_token_counts True
+incl_char_length True
+output_path ./output/
+meta_tsv_fp ./output/OpenITI_Github_clone_metadata_light.csv
+meta_yml_fp ./output/OpenITI_Github_clone_metadata_complete.yml
+meta_json_fp ./output/OpenITI_Github_clone_metadata_light.json
+meta_header_fp ./output/OpenITI_Github_clone_header_metadata.json
+silent True
+Checking yml files before collecting metadata...
+URI in yml file wrong! 0168MufaddalDabbi.Mufaddaliyat.Shamela0006904-ara1.completed != 0168MufaddalDabbi.Mufaddaliyat.Shamela0006904-ara1
+URI in yml file wrong! XXXShuhra.IsmKitab (autoupdated) != 0341MansurBiAllah.TathbitImama
+URI in yml file wrong! XXXShuhra (autoupdated) != 0341MansurBiAllah
+URI in yml file wrong! XXXShuhra.IsmKitab (autoupdated) != 0354IbnCabdJabbarNiffari.MawqifMawaqif
+URI in yml file wrong!  != 0711IbnIbrahimCimadDinWasiti.HatkAstarFusus.LMN20201127-ara1
+URI in yml file wrong! XXXShuhra.IsmKitab (autoupdated) != 0711IbnIbrahimCimadDinWasiti.HatkAstarFusus
+URI in yml file wrong!  != 0748Dhahabi.Nubdha.LMN20201019-ara1
+URI in yml file wrong! XXXShuhra.IsmKitab (autoupdated) != 0748Dhahabi.Nubdha
+URI in yml file wrong! XXXShuhra.IsmKitab (autoupdated) != 0750IbnLuyunTujibi.InalaCilmiyya
+URI in yml file wrong! XXXShuhra (autoupdated) != 0750IbnLuyunTujibi
+URI in yml file wrong! 0841BurhanDinSibtIbnCajami.KashfHathith.Shamela0005832-ara1.completed != 0841BurhanDinSibtIbnCajami.KashfHathith.Shamela0005832-ara1
+URI in yml file wrong! 0852IbnHajarCasqalani.TabaqatMudallisin.Shia003340-ara1.completed != 0852IbnHajarCasqalani.TabaqatMudallisin.Shia003340-ara1
+URI in yml file wrong! 0852IbnHajarCasqalani.TacjilManfaca.Shamela0001893-ara1.completed != 0852IbnHajarCasqalani.TacjilManfaca.Shamela0001893-ara1
+URI in yml file wrong! 0852IbnHajarCasqalani.TaghliqTacliq.Shamela0000347-ara1.completed != 0852IbnHajarCasqalani.TaghliqTacliq.Shamela0000347-ara1
+URI in yml file wrong! 0854IbnDiyaMakki.TarikhMakka.Shamela0005539-ara1.completed != 0854IbnDiyaMakki.TarikhMakka.Shamela0005539-ara1
+URI in yml file wrong! 0855BadrDinCayni.CumdatQari.Shamela0005756-ara1.completed != 0855BadrDinCayni.CumdatQari.Shamela0005756-ara1
+URI in yml file wrong! 0855BadrDinCayni.MaghaniAkhyar.Shamela0010452-ara1.completed != 0855BadrDinCayni.MaghaniAkhyar.Shamela0010452-ara1
+URI in yml file wrong! 0874IbnTaghribirdi.MawridLatafa.Shamela0006669-ara1.completed != 0874IbnTaghribirdi.MawridLatafa.Shamela0006669-ara1
+URI in yml file wrong! 0879IbnQutlubugha.TajTarajim.Shamela0010925-ara1.completed != 0879IbnQutlubugha.TajTarajim.Shamela0010925-ara1
+URI in yml file wrong! 0902Sakhawi.DawLamic.JK003608-ara1.completed != 0902Sakhawi.DawLamic.JK003608-ara1
+URI in yml file wrong! 0904Burayhi.TabaqatSulahaYaman.Shamela0006641-ara1.completed != 0904Burayhi.TabaqatSulahaYaman.Shamela0006641-ara1
+URI in yml file wrong! 0905Basrawi.Tarikh.Shamela0006637-ara1.completed != 0905Basrawi.Tarikh.Shamela0006637-ara1
+URI in yml file wrong! 0911Samhudi.KhulasatWafa.Shamela0031372-ara1.completed != 0911Samhudi.KhulasatWafa.Shamela0031372-ara1
+URI in yml file wrong! 0911Samhudi.WafaWafa.Shamela0023695-ara1.completed != 0911Samhudi.WafaWafa.Shamela0023695-ara1
+URI in yml file wrong! 0911Suyuti.AsmaMudallisin.Shamela0000005-ara1.completed != 0911Suyuti.AsmaMudallisin.Shamela0000005-ara1
+URI in yml file wrong! 0911Suyuti.DurrManthur.Shamela0012884-ara1.completed != 0911Suyuti.DurrManthur.Shamela0012884-ara1
+URI in yml file wrong! 0911Suyuti.GhurarFiFadailCumar.Shamela0000193-ara1.completed != 0911Suyuti.GhurarFiFadailCumar.Shamela0000193-ara1
+URI in yml file wrong! 0911Suyuti.HusnMuhadara.Shamela0003283-ara1.completed != 0911Suyuti.HusnMuhadara.Shamela0003283-ara1
+URI in yml file wrong! 0911Suyuti.NazmCiqyan.Shamela0009061-ara1.completed != 0911Suyuti.NazmCiqyan.Shamela0009061-ara1
+URI in yml file wrong! 0911Suyuti.TabaqatMufassirin.Shamela0006234-ara1.completed != 0911Suyuti.TabaqatMufassirin.Shamela0006234-ara1
+URI in yml file wrong! 0921JibrailIbnQulaci.QissatMarNuhra.PES20201020-ara1 != 0921JibrailIbnQilaci.QissatMarNuhra.PES20201020-ara1
+URI in yml file wrong! 0922IbnShaykhTarabulusi.IscafAwqaf.Shamela0096262-ara1.completed != 0922IbnShaykhTarabulusi.IscafAwqaf.Shamela0096262-ara1
+URI in yml file wrong! 0929IbnKayyal.KawakibNayyirat.Shamela0000309-ara1.completed != 0929IbnKayyal.KawakibNayyirat.Shamela0000309-ara1
+URI in yml file wrong! 0938IbnCaliBalawi.Thabat.Shamela0010736-ara1.completed != 0938IbnCaliBalawi.Thabat.Shamela0010736-ara1
+URI in yml file wrong! 0945ShamsDinDawudi.TabaqatMufassirin.Shamela0027084-ara1.completed != 0945ShamsDinDawudi.TabaqatMufassirin.Shamela0027084-ara1
+URI in yml file wrong! 0953IbnTulun.MufakahaKhillan.Shamela0026578-ara1.completed != 0953IbnTulun.MufakahaKhillan.Shamela0026578-ara1
+URI in yml file wrong! 0968Tashkubruizadah.ShaqaiqNucmaniyya.Shamela0006723-ara1.completed != 0968Tashkubruizadah.ShaqaiqNucmaniyya.Shamela0006723-ara1
+URI in yml file wrong! 1041Maqqari.AzharRiyad.Shamela0026350-ara1.completed != 1041Maqqari.AzharRiyad.Shamela0026350-ara1
+URI in yml file wrong! 1051Cimadi.RawdaRayya.Shamela0005864-ara1.completed != 1051Cimadi.RawdaRayya.Shamela0005864-ara1
+URI in yml file wrong! 1069ShihabDinKhafaji.RayhanaAlibba.Shamela0001522-ara1.completed != 1069ShihabDinKhafaji.RayhanaAlibba.Shamela0001522-ara1
+URI in yml file wrong! 1070MuhammadKibrit.RihlaShita.Shamela0037345-ara1.completed != 1070MuhammadKibrit.RihlaShita.Shamela0037345-ara1
+Token count must be changed in 76 files
+
+replacing token count in 76 files
+No missing yml files.
+
+The following files could have problems with their URI:
+
+     .Rhistory
+     0110HasanBasri.FadailMakka.Shamela0005722-ara1.markdown
+     0150AbuHanifa.FiqhAbsat.Shamela0006387-ara1.markdown
+     0150AbuHanifa.FiqhAkbar.JK001085-ara1.markdown
+     0151IbnIshaq.Sira.Shamela0009862-ara2.markdown
+     0195MuarrijSadusi.HadhfMinNasabQuraysh.Shamela0000496-ara1.markdown
+     0204IbnKalbi.AnsabKhayl.Shamela0009249-ara1.markdown
+     0207Waqidi.Maghazi.Shamela0023680-ara1.markdown
+     0207Waqidi.Ridda.Shamela0012222-ara1.markdown
+     0310Tabari.JamicBayan.Shamela0007798-ara1.inProgress_mARkdownSimple
+     0310Tabari.JamicBayan.Shamela0007798-ara1.notes
+     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple
+     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple.IDs
+     1408CumarKahhala.MucjamQabail.Shamela0012402-ara1.inprogress
+     Bayrut_1995_001.pdff
+     Bayrut_1995_002.pdff
+     Bayrut_1995_003.pdff
+     Bayrut_1995_004.pdff
+     OpenITI-9001AH_metadata_2020-2-3.csv
+     OpenITI_metadata_2020-2-3_wNoor.csv
+     OpenITI_metadata_2020-2-3_wNoor_merged.csv
+     Tunis_2011_000.pdff
+     Tunis_2011_001.pdff
+     Tunis_2011_002.pdff
+     Tunis_2011_003.pdff
+     Tunis_2011_004.pdff
+     move_into_author_folder.py
+
+Token count changed in 76 files
+
+
+The following files could have problems with their URI:
+
+     .Rhistory
+     0110HasanBasri.FadailMakka.Shamela0005722-ara1.markdown
+     0150AbuHanifa.FiqhAbsat.Shamela0006387-ara1.markdown
+     0150AbuHanifa.FiqhAkbar.JK001085-ara1.markdown
+     0151IbnIshaq.Sira.Shamela0009862-ara2.markdown
+     0195MuarrijSadusi.HadhfMinNasabQuraysh.Shamela0000496-ara1.markdown
+     0204IbnKalbi.AnsabKhayl.Shamela0009249-ara1.markdown
+     0207Waqidi.Maghazi.Shamela0023680-ara1.markdown
+     0207Waqidi.Ridda.Shamela0012222-ara1.markdown
+     0310Tabari.JamicBayan.Shamela0007798-ara1.inProgress_mARkdownSimple
+     0310Tabari.JamicBayan.Shamela0007798-ara1.notes
+     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple
+     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple.IDs
+     1408CumarKahhala.MucjamQabail.Shamela0012402-ara1.inprogress
+     Bayrut_1995_001.pdff
+     Bayrut_1995_002.pdff
+     Bayrut_1995_003.pdff
+     Bayrut_1995_004.pdff
+     OpenITI-9001AH_metadata_2020-2-3.csv
+     OpenITI_metadata_2020-2-3_wNoor.csv
+     OpenITI_metadata_2020-2-3_wNoor_merged.csv
+     Tunis_2011_000.pdff
+     Tunis_2011_001.pdff
+     Tunis_2011_002.pdff
+     Tunis_2011_003.pdff
+     Tunis_2011_004.pdff
+     move_into_author_folder.py
+
+Processing time: 2063.90 sec
+================================================================================
+Collecting metadata...
+collecting metadata from OpenITI...
+عمارة اليمني
+العوتبي، الصحاري
+العوتبي، الصحاري
+العوتبي، الصحاري
+شافع بن علي
+شافع بن علي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+إبن ليون
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+المنصور بالله
+الإصطخري
+الإصطخري
+الإصطخري
+إبن مروان الدينوري
+إبن مروان الدينوري
+إبن مروان الدينوري
+إبن مروان الدينوري
+إبن مروان الدينوري
+إبن مروان الدينوري
+(مؤلف مجهول)
+(مؤلف مجهول)
+خميس شقصي
+يوسف المحلي
+إبن قيصر
+إبن قيصر
+نجم الدين محمد الغزي
+نجم الدين محمد الغزي
+نجم الدين محمد الغزي
+إبن الرفعة
+إبن الرفعة
+(مترجم مجهول)
+مكي بن حموش القيسي
+مكي بن حموش القيسي
+مكي بن حموش القيسي
+مكي بن حموش القيسي
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+1111Majlisi.BiharAnwar.Zaydiyya0000202A-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsB-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsC-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsA-ara1
+1111Majlisi.BiharAnwar.Zaydiyya0000202B-ara1
+1111Majlisi.BiharAnwar.Zaydiyya0000202C-ara1
+أبو زكريا يحيى بن عدي
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+أبو الحسن البسيوي
+أبو الحسن البسيوي
+أبو سعيد الكدمي
+أبو سعيد الكدمي
+أبو سعيد الكدمي
+أبو سعيد الكدمي
+MISSING FILE? ../../OpenITI/Github_clone/0175AH/data/0151IbnIshaq/0151IbnIshaq.Sira/0151IbnIshaq.Sira.Shamela0009862-ara2 does not exist
+ابن إسحاق
+ابن إسحاق
+أبو سعد الآبي
+أبو سعد الآبي
+إبن سوار
+حسان البصري
+حسان البصري
+MISSING FILE? ../../OpenITI/Github_clone/0125AH/data/0110HasanBasri/0110HasanBasri.FadailMakka/0110HasanBasri.FadailMakka.Shamela0005722-ara1 does not exist
+حسان البصري
+خير الدين إبن إليس
+MISSING FILE? ../../OpenITI/Github_clone/0200AH/data/0195MuarrijSadusi/0195MuarrijSadusi.HadhfMinNasabQuraysh/0195MuarrijSadusi.HadhfMinNasabQuraysh.Shamela0000496-ara1 does not exist
+يحيى بن البطريق
+يحيى بن البطريق
+يحيى بن البطريق
+إبن رضوان
+أبو بكر المالكي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+شيخعمي سعيد
+عبد القادر بن محمد النعيمي الدمشقي
+عبد القادر بن محمد النعيمي الدمشقي
+محيي الدين إبن عبد الظاهر
+محيي الدين إبن عبد الظاهر
+منصور الخروصي
+عبد المسيح الناعمي
+(مؤلف مجهول)
+إبن الكلبي
+إبن الكلبي
+إبن الكلبي
+إبن الكلبي
+إبن الكلبي
+إبن الكلبي
+MISSING FILE? ../../OpenITI/Github_clone/0225AH/data/0204IbnKalbi/0204IbnKalbi.AnsabKhayl/0204IbnKalbi.AnsabKhayl.Shamela0009249-ara1 does not exist
+إبن الكلبي
+إبن الكلبي
+الواقدي
+الواقدي
+الواقدي
+MISSING FILE? ../../OpenITI/Github_clone/0225AH/data/0207Waqidi/0207Waqidi.Ridda/0207Waqidi.Ridda.Shamela0012222-ara1 does not exist
+الواقدي
+MISSING FILE? ../../OpenITI/Github_clone/0225AH/data/0207Waqidi/0207Waqidi.Maghazi/0207Waqidi.Maghazi.Shamela0023680-ara1 does not exist
+إبن أبي نبهان الخروصي
+إبن أبي نبهان الخروصي
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+MISSING FILE? ../../OpenITI/Github_clone/0325AH/data/0310Tabari/0310Tabari.Tarikh/0310Tabari.Tarikh.SBS20191023-ara1 does not exist
+الطبري
+الطبري
+الطبري
+أبو العباس النيريزي
+أبو العباس النيريزي
+أبو العباس النيريزي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو حنيفة
+أبو حنيفة
+MISSING FILE? ../../OpenITI/Github_clone/0150AH/data/0150AbuHanifa/0150AbuHanifa.FiqhAbsat/0150AbuHanifa.FiqhAbsat.Shamela0006387-ara1 does not exist
+أبو حنيفة
+MISSING FILE? ../../OpenITI/Github_clone/0150AH/data/0150AbuHanifa/0150AbuHanifa.FiqhAkbar/0150AbuHanifa.FiqhAkbar.JK001085-ara1 does not exist
+أبو حنيفة
+أبو الحواري الأعمى
+أسطاث (eستتهس)
+محمد إبن إسحاق الفاكهي
+محمد إبن إسحاق الفاكهي
+(مترجم مجهول)
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+ثيادورس إبن بسيل
+إصطفن إبن بسيل
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+(مترجم مجهول)
+قسطا بن لوقا
+قسطا بن لوقا
+قسطا بن لوقا
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إبن شهدا الكرخي
+إبن شهدا الكرخي
+إسحاق بن علي الرهاوي
+عيسى بن يحيى
+عيسى بن يحيى
+عيسى بن يحيى
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+ثابت إبن قرة
+ثابت إبن قرة
+ثابت إبن قرة
+أحمد الدرجيني
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+(مترجم مجهول)
+الرماني
+الرماني
+الرماني
+الرماني
+الرماني
+الرماني
+الرماني
+الرماني
+إبن الجزار
+إبن زرع
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+../../OpenITI/Github_clone/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Zaydiyya0000202A-ara1
+../../OpenITI/Github_clone/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Zaydiyya0000202-ara1
+---
+../../OpenITI/Github_clone/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Shia001432VolsB-ara1
+../../OpenITI/Github_clone/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Shia001432Vols-ara1
+---
+================================================================================
+COLLECTING INTO A CSV FILE (10071 LINES)...
+================================================================================
+Processing time: 2080.29 sec
+================================================================================
+Collecting issues from GitHub...
+logged in
+issue labels in this repo:
+   Label(name="Development")
+   Label(name="PRI & SEC Versions")
+   Label(name="URI change suggestion")
+   Label(name="discrepancies")
+   Label(name="in progress")
+   Label(name="no edition found")
+   Label(name="review finished")
+   Label(name="text quality")
+   Label(name="text tagged")
+   Label(name="urgent")
+getting relevant issues from GitHub...
+GitHub fetching time: 5.04 sec
+================================================================================
+Saving metadata...
+================================================================================
+Tada!
+Total processing time: 2085.33 sec
