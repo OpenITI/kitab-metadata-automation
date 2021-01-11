@@ -408,7 +408,7 @@ def insert_spaces(s):
 
 def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     incl_char_length=False, split_ar_lat=False,
-                    flat_folder=False):
+                    flat_folder=False, output_files_path=None):
     """Collect the metadata from URIs, YML files and text file headers
     and save the metadata in csv and yml files.
 
@@ -428,9 +428,10 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
     print("collecting metadata from OpenITI...")
 
     dataYML = []
-    dataCSV = {}  # vers-uri, date, author, book, id, status, length, fullTextURLURL, instantiationURL, tags, localPath
+    dataCSV = {}  # vers-uri, date, author, book, id, status, length, fullTextURL, instantiationURL, tags, localPath
     statusDic = {}
     split_files = dict()
+    start_folder = re.sub("\\\\", "/", start_folder)
 
     for root, dirs, files in os.walk(start_folder):
         dirs = [d for d in sorted(dirs) if d not in exclude]
@@ -578,7 +579,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 #   local filepath  to the current version:
                 uri.extension = ""
                 #local_pth = uri.build_pth("version_file")
-                local_pth = versF[:-4]
+                local_pth = re.sub(r"\\", "/", versF[:-4])
                 #print("local_pth:", local_pth)
                 #print(local_pth)
 
@@ -630,17 +631,25 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                         statusDic[bookURI].append("%012d##" % int(lenTemp) + versURI)
 
 
-                # - build the path to the full text file on Github:
-                #print(local_pth)
-                if URI.data_in_25_year_repos:
-                    uri.base_pth = "https://raw.githubusercontent.com/OpenITI"
-                    #fullTextURL = re.sub("data/", "master/data/", uri.build_pth("version_file"))
-                    fullTextURL = re.sub("data/", "master/data/", local_pth) 
-                else:
-                    uri.base_pth = "data"
-                    #fullTextURL = uri.build_pth("version_file")
-                    fullTextURL = re.sub(".+?/data/", "data/", local_pth)
+##                # - build the path to the full text file on Github:
+##                if URI.data_in_25_year_repos:
+##                    uri.base_pth = "https://raw.githubusercontent.com/OpenITI"
+##                    #fullTextURL = re.sub("data/", "master/data/", uri.build_pth("version_file"))
+##                    fullTextURL = re.sub("data/", "master/data/", local_pth) 
+##                else:
+##                    uri.base_pth = "data"
+##                    #fullTextURL = uri.build_pth("version_file")
+##                    fullTextURL = re.sub(".+?/data/", "data/", local_pth)
+
+                # - build the link/path to the text file in the output file:
+                
                 #print(fullTextURL)
+                if output_files_path:
+                    fullTextURL = re.sub(start_folder, output_files_path, local_pth)
+                else:
+                    fullTextURL = local_pth
+                if "githubusercontent" in fullTextURL:
+                    fullTextURL = re.sub("data/", "master/data/", fullTextURL)
 
                 # - tags (for extension + "genres")
                 tags = ""
@@ -839,10 +848,14 @@ check_token_counts = None  # True/False
 incl_char_length = None  # True/False
 
 # Split title and author data in Arabic and Latin script into separate columns:
-split_ar_lat = None # True/False
+split_ar_lat = None  # True/False
 
 # path to the output folder:
 output_path = "./output/"
+
+# Use this path instead of the `corpus_path` for text and yml files in output metadata:
+# E.g., "https://raw.githubusercontent.com/OpenITI", ".."
+output_files_path = None  # write path to use instead of corpus_path
 
 # path to the output files (default: in the folder at output_path)
 meta_tsv_fp = None
@@ -853,8 +866,9 @@ meta_header_fp = None
 # List of lists (description, run_id on server):  
 passim_runs = [['October 2017 (V1)', 'passim1017'],
                ['February 2019 (V2)', 'passim01022019'],
-               ['May 2019 (Aggregated)', 'aggregated01052019'],
-               ['February 2020', 'passim01022020']]
+#               ['May 2019 (Aggregated)', 'aggregated01052019'],
+               ['February 2020', 'passim01022020'],
+               ['October 2020', 'passim01102020']]
 
 # Set to True to allow the script to make changes to yml files without asking:
 silent = False  # True/False"""
@@ -1018,7 +1032,7 @@ Command line arguments for generate-metadata.py:
               "perform_yml_check", "check_token_counts",
               "incl_char_length", "output_path",
               "meta_tsv_fp", "meta_yml_fp", "meta_json_fp", "meta_header_fp",
-              "passim_runs", "silent", "split_ar_lat"]
+              "passim_runs", "silent", "split_ar_lat", "output_files_path"]
     supplement_config_variables(cfg_dict, v_list)
 
     corpus_path = cfg_dict["corpus_path"]
@@ -1035,6 +1049,9 @@ Command line arguments for generate-metadata.py:
     passim_runs = cfg_dict["passim_runs"]
     silent = cfg_dict["silent"]
     split_ar_lat = cfg_dict["split_ar_lat"]
+    output_files_path = cfg_dict["output_files_path"]
+
+    print("output_files_path", output_files_path)
 
 
     # 0b- override config variables from command line arguments:
@@ -1089,6 +1106,14 @@ Command line arguments for generate-metadata.py:
         msg = "Insert the path to the parent folder of the repos: "
         corpus_path = input(msg)
         print("Metadata will be collected in", corpus_path)
+
+    if output_files_path == None:
+        msg = "Do you want to use another path (e.g., relative path, URL) to this folder in the output file?"
+        print(msg)
+        r = input("Y/N? ")
+        if r.lower() == "y":
+            msg = "Write the path to the parent folder of the repos for use in output file: "
+            output_files_path = input(msg)
  
     flat_folder = False
     if data_in_25_year_repos == None:
@@ -1137,6 +1162,7 @@ Command line arguments for generate-metadata.py:
         split_ar_lat = check_input(msg)
 
 
+
     pth_string = re.sub("\.+[\\/]", "", corpus_path)
     pth_string = re.sub(r"[\\/]", "_", pth_string)
     pth_string = os.path.join(output_path, pth_string)
@@ -1161,6 +1187,7 @@ Command line arguments for generate-metadata.py:
     print("meta_json_fp", meta_json_fp)
     print("meta_header_fp", meta_header_fp)
     print("silent", silent)
+    print("output_files_path", output_files_path)
 
     if not silent:
         input("Press Enter to start generating metadata ")
@@ -1186,7 +1213,8 @@ Command line arguments for generate-metadata.py:
     print("Collecting metadata...")
     collectMetadata(corpus_path, exclude, meta_tsv_fp, meta_yml_fp,
                     incl_char_length=incl_char_length,
-                    split_ar_lat=split_ar_lat, flat_folder=flat_folder)
+                    split_ar_lat=split_ar_lat, flat_folder=flat_folder,
+                    output_files_path=output_files_path)
     temp = end
     end = time.time()
     print("Processing time: {0:.2f} sec".format(end - start))

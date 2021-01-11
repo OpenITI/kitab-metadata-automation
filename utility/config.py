@@ -22,10 +22,14 @@ check_token_counts = None  # True/False
 incl_char_length = None  # True/False
 
 # Split title and author data in Arabic and Latin script into separate columns:
-split_ar_lat = None # True/False
+split_ar_lat = None  # True/False
 
 # path to the output folder:
 output_path = "./output/"
+
+# Use this path instead of the `corpus_path` for text and yml files in output metadata:
+# E.g., "https://raw.githubusercontent.com/OpenITI", ".."
+output_files_path = None  # write path to use instead of corpus_path
 
 # path to the output files (default: in the folder at output_path)
 meta_tsv_fp = None
