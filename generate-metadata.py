@@ -216,15 +216,11 @@ def load_srt_meta(srt_folder, passim_runs):
               value: list (each item is a list with two items:
                            date of the passim run, link to the relevant srt folder)
     """
-    print(passim_runs)
     srt_d = dict()
     u = "http://dev.kitab-project.org"
     runs = {item[1]: item[0] for item in passim_runs}
-    print(json.dumps(runs, indent=2, sort_keys=True))
     for fn in os.listdir(srt_folder):
-        print(fn[:-5])
         if fn[:-5] in runs:
-            print(True)
 ##            # extract passim run date from `fn` and format as YYYY-MM-DD
 ##            date = re.sub("\D+", "", fn)
 ##            if len(date) == 8:
@@ -244,8 +240,8 @@ def load_srt_meta(srt_folder, passim_runs):
                 if not id_.split("-")[0] in srt_d:
                     srt_d[bare_id] = []
                 srt_d[bare_id].append([runs[fn[:-5]], "/".join([u, fn[:-5], id_])])
-    with open("srt_d.json", mode="w", encoding="utf-8") as file:
-        json.dump(srt_d, file, indent=2, sort_keys=True, ensure_ascii=False)
+##    with open("output/srt_d.json", mode="w", encoding="utf-8") as file:
+##        json.dump(srt_d, file, indent=2, sort_keys=True, ensure_ascii=False)
     return srt_d
         
         
@@ -559,7 +555,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
                 # - author:
 ##                author = insert_spaces(uri.author)
-                author_lat = [insert_spaces(uri.author), ]
+                author_from_uri = insert_spaces(uri.author)
+                author_lat = [author_from_uri, ]
                 author_ar = []
 
                 # - book title:
@@ -711,11 +708,13 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                         title = " :: ".join([title_lat, title_ar])
                         author = " :: ".join([author_lat,author_ar])
                         v = [versURI, date, author, bookURI, title, ed_info,
-                             uri.version, status, length, fullTextURL, tags,]
+                             uri.version, status, length, fullTextURL, tags,
+                             author_from_uri, shuhra, full_name]
                     else:
                         v = [versURI, date, author_ar, author_lat, bookURI,
                              title_ar, title_lat, ed_info,
-                             uri.version, status, length, fullTextURL, tags,]
+                             uri.version, status, length, fullTextURL, tags,
+                             author_from_uri, shuhra, full_name]
                     if incl_char_length:
                         v.append(char_length)
                     value = "\t".join(v)
@@ -738,19 +737,19 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
         dataCSV[key] = dataCSV[key].replace("\tsec\t", "\tpri\t")
 
 
-    # define the file header: 
+    # define the csv file header: 
     if not split_ar_lat:
         h = ["versionUri", "date", "author", "book",
              "title", "ed_info", "id", "status",
              "tok_length", "url",
              #"instantiation", "localPath",
-             "tags", ]
+             "tags", "author_from_uri", "author_shuhra", "author_full_name"]
     else:
         h = ["versionUri", "date", "author_ar", "author_lat", "book",
              "title_ar", "title_lat", "ed_info", "id", "status",
              "tok_length", "url",
              #"instantiation", "localPath",
-             "tags", ]
+             "tags", "author_from_uri", "author_lat_shuhra", "author_lat_full_name"]
     if incl_char_length:
         h.append("char_length")
     header = "\t".join(h)
