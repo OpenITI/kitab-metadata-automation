@@ -15,6 +15,7 @@ meta_json_fp = None
 meta_header_fp = None
 passim_runs = [['October 2017 (V1)', 'passim1017'],
                ['February 2019 (V2)', 'passim01022019'],
-               ['May 2019 (Aggregated)', 'aggregated01052019'],
-               ['February 2020', 'passim01022020']]
+#               ['May 2019 (Aggregated)', 'aggregated01052019'],
+               ['February 2020', 'passim01022020'],
+               ['October 2020', 'passim01102020']]
 silent = False

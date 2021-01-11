@@ -26,10 +26,6 @@ split_ar_lat = True # True/False
 # path to the output folder:
 output_path = "./output/"
 
-# Use this path instead of the `corpus_path` for text and yml files in output metadata:
-# E.g., "https://raw.githubusercontent.com/OpenITI", ".."
-output_files_path = "https://raw.githubusercontent.com/OpenITI"
-
 # path to the output files (default: in the folder at output_path)
 meta_tsv_fp = None
 meta_yml_fp = None
@@ -39,9 +35,8 @@ meta_header_fp = None
 # List of lists (description, run_id on server):  
 passim_runs = [['October 2017 (V1)', 'passim1017'],
                ['February 2019 (V2)', 'passim01022019'],
-#               ['May 2019 (Aggregated)', 'aggregated01052019'],
-               ['February 2020', 'passim01022020'],
-               ['October 2020', 'passim01102020']]
+               ['May 2019 (Aggregated)', 'aggregated01052019'],
+               ['February 2020', 'passim01022020']]
 
 # Set to True to allow the script to make changes to yml files without asking:
 silent = True  # True/False
