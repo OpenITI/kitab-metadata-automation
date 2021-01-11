@@ -200,6 +200,56 @@ headings_dict = {
      }
 
 
+def load_srt_meta(srt_folder, passim_runs):
+    """Create a dictionary for all existing srt files for every OpenITI text.
+
+    Args:
+       srt_folder (str): path to the folder in which the html files
+          for each passim run containing links to all srt file folders are saved
+        passim_runs (list): a list of 2-item lists of the
+            text reuse detection algorithm passim:
+            - first list member: description (date + version number)
+            - second list member: run id
+
+    Returns:
+        dict (key: bare id of a text (without Vols, -ara/per/..., extension, ...);
+              value: list (each item is a list with two items:
+                           date of the passim run, link to the relevant srt folder)
+    """
+    print(passim_runs)
+    srt_d = dict()
+    u = "http://dev.kitab-project.org"
+    runs = {item[1]: item[0] for item in passim_runs}
+    print(json.dumps(runs, indent=2, sort_keys=True))
+    for fn in os.listdir(srt_folder):
+        print(fn[:-5])
+        if fn[:-5] in runs:
+            print(True)
+##            # extract passim run date from `fn` and format as YYYY-MM-DD
+##            date = re.sub("\D+", "", fn)
+##            if len(date) == 8:
+##                date = "{}-{}-{}".format(date[4:], date[2:4], date[:2])
+##            elif len(date) == 4:
+##                date = "20{}-{}".format(date[2:], date[:2])
+
+            # extract text ids from html file and add their links to `srt_d`
+            fp = os.path.join(srt_folder, fn)
+            with open(fp, mode="r", encoding="utf-8") as file:
+                html = file.read()
+            ids = re.findall('<a href="([^\-"]+-[^"]+)"', html)
+            print(len(ids))
+            for id_ in ids:
+                id_ = re.sub("Vols[A-Z]*|BK\d+", "", id_)
+                bare_id = id_.split("-")[0]
+                if not id_.split("-")[0] in srt_d:
+                    srt_d[bare_id] = []
+                srt_d[bare_id].append([runs[fn[:-5]], "/".join([u, fn[:-5], id_])])
+    with open("srt_d.json", mode="w", encoding="utf-8") as file:
+        json.dump(srt_d, file, indent=2, sort_keys=True, ensure_ascii=False)
+    return srt_d
+        
+        
+        
 
 
 
@@ -223,7 +273,8 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
         None
     """
     json_objects = []
-    webserver_url = 'http://dev.kitab-project.org'
+##    webserver_url = 'http://dev.kitab-project.org'
+    srt_d = load_srt_meta("./utility/srt/", passim_runs)
 
     with open(csv_fp) as csvfile:
         reader = csv.DictReader(csvfile, delimiter='\t')
@@ -237,14 +288,21 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
             #new_id = row['url'].split('/')[-1].split('.')[-1] # may get the extension!
             uri = URI(row['url'])
             v_id = uri("version", ext="").split(".")[-1]
-            record['srts'] = []
-            if passim_runs:
-                for descr, run_id in passim_runs:
-                    if "2017" in descr:
-                        srt_link = "/".join([webserver_url, run_id, v_id[:-5]])
-                    else:
-                        srt_link = "/".join([webserver_url, run_id, v_id])
-                    record['srts'].append([descr, srt_link])
+            bare_id = re.sub("Vols[A-Z]*|BK\d+", "", v_id)
+            bare_id = bare_id.split("-")[0]
+            try:
+                record["srts"] = srt_d[bare_id]
+            except:
+                print("no srt files found for", bare_id)
+                record["srts"] = []
+##            record['srts'] = []
+##            if passim_runs:
+##                for descr, run_id in passim_runs:
+##                    if "2017" in descr:
+##                        srt_link = "/".join([webserver_url, run_id, v_id[:-5]])
+##                    else:
+##                        srt_link = "/".join([webserver_url, run_id, v_id])
+##                    record['srts'].append([descr, srt_link])
 
             # get issues related to the current book/version:
             
