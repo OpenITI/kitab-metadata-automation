@@ -115,6 +115,8 @@ import sys
 import textwrap
 import time
 import getopt
+from datetime import datetime
+
 
 # (in a later stage to be imported from the openiti python library):
 
@@ -324,6 +326,8 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
     # The required format for json file is data:[{jsonobjects}]
     first_json_key = {}
     first_json_key['data'] = json_objects
+    first_json_key['date'] = datetime.now().strftime("%d %B %Y")
+    first_json_key['time'] = datetime.now().strftime("%H:%M:%S")
     with open(out_fp, 'w') as json_file:
         json.dump(first_json_key, json_file,
                   ensure_ascii=False, sort_keys=True)
