@@ -120308,3 +120308,2726 @@ no srt files found for Sham19Y0004324
 no srt files found for Zaydiyya0000095
 Tada!
 Total processing time: 2212.25 sec
+[master e5cff5d] output generated
+ 4 files changed, 5516 insertions(+), 2799 deletions(-)
+Mon 01 Mar 2021 10:12:11 PM UTC
+*****************************END***********************************
+*****************************END***********************************
+******************************START**********************************
+******************************START**********************************
+Tue 02 Mar 2021 09:35:01 PM UTC
+/home/admin-kitab/Documents/OpenITI/Github_clone
+Resetting local changes ...
+HEAD is now at 7226b99 "few changes in ms and yml"
+HEAD is now at 77459b5 markdown and inprogress extensions corrected
+HEAD is now at 81b549a "few changes in ms and yml"
+HEAD is now at 33910c0 "few changes in ms and yml"
+HEAD is now at 1ac79c4 Merge pull request #2 from Gowaart/master
+HEAD is now at bb435c7 "few changes in ms and yml"
+HEAD is now at 76e2ed4 few yml and ms changes
+HEAD is now at 7d336cd Changed URI: 0189MuhammadShaybani.SiyarKabir > 0483IbnAhmadSarakhsi.SharhSiyarKabir
+HEAD is now at 21baec7 Change URI 0234IbnAbiShayba > 0235IbnAbiShayba
+HEAD is now at 6a6c943 Merge pull request #8 from Gowaart/master
+HEAD is now at 042240b Change URI
+HEAD is now at 1da04be few yml and ms changes
+HEAD is now at 08579fa URI Change
+HEAD is now at 79198e1 Fix URL
+HEAD is now at e931ea5 Merge pull request #12 from Gowaart/master
+HEAD is now at bbf9f2e Fix URL
+HEAD is now at 0ecc6b1 few yml and ms changes
+HEAD is now at a6df9cb few yml and ms changes
+HEAD is now at 53aed46 Merge pull request #14 from hamidrh66/master
+HEAD is now at 9a3e60e Delete redundant file (see issue #2044)
+HEAD is now at c6d2723 Merge pull request #8 from hamidrh66/master
+HEAD is now at 93ec341 "few changes in ms and yml"
+HEAD is now at d3135ee few yml and ms changes
+HEAD is now at 5784e4f Merge pull request #8 from hamidrh66/master
+HEAD is now at 4603db1 Merge pull request #19 from hamidrh66/master
+HEAD is now at 3e8c6f7 Change URI
+HEAD is now at 0fbefdd Update 0758NajmDinTarsusi.yml
+HEAD is now at 0f61818 Merg two folders of the same author: 0710AbuCabbasIbnRifca > 0710IbnRifca
+HEAD is now at bbee85f Merge pull request #5 from hamidrh66/master
+HEAD is now at 704c7f2 Correction: erroneously put the text of the Hidaya in this file. Replace with text of the Cinaya
+HEAD is now at bd0cb2b Merge pull request #21 from hamidrh66/master
+HEAD is now at 31a4ff5 Merge pull request #10 from Gowaart/master
+HEAD is now at 06f61f6 Change URI 0982IbnMuhammadAbuSacud > 0982IbnMuhammadAbuSucud
+HEAD is now at a987dfa Merge pull request #12 from hamidrh66/master
+HEAD is now at ab64cb3 URI Change
+HEAD is now at b12e31d Change URI to 0877IbnMiftah
+HEAD is now at a70311f "few changes in ms and yml"
+HEAD is now at 706b8e6 "few changes in ms and yml"
+HEAD is now at 0c8c22c "few changes in ms and yml"
+HEAD is now at d36e17a Change URI 0956IbnMuhammadHalabiHanafi.MajmacAnhur > 1078ShaykhiZadahDamadAfandi.MajmacAnhur
+HEAD is now at 0213a68 Change URI 0956IbnMuhammadHalabiHanafi.MajmacAnhur > 1078ShaykhiZadahDamadAfandi.MajmacAnhur
+HEAD is now at 4e00cf6 "few changes in ms and yml"
+HEAD is now at ecdf270 Merge pull request #5 from hamidrh66/master
+HEAD is now at 6eb1d9d few yml and ms changes
+HEAD is now at d31ccbc few yml and ms changes
+HEAD is now at 37c1513 Split off secondary texts
+HEAD is now at faf5cf4 few yml and ms changes
+HEAD is now at cb4ee0e "few changes in ms and yml"
+HEAD is now at 4bfc1bf "few changes in ms and yml"
+HEAD is now at 0c10de8 "few changes in ms and yml"
+HEAD is now at f9b8846 ms update
+HEAD is now at b84814d Change URI
+HEAD is now at 10d3643 few yml and ms changes
+HEAD is now at a2e606f "few changes in ms and yml"
+HEAD is now at a27b68b ms updated, few metadata fixes
+HEAD is now at 3f98cfb "few changes in ms and yml"
+HEAD is now at 70d64e3 "few changes in ms and yml"
+HEAD is now at 42dee74 "few changes in ms and yml"
+HEAD is now at 4c74e81 markdown and inprogress extensions corrected
+HEAD is now at 2666543 Update 1337IstifanThani.Zajaliyya.yml
+HEAD is now at e1589da few yml and ms changes
+HEAD is now at 70866ef "few changes in ms and yml"
+Fetching changes from corpus ...
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Updating 0f61818..a317a81
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Updating 42dee74..0e8f18f
+Already up to date.
+Already up to date.
+Already up to date.
+/home/admin-kitab/Documents/Projects/kitab-metadata-automation
+Generating corpus metadata  ...
+config ./utility/config-automated-do-not-remove-or-change.py
+output_files_path https://raw.githubusercontent.com/OpenITI
+corpus_path ../../OpenITI/Github_clone
+exclude ['OpenITI.github.io', 'Annotation', 'maintenance', 'i.mech00', 'i.mech01', 'i.mech02', 'i.mech03', 'i.mech04', 'i.mech05', 'i.mech06', 'i.mech07', 'i.mech08', 'i.mech09', 'i.logic', 'i.cex', 'i.cex_Temp', 'i.mech', 'i.mech_Temp', '.git']
+data_in_25_year_repos True
+perform_yml_check True
+check_token_counts True
+incl_char_length True
+output_path ./output/
+meta_tsv_fp ./output/OpenITI_Github_clone_metadata_light.csv
+meta_yml_fp ./output/OpenITI_Github_clone_metadata_complete.yml
+meta_json_fp ./output/OpenITI_Github_clone_metadata_light.json
+meta_header_fp ./output/OpenITI_Github_clone_header_metadata.json
+silent True
+output_files_path https://raw.githubusercontent.com/OpenITI
+Checking yml files before collecting metadata...
+URI in yml file wrong! 0786IbnMuhammadBabarti.CinayaSharhHidayaBK2.Shamela0009403-ara1 != 0786IbnMuhammadBabarti.CinayaSharhHidaya.Shamela0009403BK2-ara1
+URI in yml file wrong! 0877IbnMiftah.SharhAzhar.SharhAzhar.Zaydiyya0000275BK1-ara1 != 0877IbnMiftah.SharhAzhar.Zaydiyya0000275BK1-ara1
+../../OpenITI/Github_clone/1350AH/data/1337IstifanThani/1337IstifanThani.Zajaliyya/1337IstifanThani.Zajaliyya.yml
+('../../OpenITI/Github_clone/1350AH/data/1337IstifanThani/1337IstifanThani.Zajaliyya/1337IstifanThani.Zajaliyya.yml', 'no valid yml key in line', "It's a 13-pages archive of 170x110mm dimensions that holds the cote STM_4. Created and written by Priest Stephan the 2nd, son of Priest Stephan the 1st (born in 1855 and deceased 27 August 1938 : Review STM_15 ff.38)")
+Yml file 1337IstifanThani.Zajaliyya.yml could not be read. Check manually!
+
+The following yml files were found to contain errors.
+Check manually:
+
+     ../../OpenITI/Github_clone/1350AH/data/1337IstifanThani/1337IstifanThani.Zajaliyya/1337IstifanThani.Zajaliyya.yml
+Token count must be changed in 122 files
+
+replacing token count in 122 files
+../../OpenITI/Github_clone/1350AH/data/1337IstifanThani/1337IstifanThani.Zajaliyya/1337IstifanThani.Zajaliyya.yml
+('../../OpenITI/Github_clone/1350AH/data/1337IstifanThani/1337IstifanThani.Zajaliyya/1337IstifanThani.Zajaliyya.yml', 'no valid yml key in line', "It's a 13-pages archive of 170x110mm dimensions that holds the cote STM_4. Created and written by Priest Stephan the 2nd, son of Priest Stephan the 1st (born in 1855 and deceased 27 August 1938 : Review STM_15 ff.38)")
+Yml file 1337IstifanThani.Zajaliyya.yml could not be read. Check manually!
+
+The following yml files were found to contain errors.
+Check manually:
+
+     ../../OpenITI/Github_clone/1350AH/data/1337IstifanThani/1337IstifanThani.Zajaliyya/1337IstifanThani.Zajaliyya.yml
+No missing yml files.
+
+The following files could have problems with their URI:
+
+     .Rhistory
+     0281IbnAbiDunya.Awliya.JK000042-ara1copy
+     0281IbnAbiDunya.HilmMucawiya.Shamela0026874-ara1.mARKdown
+     0310Tabari.JamicBayan.Shamela0007798-ara1.inProgress_mARkdownSimple
+     0310Tabari.JamicBayan.Shamela0007798-ara1.notes
+     0877IbnMiftah.SharhAzhar.SharhAzhar.yml
+     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple
+     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple.IDs
+     1408CumarKahhala.MucjamQabail.Shamela0012402-ara1.inprogress
+     Bayrut_1995_001.pdff
+     Bayrut_1995_002.pdff
+     Bayrut_1995_003.pdff
+     Bayrut_1995_004.pdff
+     OpenITI-9001AH_metadata_2020-2-3.csv
+     OpenITI_metadata_2020-2-3_wNoor.csv
+     OpenITI_metadata_2020-2-3_wNoor_merged.csv
+     Tunis_2011_000.pdff
+     Tunis_2011_001.pdff
+     Tunis_2011_002.pdff
+     Tunis_2011_003.pdff
+     Tunis_2011_004.pdff
+
+Token count changed in 122 files
+
+
+The following files could have problems with their URI:
+
+     .Rhistory
+     0281IbnAbiDunya.Awliya.JK000042-ara1copy
+     0281IbnAbiDunya.HilmMucawiya.Shamela0026874-ara1.mARKdown
+     0310Tabari.JamicBayan.Shamela0007798-ara1.inProgress_mARkdownSimple
+     0310Tabari.JamicBayan.Shamela0007798-ara1.notes
+     0877IbnMiftah.SharhAzhar.SharhAzhar.yml
+     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple
+     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple.IDs
+     1408CumarKahhala.MucjamQabail.Shamela0012402-ara1.inprogress
+     Bayrut_1995_001.pdff
+     Bayrut_1995_002.pdff
+     Bayrut_1995_003.pdff
+     Bayrut_1995_004.pdff
+     OpenITI-9001AH_metadata_2020-2-3.csv
+     OpenITI_metadata_2020-2-3_wNoor.csv
+     OpenITI_metadata_2020-2-3_wNoor_merged.csv
+     Tunis_2011_000.pdff
+     Tunis_2011_001.pdff
+     Tunis_2011_002.pdff
+     Tunis_2011_003.pdff
+     Tunis_2011_004.pdff
+
+Processing time: 2511.63 sec
+================================================================================
+Collecting metadata...
+collecting metadata from OpenITI...
+عمارة اليمني
+العوتبي، الصحاري
+العوتبي، الصحاري
+العوتبي، الصحاري
+علي بن بالي منق
+علي بن بالي منق
+علي بن بالي منق
+شافع بن علي
+شافع بن علي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+الذهبي
+إبن ليون
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+أبو بشر متى بن يونس
+المنصور بالله
+الإصطخري
+الإصطخري
+الإصطخري
+إبن مروان الدينوري
+إبن مروان الدينوري
+إبن مروان الدينوري
+إبن مروان الدينوري
+إبن مروان الدينوري
+إبن مروان الدينوري
+(مؤلف مجهول)
+(مؤلف مجهول)
+خميس شقصي
+عماد الدين الكاتب الإصفهاني
+عماد الدين الكاتب الإصفهاني
+عماد الدين الكاتب الإصفهاني
+عماد الدين الكاتب الإصفهاني
+عماد الدين الكاتب الإصفهاني
+عماد الدين الكاتب الإصفهاني
+عماد الدين الكاتب الإصفهاني
+عماد الدين الكاتب الإصفهاني
+عماد الدين الكاتب الإصفهاني
+عماد الدين الكاتب الإصفهاني
+يوسف المحلي
+إبن قيصر
+إبن قيصر
+نجم الدين محمد الغزي
+نجم الدين محمد الغزي
+نجم الدين محمد الغزي
+طاشكpري زاده
+طاشكpري زاده
+إبن الرفعة
+إبن الرفعة
+No author yml file found
+(مترجم مجهول)
+مكي بن حموش القيسي
+مكي بن حموش القيسي
+مكي بن حموش القيسي
+مكي بن حموش القيسي
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+أبو نعيم الإسبحاني
+1111Majlisi.BiharAnwar.Zaydiyya0000202A-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsB-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsC-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsA-ara1
+1111Majlisi.BiharAnwar.Zaydiyya0000202B-ara1
+1111Majlisi.BiharAnwar.Zaydiyya0000202C-ara1
+نجم الدين إبراهيم بن علي الطرسوسي
+نجم الدين إبراهيم بن علي الطرسوسي
+نجم الدين إبراهيم بن علي الطرسوسي
+أبو زكريا يحيى بن عدي
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+إبن عدي، إبن القطان
+أبو الحسن البسيوي
+أبو الحسن البسيوي
+أبو سعيد الكدمي
+أبو سعيد الكدمي
+أبو سعيد الكدمي
+أبو سعيد الكدمي
+ابن إسحاق
+ابن إسحاق
+ابن إسحاق
+أبو سعد الآبي
+أبو سعد الآبي
+إبن سوار
+حسان البصري
+حسان البصري
+حسان البصري
+حسان البصري
+خير الدين إبن إليس
+يحيى بن البطريق
+يحيى بن البطريق
+يحيى بن البطريق
+إبن رضوان
+أبو بكر المالكي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+الخطيب البغدادي
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن عبد البر
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+إبن حزم
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+القاضي عياض
+قوام السنة
+قوام السنة
+قوام السنة
+قوام السنة
+قوام السنة
+قوام السنة
+قوام السنة
+قوام السنة
+قوام السنة
+قوام السنة
+قوام السنة
+قوام السنة
+شيخعمي سعيد
+عبد القادر بن محمد النعيمي الدمشقي
+عبد القادر بن محمد النعيمي الدمشقي
+../../OpenITI/Github_clone/1350AH/data/1337IstifanThani/1337IstifanThani.Zajaliyya/1337IstifanThani.Zajaliyya.yml
+('../../OpenITI/Github_clone/1350AH/data/1337IstifanThani/1337IstifanThani.Zajaliyya/1337IstifanThani.Zajaliyya.yml', 'no valid yml key in line', "It's a 13-pages archive of 170x110mm dimensions that holds the cote STM_4. Created and written by Priest Stephan the 2nd, son of Priest Stephan the 1st (born in 1855 and deceased 27 August 1938 : Review STM_15 ff.38)")
+../../OpenITI/Github_clone/1350AH/data/1337IstifanThani/1337IstifanThani.Zajaliyya/1337IstifanThani.Zajaliyya.yml
+('../../OpenITI/Github_clone/1350AH/data/1337IstifanThani/1337IstifanThani.Zajaliyya/1337IstifanThani.Zajaliyya.yml', 'no valid yml key in line', "It's a 13-pages archive of 170x110mm dimensions that holds the cote STM_4. Created and written by Priest Stephan the 2nd, son of Priest Stephan the 1st (born in 1855 and deceased 27 August 1938 : Review STM_15 ff.38)")
+No book yml file found
+محيي الدين إبن عبد الظاهر
+محيي الدين إبن عبد الظاهر
+منصور الخروصي
+عبد المسيح الناعمي
+إبن سلام الجمحي
+إبن سلام الجمحي
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+أحمد بن حنبل
+محمد  بن حبيب البغدادي
+محمد  بن حبيب البغدادي
+محمد  بن حبيب البغدادي
+محمد  بن حبيب البغدادي
+محمد  بن حبيب البغدادي
+محمد  بن حبيب البغدادي
+محمد  بن حبيب البغدادي
+محمد  بن حبيب البغدادي
+محمد  بن حبيب البغدادي
+محمد  بن حبيب البغدادي
+أبو عبيدة
+أبو عبيدة
+أبو عبيدة
+أبو عبيدة
+أبو عبيدة
+أبو عبيدة
+أبو عبيدة
+(مؤلف مجهول)
+إبن الكلبي
+إبن الكلبي
+إبن الكلبي
+إبن الكلبي
+إبن الكلبي
+إبن الكلبي
+إبن الكلبي
+إبن الكلبي
+إبن الكلبي
+الأصمعي
+الأصمعي
+الأصمعي
+الأصمعي
+الأصمعي
+الأصمعي
+الأصمعي
+الأصمعي
+الواقدي
+الواقدي
+الواقدي
+الواقدي
+الواقدي
+الواقدي
+إبن عبد الحكم المصري
+إبن عبد الحكم المصري
+إبن أبي نبهان الخروصي
+إبن أبي نبهان الخروصي
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+الطبري
+أبو العباس النيريزي
+أبو العباس النيريزي
+أبو العباس النيريزي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+النسائي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو عثمان الدمشقي
+أبو حنيفة
+أبو حنيفة
+أبو حنيفة
+أبو حنيفة
+أبو حنيفة
+أبو حنيفة
+مسلم بن الحجاج
+مسلم بن الحجاج
+مسلم بن الحجاج
+مسلم بن الحجاج
+مسلم بن الحجاج
+مسلم بن الحجاج
+مسلم بن الحجاج
+مسلم بن الحجاج
+مسلم بن الحجاج
+مسلم بن الحجاج
+مسلم بن الحجاج
+مسلم بن الحجاج
+أبو الحواري الأعمى
+العجلي
+العجلي
+العجلي
+العجلي
+أسطاث (eستتهس)
+أسطاث (eستتهس)
+أسطاث (eستتهس)
+محمد إبن إسحاق الفاكهي
+محمد إبن إسحاق الفاكهي
+(مترجم مجهول)
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+حنين بن إسحاق
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+البخاري
+الزبير بن بكار
+الزبير بن بكار
+الزبير بن بكار
+الزبير بن بكار
+الزبير بن بكار
+ثيادورس إبن بسيل
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+الجاحظ
+إصطفن إبن بسيل
+عبد ألاه بن أحمد بن حنبل
+عبد ألاه بن أحمد بن حنبل
+عبد ألاه بن أحمد بن حنبل
+عبد ألاه بن أحمد بن حنبل
+عبد ألاه بن أحمد بن حنبل
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+عثمان بن سعيد الدارمي
+(مترجم مجهول)
+بن سفيان الفسوي
+بن سفيان الفسوي
+بن سفيان الفسوي
+بن سفيان الفسوي
+بن سفيان الفسوي
+بحشل الواصطي
+بحشل الواصطي
+قسطا بن لوقا
+قسطا بن لوقا
+قسطا بن لوقا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+MISSING FILE? ../../OpenITI/Github_clone/0300AH/data/0281IbnAbiDunya/0281IbnAbiDunya.AmrBiMacruf/0281IbnAbiDunya.AmrBiMacruf.Shamela0008207-ara1 does not exist
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+MISSING FILE? ../../OpenITI/Github_clone/0300AH/data/0281IbnAbiDunya/0281IbnAbiDunya.HilmMucawiya/0281IbnAbiDunya.HilmMucawiya.Shamela0026874-ara1 does not exist
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+MISSING FILE? ../../OpenITI/Github_clone/0300AH/data/0281IbnAbiDunya/0281IbnAbiDunya.Awliya/0281IbnAbiDunya.Awliya.JK000042-ara1 does not exist
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن أبي الدنيا
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+إبن يزيد المبرد
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+حبيش بن الحسن
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إسحاق بن حنين
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن قتيبة
+إبن شهدا الكرخي
+إبن شهدا الكرخي
+إسحاق بن علي الرهاوي
+عيسى بن يحيى
+عيسى بن يحيى
+عيسى بن يحيى
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+إبن أبي عاصم
+ثابت إبن قرة
+ثابت إبن قرة
+ثابت إبن قرة
+ثابت إبن قرة
+ثابت إبن قرة
+أحمد الدرجيني
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+جلال الدين السيوطي
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+إبن جني
+(مترجم مجهول)
+الرماني
+الرماني
+الرماني
+الرماني
+الرماني
+الرماني
+الرماني
+الرماني
+إبن الجزار
+إبن زرع
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+الدارقطني
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+إبن بابويه، الشيخ الصدوق
+https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Zaydiyya0000202A-ara1
+https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Zaydiyya0000202-ara1
+---
+https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Shia001432VolsB-ara1
+https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Shia001432Vols-ara1
+---
+================================================================================
+COLLECTING INTO A CSV FILE (10239 LINES)...
+================================================================================
+Processing time: 2566.13 sec
+================================================================================
+Collecting issues from GitHub...
+logged in
+issue labels in this repo:
+   Label(name="Development")
+   Label(name="PRI & SEC Versions")
+   Label(name="URI change suggestion")
+   Label(name="discrepancies")
+   Label(name="in progress")
+   Label(name="no edition found")
+   Label(name="review finished")
+   Label(name="text quality")
+   Label(name="text tagged")
+   Label(name="urgent")
+getting relevant issues from GitHub...
+GitHub fetching time: 6.85 sec
+================================================================================
+Saving metadata...
+================================================================================
+7110
+9
+4247
+4729
+4728
+6162
+no srt files found for ShamAY0037822
+no srt files found for ShamAY0037914
+no srt files found for JK007524
+no srt files found for ShamAY0037904
+no srt files found for ShamAY0037903
+no srt files found for ShamAY0037848
+no srt files found for ShamAY0037913
+no srt files found for ShamAY0037862
+no srt files found for ShamAY0037895
+no srt files found for ShamAY0037896
+no srt files found for ShamAY0037887
+no srt files found for ShamAY0037934
+no srt files found for ShamAY0037847
+no srt files found for ShamAY0037905
+no srt files found for ShamAY0037892
+no srt files found for ShamAY0037828
+no srt files found for ShamAY0037833
+no srt files found for ShamAY0037879
+no srt files found for ShamAY0037911
+no srt files found for ShamAY0037850
+no srt files found for ShamAY0037827
+no srt files found for ShamAY0037908
+no srt files found for ShamAY0037853
+no srt files found for ShamAY0037836
+no srt files found for ShamAY0037940
+no srt files found for ShamAY0037927
+no srt files found for ShamAY0037882
+no srt files found for ShamAY0037963
+no srt files found for ShamAY0037902
+no srt files found for ShamAY0037957
+no srt files found for ShamAY0034071
+no srt files found for Tafsir02078
+no srt files found for ShamAY0037939
+no srt files found for ShamAY0037909
+no srt files found for ShamAY0034790
+no srt files found for ShamAY0037926
+no srt files found for ShamAY0037932
+no srt files found for Zaydiyya0000269
+no srt files found for Zaydiyya0000056
+no srt files found for ShamAY0034089
+no srt files found for ShamAY0037897
+no srt files found for ShamAY0037894
+no srt files found for ShamAY0037855
+no srt files found for Zaydiyya0000117
+no srt files found for ShamAY0034072
+no srt files found for Tafsir02067
+no srt files found for Sham19Y0017869
+no srt files found for Tafsir02099
+no srt files found for ShamAY0037930
+no srt files found for ShamIbadiyya0000225
+no srt files found for ShamAY0034704
+no srt files found for ShamAY0033921
+no srt files found for ShamAY0033922
+no srt files found for ShamAY0033923
+no srt files found for ShamAY0033991
+no srt files found for ShamAY0037964
+no srt files found for ShamAY0037918
+no srt files found for ShamAY0033534
+no srt files found for ShamAY0033661
+no srt files found for ShamAY0034334
+no srt files found for ShamAY0037818
+no srt files found for ShamAY0037825
+no srt files found for ShamAY0037852
+no srt files found for ShamAY0037920
+no srt files found for ShamAY0033618
+no srt files found for ShamAY0033714
+no srt files found for Zaydiyya0000221
+no srt files found for Zaydiyya0000155
+no srt files found for GRAR000089
+no srt files found for GRAR000066
+no srt files found for Zaydiyya0000121
+no srt files found for ShamAY0033930
+no srt files found for ShamAY0033800
+no srt files found for ShamAY0037916
+no srt files found for ShamAY0033951
+no srt files found for ShamAY0034203
+no srt files found for ShamAY0034255
+no srt files found for ShamAY0037900
+no srt files found for ShamAY0038048
+no srt files found for Tafsir02101
+no srt files found for ShamAY0033834
+no srt files found for ShamAY0034440
+no srt files found for ShamAY0037856
+no srt files found for ShamAY0034501
+no srt files found for ShamAY0033965
+no srt files found for ShamAY0034007
+no srt files found for Sham19Y0032196
+no srt files found for GRAR000067
+no srt files found for ShamAY0033972
+no srt files found for ShamAY0033953
+no srt files found for ShamAY0038024
+no srt files found for ShamAY0034595
+no srt files found for ShamAY0035884
+no srt files found for ShamAY0037821
+no srt files found for ShamAY0038167
+no srt files found for ShamAY0037948
+no srt files found for ShamAY0033931
+no srt files found for ShamAY0033966
+no srt files found for ShamAY0033967
+no srt files found for ShamAY0037953
+no srt files found for ShamAY0034615
+no srt files found for ShamAY0034333
+no srt files found for ShamAY0034149
+no srt files found for ShamAY0034272
+no srt files found for ShamAY0033936
+no srt files found for ShamAY0033963
+no srt files found for ShamAY0033964
+no srt files found for ShamAY0033617
+no srt files found for ShamAY0033738
+no srt files found for ShamAY0034670
+no srt files found for ShamAY0037947
+no srt files found for Zaydiyya0000222
+no srt files found for ShamAY0033816
+no srt files found for ShamAY0034258
+no srt files found for ShamAY0038095
+no srt files found for ShamAY0033961
+no srt files found for ShamAY0033779
+no srt files found for ShamAY0033801
+no srt files found for Zaydiyya0000478
+no srt files found for ShamAY0033775
+no srt files found for ShamAY0033772
+no srt files found for ShamAY0033780
+no srt files found for GRAR000097
+no srt files found for GRAR000047
+no srt files found for GRAR000080
+no srt files found for GRAR000081
+no srt files found for GRAR000099
+no srt files found for GRAR000084
+no srt files found for GRAR000043
+no srt files found for GRAR000085
+no srt files found for ShamAY0034603
+no srt files found for ShamAY0032910
+no srt files found for ShamAY0033912
+no srt files found for ShamAY0033814
+no srt files found for ShamAY0033959
+no srt files found for ShamAY0034161
+no srt files found for ShamAY0034622
+no srt files found for ShamAY0033960
+no srt files found for ShamIbadiyya0000099
+no srt files found for ShamAY0033771
+no srt files found for ShamAY0038035
+no srt files found for ShamAY0033821
+no srt files found for ShamAY0038142
+no srt files found for Sham19Y0018091
+no srt files found for Sham19Y0018089
+no srt files found for Sham19Y0013262
+no srt files found for Sham19Y0013977
+no srt files found for Sham19Y0017844
+no srt files found for ShamAY0038071
+no srt files found for ShamAY0038119
+no srt files found for ShamAY0038104
+no srt files found for ShamAY0038075
+no srt files found for ShamAY0038131
+no srt files found for ShamAY0034115
+no srt files found for ShamAY0038169
+no srt files found for ShamAY0038097
+no srt files found for ShamAY0038151
+no srt files found for ShamAY0038143
+no srt files found for ShamAY0038089
+no srt files found for ShamAY0038052
+no srt files found for ShamAY0038155
+no srt files found for ShamAY0038066
+no srt files found for ShamAY0038060
+no srt files found for ShamAY0038085
+no srt files found for ShamAY0038124
+no srt files found for ShamAY0038073
+no srt files found for ShamAY0038053
+no srt files found for ShamAY0038145
+no srt files found for ShamAY0038076
+no srt files found for ShamAY0038077
+no srt files found for ShamAY0038165
+no srt files found for ShamAY0038088
+no srt files found for ShamAY0038163
+no srt files found for ShamAY0038047
+no srt files found for ShamAY0038050
+no srt files found for ShamAY0038111
+no srt files found for ShamAY0038113
+no srt files found for ShamAY0038120
+no srt files found for ShamAY0038129
+no srt files found for ShamAY0038126
+no srt files found for ShamAY0038114
+no srt files found for ShamAY0038132
+no srt files found for ShamAY0038133
+no srt files found for ShamAY0038057
+no srt files found for ShamAY0038175
+no srt files found for ShamAY0038079
+no srt files found for ShamAY0038162
+no srt files found for ShamAY0034117
+no srt files found for ShamAY0038081
+no srt files found for ShamAY0038171
+no srt files found for ShamAY0038138
+no srt files found for ShamAY0038093
+no srt files found for ShamAY0034113
+no srt files found for ShamAY0038160
+no srt files found for ShamAY0038150
+no srt files found for ShamAY0038137
+no srt files found for ShamAY0034114
+no srt files found for ShamAY0038106
+no srt files found for ShamAY0038061
+no srt files found for ShamAY0038158
+no srt files found for ShamAY0038098
+no srt files found for ShamAY0038105
+no srt files found for ShamAY0033842
+no srt files found for Zaydiyya0000174
+no srt files found for ShamAY0037838
+no srt files found for Tafsir03029
+no srt files found for ShamAY0037844
+no srt files found for ShamIbadiyya0000640
+no srt files found for ShamIbadiyya0000642
+no srt files found for Zaydiyya0000578
+no srt files found for ShamIbadiyya0000063
+no srt files found for ShamIbadiyya0000179
+no srt files found for ShamAY0033904
+no srt files found for ShamAY0033984
+no srt files found for GRAR000011
+no srt files found for GRAR000060
+no srt files found for GRAR000075
+no srt files found for ShamAY0033843
+no srt files found for Zaydiyya0000179
+no srt files found for Zaydiyya0000024
+no srt files found for Zaydiyya0000057
+no srt files found for ShamAY0037841
+no srt files found for GRAR000025
+no srt files found for GRAR000064
+no srt files found for GRAR000007
+no srt files found for GRAR000009
+no srt files found for GRAR000039
+no srt files found for GRAR000018
+no srt files found for GRAR000019
+no srt files found for GRAR000065
+no srt files found for GRAR000059
+no srt files found for GRAR000071
+no srt files found for GRAR000040
+no srt files found for GRAR000079
+no srt files found for GRAR000045
+no srt files found for GRAR000046
+no srt files found for GRAR000044
+no srt files found for Zaydiyya0000112
+no srt files found for Zaydiyya0000150
+no srt files found for Kalema00001
+no srt files found for GRAR000076
+no srt files found for GRAR000055
+no srt files found for ShamAY0033868
+no srt files found for ShamAY0034608
+no srt files found for Sham19Y0122400
+no srt files found for ShamAY0008205
+no srt files found for ShamAY0034604
+no srt files found for ShamAY0001371
+no srt files found for ShamAY0033958
+no srt files found for ShamAY0033997
+no srt files found for ShamAY0033998
+no srt files found for ShamAY0034618
+no srt files found for GRAR000098
+no srt files found for GRAR000063
+no srt files found for GRAR000008
+no srt files found for GRAR000003
+no srt files found for GRAR000002
+no srt files found for ShamAY0033903
+no srt files found for ShamAY0033925
+no srt files found for ShamAY0033947
+no srt files found for ShamAY0033790
+no srt files found for ShamAY0033791
+no srt files found for GRAR000057
+no srt files found for GRAR000058
+no srt files found for Sham19Y0008196
+no srt files found for Tafsir01001
+no srt files found for SBS20191024
+no srt files found for ShamAY0033812
+no srt files found for ShamAY0033905
+no srt files found for ShamAY0033968
+no srt files found for ShamAY0033692
+no srt files found for ShamAY0034636
+no srt files found for ShamAY0033619
+no srt files found for ShamAY0038092
+no srt files found for ShamAY0037867
+no srt files found for ShamIbadiyya0000223
+no srt files found for Sham19Y0029605
+no srt files found for ShamAY0034141
+no srt files found for ShamAY0034664
+no srt files found for AQ001
+no srt files found for ShamAY0001167
+no srt files found for Zaydiyya0000089
+no srt files found for GRAR000006
+no srt files found for GRAR000005
+no srt files found for GRAR000001
+no srt files found for ShamAY0033948
+no srt files found for ShamAY0035210
+no srt files found for GRAR000015
+no srt files found for GRAR000023
+no srt files found for GRAR000024
+no srt files found for GRAR000004
+no srt files found for ShamAY0037874
+no srt files found for ShamAY0033578
+no srt files found for ShamAY0033891
+no srt files found for Zaydiyya0000115
+no srt files found for Tafsir04038
+no srt files found for Zaydiyya0000177
+no srt files found for Zaydiyya0000345
+no srt files found for ShamAY0032829
+no srt files found for Tafsir02094
+no srt files found for JMIHE04
+no srt files found for ShamAY0033954
+no srt files found for ShamAY0033920
+no srt files found for ShamAY0032755
+no srt files found for ShamAY0034083
+no srt files found for ShamAY0035930
+no srt files found for ShamAY0035932
+no srt files found for ShamAY0035931
+no srt files found for GRAR000037
+no srt files found for ShamAY0033601
+no srt files found for ShamAY0035224
+no srt files found for JK010472
+no srt files found for ShamAY0032890
+no srt files found for GRAR000068
+no srt files found for Tafsir05045
+no srt files found for ShamAY0032836
+no srt files found for ShamAY0032846
+no srt files found for LMN20200929
+no srt files found for JK009335
+no srt files found for Sham19Y0151099
+no srt files found for ShamAY0034623
+no srt files found for Sham19Y0001734
+no srt files found for ShamAY0038017
+no srt files found for ShamAY0037830
+no srt files found for ShamAY0033805
+no srt files found for ShamAY0037823
+no srt files found for ShamAY0032824
+no srt files found for ShamAY0001300
+no srt files found for ShamAY0033848
+no srt files found for ShamAY0037962
+no srt files found for ShamAY0033533
+no srt files found for ShamAY0033982
+no srt files found for ShamAY0033643
+no srt files found for ShamAY0033908
+no srt files found for ShamAY0033986
+no srt files found for ShamIbadiyya0000094
+no srt files found for ShamIbadiyya0000130
+no srt files found for Zaydiyya0000154
+no srt files found for Zaydiyya0000224
+no srt files found for ShamIbadiyya0000214
+no srt files found for ShamAY0037881
+no srt files found for Zaydiyya0000186
+no srt files found for ShamAY0034613
+no srt files found for ShamAY0034661
+no srt files found for ShamAY0037885
+no srt files found for ShamAY0034069
+no srt files found for Tafsir02011
+no srt files found for ShamAY0034449
+no srt files found for ShamAY0034678
+no srt files found for ShamAY0033813
+no srt files found for ShamAY0034619
+no srt files found for ShamAY0034610
+no srt files found for ShamAY0032808
+no srt files found for ShamAY0033880
+no srt files found for ShamAY0038055
+no srt files found for ShamAY0038096
+no srt files found for Zaydiyya0000114
+no srt files found for Zaydiyya0000192
+no srt files found for Zaydiyya0000332
+no srt files found for Zaydiyya0000193
+no srt files found for Zaydiyya0000128
+no srt files found for Zaydiyya0000239
+no srt files found for ShamAY0034669
+no srt files found for ShamAY0033773
+no srt files found for ShamAY0033996
+no srt files found for ShamAY0038051
+no srt files found for ShamAY0034171
+no srt files found for ShamAY0034177
+no srt files found for ShamAY0035209
+no srt files found for ShamAY0034651
+no srt files found for ShamAY0033927
+no srt files found for GRAR000030
+no srt files found for ShamAY0034153
+no srt files found for ShamAY0033622
+no srt files found for ShamAY0034152
+no srt files found for ShamAY0034151
+no srt files found for ShamAY0037832
+no srt files found for ShamAY0032958
+no srt files found for ShamAY0032748
+no srt files found for ShamAY0033871
+no srt files found for ShamAY0035405
+no srt files found for ShamAY0033807
+no srt files found for ShamAY0034702
+no srt files found for ShamAY0032900
+no srt files found for PAL065900968
+no srt files found for PAL065900960
+no srt files found for Tafsir02104
+no srt files found for GRAR000073
+no srt files found for NLIAG000190
+no srt files found for NLIAG000191
+no srt files found for ShamAY0035407
+no srt files found for ShamAY0033941
+no srt files found for ShamAY0034163
+no srt files found for ShamAY0037890
+no srt files found for Zaydiyya0000009
+no srt files found for Zaydiyya0000212
+no srt files found for Zaydiyya0000068
+no srt files found for ShamAY0034058
+no srt files found for Tafsir03030
+no srt files found for Zaydiyya0000307
+no srt files found for Zaydiyya0000323
+no srt files found for Zaydiyya0000318
+no srt files found for Zaydiyya0000319
+no srt files found for Zaydiyya0000317
+no srt files found for Zaydiyya0000309
+no srt files found for Zaydiyya0000321
+no srt files found for Zaydiyya0000324
+no srt files found for Zaydiyya0000306
+no srt files found for Zaydiyya0000322
+no srt files found for Zaydiyya0000326
+no srt files found for Zaydiyya0000327
+no srt files found for Zaydiyya0000320
+no srt files found for Zaydiyya0000325
+no srt files found for ShamAY0033777
+no srt files found for ShamAY0032879
+no srt files found for ShamAY0034106
+no srt files found for ShamAY0037866
+no srt files found for Zaydiyya0000069
+no srt files found for Sham19Y0018686
+no srt files found for Tafsir02075
+no srt files found for ShamAY0034166
+no srt files found for ALCorpus00012
+no srt files found for ShamAY0035934
+no srt files found for GRAR000034
+no srt files found for ShamAY0037863
+no srt files found for ShamAY0037824
+no srt files found for ShamAY0033776
+no srt files found for ShamAY0035933
+no srt files found for ShamAY0034519
+no srt files found for Zaydiyya0000119
+no srt files found for ShamAY0000454
+no srt files found for ShamAY0000458
+no srt files found for ShamAY0032792
+no srt files found for ShamAY0032861
+no srt files found for ShamAY0032862
+no srt files found for Zaydiyya0000055
+no srt files found for Zaydiyya0000412
+no srt files found for Zaydiyya0000123
+no srt files found for ShamAY0033825
+no srt files found for Zaydiyya0000201
+no srt files found for Zaydiyya0000228
+no srt files found for Zaydiyya0000116
+no srt files found for ShamAY0033725
+no srt files found for Tafsir02012
+no srt files found for GRAR000074
+no srt files found for JMIHE06
+no srt files found for Sham19Y0014607
+no srt files found for JMIHE03
+no srt files found for Zaydiyya0000188
+no srt files found for ShamAY0033784
+no srt files found for ShamAY0032895
+no srt files found for ShamAY0032954
+no srt files found for ShamAY0033587
+no srt files found for ShamAY0035175
+no srt files found for ShamAY0033827
+no srt files found for ShamAY0034276
+no srt files found for ShamAY0033542
+no srt files found for ShamAY0033600
+no srt files found for ShamAY0033978
+no srt files found for Sham19Y0147811
+no srt files found for ShamAY0033977
+no srt files found for ShamAY0034010
+no srt files found for ShamAY0034009
+no srt files found for ShamAY0034008
+no srt files found for ShamAY0033950
+no srt files found for ShamAY0033962
+no srt files found for ShamAY0033909
+no srt files found for ShamAY0033917
+no srt files found for ShamAY0033602
+no srt files found for Zaydiyya0000156
+no srt files found for Zaydiyya0000277
+no srt files found for Zaydiyya0000284
+no srt files found for Zaydiyya0000283
+no srt files found for Zaydiyya0000278
+no srt files found for Zaydiyya0000285
+no srt files found for Zaydiyya0000302
+no srt files found for Tafsir04039
+no srt files found for Zaydiyya0000279
+no srt files found for Zaydiyya0000058
+no srt files found for ShamAY0033530
+no srt files found for ShamAY0034003
+no srt files found for ShamAY0034246
+no srt files found for ShamAY0037868
+no srt files found for ShamAY0037870
+no srt files found for ShamAY0033621
+no srt files found for ShamAY0035236
+no srt files found for ShamAY0033976
+no srt files found for Tafsir03031
+no srt files found for ShamAY0032750
+no srt files found for ShamAY0037956
+no srt files found for ShamAY0037843
+no srt files found for ShamAY0036754
+no srt files found for Tafsir08060
+no srt files found for Filaha001
+no srt files found for ShamAY0033616
+no srt files found for ShamAY0034098
+no srt files found for Sham19Y0122173
+no srt files found for ShamAY0037864
+no srt files found for Sham19Y0017871
+no srt files found for ShamAY0034037
+no srt files found for JMIHE05
+no srt files found for ShamAY0034188
+no srt files found for ShamAY0034346
+no srt files found for ShamAY0033882
+no srt files found for ShamAY0037849
+no srt files found for Sham19Y0014593
+no srt files found for ShamAY0032848
+no srt files found for ShamAY0032905
+no srt files found for ShamAY0032906
+no srt files found for Zaydiyya0000137
+no srt files found for ShamAY0034577
+no srt files found for Zaydiyya0000230
+no srt files found for ShamAY0038108
+no srt files found for LMN20210125
+no srt files found for ShamAY0034092
+no srt files found for ShamAY0034794
+no srt files found for ShamAY0037938
+no srt files found for Sham19Y0146126
+no srt files found for ShamIbadiyya0000198
+no srt files found for ShamIbadiyya0000199
+no srt files found for ShamIbadiyya0000470
+no srt files found for Tafsir02013
+no srt files found for Sham19Y0018251
+no srt files found for ShamAY0033787
+no srt files found for ShamAY0037837
+no srt files found for SBS20191024
+no srt files found for ShamAY0037952
+no srt files found for ShamAY0037839
+no srt files found for ShamAY0037865
+no srt files found for ShamAY0032847
+no srt files found for ShamAY0032884
+no srt files found for ShamAY0037124
+no srt files found for ShamAY0034685
+no srt files found for Tafsir01002
+no srt files found for ShamAY0038635
+no srt files found for ShamAY0033890
+no srt files found for ShamAY0035590
+no srt files found for Tafsir04003
+no srt files found for Zaydiyya0000301
+no srt files found for Zaydiyya0000357
+no srt files found for Zaydiyya0000390
+no srt files found for ShamAY0037935
+no srt files found for ShamAY0000406
+no srt files found for ShamAY0033614
+no srt files found for ShamAY0033615
+no srt files found for Zaydiyya0000120
+no srt files found for ShamIbadiyya0000880
+no srt files found for ShamAY0032835
+no srt files found for Sham19Y0016626
+no srt files found for Shamela0012883
+no srt files found for ShamAY0034671
+no srt files found for ShamAY0034700
+no srt files found for ShamAY0033540
+no srt files found for Shamela0009734
+no srt files found for ShamAY0037949
+no srt files found for JT001
+no srt files found for JT002
+no srt files found for ShamAY0037915
+no srt files found for ShamAY0034095
+no srt files found for ShamAY0034209
+no srt files found for ShamAY0034220
+no srt files found for ShamAY0034221
+no srt files found for Shamela0009737
+no srt files found for GRAR000033
+no srt files found for DARE00021
+no srt files found for ShamAY0033797
+no srt files found for Shamela0021503
+no srt files found for Sham19Y0014789
+no srt files found for ShamAY0033774
+no srt files found for ShamAY0034338
+no srt files found for ShamAY0034148
+no srt files found for ShamAY0032164
+no srt files found for ShamAY0034611
+no srt files found for ShamAY0034097
+no srt files found for ShamAY0033757
+no srt files found for ShamAY0033755
+no srt files found for ShamAY0037387
+no srt files found for ShamAY0034060
+no srt files found for Tafsir02015
+no srt files found for Sham19Y0017103
+no srt files found for Tafsir01004
+no srt files found for ShamAY0034194
+no srt files found for ShamAY0034680
+no srt files found for Zaydiyya0000147
+no srt files found for Zaydiyya0000372
+no srt files found for ShamAY0034088
+no srt files found for Sham19Y0013786
+no srt files found for ShamAY0033625
+no srt files found for ShamAY0034259
+no srt files found for ShamAY0034266
+no srt files found for ShamAY0034197
+no srt files found for ShamAY0033750
+no srt files found for ShamAY0033573
+no srt files found for ShamAY0001502
+no srt files found for ShamAY0032791
+no srt files found for DARE00101
+no srt files found for ShamAY0033803
+no srt files found for ShamAY0034599
+no srt files found for ShamAY0033808
+no srt files found for ShamAY0034612
+no srt files found for ShamAY0037875
+no srt files found for ShamAY0034186
+no srt files found for ShamAY0037019
+no srt files found for Tafsir03033
+no srt files found for ShamAY0038202
+no srt files found for ShamAY0038443
+no srt files found for ShamAY0033756
+no srt files found for ShamAY0033690
+no srt files found for Sham19Y0122235
+no srt files found for ShamAY0037871
+no srt files found for ShamAY0033785
+no srt files found for Zaydiyya0000145
+no srt files found for ShamAY0034198
+no srt files found for Tafsir02016
+no srt files found for Zaydiyya0000138
+no srt files found for ShamAY0034102
+no srt files found for ShamAY0034681
+no srt files found for Tafsir01005
+no srt files found for ShamAY0033749
+no srt files found for ShamAY0037034
+no srt files found for ShamAY0035935
+no srt files found for Zaydiyya0000244
+no srt files found for ShamAY0034339
+no srt files found for Sham19Y0013566
+no srt files found for Sham19Y0147927
+no srt files found for ShamAY0034248
+no srt files found for ShamAY0038643
+no srt files found for ShamAY0009702
+no srt files found for ShamAY0034087
+no srt files found for ShamAY0001153
+no srt files found for ShamAY0032968
+no srt files found for ShamAY0034205
+no srt files found for ShamAY0033849
+no srt files found for ShamAY0034190
+no srt files found for ShamAY0034065
+no srt files found for Tafsir01006
+no srt files found for ShamAY0034696
+no srt files found for ShamAY0037889
+no srt files found for ShamAY0037846
+no srt files found for Zaydiyya0000354
+no srt files found for ShamAY0000687
+no srt files found for Zaydiyya0000299
+no srt files found for Sham19Y0000924
+no srt files found for Sham19Y0017056
+no srt files found for ShamAY0034683
+no srt files found for ShamAY0034061
+no srt files found for Tafsir02017
+no srt files found for LMN20200828
+no srt files found for LMN20200830
+no srt files found for ShamAY0034695
+no srt files found for ShamAY0037156
+no srt files found for Zaydiyya0000245
+no srt files found for Zaydiyya0000181
+no srt files found for ShamAY0034382
+no srt files found for ShamAY0033865
+no srt files found for ShamAY0034363
+no srt files found for ShamAY0034359
+no srt files found for ShamAY0035410
+no srt files found for ShamAY0034358
+no srt files found for Sham19Y0013652
+no srt files found for Sham19Y0016422
+no srt files found for Sham19Y0016953
+no srt files found for Sham19Y0017680
+no srt files found for Sham19Y0017835
+no srt files found for Sham19Y0018124
+no srt files found for Sham19Y0018128
+no srt files found for Sham19Y0018152
+no srt files found for Sham19Y0145376
+no srt files found for ShamAY0034353
+no srt files found for ShamAY0038206
+no srt files found for ShamAY0034375
+no srt files found for Zaydiyya0000108
+no srt files found for ShamAY0034366
+no srt files found for ShamAY0034356
+no srt files found for ShamAY0034365
+no srt files found for ShamAY0034360
+no srt files found for ShamAY0034369
+no srt files found for ShamAY0034381
+no srt files found for ShamAY0034362
+no srt files found for ShamAY0034373
+no srt files found for Sham19Y0014500
+no srt files found for Sham19Y0017073
+no srt files found for Sham19Y0017417
+no srt files found for ShamAY0032298
+no srt files found for ShamAY0037806
+no srt files found for ShamAY0034347
+no srt files found for ShamAY0034402
+no srt files found for Sham19Y0018645
+no srt files found for ShamAY0034386
+no srt files found for ShamAY0034399
+no srt files found for Tafsir02022
+no srt files found for ShamAY0033789
+no srt files found for Zaydiyya0000261
+no srt files found for Sham19Y0007488
+no srt files found for ShamAY0034247
+no srt files found for ShamAY0033778
+no srt files found for ShamAY0037576
+no srt files found for Zaydiyya0000187
+no srt files found for Tafsir02088
+no srt files found for ShamAY0034067
+no srt files found for ShamAY0034125
+no srt files found for ShamAY0034064
+no srt files found for Tafsir02019
+no srt files found for Sham19Y0013304
+no srt files found for ShamAY0033810
+no srt files found for ShamAY0034591
+no srt files found for ShamAY0034590
+no srt files found for ShamAY0033744
+no srt files found for ShamAY0034609
+no srt files found for ShamAY0034601
+no srt files found for ShamAY0034652
+no srt files found for ShamAY0034631
+no srt files found for ShamAY0038192
+no srt files found for Zaydiyya0000543
+no srt files found for Zaydiyya0000391
+no srt files found for Zaydiyya0000393
+no srt files found for ShamAY0034410
+no srt files found for ShamAY0034411
+no srt files found for ShamAY0034421
+no srt files found for ShamAY0034433
+no srt files found for ShamAY0034428
+no srt files found for ShamAY0034414
+no srt files found for ShamAY0034405
+no srt files found for ShamAY0034425
+no srt files found for ShamAY0034429
+no srt files found for Sham19Y0019225
+no srt files found for ShamAY0034412
+no srt files found for ShamAY0033845
+no srt files found for ShamAY0034408
+no srt files found for ShamAY0034424
+no srt files found for ShamAY0034419
+no srt files found for ShamAY0034407
+no srt files found for ShamAY0034432
+no srt files found for ShamAY0034415
+no srt files found for ShamAY0034426
+no srt files found for ShamAY0034427
+no srt files found for ShamAY0034416
+no srt files found for ShamAY0034417
+no srt files found for ShamAY0034413
+no srt files found for ShamAY0034418
+no srt files found for ShamAY0034420
+no srt files found for ShamAY0033881
+no srt files found for ShamAY0000958
+no srt files found for ShamAY0034632
+no srt files found for ShamAY0034647
+no srt files found for ShamAY0034264
+no srt files found for ShamAY0034592
+no srt files found for Sham19Y0148538
+no srt files found for ShamAY0033823
+no srt files found for ShamAY0034699
+no srt files found for ShamAY0034679
+no srt files found for ShamAY0034268
+no srt files found for ShamAY0034045
+no srt files found for ShamAY0034063
+no srt files found for Tafsir01007
+no srt files found for ShamAY0034127
+no srt files found for Sham19Y0014568
+no srt files found for ShamAY0033844
+no srt files found for ShamAY0034196
+no srt files found for ShamAY0033884
+no srt files found for ShamAY0034187
+no srt files found for ShamAY0033924
+no srt files found for ShamAY0033754
+no srt files found for ShamAY0032660
+no srt files found for ShamAY0033527
+no srt files found for ShamAY0034191
+no srt files found for ShamAY0034192
+no srt files found for Shamela0037541
+no srt files found for ShamAY0034056
+no srt files found for Tafsir02024
+no srt files found for ShamAY0037845
+no srt files found for Tafsir02020
+no srt files found for ShamAY0034193
+no srt files found for ShamAY0034233
+no srt files found for ShamAY0034126
+no srt files found for ShamAY0033985
+no srt files found for ShamAY0034120
+no srt files found for ShamAY0038036
+no srt files found for Zaydiyya0000152
+no srt files found for Zaydiyya0000303
+no srt files found for ShamAY0034046
+no srt files found for Tafsir02010
+no srt files found for Zaydiyya0000026
+no srt files found for Zaydiyya0000060
+no srt files found for ShamAY0034616
+no srt files found for ShamAY0033781
+no srt files found for ShamAY0034283
+no srt files found for ShamAY0034567
+no srt files found for ShamAY0034568
+no srt files found for ShamAY0038004
+no srt files found for ShamAY0033751
+no srt files found for ShamAY0038211
+no srt files found for ShamAY0034606
+no srt files found for ShamAY0034614
+no srt files found for ShamAY0034124
+no srt files found for ShamAY0034607
+no srt files found for Noorlib0019441
+no srt files found for Tafsir02023
+no srt files found for Shia0008142
+no srt files found for Zaydiyya0000275
+no srt files found for ShamAY0034189
+no srt files found for Sham19Y0124365
+no srt files found for ShamAY0031950
+no srt files found for ShamAY0034265
+no srt files found for Tafsir02025
+no srt files found for ShamAY0033745
+no srt files found for ShamAY0034219
+no srt files found for Sham19Y0132425
+no srt files found for ShamAY0035239
+no srt files found for ShamAY0034057
+no srt files found for Tafsir02026
+no srt files found for Sham19Y0014246
+no srt files found for ShamAY0034582
+no srt files found for ShamAY0036025
+no srt files found for ShamAY0034090
+no srt files found for Zaydiyya0000205
+no srt files found for ShamAY0033525
+no srt files found for ShamAY0034019
+no srt files found for Shamela0038158
+no srt files found for ShamAY0034038
+no srt files found for Tafsir01008
+no srt files found for ShamAY0033528
+no srt files found for ShamAY0033820
+no srt files found for Sham19Y0133360
+no srt files found for Zaydiyya0000252
+no srt files found for Zaydiyya0000066
+no srt files found for PES20201020
+no srt files found for ShamAY0034253
+no srt files found for ShamAY0034617
+no srt files found for ShamAY0036803
+no srt files found for ShamAY0038423
+no srt files found for ShamAY0034267
+no srt files found for ShamAY0033753
+no srt files found for ShamAY0034254
+no srt files found for ShamAY0034684
+no srt files found for Tafsir02028
+no srt files found for ShamAY0034252
+no srt files found for ShamAY0037368
+no srt files found for ShamAY0037471
+no srt files found for ShamAY0037586
+no srt files found for ShamAY0034940
+no srt files found for ShamAY0034445
+no srt files found for ShamAY0034485
+no srt files found for ShamAY0033524
+no srt files found for ShamAY0034121
+no srt files found for ShamAY0034677
+no srt files found for ShamAY0034260
+no srt files found for ShamAY0034439
+no srt files found for ShamAY0034261
+no srt files found for ShamAY0034262
+no srt files found for ShamAY0034271
+no srt files found for ShamIbadiyya0000116
+no srt files found for Zaydiyya0000020
+no srt files found for Sham19Y0002118
+no srt files found for Zaydiyya0000369
+no srt files found for ShamAY0034212
+no srt files found for ShamAY0037831
+no srt files found for Zaydiyya0000122
+no srt files found for Zaydiyya0000130
+no srt files found for ShamAY0037877
+no srt files found for Sham19Y0014250
+no srt files found for ShamAY0034625
+no srt files found for Tafsir04041
+no srt files found for ShamAY0033782
+no srt files found for Zaydiyya0000176
+no srt files found for Zaydiyya0000243
+no srt files found for Zaydiyya0000178
+no srt files found for Zaydiyya0000248
+no srt files found for Zaydiyya0000202
+no srt files found for Zaydiyya0000202A
+no srt files found for Zaydiyya0000202B
+no srt files found for Zaydiyya0000202C
+no srt files found for Zaydiyya0000113
+no srt files found for ShamAY0034642
+no srt files found for ShamIbadiyya0000886
+no srt files found for ShamAY0034228
+no srt files found for Tafsir03036
+no srt files found for ShamAY0036839
+no srt files found for ShamAY0036800
+no srt files found for Filaha004
+no srt files found for ShamAY0034278
+no srt files found for ShamAY0034039
+no srt files found for Zaydiyya0000127
+no srt files found for ShamAY0033742
+no srt files found for ShamAY0036056
+no srt files found for ShamAY0034693
+no srt files found for ShamAY0034442
+no srt files found for ShamAY0037303
+no srt files found for ShamAY0034250
+no srt files found for ShamAY0034062
+no srt files found for ShamAY0034210
+no srt files found for ShamAY0033888
+no srt files found for Sham19Y0150969
+no srt files found for ShamAY0034222
+no srt files found for ShamAY0034281
+no srt files found for ShamAY0034280
+no srt files found for Tafsir01009
+no srt files found for ShamAY0034184
+no srt files found for ShamAY0034277
+no srt files found for ShamAY0033847
+no srt files found for ShamAY0034701
+no srt files found for ShamIbadiyya0000654
+no srt files found for Tafsir07052
+no srt files found for JK012057
+no srt files found for ShamAY0037954
+no srt files found for Shia004661
+no srt files found for ShamAY0034499
+no srt files found for ShamAY0036004
+no srt files found for ShamAY0037945
+no srt files found for Zaydiyya0000190
+no srt files found for ShamAY0035461
+no srt files found for ShamAY0033867
+no srt files found for ShamAY0034691
+no srt files found for Tafsir02102
+no srt files found for ShamIbadiyya0000146
+no srt files found for ShamIbadiyya0000486
+no srt files found for ShamIbadiyya0000975
+no srt files found for ShamIbadiyya0000926
+no srt files found for PES20201021
+no srt files found for Zaydiyya0000247
+no srt files found for Shia002977
+no srt files found for ShamAY0037613
+no srt files found for Shamela0003727
+no srt files found for Shamela0031475
+no srt files found for Zaydiyya0000223
+no srt files found for Tafsir02103
+no srt files found for ShamIbadiyya0000555
+no srt files found for ShamIbadiyya0000459
+no srt files found for ShamIbadiyya0000249
+no srt files found for ShamIbadiyya0000823
+no srt files found for Tafsir07054
+no srt files found for Zaydiyya0000111
+no srt files found for Tafsir04056
+no srt files found for Zaydiyya0000282
+no srt files found for Zaydiyya0000467
+no srt files found for GRAR000017
+no srt files found for Zaydiyya0000392
+no srt files found for Zaydiyya0000466
+no srt files found for Shamela0000611
+no srt files found for Zaydiyya0000494
+no srt files found for Zaydiyya0000516
+no srt files found for Zaydiyya0000589
+no srt files found for Zaydiyya0000410
+no srt files found for Zaydiyya0000235
+no srt files found for Zaydiyya0000092
+no srt files found for Zaydiyya0000157
+no srt files found for Zaydiyya0000169
+no srt files found for Sham19Y0004324
+no srt files found for Zaydiyya0000095
+Tada!
+Total processing time: 2572.98 sec
