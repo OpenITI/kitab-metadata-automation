@@ -237,13 +237,13 @@ def load_srt_meta(srt_folder, passim_runs):
             ids = re.findall('<a href="([^\-"]+-[^"]+)"', html)
             print(len(ids))
             for id_ in ids:
-                id_ = re.sub("Vols[A-Z]*|BK\d+", "", id_)
+                #id_ = re.sub("Vols[A-Z]*|BK\d+", "", id_)
                 bare_id = id_.split("-")[0]
-                if not id_.split("-")[0] in srt_d:
+                if not bare_id in srt_d:
                     srt_d[bare_id] = []
                 srt_d[bare_id].append([runs[fn[:-5]], "/".join([u, fn[:-5], id_])])
-##    with open("output/srt_d.json", mode="w", encoding="utf-8") as file:
-##        json.dump(srt_d, file, indent=2, sort_keys=True, ensure_ascii=False)
+    with open("output/srt_d.json", mode="w", encoding="utf-8") as file:
+        json.dump(srt_d, file, indent=2, sort_keys=True, ensure_ascii=False)
     return srt_d
         
         
@@ -286,13 +286,26 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
             #new_id = row['url'].split('/')[-1].split('.')[-1] # may get the extension!
             uri = URI(row['url'])
             v_id = uri("version", ext="").split(".")[-1]
-            bare_id = re.sub("Vols[A-Z]*|BK\d+", "", v_id)
-            bare_id = bare_id.split("-")[0]
-            try:
-                record["srts"] = srt_d[bare_id]
-            except:
-                print("no srt files found for", bare_id)
-                record["srts"] = []
+##            bare_id = re.sub("Vols[A-Z]*|BK\d+", "", v_id)
+##            bare_id = bare_id.split("-")[0]
+
+            srts = []
+
+            # get all srt files connected to the current version ID:
+            bare_id = v_id.split("-")[0]
+            if bare_id in srt_d:
+                srts += srt_d[bare_id]
+            # add srt files connected to previous versions of this text,
+            # before it was split into different parts or joined with other texts:
+            bare_id = re.sub("Vols[A-Z]*|BK\d+", "", bare_id)
+            if bare_id in srt_d:
+                srts += srt_d[bare_id]
+            record["srts"] = srts
+##            try:
+##                record["srts"] = srt_d[bare_id]
+##            except:
+##                print("no srt files found for", bare_id)
+##                record["srts"] = []
 ##            record['srts'] = []
 ##            if passim_runs:
 ##                for descr, run_id in passim_runs:
@@ -328,6 +341,7 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
     first_json_key['data'] = json_objects
     first_json_key['date'] = datetime.now().strftime("%d %B %Y")
     first_json_key['time'] = datetime.now().strftime("%H:%M:%S")
+    print("first_json_key['date']", first_json_key['date'])
     with open(out_fp, 'w') as json_file:
         json.dump(first_json_key, json_file,
                   ensure_ascii=False, sort_keys=True)
