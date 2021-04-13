@@ -686,11 +686,11 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     tags += tagsDic[uri.version]
                     #print(uri.version, tagsDic[uri.version])
                 if bookD and not bookD["10#BOOK#GENRES###:"].startswith("src"):
-                    tags += bookD["10#BOOK#GENRES###:"]
+                    tags += "," + bookD["10#BOOK#GENRES###:"]
                 version_tags = re.findall("[A-Z_]{5,}",
                                           versD["90#VERS#ISSUES###:"])
                 if version_tags:
-                    tags += ",".join(version_tags)
+                    tags += "," + ",".join(version_tags)
                 
 
 
