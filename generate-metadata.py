@@ -242,8 +242,8 @@ def load_srt_meta(srt_folder, passim_runs):
                 if not bare_id in srt_d:
                     srt_d[bare_id] = []
                 srt_d[bare_id].append([runs[fn[:-5]], "/".join([u, fn[:-5], id_])])
-    with open("output/srt_d.json", mode="w", encoding="utf-8") as file:
-        json.dump(srt_d, file, indent=2, sort_keys=True, ensure_ascii=False)
+##    with open("output/srt_d.json", mode="w", encoding="utf-8") as file:
+##        json.dump(srt_d, file, indent=2, sort_keys=True, ensure_ascii=False)
     return srt_d
         
         
