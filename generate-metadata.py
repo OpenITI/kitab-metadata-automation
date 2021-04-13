@@ -299,7 +299,8 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
             # before it was split into different parts or joined with other texts:
             bare_id = re.sub("Vols[A-Z]*|BK\d+", "", bare_id)
             if bare_id in srt_d:
-                srts += srt_d[bare_id]
+                old_srts = [x for x in srt_d[bare_id] if x not in srts]
+                srts = old_srts + srts
             record["srts"] = srts
 ##            try:
 ##                record["srts"] = srt_d[bare_id]
@@ -484,16 +485,23 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 ##                versD = zfunc.dicToYML(zfunc.readYML(versF)) + "\n"
 ##                bookD = zfunc.dicToYML(zfunc.readYML(bookF)) + "\n"
 ##                authD = zfunc.dicToYML(zfunc.readYML(authF)) + "\n"
-                versD = dicToYML(readYML(versF)) + "\n"
+                versD = readYML(versF)
+                versD_yml = dicToYML(versD) + "\n"
                 try:
-                    bookD = dicToYML(readYML(bookF)) + "\n"
+                    bookD = readYML(bookF)
+                    bookD_yml = dicToYML(bookD) + "\n"
                 except:
+                    print("No book yml file found")
                     bookD = ""
+                    bookD_yml = ""
                 try:
-                    authD = dicToYML(readYML(authF)) + "\n"
+                    authD = readYML(authF)
+                    authD_yml = dicToYML(authD) + "\n"
                 except:
+                    print("No author yml file found")
                     authD = ""
-                record = splitter + versD + bookD + authD
+                    bookD_yml = ""
+                record = splitter + versD_yml + bookD_yml + authD_yml
                 dataYML.append(record)
 
                 # collect the metadata related to the current version:
@@ -503,7 +511,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
                 # - length in number of characters:
 ##                versD = zfunc.readYML(versF)
-                versD = readYML(versF)
+##                versD = readYML(versF)
                 length = versD["00#VERS#LENGTH###:"].strip()
                 if incl_char_length:
                     try:
@@ -533,26 +541,27 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 ##                bookD = zfunc.readYML(bookF)
                 title_lat = []
                 title_ar = []
-                try:
-                    bookD = readYML(bookF)
-                    #title = []
-
+##                try:
+##                    bookD = readYML(bookF)
+##                    #title = []
+                if bookD:
                     for c in ["10#BOOK#TITLEA#AR:", "10#BOOK#TITLEB#AR:"]:
                         if not "al-Muʾallif" in bookD[c]:
     ##                        title.append(bookD[c].strip())
     ##                        title.append(betaCodeToArSimple(title[-1]))
                             title_lat.append(bookD[c].strip())
                             title_ar.append(betaCodeToArSimple(title_lat[-1]))
-                except:
-                    print("No book yml file found")
+##                except:
+##                    print("No book yml file found")
 
  
                 # - author:
 ##                authD = zfunc.readYML(authF)
                 shuhra = ""
                 full_name = ""
-                try:
-                    authD = readYML(authF)
+##                try:
+##                    authD = readYML(authF)
+                if authD:
                     if not "Fulān" in authD["10#AUTH#SHUHRA#AR:"]:
                         shuhra = authD["10#AUTH#SHUHRA#AR:"].strip()
                     name_comps = ["10#AUTH#LAQAB##AR:",
@@ -563,8 +572,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     full_name = [authD[x] for x in name_comps \
                                  if "Fulān" not in authD[x]]
                     full_name = " ".join(full_name)
-                except:
-                    print("No author yml file found")
+##                except:
+##                    print("No author yml file found")
 
 
                 # 2) from the URI: 
@@ -676,6 +685,13 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 if uri.version in tagsDic:
                     tags += tagsDic[uri.version]
                     #print(uri.version, tagsDic[uri.version])
+                if bookD and not bookD["10#BOOK#GENRES###:"].startswith("src"):
+                    tags += bookD["10#BOOK#GENRES###:"]
+                version_tags = re.findall("[A-Z_]{5,}",
+                                          versD["90#VERS#ISSUES###:"])
+                if version_tags:
+                    tags += ",".join(version_tags)
+                
 
 
                 # 3) collect additional metadata (mostly in Arabic!)
