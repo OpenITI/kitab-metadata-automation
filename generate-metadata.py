@@ -406,6 +406,7 @@ def extract_metadata_from_header(fp):
                 # reorganize the relevant headers under overarching categories:
                 if key in headings_dict:
                     cat = headings_dict[key]
+                    val = re.sub("¶.+", "", val)
                     meta[cat].append(val)
         else:
             unreadable.append(line)
