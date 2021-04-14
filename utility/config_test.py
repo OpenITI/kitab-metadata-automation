@@ -1,5 +1,7 @@
 # Path to the input folder:
 corpus_path = r"test\25-years-folders"
+#corpus_path = r"test\release_structure"
+
 
 # list of folder names to be excluded from metadata generation:
 exclude = (["OpenITI.github.io", "Annotation", "maintenance", "i.mech00",
@@ -24,6 +26,11 @@ split_ar_lat = True
 
 # path to the output folder:
 output_path = "./output/"
+
+# Use this path instead of the `corpus_path` for text and yml files in output metadata:
+# E.g., "https://raw.githubusercontent.com/OpenITI", ".."
+output_files_path = "test1/test2/test3"  # write path to use instead of corpus_path
+
 
 # path to the output files (default: in the folder at output_path)
 meta_tsv_fp = None
