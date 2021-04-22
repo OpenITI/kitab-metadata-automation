@@ -563,7 +563,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 ##                try:
 ##                    authD = readYML(authF)
                 if authD:
-                    if not "Fulān" in authD["10#AUTH#SHUHRA#AR:"]:
+                    if not ("Fulān" in authD["10#AUTH#SHUHRA#AR:"]\
+                            or "none" in authD["10#AUTH#SHUHRA#AR:"]):
                         shuhra = authD["10#AUTH#SHUHRA#AR:"].strip()
                     name_comps = ["10#AUTH#LAQAB##AR:",
                                   "10#AUTH#KUNYA##AR:",
@@ -571,7 +572,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                                   "10#AUTH#NASAB##AR:",
                                   "10#AUTH#NISBA##AR:"]
                     full_name = [authD[x] for x in name_comps \
-                                 if "Fulān" not in authD[x]]
+                                 if not ("Fulān" in authD[x] \
+                                         or "none" in authD[x])]
                     full_name = " ".join(full_name)
 ##                except:
 ##                    print("No author yml file found")
