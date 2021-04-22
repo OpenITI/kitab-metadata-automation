@@ -547,7 +547,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 ##                    #title = []
                 if bookD:
                     for c in ["10#BOOK#TITLEA#AR:", "10#BOOK#TITLEB#AR:"]:
-                        if not "al-Muʾallif" in bookD[c]:
+                        if not ("al-Muʾallif" in bookD[c]\
+                                or "none" in bookD[c].lower()):
     ##                        title.append(bookD[c].strip())
     ##                        title.append(betaCodeToArSimple(title[-1]))
                             title_lat.append(bookD[c].strip())
@@ -564,7 +565,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 ##                    authD = readYML(authF)
                 if authD:
                     if not ("Fulān" in authD["10#AUTH#SHUHRA#AR:"]\
-                            or "none" in authD["10#AUTH#SHUHRA#AR:"]):
+                            or "none" in authD["10#AUTH#SHUHRA#AR:"].lower()):
                         shuhra = authD["10#AUTH#SHUHRA#AR:"].strip()
                     name_comps = ["10#AUTH#LAQAB##AR:",
                                   "10#AUTH#KUNYA##AR:",
@@ -573,7 +574,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                                   "10#AUTH#NISBA##AR:"]
                     full_name = [authD[x] for x in name_comps \
                                  if not ("Fulān" in authD[x] \
-                                         or "none" in authD[x])]
+                                         or "none" in authD[x].lower())]
                     full_name = " ".join(full_name)
 ##                except:
 ##                    print("No author yml file found")
