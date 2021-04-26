@@ -467,7 +467,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
     statusDic = {}
     split_files = dict()
     start_folder = re.sub("\\\\", "/", start_folder)
-     = dict()
+    book_rel_d = dict()
 
     for root, dirs, files in os.walk(start_folder):
         dirs = [d for d in sorted(dirs) if d not in exclude]
@@ -556,22 +556,32 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     for rel in rels:
                         rel = re.sub("[ \r\n]+", " ", rel)
                         try:
-                            rel_type = re.findall("\(([^\)]+)", rel)[0]
+                            rel_types = re.findall("\(([^\)]+)", rel)[0]
                         except:
                             print(bookF, ":")
                             print("    no relationship type found in ", rel)
                             continue
                         rel_book = re.sub(" *\(.+", "", rel).strip()
                         bookURI = uri.build_uri("book")
-                        rel = [bookURI, rel_type, rel_book]
                         if not bookURI in book_rel_d:
                             book_rel_d[bookURI] = []
-                        if not rel in  book_rel_d[bookURI]:
-                            book_rel_d[bookURI].append(rel)
                         if not rel_book in book_rel_d:
                             book_rel_d[rel_book] = []
-                        if not rel in book_rel_d[rel_book]:
-                            book_rel_d[rel_book].append(rel)
+                        for rel_type in re.split(" *, *", rel_types):
+                            if "." in rel_type:
+                                main_rel_type = re.split(" *\. *", rel_type)[0]
+                                sec_rel_type = re.sub(" *\.", "", rel_type)[1]
+                            else:
+                                main_rel_type = rel_type
+                                sec_rel_type = ""
+                            rel = {"source": bookURI,
+                                   "main_rel_type": main_rel_type,
+                                   "sec_rel_type": sec_rel_type,
+                                   "dest": rel_book}
+                            if not rel in  book_rel_d[bookURI]:
+                                book_rel_d[bookURI].append(rel)
+                            if not rel in book_rel_d[rel_book]:
+                                book_rel_d[rel_book].append(rel)
 
 
                 # - edition information:
