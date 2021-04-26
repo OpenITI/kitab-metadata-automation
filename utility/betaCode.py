@@ -20,6 +20,7 @@ betacodeTranslit = {
 # Alphabet letters
     '_a' : 'ā', # alif
     'b'  : 'b', # bā’
+    'p'  : 'p', # pe / Persian
     't'  : 't', # tā’
     '_t' : 'ṯ', # thā’
     '^g' : 'ǧ', # jīm
@@ -85,6 +86,7 @@ translitLOC = {
 # Alphabet letters
     'ā' : 'ā',  # alif
     'b' : 'b',  # bā’
+    'p' : 'p', # pe / Persian
     't' : 't',  # tā’
     'ṯ' : 'th', # thā’
     'ǧ' : 'j',  # jīm
@@ -139,6 +141,7 @@ translitSearch = {
 # Alphabet letters
     'ā' : 'a',  # alif
     'b' : 'b',  # bā’
+    'p' : 'p', # pe / Persian
     't' : 't',  # tā’
     'ṯ' : 'th', # thā’
     'ǧ' : 'j',  # jīm
@@ -192,6 +195,7 @@ translitArabic = {
 # Alphabet letters
     'ā' : ' ا ',  # alif
     'b' : ' ب ',  # bāʾ
+    'p' : ' پ ', # pe / Persian
     't' : ' ت ',  # tāʾ
     'ṯ' : ' ث ', # thāʾ
     'ǧ' : ' ج ',  # jīm
@@ -249,6 +253,7 @@ arabicBetaCode = {
     " إ " :  "'i",   # alif
     " آ " :  "'_a",  # alif
     " ب " :  "b",   # bāʾ
+    " پ " :  "p",   # pe / Persian
     " ت " :  "t",   # tāʾ
     " ث " :  "_t",  # thāʾ
     " ج " :  "^g",  # jīm
@@ -552,8 +557,8 @@ def betacodeToArabic(text):
 def betaCodeToArSimple(text):
     text = betacodeToArabic(text)
     text = text.replace("ﭐ", "ا")
-    text = re.sub(r"\bإبن\b", "ابن", text)
     text = deNoise(text)
+    text = re.sub(r"\bإبن\b", "ابن", text)
     return(text)
     
 
