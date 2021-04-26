@@ -248,7 +248,21 @@ def load_srt_meta(srt_folder, passim_runs):
         
         
         
-
+##def create_book_relations_json(csv_fp, out_fp):
+##    """Create a json file that contains book relations info for each URI 
+##    for which the book yml file contains book relations information
+##    """
+##    br_d = dict()
+##    with open(csv_fp) as csvfile:
+##        reader = csv.DictReader(csvfile, delimiter='\t')
+##        record = {}
+##
+##        for row in reader:
+##            if "relations" in row:
+##                
+            
+    
+    
 
 
 def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
@@ -427,6 +441,7 @@ def insert_spaces(s):
     return re.sub("([a-z])([A-Z])", r"\1 \2", s)
 
 def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
+                    book_rel_outpth,
                     incl_char_length=False, split_ar_lat=False,
                     flat_folder=False, output_files_path=None):
     """Collect the metadata from URIs, YML files and text file headers
@@ -452,6 +467,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
     statusDic = {}
     split_files = dict()
     start_folder = re.sub("\\\\", "/", start_folder)
+     = dict()
 
     for root, dirs, files in os.walk(start_folder):
         dirs = [d for d in sorted(dirs) if d not in exclude]
@@ -492,14 +508,14 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     bookD = readYML(bookF)
                     bookD_yml = dicToYML(bookD) + "\n"
                 except:
-                    print("No book yml file found")
+                    print("No book yml file found", bookF)
                     bookD = ""
                     bookD_yml = ""
                 try:
                     authD = readYML(authF)
                     authD_yml = dicToYML(authD) + "\n"
                 except:
-                    print("No author yml file found")
+                    print("No author yml file found", authF)
                     authD = ""
                     bookD_yml = ""
                 record = splitter + versD_yml + bookD_yml + authD_yml
@@ -531,6 +547,32 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                                 with open(versF, mode="w", encoding="utf-8") as file:
                                     file.write(ymlS)
                                 break
+
+                # - book relations:
+                if "40#BOOK#RELATED##:" in bookD \
+                   and not bookD["40#BOOK#RELATED##:"].strip().startswith("URI of"):
+                    rels = bookD["40#BOOK#RELATED##:"].strip()
+                    rels = re.split(" ?; ?", rels)
+                    for rel in rels:
+                        rel = re.sub("[ \r\n]+", " ", rel)
+                        try:
+                            rel_type = re.findall("\(([^\)]+)", rel)[0]
+                        except:
+                            print(bookF, ":")
+                            print("    no relationship type found in ", rel)
+                            continue
+                        rel_book = re.sub(" *\(.+", "", rel).strip()
+                        bookURI = uri.build_uri("book")
+                        rel = [bookURI, rel_type, rel_book]
+                        if not bookURI in book_rel_d:
+                            book_rel_d[bookURI] = []
+                        if not rel in  book_rel_d[bookURI]:
+                            book_rel_d[bookURI].append(rel)
+                        if not rel_book in book_rel_d:
+                            book_rel_d[rel_book] = []
+                        if not rel in book_rel_d[rel_book]:
+                            book_rel_d[rel_book].append(rel)
+
 
                 # - edition information:
                 ed_info = []
@@ -859,6 +901,9 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
     # Finally, also save the combined yml data in a master yml file: 
     with open(yml_outpth, "w", encoding="utf8") as outfile:
         outfile.write("\n".join(dataYML))
+
+    with open(book_rel_outpth, "w", encoding="utf-8") as outfile:
+        json.dump(book_rel_d, indent=2, ensure_ascii=False, sort_keys=True)
 
 def restore_config_to_default():
     def_config = """\
@@ -1212,6 +1257,7 @@ Command line arguments for generate-metadata.py:
         meta_json_fp = pth_string + "_metadata_light.json"
     if meta_header_fp == None:
         meta_header_fp = pth_string + "_header_metadata.json"
+    book_rel_fp = pth_string + "_book_relations.json"
 
     print("corpus_path", corpus_path)
     print("exclude", exclude)
@@ -1250,7 +1296,7 @@ Command line arguments for generate-metadata.py:
     print("="*80)
     print("Collecting metadata...")
     collectMetadata(corpus_path, exclude, meta_tsv_fp, meta_yml_fp,
-                    incl_char_length=incl_char_length,
+                    book_rel_fp, incl_char_length=incl_char_length,
                     split_ar_lat=split_ar_lat, flat_folder=flat_folder,
                     output_files_path=output_files_path)
     temp = end
