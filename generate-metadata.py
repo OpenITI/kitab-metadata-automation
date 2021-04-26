@@ -913,7 +913,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
         outfile.write("\n".join(dataYML))
 
     with open(book_rel_outpth, "w", encoding="utf-8") as outfile:
-        json.dump(book_rel_d, indent=2, ensure_ascii=False, sort_keys=True)
+        json.dump(book_rel_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
 
 def restore_config_to_default():
     def_config = """\
