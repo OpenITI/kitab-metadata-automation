@@ -570,7 +570,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                         for rel_type in re.split(" *, *", rel_types):
                             if "." in rel_type:
                                 main_rel_type = re.split(" *\. *", rel_type)[0]
-                                sec_rel_type = re.sub(" *\.", "", rel_type)[1]
+                                sec_rel_type = re.split(" *\. *", rel_type)[1]
                             else:
                                 main_rel_type = rel_type
                                 sec_rel_type = ""
