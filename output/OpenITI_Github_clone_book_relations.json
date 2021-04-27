@@ -1247,15 +1247,15 @@
       "source": "0832AbuTayyibFasi.DhaylTaqyid"
     }
   ],
-  "0630IbnAthirCizzDin.Kamil.JK000911": [
+  "0630IbnAthirCizzDin.Kamil": [
     {
-      "dest": "0630IbnAthirCizzDin.Kamil.JK000911",
+      "dest": "0630IbnAthirCizzDin.Kamil",
       "main_rel_type": "ABR",
       "sec_rel_type": "mukhtasar",
       "source": "0732AbuFida.MukhtasarFiAkhbar"
     },
     {
-      "dest": "0630IbnAthirCizzDin.Kamil.JK000911",
+      "dest": "0630IbnAthirCizzDin.Kamil",
       "main_rel_type": "CONT",
       "sec_rel_type": "dhayl",
       "source": "0732AbuFida.MukhtasarFiAkhbar"
@@ -1689,9 +1689,9 @@
       "source": "0691IbnYusufLabli.TuhfatMajd"
     }
   ],
-  "0692IbnCabdZahir.RawdZahir.GVDB20200120": [
+  "0692IbnCabdZahir.RawdZahir": [
     {
-      "dest": "0692IbnCabdZahir.RawdZahir.GVDB20200120",
+      "dest": "0692IbnCabdZahir.RawdZahir",
       "main_rel_type": "ABR",
       "sec_rel_type": "mukhtasar",
       "source": "0730ShaficIbnCali.HusnManaqib"
@@ -1879,7 +1879,7 @@
   ],
   "0730ShaficIbnCali.HusnManaqib": [
     {
-      "dest": "0692IbnCabdZahir.RawdZahir.GVDB20200120",
+      "dest": "0692IbnCabdZahir.RawdZahir",
       "main_rel_type": "ABR",
       "sec_rel_type": "mukhtasar",
       "source": "0730ShaficIbnCali.HusnManaqib"
@@ -1887,13 +1887,13 @@
   ],
   "0732AbuFida.MukhtasarFiAkhbar": [
     {
-      "dest": "0630IbnAthirCizzDin.Kamil.JK000911",
+      "dest": "0630IbnAthirCizzDin.Kamil",
       "main_rel_type": "ABR",
       "sec_rel_type": "mukhtasar",
       "source": "0732AbuFida.MukhtasarFiAkhbar"
     },
     {
-      "dest": "0630IbnAthirCizzDin.Kamil.JK000911",
+      "dest": "0630IbnAthirCizzDin.Kamil",
       "main_rel_type": "CONT",
       "sec_rel_type": "dhayl",
       "source": "0732AbuFida.MukhtasarFiAkhbar"
