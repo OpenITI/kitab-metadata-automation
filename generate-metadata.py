@@ -904,14 +904,15 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
     print("="*80)
 
 
-    
+    # save csv file:
     with open(csv_outpth, "w", encoding="utf8") as outfile:
         outfile.write(header+"\n"+"\n".join(dataCSV))#.replace(" ", ""))
 
-    # Finally, also save the combined yml data in a master yml file: 
+    # also save the combined yml data in a master yml file: 
     with open(yml_outpth, "w", encoding="utf8") as outfile:
         outfile.write("\n".join(dataYML))
 
+    # Finally, save the book relations:
     with open(book_rel_outpth, "w", encoding="utf-8") as outfile:
         json.dump(book_rel_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
 
