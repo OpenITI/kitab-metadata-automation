@@ -764,7 +764,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     if shuhra:
                         author_lat.append(shuhra)
                         author_ar.append(betaCodeToArSimple(shuhra))
-                        print("shuhra:", betaCodeToArSimple(shuhra))
+                        #print("shuhra:", betaCodeToArSimple(shuhra))
                         #add_arabic_name = False
                     if full_name:
                         author_lat.append(full_name)
