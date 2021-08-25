@@ -425,6 +425,14 @@
       "source": "0669IbnCusfurHadramiIshbili.SharhJumalZajjaji"
     }
   ],
+  "0344IbnSammak.JuzShurut": [
+    {
+      "dest": "0344IbnSammak.JuzShurut",
+      "main_rel_type": "TRANSM",
+      "sec_rel_type": "riwaya",
+      "source": "0344IbnSammak.JuzShurut"
+    }
+  ],
   "0346Istakhri.MasalikWaMamalik": [
     {
       "dest": "0346Istakhri.MasalikWaMamalik",
@@ -2037,6 +2045,14 @@
       "source": "0911Suyuti.DhaylTabaqatHuffaz"
     }
   ],
+  "0748Dhahabi.TadhhibTahdhib": [
+    {
+      "dest": "0748Dhahabi.TadhhibTahdhib",
+      "main_rel_type": "Abbr",
+      "sec_rel_type": "khulasa",
+      "source": "0923IbnCabdAllahKhazraji.KhulasatTadhhibTahdhibKamal"
+    }
+  ],
   "0748Dhahabi.TadhkiratHuffaz": [
     {
       "dest": "0748Dhahabi.TadhkiratHuffaz",
@@ -2995,6 +3011,14 @@
       "source": "0923AhmadQastallani.IrshadSari"
     }
   ],
+  "0923IbnCabdAllahKhazraji.KhulasatTadhhibTahdhibKamal": [
+    {
+      "dest": "0748Dhahabi.TadhhibTahdhib",
+      "main_rel_type": "Abbr",
+      "sec_rel_type": "khulasa",
+      "source": "0923IbnCabdAllahKhazraji.KhulasatTadhhibTahdhibKamal"
+    }
+  ],
   "0926ZakariyyaAnsari.AsnaMatalib": [
     {
       "dest": "0926ZakariyyaAnsari.AsnaMatalib",
@@ -3315,6 +3339,22 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "1078ShaykhiZadahDamadAfandi.MajmacAnhur"
+    }
+  ],
+  "1212WahidBihbahani.FawaidRijaliyya": [
+    {
+      "dest": "1212WahidBihbahani.FawaidRijaliyya",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "tacliqa",
+      "source": "1334NajmDinTabasi.RijalKhaqani"
+    }
+  ],
+  "1334NajmDinTabasi.RijalKhaqani": [
+    {
+      "dest": "1212WahidBihbahani.FawaidRijaliyya",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "tacliqa",
+      "source": "1334NajmDinTabasi.RijalKhaqani"
     }
   ],
   "510IbnMascudBaghawi.MasabihSunna": [
