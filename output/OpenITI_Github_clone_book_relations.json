@@ -1521,6 +1521,14 @@
       "source": "0676IbnHasanMuhaqqiqHilli.MuctabarFiSharhMukhtasar"
     }
   ],
+  "0676IbnHasanMuhaqqiqHilli.SharaicIslam": [
+    {
+      "dest": "0676IbnHasanMuhaqqiqHilli.SharaicIslam",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0966ShahidThani.MasalikAfham"
+    }
+  ],
   "0676Nawawi.ArbacunaNawawiyya": [
     {
       "dest": "0676Nawawi.ArbacunaNawawiyya",
@@ -1577,6 +1585,12 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0808MuhammadDamiri.NajmWahhaj"
+    },
+    {
+      "dest": "0676Nawawi.MinhajTalibin",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0977KhatibShirbini.MughniMuhtaj"
     },
     {
       "dest": "0676Nawawi.MinhajTalibin",
@@ -1855,6 +1869,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0855ShamsDinDikunquz.SharhCalaMarahArwah"
+    }
+  ],
+  "0726CallamaHilli.IrshadAdhhan": [
+    {
+      "dest": "0726CallamaHilli.IrshadAdhhan",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0993MuhaqqiqArdabili.MajmacFaida"
     }
   ],
   "0726CallamaHilli.KashfMurad": [
@@ -3199,6 +3221,14 @@
       "source": "0965ShahidThani.RawdaBahiyya"
     }
   ],
+  "0966ShahidThani.MasalikAfham": [
+    {
+      "dest": "0676IbnHasanMuhaqqiqHilli.SharaicIslam",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0966ShahidThani.MasalikAfham"
+    }
+  ],
   "0970IbnIbrahimIbnNujaymMisri.BahrRaiq": [
     {
       "dest": "0710IbnAhmadHafizDinNasafi.KanzDaqaiq",
@@ -3269,6 +3299,14 @@
       "source": "0974IbnHajarHaytami.TuhfatMuhtaj"
     }
   ],
+  "0977KhatibShirbini.MughniMuhtaj": [
+    {
+      "dest": "0676Nawawi.MinhajTalibin",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0977KhatibShirbini.MughniMuhtaj"
+    }
+  ],
   "0987ZaynDinMalibari.FathMucin": [
     {
       "dest": "0987ZaynDinMalibari.QurratCayn",
@@ -3299,6 +3337,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "hashiya",
       "source": "0992IbnQasimCibadi.HashiyaCalaTuhfatMuhtaj"
+    }
+  ],
+  "0993MuhaqqiqArdabili.MajmacFaida": [
+    {
+      "dest": "0726CallamaHilli.IrshadAdhhan",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0993MuhaqqiqArdabili.MajmacFaida"
     }
   ],
   "0995AhmadManjur.SharhManhajMuntakhab": [
