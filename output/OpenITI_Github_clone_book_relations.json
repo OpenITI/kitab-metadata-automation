@@ -1985,6 +1985,14 @@
       "source": "0743SharafDinTibi.SharhMishkat"
     }
   ],
+  "0742Mizzi.TuhfatAshraf": [
+    {
+      "dest": "0742Mizzi.TuhfatAshraf",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0852IbnHajarCasqalani.NukatZiraf"
+    }
+  ],
   "0743FakhrDinZaylaci.TabyinHaqaiq": [
     {
       "dest": "0710IbnAhmadHafizDinNasafi.KanzDaqaiq",
@@ -2625,6 +2633,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "radd",
       "source": "0852IbnHajarCasqalani.IntiqadIctirad"
+    }
+  ],
+  "0852IbnHajarCasqalani.NukatZiraf": [
+    {
+      "dest": "0742Mizzi.TuhfatAshraf",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0852IbnHajarCasqalani.NukatZiraf"
     }
   ],
   "0854IbnMalak.SharhMasabih": [
