@@ -3408,15 +3408,15 @@
       "dest": "1212WahidBihbahani.FawaidRijaliyya",
       "main_rel_type": "COMM",
       "sec_rel_type": "tacliqa",
-      "source": "1334NajmDinTabasi.RijalKhaqani"
+      "source": "1334CaliKhaqani.Rijal"
     }
   ],
-  "1334NajmDinTabasi.RijalKhaqani": [
+  "1334CaliKhaqani.Rijal": [
     {
       "dest": "1212WahidBihbahani.FawaidRijaliyya",
       "main_rel_type": "COMM",
       "sec_rel_type": "tacliqa",
-      "source": "1334NajmDinTabasi.RijalKhaqani"
+      "source": "1334CaliKhaqani.Rijal"
     }
   ],
   "510IbnMascudBaghawi.MasabihSunna": [
