@@ -254,7 +254,7 @@
       "dest": "0273IbnMaja.Sunan",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
-      "source": "0762MughaltayIbnQalij.SharhSunanIbnMaja"
+      "source": "0762MughultayIbnQilij.SharhSunanIbnMaja"
     },
     {
       "dest": "0273IbnMaja.Sunan",
@@ -430,7 +430,7 @@
       "dest": "0344IbnSammak.JuzShurut",
       "main_rel_type": "TRANSM",
       "sec_rel_type": "riwaya",
-      "source": "0344IbnSammak.JuzShurut"
+      "source": "0607IbnTabarzad.JuzShurut"
     }
   ],
   "0346Istakhri.MasalikWaMamalik": [
@@ -533,6 +533,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0384AbuHasanRummani.SharhKitabSibawayh"
+    }
+  ],
+  "0385Daraqutni.FawaidMuntaqatDhuhli": [
+    {
+      "dest": "0385Daraqutni.FawaidMuntaqatDhuhli",
+      "main_rel_type": "COMP",
+      "sec_rel_type": "muntaqa",
+      "source": "0627ZaynUmanaIbnCasakir.FawaidMuntaqatDhuhli"
     }
   ],
   "0385IbnHasanSirafi.SharhAbyatSibawayh": [
@@ -1151,6 +1159,14 @@
       "source": "0606IbnAthirMajdDin.Shafi"
     }
   ],
+  "0607IbnTabarzad.JuzShurut": [
+    {
+      "dest": "0344IbnSammak.JuzShurut",
+      "main_rel_type": "TRANSM",
+      "sec_rel_type": "riwaya",
+      "source": "0607IbnTabarzad.JuzShurut"
+    }
+  ],
   "0616CaliIbnIsmacilAbyari.TahqiqWaBayan": [
     {
       "dest": "0478ImamHaramaynJuwayni.BurhanFiUsulFiqh",
@@ -1245,6 +1261,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0624IbnIbrahimBahaDinMuqaddasi.CuddaSharhCumda"
+    }
+  ],
+  "0627ZaynUmanaIbnCasakir.FawaidMuntaqatDhuhli": [
+    {
+      "dest": "0385Daraqutni.FawaidMuntaqatDhuhli",
+      "main_rel_type": "COMP",
+      "sec_rel_type": "muntaqa",
+      "source": "0627ZaynUmanaIbnCasakir.FawaidMuntaqatDhuhli"
     }
   ],
   "0629IbnNuqta.TaqyidLiMacrifa": [
@@ -2187,12 +2211,12 @@
       "source": "0761JamalDinIbnHisham.SharhShudhurDhahab"
     }
   ],
-  "0762MughaltayIbnQalij.SharhSunanIbnMaja": [
+  "0762MughultayIbnQilij.SharhSunanIbnMaja": [
     {
       "dest": "0273IbnMaja.Sunan",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
-      "source": "0762MughaltayIbnQalij.SharhSunanIbnMaja"
+      "source": "0762MughultayIbnQilij.SharhSunanIbnMaja"
     }
   ],
   "0765AbuMahasinHusayni.DhaylCibar": [
