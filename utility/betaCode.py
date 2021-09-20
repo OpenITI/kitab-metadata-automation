@@ -413,18 +413,18 @@ def betacodeToArabic(text):
     text = re.sub("ủ", "u", text)
     text = re.sub("ỉ", "i", text)
     text = re.sub("ả", "a", text)
-    
+
     # complex combinations
+    text = re.sub(r"li-?a?ll[āã]hi?", " لِـلّٰـهِ ".strip(), text) # Convert God's Name
+    text = re.sub(r"bi-?a?ll[āã]hi?", "بِاللهِ", text) # Convert God's Name
+    text = re.sub("all[ãā]h", " ﭐلـلّٰـه ".strip(), text) # Convert God's Name
+    text = re.sub(r"\bb\.", "بن", text) # Convert b. into ar bn
+
     sun = "tṯdḏrzsšṣḍṭẓln"
-    text = re.sub(r"\b[aA]l-([%s])" % sun, r"ﭐل-\1\1", text) # converts articles w/ sun letters
-    text = re.sub(r"\b[aA]l-", r"ﭐلْ-", text) # converts articles
+    text = re.sub(r"\bal-([%s])" % sun, r"ﭐل-\1\1", text) # converts articles w/ sun letters
+    text = re.sub(r"\bal-", r"ﭐلْ-", text) # converts articles
     text = re.sub(r"\bwa-a?l-", "وَﭐل-", text) # converts articles
     #text   = re.sub(r"n-", "", text) # converts articles
-
-    text = re.sub("allãh", " ﭐلـلّٰـه ".strip(), text) # Convert God's Name
-    # need to add "bi-Ll~ah?i"
-    text = re.sub(r"li-llãhi", " لِـلّٰـهِ ".strip(), text) # Convert God's Name
-    text = re.sub(r"\bb\.", "بن", text) # Convert b. into ar bn
 
     text  = re.sub(",", "،", text) # Convert commas
 
