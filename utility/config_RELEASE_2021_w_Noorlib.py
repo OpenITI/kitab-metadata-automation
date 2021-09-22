@@ -31,10 +31,10 @@ output_path = "./output/"
 output_files_path = "https://raw.githubusercontent.com/OpenITI"
 
 # path to the output files (default: in the folder at output_path)
-meta_tsv_fp = None
-meta_yml_fp = None
-meta_json_fp = None
-meta_header_fp = None
+meta_tsv_fp = "./output/RELEASE_2021_2_wo_Noorlib_meta.tsv"
+meta_yml_fp = "./output/RELEASE_2021_2_wo_Noorlib_meta.yml"
+meta_json_fp = "./output/RELEASE_2021_2_wo_Noorlib_meta.json"
+meta_header_fp = "./output/RELEASE_2021_2_wo_Noorlib_header_meta.json"
 
 # List of lists (description, run_id on server):  
 passim_runs = []

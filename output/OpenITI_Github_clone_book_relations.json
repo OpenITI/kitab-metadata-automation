@@ -3075,6 +3075,12 @@
   ],
   "0923IbnCabdAllahKhazraji.KhulasatTadhhibTahdhibKamal": [
     {
+      "dest": "0923IbnCabdAllahKhazraji.KhulasatTadhhibTahdhibKamal",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "khulasa",
+      "source": "1191Kawkabani.IthafKhassa"
+    },
+    {
       "dest": "0748Dhahabi.TadhhibTahdhib",
       "main_rel_type": "Abbr",
       "sec_rel_type": "khulasa",
@@ -3425,6 +3431,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "1078ShaykhiZadahDamadAfandi.MajmacAnhur"
+    }
+  ],
+  "1191Kawkabani.IthafKhassa": [
+    {
+      "dest": "0923IbnCabdAllahKhazraji.KhulasatTadhhibTahdhibKamal",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "khulasa",
+      "source": "1191Kawkabani.IthafKhassa"
     }
   ],
   "1212WahidBihbahani.FawaidRijaliyya": [
