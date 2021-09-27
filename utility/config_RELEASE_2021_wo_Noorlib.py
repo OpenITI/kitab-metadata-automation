@@ -12,10 +12,10 @@ exclude = (["OpenITI.github.io", "Annotation", "maintenance", "i.mech00",
 data_in_25_year_repos = True  # True/False
 
 # Set to True if the script needs to check completeness of the yml files:
-perform_yml_check = False  # True/False
+perform_yml_check = True  # True/False
 
 # Set to True if the script needs to update the token counts in the yml files:
-check_token_counts = False  # True/False
+check_token_counts = True  # True/False
 
 # Set to True if the script needs to include character length in the yml files:
 incl_char_length = True  # True/False
@@ -31,10 +31,10 @@ output_path = "./output/"
 output_files_path = "https://raw.githubusercontent.com/OpenITI"
 
 # path to the output files (default: in the folder at output_path)
-meta_tsv_fp = "./output/RELEASE_2021_2_meta.tsv"
-meta_yml_fp = "./output/RELEASE_2021_2_meta.yml"
-meta_json_fp = "./output/RELEASE_2021_2_meta.json"
-meta_header_fp = "./output/RELEASE_2021_2_header_meta.json"
+meta_tsv_fp = "./output/RELEASE_2021_2_wo-Noor_meta.tsv"
+meta_yml_fp = "./output/RELEASE_2021_2_wo-Noor_meta.yml"
+meta_json_fp = "./output/RELEASE_2021_2_wo-Noor_meta.json"
+meta_header_fp = "./output/RELEASE_2021_2_wo-Noor_header_meta.json"
 
 # List of lists (description, run_id on server):  
 passim_runs = []

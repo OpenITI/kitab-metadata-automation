@@ -2009,6 +2009,14 @@
       "source": "0743SharafDinTibi.SharhMishkat"
     }
   ],
+  "0742Mizzi.TahdhibKamal": [
+    {
+      "dest": "0742Mizzi.TahdhibKamal",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "Tahdhib",
+      "source": "0762MughultayIbnQilij.IkmalTahdhib"
+    }
+  ],
   "0742Mizzi.TuhfatAshraf": [
     {
       "dest": "0742Mizzi.TuhfatAshraf",
@@ -2209,6 +2217,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0761JamalDinIbnHisham.SharhShudhurDhahab"
+    }
+  ],
+  "0762MughultayIbnQilij.IkmalTahdhib": [
+    {
+      "dest": "0742Mizzi.TahdhibKamal",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "Tahdhib",
+      "source": "0762MughultayIbnQilij.IkmalTahdhib"
     }
   ],
   "0762MughultayIbnQilij.SharhSunanIbnMaja": [
