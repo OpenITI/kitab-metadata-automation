@@ -470,7 +470,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
     book_rel_d = dict()
 
     for root, dirs, files in os.walk(start_folder):
-        dirs = [d for d in sorted(dirs) if d not in exclude]
+        dirs[:] = [d for d in sorted(dirs) if d not in exclude]
         
         for file in files:
             # select only the version yml files:
