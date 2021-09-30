@@ -192,7 +192,7 @@ The following files could have problems with their URI:
      map21b.caption
      map21b.png
 
-Processing time: 2110.28 sec
+Processing time: 2052.80 sec
 ================================================================================
 Collecting metadata...
 collecting metadata from OpenITI...
@@ -211,7 +211,7 @@ https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Maj
 ================================================================================
 COLLECTING INTO A CSV FILE (10351 LINES)...
 ================================================================================
-Processing time: 2126.84 sec
+Processing time: 2068.70 sec
 ================================================================================
 Collecting issues from GitHub...
 logged in
@@ -227,10 +227,10 @@ issue labels in this repo:
    Label(name="urgent")
    Label(name="URI change suggestion")
 getting relevant issues from GitHub...
-GitHub fetching time: 8.79 sec
+GitHub fetching time: 7.99 sec
 ================================================================================
 Saving metadata...
 ================================================================================
-first_json_key['date'] 29 September 2021
+first_json_key['date'] 30 September 2021
 Tada!
-Total processing time: 2135.63 sec
+Total processing time: 2076.69 sec
