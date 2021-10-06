@@ -1911,6 +1911,14 @@
       "source": "0726CallamaHilli.KashfMurad"
     }
   ],
+  "0726CallamaHilli.MinhajKarama": [
+    {
+      "dest": "0726CallamaHilli.MinhajKarama",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "radd",
+      "source": "0728IbnTaymiyya.MinhajSunna"
+    }
+  ],
   "0726Yunini.DhaylMiratZaman": [
     {
       "dest": "0654SibtIbnJawzi.MiratZaman",
@@ -1925,6 +1933,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0727MuzhiriZaydani.Mafatih"
+    }
+  ],
+  "0728IbnTaymiyya.MinhajSunna": [
+    {
+      "dest": "0726CallamaHilli.MinhajKarama",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "radd",
+      "source": "0728IbnTaymiyya.MinhajSunna"
     }
   ],
   "0728IbnTaymiyya.SharhCumdatFiqh": [
