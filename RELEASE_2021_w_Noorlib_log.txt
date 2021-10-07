@@ -1,8 +1,8 @@
 config utility/config_RELEASE_2021_w_Noorlib.py
-output_files_path https://raw.githubusercontent.com/OpenITI
-corpus_path /home/admin-kitab/Documents/OpenITI/RELEASE_git/working_dir/AH_repos
+output_files_path ../data
+corpus_path /home/admin-kitab/Documents/OpenITI/RELEASE_git/working_dir/OpenITI-data-wNoor_2021-2-5
 exclude ['OpenITI.github.io', 'Annotation', 'maintenance', 'i.mech00', 'i.mech01', 'i.mech02', 'i.mech03', 'i.mech04', 'i.mech05', 'i.mech06', 'i.mech07', 'i.mech08', 'i.mech09', 'i.logic', 'i.cex', 'i.cex_Temp', 'i.mech', 'i.mech_Temp', '.git']
-data_in_25_year_repos True
+data_in_25_year_repos False
 perform_yml_check True
 check_token_counts True
 incl_char_length True
@@ -12,8 +12,12 @@ meta_yml_fp ./output/RELEASE_2021_2_w_Noorlib_meta.yml
 meta_json_fp ./output/RELEASE_2021_2_w_Noorlib_meta.json
 meta_header_fp ./output/RELEASE_2021_2_w_Noorlib_header_meta.json
 silent True
-output_files_path https://raw.githubusercontent.com/OpenITI
+output_files_path ../data
 Checking yml files before collecting metadata...
+NO TOKEN COUNT 0353MaslamaQurtubi.GhayatHakim.Noorlib018390-ara1
+NO TOKEN COUNT 0353MaslamaQurtubi.GhayatHakim.Noorlib018390-ara1
+NO TOKEN COUNT 0363QadiNucman.Iqtisar.Noorlib38975Vols-ara1.completed
+NO TOKEN COUNT 0363QadiNucman.Iqtisar.Noorlib38975Vols-ara1.completed
 NO TOKEN COUNT 0428IbnSina.IsharatWaTanbihat.Shamela0006534BK1-ara1.mARkdown
 NO TOKEN COUNT 0428IbnSina.IsharatWaTanbihat.Shamela0006534BK1-ara1.mARkdown
 NO TOKEN COUNT 0429AbuMansurThacalibi.KinayaWaTacrid.Shamela0000623BK2-ara1.mARkdown
@@ -36,173 +40,15 @@ NO TOKEN COUNT 0884AbuIshaqIbnMuflih.MubdicFiSharhMuqnic.JK000787BK2-ara1
 NO TOKEN COUNT 0884AbuIshaqIbnMuflih.MubdicFiSharhMuqnic.JK000787BK2-ara1
 NO TOKEN COUNT 0940IbnHusaynMuhaqqiqThaniKaraki.JamicMaqasid.Shia000134VolsBK2-ara1
 NO TOKEN COUNT 0940IbnHusaynMuhaqqiqThaniKaraki.JamicMaqasid.Shia000134VolsBK2-ara1
-NO TOKEN COUNT 0353MaslamaQurtubi.GhayatHakim.Noorlib018390-ara1
-NO TOKEN COUNT 0353MaslamaQurtubi.GhayatHakim.Noorlib018390-ara1
-NO TOKEN COUNT 0363QadiNucman.Iqtisar.Noorlib38975Vols-ara1.completed
-NO TOKEN COUNT 0363QadiNucman.Iqtisar.Noorlib38975Vols-ara1.completed
-Token count must be changed in 263 files
+Token count must be changed in 268 files
 
-replacing token count in 263 files
+replacing token count in 268 files
 No missing yml files.
 
-The following files could have problems with their URI:
-
-     .Rhistory
-     0281IbnAbiDunya.Awliya.JK000042-ara1copy.mARkdown
-     0310Tabari.JamicBayan.Shamela0007798-ara1.inProgress_mARkdownSimple
-     0310Tabari.JamicBayan.Shamela0007798-ara1.notes
-     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple
-     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple.IDs
-     Bayrut_1995_001.pdff
-     Bayrut_1995_002.pdff
-     Bayrut_1995_003.pdff
-     Bayrut_1995_004.pdff
-     OpenITI-9001AH_metadata_2020-2-3.csv
-     OpenITI_metadata_2020-2-3_wNoor.csv
-     OpenITI_metadata_2020-2-3_wNoor_merged.csv
-     Tunis_2011_000.pdff
-     Tunis_2011_001.pdff
-     Tunis_2011_002.pdff
-     Tunis_2011_003.pdff
-     Tunis_2011_004.pdff
-     bash.exe.stackdump
-     map00.caption
-     map00.png
-     map01.caption
-     map01.png
-     map02.caption
-     map02.png
-     map03a.caption
-     map03a.png
-     map03b.caption
-     map03b.png
-     map03bc.png
-     map03c.caption
-     map03c.png
-     map04a.caption
-     map04a.png
-     map04b.caption
-     map04b.png
-     map05.caption
-     map05.png
-     map06.caption
-     map06.png
-     map07.caption
-     map07.png
-     map08.caption
-     map08.png
-     map09.caption
-     map09.png
-     map10.caption
-     map10.png
-     map11.caption
-     map11.png
-     map12.caption
-     map12.png
-     map13.caption
-     map13.png
-     map14.caption
-     map14.png
-     map15.caption
-     map15.png
-     map16.caption
-     map16.png
-     map17.caption
-     map17.png
-     map18.caption
-     map18.png
-     map19.caption
-     map19.png
-     map20a.caption
-     map20a.png
-     map20b.caption
-     map20b.png
-     map21a.caption
-     map21a.png
-     map21b.caption
-     map21b.png
-
-Token count changed in 263 files
+Token count changed in 268 files
 
 
-The following files could have problems with their URI:
-
-     .Rhistory
-     0281IbnAbiDunya.Awliya.JK000042-ara1copy.mARkdown
-     0310Tabari.JamicBayan.Shamela0007798-ara1.inProgress_mARkdownSimple
-     0310Tabari.JamicBayan.Shamela0007798-ara1.notes
-     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple
-     0902Sakhawi.DawLamic.JK003608-ara1.mARkdownSimple.IDs
-     Bayrut_1995_001.pdff
-     Bayrut_1995_002.pdff
-     Bayrut_1995_003.pdff
-     Bayrut_1995_004.pdff
-     OpenITI-9001AH_metadata_2020-2-3.csv
-     OpenITI_metadata_2020-2-3_wNoor.csv
-     OpenITI_metadata_2020-2-3_wNoor_merged.csv
-     Tunis_2011_000.pdff
-     Tunis_2011_001.pdff
-     Tunis_2011_002.pdff
-     Tunis_2011_003.pdff
-     Tunis_2011_004.pdff
-     bash.exe.stackdump
-     map00.caption
-     map00.png
-     map01.caption
-     map01.png
-     map02.caption
-     map02.png
-     map03a.caption
-     map03a.png
-     map03b.caption
-     map03b.png
-     map03bc.png
-     map03c.caption
-     map03c.png
-     map04a.caption
-     map04a.png
-     map04b.caption
-     map04b.png
-     map05.caption
-     map05.png
-     map06.caption
-     map06.png
-     map07.caption
-     map07.png
-     map08.caption
-     map08.png
-     map09.caption
-     map09.png
-     map10.caption
-     map10.png
-     map11.caption
-     map11.png
-     map12.caption
-     map12.png
-     map13.caption
-     map13.png
-     map14.caption
-     map14.png
-     map15.caption
-     map15.png
-     map16.caption
-     map16.png
-     map17.caption
-     map17.png
-     map18.caption
-     map18.png
-     map19.caption
-     map19.png
-     map20a.caption
-     map20a.png
-     map20b.caption
-     map20b.png
-     map21a.caption
-     map21a.png
-     map21b.caption
-     map21b.png
-
-Processing time: 2094.60 sec
+Processing time: 2312.72 sec
 ================================================================================
 Collecting metadata...
 collecting metadata from OpenITI...
@@ -212,16 +58,16 @@ collecting metadata from OpenITI...
 1111Majlisi.BiharAnwar.Shia001432VolsA-ara1
 1111Majlisi.BiharAnwar.Zaydiyya0000202B-ara1
 1111Majlisi.BiharAnwar.Zaydiyya0000202C-ara1
-https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Zaydiyya0000202A-ara1
-https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Zaydiyya0000202-ara1
+../data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Zaydiyya0000202A-ara1
+../data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Zaydiyya0000202-ara1
 ---
-https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Shia001432VolsB-ara1
-https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Shia001432Vols-ara1
+../data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Shia001432VolsB-ara1
+../data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Shia001432Vols-ara1
 ---
 ================================================================================
 COLLECTING INTO A CSV FILE (10387 LINES)...
 ================================================================================
-Processing time: 2110.39 sec
+Processing time: 2330.13 sec
 ================================================================================
 Collecting issues from GitHub...
 logged in
@@ -237,10 +83,10 @@ issue labels in this repo:
    Label(name="urgent")
    Label(name="URI change suggestion")
 getting relevant issues from GitHub...
-GitHub fetching time: 7.50 sec
+GitHub fetching time: 8.42 sec
 ================================================================================
 Saving metadata...
 ================================================================================
-first_json_key['date'] 04 October 2021
+first_json_key['date'] 07 October 2021
 Tada!
-Total processing time: 2117.89 sec
+Total processing time: 2338.55 sec
