@@ -530,23 +530,34 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 ##                versD = zfunc.readYML(versF)
 ##                versD = readYML(versF)
                 length = versD["00#VERS#LENGTH###:"].strip()
+                recalc = False
+                if not length:
+                    recalc = True
                 if incl_char_length:
                     try:
                         char_length = versD["00#VERS#CLENGTH##:"].strip()
+                        if not char_length:
+                            recalc = True
                     except:
-                        uri.extension = ""
-                        #pth = uri.build_pth(uri_type="version_file")
-                        pth = versF[:-4]
-                        for ext in [".mARkdown", ".completed", ".inProgress", ""]:
-                            version_fp = pth + ext
-                            if os.path.exists(version_fp):
+                        recalc = True
+                if recalc:
+                    uri.extension = ""
+                    #pth = uri.build_pth(uri_type="version_file")
+                    pth = versF[:-4]
+                    for ext in [".mARkdown", ".completed", ".inProgress", ""]:
+                        version_fp = pth + ext
+                        if os.path.exists(version_fp):
+                            if incl_char_length:
                                 char_length = ar_cnt_file(version_fp, mode="char")
                                 char_length = str(char_length)
                                 versD["00#VERS#CLENGTH##:"] = char_length
-                                ymlS = dicToYML(versD)
-                                with open(versF, mode="w", encoding="utf-8") as file:
-                                    file.write(ymlS)
-                                break
+                            length = ar_cnt_file(version_fp, mode="token")
+                            length = str(length)
+                            versD["00#VERS#LENGTH###:"] = length
+                            ymlS = dicToYML(versD)
+                            with open(versF, mode="w", encoding="utf-8") as file:
+                                file.write(ymlS)
+                            break
 
                 # - book relations:
                 if "40#BOOK#RELATED##:" in bookD \
