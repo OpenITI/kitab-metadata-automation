@@ -508,6 +508,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 versD_yml = dicToYML(versD) + "\n"
                 try:
                     bookD = readYML(bookF)
+                    if not bookD:
+                        bookD = fix_broken_yml(bookF)
                     bookD_yml = dicToYML(bookD) + "\n"
                 except:
                     print("No book yml file found", bookF)
@@ -515,6 +517,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     bookD_yml = ""
                 try:
                     authD = readYML(authF)
+                    if not authD:
+                        authD = fix_broken_yml(authF)
                     authD_yml = dicToYML(authD) + "\n"
                 except:
                     print("No author yml file found", authF)
