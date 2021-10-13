@@ -128,7 +128,7 @@ from datetime import datetime
 
 from openiti.helper.uri import URI, check_yml_files
 from openiti.git import get_issues
-from openiti.helper.yml import readYML, dicToYML
+from openiti.helper.yml import readYML, dicToYML, fix_broken_yml
 from openiti.helper.ara import deNoise, ar_cnt_file
 from utility.betaCode import betaCodeToArSimple
 
@@ -503,6 +503,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 ##                bookD = zfunc.dicToYML(zfunc.readYML(bookF)) + "\n"
 ##                authD = zfunc.dicToYML(zfunc.readYML(authF)) + "\n"
                 versD = readYML(versF)
+                if not versD:
+                    versD = fix_broken_yml(versF)
                 versD_yml = dicToYML(versD) + "\n"
                 try:
                     bookD = readYML(bookF)
