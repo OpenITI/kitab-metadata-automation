@@ -1143,6 +1143,14 @@
       "source": "0734IbnCaliTajDinFakihani.RiyadAfham"
     }
   ],
+  "0606FakhrDinRazi.AsasTaqdis": [
+    {
+      "dest": "0606FakhrDinRazi.AsasTaqdis",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "radd",
+      "source": "0728IbnTaymiyya.BayanTalbisJahmiyya"
+    }
+  ],
   "0606FakhrDinRazi.Mahsul": [
     {
       "dest": "0606FakhrDinRazi.Mahsul",
@@ -1933,6 +1941,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0727MuzhiriZaydani.Mafatih"
+    }
+  ],
+  "0728IbnTaymiyya.BayanTalbisJahmiyya": [
+    {
+      "dest": "0606FakhrDinRazi.AsasTaqdis",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "radd",
+      "source": "0728IbnTaymiyya.BayanTalbisJahmiyya"
     }
   ],
   "0728IbnTaymiyya.MinhajSunna": [
