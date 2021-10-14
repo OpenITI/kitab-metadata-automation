@@ -527,6 +527,14 @@
       "source": "0466CabdCazizKattani.DhaylTarikhMawlidCulama"
     }
   ],
+  "0381ShaykhSaduq.Tawhid": [
+    {
+      "dest": "0381ShaykhSaduq.Tawhid",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1107QadiSacidQummi.SharhTawhidSaduq"
+    }
+  ],
   "0384AbuHasanRummani.SharhKitabSibawayh": [
     {
       "dest": "0180Sibawayh.KitabSibawayh",
@@ -1957,6 +1965,12 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "radd",
       "source": "0728IbnTaymiyya.MinhajSunna"
+    },
+    {
+      "dest": "0728IbnTaymiyya.MinhajSunna",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "radd",
+      "source": "0775Anonymous.InsafFiIntisaf"
     }
   ],
   "0728IbnTaymiyya.SharhCumdatFiqh": [
@@ -2385,6 +2399,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0773IbnMusaRahuni.TuhfatMasul"
+    }
+  ],
+  "0775Anonymous.InsafFiIntisaf": [
+    {
+      "dest": "0728IbnTaymiyya.MinhajSunna",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "radd",
+      "source": "0775Anonymous.InsafFiIntisaf"
     }
   ],
   "0778NazirJaysh.TamhidQawacid": [
@@ -3479,6 +3501,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "1078ShaykhiZadahDamadAfandi.MajmacAnhur"
+    }
+  ],
+  "1107QadiSacidQummi.SharhTawhidSaduq": [
+    {
+      "dest": "0381ShaykhSaduq.Tawhid",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1107QadiSacidQummi.SharhTawhidSaduq"
     }
   ],
   "1191Kawkabani.IthafKhassa": [
