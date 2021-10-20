@@ -1,6 +1,5 @@
 # Path to the input folder:
-corpus_path = r"test\25-years-folders"
-#corpus_path = r"test\release_structure"
+corpus_path = r"test\temp"
 
 
 # list of folder names to be excluded from metadata generation:
@@ -45,4 +44,4 @@ passim_runs = [['October 2017 (V1)', 'passim1017'],
                ['February 2020', 'passim01022020']]
 
 # Set to True to allow the script to make changes to yml files without asking:
-silent = False  # True/False
+silent = True  # True/False

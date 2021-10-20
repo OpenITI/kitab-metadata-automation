@@ -2,6 +2,7 @@
 GitHub personalAccessTokenReadOnly.txt
 old/
 .DS_Store
-test/
+test/temp/
+test/old/
 output/test/
 output.log

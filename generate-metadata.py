@@ -508,6 +508,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 versD_yml = dicToYML(versD) + "\n"
                 try:
                     bookD = readYML(bookF)
+                    if not bookD:
+                        bookD = fix_broken_yml(bookF)
                     bookD_yml = dicToYML(bookD) + "\n"
                 except:
                     print("No book yml file found", bookF)
@@ -515,6 +517,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     bookD_yml = ""
                 try:
                     authD = readYML(authF)
+                    if not authD:
+                        authD = fix_broken_yml(authF)
                     authD_yml = dicToYML(authD) + "\n"
                 except:
                     print("No author yml file found", authF)
@@ -1046,6 +1050,40 @@ def read_config(config_pth):
     return cfg_dict
     
 
+def setup_25_years_folders_test(test_folder="test/25-years-folders",
+                          temp_folder="test/temp"):
+    if os.path.exists(temp_folder):
+        shutil.rmtree(temp_folder)
+    shutil.copytree(test_folder, temp_folder)
+
+
+def setup_release_structure_test(test_folder="test/25-years-folders",
+                          temp_folder="test/temp"):
+    if os.path.exists(temp_folder):
+        shutil.rmtree(temp_folder)
+    os.mkdir(temp_folder)
+    
+    for folder in os.listdir(test_folder):
+        folder_pth = os.path.join(test_folder, folder, "data")
+        for case in os.listdir(folder_pth):
+            case_pth = os.path.join(folder_pth, case)
+            dst = os.path.join(temp_folder, case)
+            shutil.copytree(case_pth, dst)
+
+def setup_flat_structure_test(test_folder="test/25-years-folders",
+                        temp_folder="test/temp"):
+    if os.path.exists(temp_folder):
+        shutil.rmtree(temp_folder)
+    os.mkdir(temp_folder)    
+    for folder in os.listdir(test_folder):
+        folder_pth = os.path.join(test_folder, folder, "data")
+        for root, dirs, files in os.walk(folder_pth):
+            for fn in files:
+                if fn.startswith("0"):
+                    fp = os.path.join(root, fn)
+                    shutil.copyfile(fp, os.path.join(temp_folder, fn))
+
+
 
 def main():
     
@@ -1086,13 +1124,16 @@ Command line arguments for generate-metadata.py:
 -x, --exclude : (list) list of folder names to exclude from metadata
 -c, --config : (str) name of a python file with custom configuration variables
                      (default: ./utility/config.py)
+-z, --test : (str) test the script on one of the three different
+                   folder structures: choose one out of "25_years_folders",
+                   "release_structure" or "flat_structure"
 """
     argv = sys.argv[1:]
-    opt_str = "htlfdprsi:o:t:y:j:a:x:c:"
+    opt_str = "htlfdprsi:o:t:y:j:a:x:c:z:"
     opt_list = ["help", "token_counts", "char_length", "flat_data",
                 "restore_default", "split_ar_lat", "recheck_yml", "silent",
                 "input_folder=", "output_folder=", "csv_fp=", "yml_fp=",
-                "json_fp=", "arab_header_fp=", "exclude=", "config="]
+                "json_fp=", "arab_header_fp=", "exclude=", "config=", "test="]
     try:
         opts, args = getopt.getopt(argv, opt_str, opt_list)
     except Exception as e:
@@ -1157,6 +1198,7 @@ Command line arguments for generate-metadata.py:
     silent = cfg_dict["silent"]
     split_ar_lat = cfg_dict["split_ar_lat"]
     output_files_path = cfg_dict["output_files_path"]
+    flat_folder = False
 
     print("output_files_path", output_files_path)
 
@@ -1206,6 +1248,26 @@ Command line arguments for generate-metadata.py:
         elif opt in ["-x", "--exclude"]:
             exclude = arg
             print("exclude", exclude)
+        elif opt in ["-z", "--test"]:
+            if arg == "25_years_folders":
+                setup_25_years_folders_test()
+                data_in_25_year_repos = True
+            elif arg == "release_structure":
+                setup_release_structure_test()
+                data_in_25_year_repos = False
+                flat_folder = False
+            elif arg == "flat_structure":
+                setup_flat_structure_test()
+                data_in_25_year_repos = False
+                flat_folder = True
+            else:
+                print(arg, "is not a correct value for the -z/--test parameter")
+                print("Choose one out of:")
+                print("* 25_years_folders")
+                print("* release_structure")
+                print("* flat_structure")
+                sys.exit(2)
+
 
     # 0c- deal with variables that remain undefined:
  
@@ -1222,7 +1284,6 @@ Command line arguments for generate-metadata.py:
             msg = "Write the path to the parent folder of the repos for use in output file: "
             output_files_path = input(msg)
  
-    flat_folder = False
     if data_in_25_year_repos == None:
 ##        print("Is the data in 25-years folders? (press 'N' for RELEASE data)")
 ##        resp = input("Y/N: ")
@@ -1283,6 +1344,10 @@ Command line arguments for generate-metadata.py:
         meta_header_fp = pth_string + "_header_metadata.json"
     book_rel_fp = pth_string + "_book_relations.json"
 
+##def main(corpus_path, exclude, data_in_25_year_repos, perform_yml_check, 
+##         check_token_counts, incl_char_length, output_path, meta_tsv_fp,
+##         meta_yml_fp, meta_json_fp, meta_header_fp, silent, output_files_path):
+
     print("corpus_path", corpus_path)
     print("exclude", exclude)
     print("data_in_25_year_repos", data_in_25_year_repos)
@@ -1295,6 +1360,8 @@ Command line arguments for generate-metadata.py:
     print("meta_json_fp", meta_json_fp)
     print("meta_header_fp", meta_header_fp)
     print("silent", silent)
+    print("data_in_25_year_repos", data_in_25_year_repos)
+    print("flat_folder", flat_folder)
     print("output_files_path", output_files_path)
 
     if not silent:
@@ -1309,7 +1376,8 @@ Command line arguments for generate-metadata.py:
         # execute=False forces the script to show you all changes it wants to make
         # before prompting you whether to execute the proposed changes:
         check_yml_files(corpus_path, exclude=exclude,
-                        execute=silent, check_token_counts=check_token_counts)
+                        execute=silent, check_token_counts=check_token_counts,
+                        flat_folder=flat_folder)
         print()
         end = time.time()
         print("Processing time: {0:.2f} sec".format(end - start))
