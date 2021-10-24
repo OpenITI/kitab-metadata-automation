@@ -1968,6 +1968,12 @@
     },
     {
       "dest": "0728IbnTaymiyya.MinhajSunna",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "muntaqa",
+      "source": "0748Dhahabi.MuntaqaMinMinhajIctidal"
+    },
+    {
+      "dest": "0728IbnTaymiyya.MinhajSunna",
       "main_rel_type": "COMM",
       "sec_rel_type": "radd",
       "source": "0775Anonymous.InsafFiIntisaf"
@@ -2058,6 +2064,12 @@
   "0742Mizzi.TahdhibKamal": [
     {
       "dest": "0742Mizzi.TahdhibKamal",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "0748Dhahabi.TadhhibTahdhib"
+    },
+    {
+      "dest": "0742Mizzi.TahdhibKamal",
       "main_rel_type": "COMM",
       "sec_rel_type": "Tahdhib",
       "source": "0762MughultayIbnQilij.IkmalTahdhib"
@@ -2139,6 +2151,14 @@
       "source": "0806IbnHusaynZaynDinCiraqi.DhaylMizan"
     }
   ],
+  "0748Dhahabi.MuntaqaMinMinhajIctidal": [
+    {
+      "dest": "0728IbnTaymiyya.MinhajSunna",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "muntaqa",
+      "source": "0748Dhahabi.MuntaqaMinMinhajIctidal"
+    }
+  ],
   "0748Dhahabi.TabaqatHuffaz": [
     {
       "dest": "0748Dhahabi.TabaqatHuffaz",
@@ -2155,8 +2175,14 @@
   ],
   "0748Dhahabi.TadhhibTahdhib": [
     {
+      "dest": "0742Mizzi.TahdhibKamal",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "0748Dhahabi.TadhhibTahdhib"
+    },
+    {
       "dest": "0748Dhahabi.TadhhibTahdhib",
-      "main_rel_type": "Abbr",
+      "main_rel_type": "ABR",
       "sec_rel_type": "khulasa",
       "source": "0923IbnCabdAllahKhazraji.KhulasatTadhhibTahdhibKamal"
     }
@@ -3146,7 +3172,7 @@
   "0923IbnCabdAllahKhazraji.KhulasatTadhhibTahdhibKamal": [
     {
       "dest": "0748Dhahabi.TadhhibTahdhib",
-      "main_rel_type": "Abbr",
+      "main_rel_type": "ABR",
       "sec_rel_type": "khulasa",
       "source": "0923IbnCabdAllahKhazraji.KhulasatTadhhibTahdhibKamal"
     },
