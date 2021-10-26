@@ -853,6 +853,14 @@
       "source": "0954HattabRucayniMaghribi.QurratCayn"
     }
   ],
+  "0481AnsariHarawi.ManazilSairin": [
+    {
+      "dest": "0481AnsariHarawi.ManazilSairin",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0751IbnQayyimJawziyya.MadarijSalikin"
+    }
+  ],
   "0482IbnMuhammadBazdawi.KanzWusul": [
     {
       "dest": "0482IbnMuhammadBazdawi.KanzWusul",
@@ -2233,6 +2241,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "hashiya",
       "source": "0751IbnQayyimJawziyya.HashiyaCalaSunanAbiDawud"
+    }
+  ],
+  "0751IbnQayyimJawziyya.MadarijSalikin": [
+    {
+      "dest": "0481AnsariHarawi.ManazilSairin",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0751IbnQayyimJawziyya.MadarijSalikin"
     }
   ],
   "0756CadudDinIji.SharhCadud": [
