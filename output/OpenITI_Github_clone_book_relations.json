@@ -2081,6 +2081,12 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "Tahdhib",
       "source": "0762MughultayIbnQilij.IkmalTahdhib"
+    },
+    {
+      "dest": "0742Mizzi.TahdhibKamal",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "tahdhib",
+      "source": "0852IbnHajarCasqalani.TahdhibTahdhib"
     }
   ],
   "0742Mizzi.TuhfatAshraf": [
@@ -2777,6 +2783,28 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0852IbnHajarCasqalani.NukatZiraf"
+    }
+  ],
+  "0852IbnHajarCasqalani.TahdhibTahdhib": [
+    {
+      "dest": "0742Mizzi.TahdhibKamal",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "tahdhib",
+      "source": "0852IbnHajarCasqalani.TahdhibTahdhib"
+    },
+    {
+      "dest": "0852IbnHajarCasqalani.TahdhibTahdhib",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "taqrib",
+      "source": "0852IbnHajarCasqalani.TaqribTahdhib"
+    }
+  ],
+  "0852IbnHajarCasqalani.TaqribTahdhib": [
+    {
+      "dest": "0852IbnHajarCasqalani.TahdhibTahdhib",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "taqrib",
+      "source": "0852IbnHajarCasqalani.TaqribTahdhib"
     }
   ],
   "0854IbnMalak.SharhMasabih": [
