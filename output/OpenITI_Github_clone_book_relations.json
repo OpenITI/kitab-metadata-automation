@@ -1039,14 +1039,6 @@
       "source": "0544QadiCiyad.IkmalMuclim"
     }
   ],
-  "0544QadiCiyad.MashariqAnwar": [
-    {
-      "dest": "0544QadiCiyad.MashariqAnwar",
-      "main_rel_type": "COMM",
-      "sec_rel_type": "sharh",
-      "source": "0801CabdLatifIbnMalak.MabariqAzhar"
-    }
-  ],
   "0562Samcani.DhaylTarikhBaghdad": [
     {
       "dest": "0562Samcani.DhaylTarikhBaghdad",
@@ -1395,6 +1387,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0786IbnMuhammadBabarti.SharhMukhtasarIbnHajib"
+    }
+  ],
+  "0650IbnMuhammadRadiDinSaghani.MashariqAnwar": [
+    {
+      "dest": "0650IbnMuhammadRadiDinSaghani.MashariqAnwar",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0801CabdLatifIbnMalak.MabariqAzhar"
     }
   ],
   "0650IbnMuhammadRadiDinSaghani.Takmila": [
@@ -2042,6 +2042,12 @@
     },
     {
       "dest": "0739JalalDinQazwini.TalkhisMiftah",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "nazm",
+      "source": "0815MuhibbDinIbnShihnaHalabi.MacaniWaBayan"
+    },
+    {
+      "dest": "0739JalalDinQazwini.TalkhisMiftah",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0943CisamDinIsfarayini.Atwal"
@@ -2547,7 +2553,7 @@
   ],
   "0801CabdLatifIbnMalak.MabariqAzhar": [
     {
-      "dest": "0544QadiCiyad.MashariqAnwar",
+      "dest": "0650IbnMuhammadRadiDinSaghani.MashariqAnwar",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0801CabdLatifIbnMalak.MabariqAzhar"
@@ -2649,6 +2655,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0808MuhammadDamiri.NajmWahhaj"
+    }
+  ],
+  "0815MuhibbDinIbnShihnaHalabi.MacaniWaBayan": [
+    {
+      "dest": "0739JalalDinQazwini.TalkhisMiftah",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "nazm",
+      "source": "0815MuhibbDinIbnShihnaHalabi.MacaniWaBayan"
     }
   ],
   "0826IbnCiraqi.GhaythHamic": [
