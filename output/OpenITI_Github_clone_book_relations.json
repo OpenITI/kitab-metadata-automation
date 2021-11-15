@@ -2042,8 +2042,8 @@
     },
     {
       "dest": "0739JalalDinQazwini.TalkhisMiftah",
-      "main_rel_type": "ABR",
-      "sec_rel_type": "nazm",
+      "main_rel_type": "VERS",
+      "sec_rel_type": "",
       "source": "0815MuhibbDinIbnShihnaHalabi.MacaniWaBayan"
     },
     {
@@ -2660,8 +2660,8 @@
   "0815MuhibbDinIbnShihnaHalabi.MacaniWaBayan": [
     {
       "dest": "0739JalalDinQazwini.TalkhisMiftah",
-      "main_rel_type": "ABR",
-      "sec_rel_type": "nazm",
+      "main_rel_type": "VERS",
+      "sec_rel_type": "",
       "source": "0815MuhibbDinIbnShihnaHalabi.MacaniWaBayan"
     }
   ],
