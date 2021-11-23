@@ -630,8 +630,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 ##                authD = zfunc.readYML(authF)
                 shuhra = ""
                 full_name = ""
-##                try:
-##                    authD = readYML(authF)
+
+                geo = []
                 if authD:
                     if not ("Fulān" in authD["10#AUTH#SHUHRA#AR:"]\
                             or "none" in authD["10#AUTH#SHUHRA#AR:"].lower()):
@@ -645,9 +645,23 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                                  if not ("Fulān" in authD[x] \
                                          or "none" in authD[x].lower())]
                     full_name = " ".join(full_name)
-##                except:
-##                    print("No author yml file found")
 
+                    # geo data:
+                    
+                    born = re.findall("\w+_RE(?:_\w+)?|\w+_S",
+                                      authD["20#AUTH#BORN#####:"])
+                    geo += ["born@"+p for p in born]
+                    died = re.findall("\w+_RE(?:_\w+)?|\w+_S",
+                                      authD["20#AUTH#DIED#####:"])
+                    geo += ["died@"+p for p in died]
+                    resided = re.findall("\w+_RE(?:_\w+)?|\w+_S",
+                                         authD["20#AUTH#RESIDED##:"])
+                    geo += ["resided@"+p for p in resided]
+                    visited = re.findall("\w+_RE(?:_\w+)?|\w+_S",
+                                         authD["20#AUTH#VISITED##:"])
+                    geo += ["visited@"+p for p in visited]
+                    #geo = " :: ".join(geo)
+                    
 
                 # 2) from the URI: 
 
@@ -812,6 +826,9 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                         for t in el.split(" :: "):
                             if coll_id+"@"+t not in tags:
                                 tags.append(coll_id+"@"+t)
+
+                    # - add geo data:
+                    tags += geo
 
                     # if there are multiple values: separate with " :: ":
 ##                    cats = [author, title, ed_info, tags]
