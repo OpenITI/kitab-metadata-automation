@@ -9756,3 +9756,215 @@ Saving metadata...
 first_json_key['date'] 05 January 2022
 Tada!
 Total processing time: 2066.85 sec
+[master 6390b7e] output generated
+ 3 files changed, 2660 insertions(+), 2452 deletions(-)
+Wed 05 Jan 2022 10:09:42 PM UTC
+*****************************END***********************************
+*****************************END***********************************
+******************************START**********************************
+******************************START**********************************
+Thu 06 Jan 2022 09:35:01 PM UTC
+/home/admin-kitab/Documents/OpenITI/Github_clone
+Resetting local changes ...
+HEAD is now at 77269a5 Add warning about under- and over-length lines of poetry
+HEAD is now at 1d6308d Add geographical metadata
+HEAD is now at 3e4d41a Merge branch 'master' of https://github.com/OpenITI/0050AH
+HEAD is now at e861f3c minor edit
+HEAD is now at cf7cb2c Fix yml issues
+HEAD is now at 00b21ac Fix yml issues
+HEAD is now at 1cd85b5 Fix yml issues
+HEAD is now at eaaa0bc Fix yml issues
+HEAD is now at 4b3ec5b Fix yml issues
+HEAD is now at b85e634 Fix yml issues
+HEAD is now at b6d4774 Fix yml issues
+HEAD is now at cff59aa Fix yml issues
+HEAD is now at 30a3513 Fix yml issues
+HEAD is now at b217743 Fix yml issues
+HEAD is now at 2a1b5af Fix yml issues
+HEAD is now at 7ef7f6c Fix yml issues
+HEAD is now at 21c92ad Fix yml issues
+HEAD is now at 77aa29b Fix yml issues
+HEAD is now at eeca023 Fix yml issues
+HEAD is now at 2694d76 Fix yml issues
+HEAD is now at 8dfeb9a Fix yml issues
+HEAD is now at 26443d5 Merge branch 'master' of https://github.com/OpenITI/0325AH
+HEAD is now at 92b5d5f Fix yml issues
+HEAD is now at 2fbbd5f Fix yml issues
+HEAD is now at bda6cec Fix yml issues
+HEAD is now at 7610680 Fix yml issues
+HEAD is now at 9245f4f Fix yml issues
+HEAD is now at 23e999d Fix yml issues
+HEAD is now at 1e8b1b2 Fix yml issues
+HEAD is now at f91ce09 Merge branch 'master' of https://github.com/OpenITI/0750AH
+HEAD is now at 579bb9b Fix yml issues
+HEAD is now at 2e5d54e Fix yml issues
+HEAD is now at 5c4abcf Fix yml issues
+HEAD is now at 4383e9c Fix yml issues
+HEAD is now at 8ee35cb Fix yml issues
+HEAD is now at 31b98ad ms update
+HEAD is now at 04e25f5 Fix yml issues
+HEAD is now at 882d4a8 Fix yml issues
+HEAD is now at 510a835 Add Aslisho's birth place metadata
+HEAD is now at 04090c0 Fix yml issues
+HEAD is now at 977a4e4 Fix yml issues
+HEAD is now at 7252b3f Fix yml issues
+HEAD is now at 2b1a257 Decode HTML strings in links
+HEAD is now at f7ccc23 Add book relation type
+HEAD is now at 970f322 Add Aslisho's birth place metadata
+HEAD is now at 02f3823 Fix yml issues
+HEAD is now at eb63e6a Add new file from barzakh
+HEAD is now at cf78880 ms update
+HEAD is now at 527f634 Fix yml issues
+HEAD is now at 190ea71 URI change
+HEAD is now at 4f3e0ce URI change
+HEAD is now at 423b07d Fix yml issues
+HEAD is now at d041b3a Fix yml issues
+HEAD is now at f9b8846 ms update
+HEAD is now at 943467f URI change
+HEAD is now at 28e568e Fix yml issues
+HEAD is now at 2394989 Fix yml issues
+HEAD is now at a27b68b ms updated, few metadata fixes
+HEAD is now at 6b3795f Add geographical metadata
+HEAD is now at 727942c Fix yml issues
+HEAD is now at 42a2f6d Fix yml issues
+HEAD is now at d37366d Fix yml issues
+Fetching changes from corpus ...
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Updating 2394989..138413f
+Fast-forward
+ .../1386SayyidQutb.FiZilalQuran.yml                        |  6 +++---
+ data/1386SayyidQutb/1386SayyidQutb.yml                     | 14 +++++++-------
+ 2 files changed, 10 insertions(+), 10 deletions(-)
+Already up to date.
+Already up to date.
+/home/admin-kitab/Documents/Projects/kitab-metadata-automation
+Generating corpus metadata  ...
+config ./utility/config-automated-do-not-remove-or-change.py
+output_files_path https://raw.githubusercontent.com/OpenITI
+corpus_path ../../OpenITI/Github_clone
+exclude ['OpenITI.github.io', 'Annotation', 'maintenance', 'i.mech00', 'i.mech01', 'i.mech02', 'i.mech03', 'i.mech04', 'i.mech05', 'i.mech06', 'i.mech07', 'i.mech08', 'i.mech09', 'i.logic', 'i.cex', 'i.cex_Temp', 'i.mech', 'i.mech_Temp', '.git']
+data_in_25_year_repos True
+perform_yml_check True
+check_token_counts True
+incl_char_length True
+output_path ./output/
+meta_tsv_fp ./output/OpenITI_Github_clone_metadata_light.csv
+meta_yml_fp ./output/OpenITI_Github_clone_metadata_complete.yml
+meta_json_fp ./output/OpenITI_Github_clone_metadata_light.json
+meta_header_fp ./output/OpenITI_Github_clone_header_metadata.json
+silent True
+data_in_25_year_repos True
+flat_folder False
+output_files_path https://raw.githubusercontent.com/OpenITI
+Checking yml files before collecting metadata...
+../../OpenITI/Github_clone/0325AH/data/0310Tabari/0310Tabari.Tarikh/0310Tabari.Tarikh.Shamela0009783BK1-ara1.yml
+-> token and character counts changed
+
+Processing time: 2040.20 sec
+================================================================================
+Collecting metadata...
+collecting metadata from OpenITI...
+1111Majlisi.BiharAnwar.Zaydiyya0000202A-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsB-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsC-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsA-ara1
+1111Majlisi.BiharAnwar.Zaydiyya0000202B-ara1
+1111Majlisi.BiharAnwar.Zaydiyya0000202C-ara1
+https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Zaydiyya0000202A-ara1
+https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Zaydiyya0000202-ara1
+---
+https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Shia001432VolsB-ara1
+https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Shia001432Vols-ara1
+---
+================================================================================
+COLLECTING INTO A CSV FILE (10393 LINES)...
+================================================================================
+Processing time: 2056.06 sec
+================================================================================
+Collecting issues from GitHub...
+logged in
+issue labels in this repo:
+   Label(name="Development")
+   Label(name="discrepancies")
+   Label(name="in progress")
+   Label(name="no edition found")
+   Label(name="PRI & SEC Versions")
+   Label(name="review finished")
+   Label(name="text quality")
+   Label(name="text tagged")
+   Label(name="urgent")
+   Label(name="URI change suggestion")
+getting relevant issues from GitHub...
+GitHub fetching time: 10.10 sec
+================================================================================
+Saving metadata...
+================================================================================
+7110
+6261
+9
+4247
+4729
+4728
+6162
+6162
+first_json_key['date'] 06 January 2022
+Tada!
+Total processing time: 2066.16 sec
