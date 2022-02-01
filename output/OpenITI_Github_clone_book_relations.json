@@ -1139,6 +1139,14 @@
       "source": "0597IbnJawzi.KashfMushkil"
     }
   ],
+  "0597IbnJawzi.Mawducat": [
+    {
+      "dest": "0597IbnJawzi.Mawducat",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "talkhis",
+      "source": "0748Dhahabi.TalkhisMawducatIbnJawzi"
+    }
+  ],
   "0597IbnJawzi.MinhajQasidin": [
     {
       "dest": "0597IbnJawzi.MinhajQasidin",
@@ -2281,6 +2289,14 @@
       "source": "0765AbuMahasinHusayni.DhaylTadhkira"
     }
   ],
+  "0748Dhahabi.TalkhisMawducatIbnJawzi": [
+    {
+      "dest": "0597IbnJawzi.Mawducat",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "talkhis",
+      "source": "0748Dhahabi.TalkhisMawducatIbnJawzi"
+    }
+  ],
   "0749BadrDinMisriMuradi.TawdihMaqasid": [
     {
       "dest": "0672IbnMalikJayyaniTai.AlfiyyatIbnMalik",
@@ -2679,6 +2695,28 @@
       "source": "0883AbuBakrJuraci.SharhMukhtasarUsulFiqh"
     }
   ],
+  "0804IbnMulaqqin.BadrMunir": [
+    {
+      "dest": "0804IbnMulaqqin.BadrMunir",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "khulasa",
+      "source": "0804IbnMulaqqin.KhulasatBadrMunir"
+    },
+    {
+      "dest": "0804IbnMulaqqin.BadrMunir",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "talkhis",
+      "source": "0852IbnHajarCasqalani.TalkhisHabir"
+    }
+  ],
+  "0804IbnMulaqqin.KhulasatBadrMunir": [
+    {
+      "dest": "0804IbnMulaqqin.BadrMunir",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "khulasa",
+      "source": "0804IbnMulaqqin.KhulasatBadrMunir"
+    }
+  ],
   "0805BahramDamiri.TahbirMukhtasar": [
     {
       "dest": "0767KhalilIbnIshaq.MukhtasarKhalil",
@@ -2907,6 +2945,14 @@
       "main_rel_type": "ABR",
       "sec_rel_type": "taqrib",
       "source": "0852IbnHajarCasqalani.TaqribTahdhib"
+    }
+  ],
+  "0852IbnHajarCasqalani.TalkhisHabir": [
+    {
+      "dest": "0804IbnMulaqqin.BadrMunir",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "talkhis",
+      "source": "0852IbnHajarCasqalani.TalkhisHabir"
     }
   ],
   "0852IbnHajarCasqalani.TaqribTahdhib": [
