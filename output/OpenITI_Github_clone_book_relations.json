@@ -186,6 +186,12 @@
       "dest": "0256Bukhari.Sahih",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
+      "source": "0893IbnIsmacilShihabDinKurani.KawtharJari"
+    },
+    {
+      "dest": "0256Bukhari.Sahih",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
       "source": "0911Suyuti.Tawshih"
     },
     {
@@ -828,6 +834,12 @@
       "dest": "0476AbuIshaqShirazi.MuhadhdhabFiFiqh",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
+      "source": "0558IbnAbiKhayrCimraniYamani.ByanFiMadhhabShafici"
+    },
+    {
+      "dest": "0476AbuIshaqShirazi.MuhadhdhabFiFiqh",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
       "source": "0676Nawawi.Majmuc"
     }
   ],
@@ -899,6 +911,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0487AbuCubaydBakri.SimtLaaliFiSharhAmali"
+    }
+  ],
+  "0505Ghazali.IhyaCulumDin": [
+    {
+      "dest": "0505Ghazali.IhyaCulumDin",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "1332IbnMuhammadJamalDinQasimi.MawcizatMuminin"
     }
   ],
   "0505Ghazali.Wajiz": [
@@ -1047,6 +1067,14 @@
       "source": "0544QadiCiyad.IkmalMuclim"
     }
   ],
+  "0558IbnAbiKhayrCimraniYamani.ByanFiMadhhabShafici": [
+    {
+      "dest": "0476AbuIshaqShirazi.MuhadhdhabFiFiqh",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0558IbnAbiKhayrCimraniYamani.ByanFiMadhhabShafici"
+    }
+  ],
   "0562Samcani.DhaylTarikhBaghdad": [
     {
       "dest": "0562Samcani.DhaylTarikhBaghdad",
@@ -1125,6 +1153,14 @@
       "source": "0855BadrDinCayni.BinayaSharhHidaya"
     }
   ],
+  "0593IbnHusaynShihabDinIsbahani.GhayaWaTaqrib": [
+    {
+      "dest": "0593IbnHusaynShihabDinIsbahani.GhayaWaTaqrib",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0977KhatibShirbini.Iqnac"
+    }
+  ],
   "0597IbnJawzi.KashfMushkil": [
     {
       "dest": "0261Muslim.Sahih",
@@ -1145,6 +1181,12 @@
       "main_rel_type": "ABR",
       "sec_rel_type": "talkhis",
       "source": "0748Dhahabi.TalkhisMawducatIbnJawzi"
+    },
+    {
+      "dest": "0597IbnJawzi.Mawducat",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "0911Suyuti.LaaliMasnuca"
     }
   ],
   "0597IbnJawzi.MinhajQasidin": [
@@ -1678,6 +1720,12 @@
     },
     {
       "dest": "0676Nawawi.MinhajTalibin",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "0926ZakariyyaAnsari.ManhajTullab"
+    },
+    {
+      "dest": "0676Nawawi.MinhajTalibin",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0974IbnHajarHaytami.TuhfatMuhtaj"
@@ -1687,6 +1735,12 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0977KhatibShirbini.MughniMuhtaj"
+    },
+    {
+      "dest": "0676Nawawi.MinhajTalibin",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1337MuhammadZahriGhamrawi.SirajWahhaj"
     }
   ],
   "0676Nawawi.RawdatTalibin": [
@@ -2037,6 +2091,12 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "radd",
       "source": "0775Anonymous.InsafFiIntisaf"
+    },
+    {
+      "dest": "0728IbnTaymiyya.MinhajSunna",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "1450CabdAllahGhunayman.MukhtasarMinhajSunna"
     }
   ],
   "0728IbnTaymiyya.SharhCumdatFiqh": [
@@ -3145,6 +3205,14 @@
       "source": "0893IbnIsmacilShihabDinKurani.DurarLawamic"
     }
   ],
+  "0893IbnIsmacilShihabDinKurani.KawtharJari": [
+    {
+      "dest": "0256Bukhari.Sahih",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0893IbnIsmacilShihabDinKurani.KawtharJari"
+    }
+  ],
   "0894IbnQasimRassacTunisi.SharhHudud": [
     {
       "dest": "0803IbnCarafaWarghami.HududFiqhiyya",
@@ -3279,6 +3347,14 @@
       "main_rel_type": "ABR",
       "sec_rel_type": "nazm",
       "source": "0911Suyuti.KawkabSatic"
+    }
+  ],
+  "0911Suyuti.LaaliMasnuca": [
+    {
+      "dest": "0597IbnJawzi.Mawducat",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "0911Suyuti.LaaliMasnuca"
     }
   ],
   "0911Suyuti.MisbahZujaja": [
@@ -3419,6 +3495,12 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0926ZakariyyaAnsari.FathWahhab"
+    },
+    {
+      "dest": "0926ZakariyyaAnsari.FathWahhab",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "hashiya",
+      "source": "1221IbnMuhammadBujayrimiMisri.TajridLiNafcCabid"
     }
   ],
   "0926ZakariyyaAnsari.GhayatWusul": [
@@ -3473,6 +3555,12 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0926ZakariyyaAnsari.FathWahhab"
+    },
+    {
+      "dest": "0676Nawawi.MinhajTalibin",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "0926ZakariyyaAnsari.ManhajTullab"
     }
   ],
   "0926ZakariyyaAnsari.MinhatBari": [
@@ -3641,6 +3729,20 @@
       "source": "0992IbnQasimCibadi.HashiyaCalaTuhfatMuhtaj"
     }
   ],
+  "0977KhatibShirbini.Iqnac": [
+    {
+      "dest": "0593IbnHusaynShihabDinIsbahani.GhayaWaTaqrib",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0977KhatibShirbini.Iqnac"
+    },
+    {
+      "dest": "0977KhatibShirbini.Iqnac",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "hashiya",
+      "source": "1221IbnMuhammadBujayrimiMisri.TuhfatHabib"
+    }
+  ],
   "0977KhatibShirbini.MughniMuhtaj": [
     {
       "dest": "0676Nawawi.MinhajTalibin",
@@ -3655,6 +3757,12 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0987ZaynDinMalibari.FathMucin"
+    },
+    {
+      "dest": "0987ZaynDinMalibari.FathMucin",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "hashiya",
+      "source": "1310BakriDimyati.HashiyaIcanaTalibin"
     }
   ],
   "0987ZaynDinMalibari.QurratCayn": [
@@ -3753,6 +3861,22 @@
       "source": "1334CaliKhaqani.Rijal"
     }
   ],
+  "1221IbnMuhammadBujayrimiMisri.TajridLiNafcCabid": [
+    {
+      "dest": "0926ZakariyyaAnsari.FathWahhab",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "hashiya",
+      "source": "1221IbnMuhammadBujayrimiMisri.TajridLiNafcCabid"
+    }
+  ],
+  "1221IbnMuhammadBujayrimiMisri.TuhfatHabib": [
+    {
+      "dest": "0977KhatibShirbini.Iqnac",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "hashiya",
+      "source": "1221IbnMuhammadBujayrimiMisri.TuhfatHabib"
+    }
+  ],
   "1230IbnAhmadDasuqi.HashiyaCalaMukhtasarMacani": [
     {
       "dest": "0792IbnCumarTaftazani.MukhtasarMacani",
@@ -3761,12 +3885,44 @@
       "source": "1230IbnAhmadDasuqi.HashiyaCalaMukhtasarMacani"
     }
   ],
+  "1310BakriDimyati.HashiyaIcanaTalibin": [
+    {
+      "dest": "0987ZaynDinMalibari.FathMucin",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "hashiya",
+      "source": "1310BakriDimyati.HashiyaIcanaTalibin"
+    }
+  ],
+  "1332IbnMuhammadJamalDinQasimi.MawcizatMuminin": [
+    {
+      "dest": "0505Ghazali.IhyaCulumDin",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "1332IbnMuhammadJamalDinQasimi.MawcizatMuminin"
+    }
+  ],
   "1334CaliKhaqani.Rijal": [
     {
       "dest": "1212WahidBihbahani.FawaidRijaliyya",
       "main_rel_type": "COMM",
       "sec_rel_type": "tacliqa",
       "source": "1334CaliKhaqani.Rijal"
+    }
+  ],
+  "1337MuhammadZahriGhamrawi.SirajWahhaj": [
+    {
+      "dest": "0676Nawawi.MinhajTalibin",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1337MuhammadZahriGhamrawi.SirajWahhaj"
+    }
+  ],
+  "1450CabdAllahGhunayman.MukhtasarMinhajSunna": [
+    {
+      "dest": "0728IbnTaymiyya.MinhajSunna",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "1450CabdAllahGhunayman.MukhtasarMinhajSunna"
     }
   ],
   "510IbnMascudBaghawi.MasabihSunna": [
