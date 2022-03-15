@@ -601,6 +601,14 @@
       "source": "0388AbuSulaymanKhattabi.MacalimSunan"
     }
   ],
+  "0392IbnJinniMawsili.FathWahbi": [
+    {
+      "dest": "0392IbnJinniMawsili.FathWahbi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "radd",
+      "source": "0455IbnHamdBarujirdi.FathCalaAbiFath"
+    }
+  ],
   "0392IbnJinniMawsili.Munsif": [
     {
       "dest": "0249AbuCuthmanMazini.Tasrif",
@@ -741,6 +749,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0450Jubbi.SharhMudawwana"
+    }
+  ],
+  "0455IbnHamdBarujirdi.FathCalaAbiFath": [
+    {
+      "dest": "0392IbnJinniMawsili.FathWahbi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "radd",
+      "source": "0455IbnHamdBarujirdi.FathCalaAbiFath"
     }
   ],
   "0458Bayhaqi.ShucabIman": [
