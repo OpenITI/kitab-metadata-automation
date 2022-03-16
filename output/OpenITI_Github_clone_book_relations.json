@@ -609,6 +609,14 @@
       "source": "0455IbnHamdBarujirdi.FathCalaAbiFath"
     }
   ],
+  "0392IbnJinniMawsili.LumacFiCarabiyya": [
+    {
+      "dest": "0392IbnJinniMawsili.LumacFiCarabiyya",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0639IbnKhabbaz.TawjihLamc"
+    }
+  ],
   "0392IbnJinniMawsili.Munsif": [
     {
       "dest": "0249AbuCuthmanMazini.Tasrif",
@@ -1411,6 +1419,14 @@
       "main_rel_type": "ABR",
       "sec_rel_type": "mukhtasar",
       "source": "0748Dhahabi.MukhtasarMinDubaythi"
+    }
+  ],
+  "0639IbnKhabbaz.TawjihLamc": [
+    {
+      "dest": "0392IbnJinniMawsili.LumacFiCarabiyya",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0639IbnKhabbaz.TawjihLamc"
     }
   ],
   "0642IbnNajjar.DhaylTarikhBaghdad": [
