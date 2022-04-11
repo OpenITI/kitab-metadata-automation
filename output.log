@@ -44893,3 +44893,439 @@ Saving metadata...
 first_json_key['date'] 10 April 2022
 Tada!
 Total processing time: 2491.88 sec
+[master 4576dab] output generated
+ 3 files changed, 2925 insertions(+), 2494 deletions(-)
+Sun 10 Apr 2022 10:16:50 PM UTC
+*****************************END***********************************
+*****************************END***********************************
+******************************START**********************************
+******************************START**********************************
+Mon 11 Apr 2022 09:35:01 PM UTC
+/home/admin-kitab/Documents/OpenITI/Github_clone
+Resetting local changes ...
+HEAD is now at 3e4d41a Merge branch 'master' of https://github.com/OpenITI/0050AH
+HEAD is now at 1d6308d Add geographical metadata
+HEAD is now at cf7cb2c Fix yml issues
+HEAD is now at e861f3c minor edit
+HEAD is now at 77269a5 Add warning about under- and over-length lines of poetry
+HEAD is now at 1cd85b5 Fix yml issues
+HEAD is now at aa84108 Merge pull request #3 from hamidrh66/master
+HEAD is now at 799a76f Merge pull request #11 from hamidrh66/master
+HEAD is now at 4b3ec5b Fix yml issues
+HEAD is now at 5143455 Merge pull request #22 from hamidrh66/master
+HEAD is now at 6ac90c0 Merge pull request #12 from hamidrh66/master
+HEAD is now at 2c2e162 Update 0255Jahiz.yml
+HEAD is now at 2b44599 Small changes to structural tagging of vol 1
+HEAD is now at b217743 Fix yml issues
+HEAD is now at 1920a5d Merge pull request #15 from mabarber92/master
+HEAD is now at 1dda360 Update 0372AbuSacidQayruwani.TahdhibMudawwana.yml
+HEAD is now at 6cd91b8 Merge pull request #21 from hamidrh66/master
+HEAD is now at a0791de Update 0377IbnAhmadFarisi.HujjaLiQurraSabca.yml
+HEAD is now at 9b0db5b Merge pull request #27 from hamidrh66/master
+HEAD is now at 21c92ad Fix yml issues
+HEAD is now at 50978a2 Update 0487AbuCubaydBakri.TanbihCalaAwham.yml
+HEAD is now at 12fac5b Update 0558IbnAbiKhayrCimraniYamani.ByanFiMadhhabShafici.yml
+HEAD is now at 3cc8689 Merge pull request #10 from hamidrh66/master
+HEAD is now at c745554 Merge pull request #9 from hamidrh66/master
+HEAD is now at 924e8bd Update 0639IbnKhabbaz.TawjihLamc.yml
+HEAD is now at 9245f4f Fix yml issues
+HEAD is now at 2fbbd5f Fix yml issues
+HEAD is now at 96b7b89 Merge pull request #11 from hamidrh66/master
+HEAD is now at 71d5f86 Merge pull request #19 from hamidrh66/master
+HEAD is now at 56fba8f Update 0893IbnIsmacilShihabDinKurani.KawtharJari.yml
+HEAD is now at 34391b5 Update 0748Dhahabi.TalkhisMawducatIbnJawzi.yml
+HEAD is now at fb5e1bf Merge pull request #12 from hamidrh66/master
+HEAD is now at 044e095 Update 0852IbnHajarCasqalani.TalkhisHabir.yml
+HEAD is now at 5e39df6 Update 0792IbnCumarTaftazani.MukhtasarMacani.yml
+HEAD is now at b6fa757 Update 0956IbnMuhammadHalabiHanafi.NicmatDharica.yml
+HEAD is now at 0b1bc71 Update 0771TajDinSubki.RafcHajib.yml
+HEAD is now at 3f3ccef Merge pull request #7 from hamidrh66/master
+HEAD is now at d79bfb0 Update 0804IbnMulaqqin.KhulasatBadrMunir.yml
+HEAD is now at eee02b1 Update 1069ShihabDinKhafaji.SharhDurratGhawwas.yml
+HEAD is now at 0d14740 Update 1021ShihabDinShalabi.HashiyaCalaTabyinHaqaiq.yml
+HEAD is now at 410e9a4 Update 0911Suyuti.LaaliMasnuca.yml
+HEAD is now at 98c5496 Update 1097IbnQaid.Hashiya.yml
+HEAD is now at ec9e207 Update 1033MarciKarmi.GhayatMuntaha.yml
+HEAD is now at 3ed9682 Update 0977KhatibShirbini.Iqnac.yml
+HEAD is now at eb63e6a Add new file from barzakh
+HEAD is now at 7e22eff Merge pull request #4 from hamidrh66/master
+HEAD is now at c77433b Annotated RuhMacani
+HEAD is now at 4116b2c Update 1230IbnAhmadDasuqi.HashiyaCalaMukhtasarMacani.yml
+HEAD is now at 4ce8688 Update 1192IbnCabdAllahBacliHanbali.KashfMukhaddarat.yml
+HEAD is now at 7e9a224 Update 1135IbnCumarTaghlibiShaybani.NaylMaarib.yml
+HEAD is now at 514c5f4 Update 1221IbnMuhammadBujayrimiMisri.TuhfatHabib.yml
+HEAD is now at 423b07d Fix yml issues
+HEAD is now at 28e568e Fix yml issues
+HEAD is now at f9b8846 ms update
+HEAD is now at 138413f add title transcription
+HEAD is now at ffeab0d Update 1307Qannawji.RawdaNadiyya.yml
+HEAD is now at 943467f URI change
+HEAD is now at a27b68b ms updated, few metadata fixes
+HEAD is now at 1dbe7d3 Update 1338Tawzari.TawdihAhkam.yml
+HEAD is now at 56dec35 Add link to pdf of edition
+HEAD is now at 42a2f6d Fix yml issues
+HEAD is now at 6b03625 Update 1450CabdAllahGhunayman.MukhtasarMinhajSunna.yml
+Fetching changes from corpus ...
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Updating 9b0db5b..ed1fae3
+Fast-forward
+ ...ls.completed => 0460ShaykhTusi.Istibsar.Shia001157Vols-ara1.completed} | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename data/0460ShaykhTusi/0460ShaykhTusi.Istibsar/{0460ShaykhTusi.Istibsar.Shia001157Vols.completed => 0460ShaykhTusi.Istibsar.Shia001157Vols-ara1.completed} (100%)
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+Already up to date.
+/home/admin-kitab/Documents/Projects/kitab-metadata-automation
+Generating corpus metadata  ...
+config ./utility/config-automated-do-not-remove-or-change.py
+output_files_path https://raw.githubusercontent.com/OpenITI
+corpus_path ../../OpenITI/Github_clone
+exclude ['OpenITI.github.io', 'Annotation', 'maintenance', 'i.mech00', 'i.mech01', 'i.mech02', 'i.mech03', 'i.mech04', 'i.mech05', 'i.mech06', 'i.mech07', 'i.mech08', 'i.mech09', 'i.logic', 'i.cex', 'i.cex_Temp', 'i.mech', 'i.mech_Temp', '.git']
+data_in_25_year_repos True
+perform_yml_check True
+check_token_counts True
+incl_char_length True
+output_path ./output/
+meta_tsv_fp ./output/OpenITI_Github_clone_metadata_light.csv
+meta_yml_fp ./output/OpenITI_Github_clone_metadata_complete.yml
+meta_json_fp ./output/OpenITI_Github_clone_metadata_light.json
+meta_header_fp ./output/OpenITI_Github_clone_header_metadata.json
+silent True
+data_in_25_year_repos True
+flat_folder False
+output_files_path https://raw.githubusercontent.com/OpenITI
+Checking yml files before collecting metadata...
+URI 0575IbnKhayrIshbili.Fahrasa.Sham19Y0016626-ara1 != filename 0575IbnKhayrIshbili.Fahrasa.Sham19Y0016626-ara2
+-> URI replaced with 0575IbnKhayrIshbili.Fahrasa.Sham19Y0016626-ara2
+../../OpenITI/Github_clone/0575AH/data/0575IbnKhayrIshbili/0575IbnKhayrIshbili.Fahrasa/0575IbnKhayrIshbili.Fahrasa.JK001084-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0575AH/data/0571IbnCasakir/0571IbnCasakir.TarikhDimashq/0571IbnCasakir.TarikhDimashq.JK000916-ara1.yml
+-> token and character counts changed
+URI 0808IbnKhaldun.Tarikh.Shia003607Vols-ara1 != filename 0808IbnKhaldun.Tarikh.Shia003607Vols-ara2
+-> URI replaced with 0808IbnKhaldun.Tarikh.Shia003607Vols-ara2
+URI 0808IbnKhaldun.Tarikh.Zaydiyya0000152-ara1 != filename 0808IbnKhaldun.Tarikh.Zaydiyya0000152-ara2
+-> URI replaced with 0808IbnKhaldun.Tarikh.Zaydiyya0000152-ara2
+URI 0808IbnKhaldun.Tarikh.JK000420-ara1 != filename 0808IbnKhaldun.Tarikh.JK000420-ara2
+-> URI replaced with 0808IbnKhaldun.Tarikh.JK000420-ara2
+URI 0808IbnKhaldun.Tarikh.JK005600-ara1 != filename 0808IbnKhaldun.Tarikh.JK005600-ara2
+-> URI replaced with 0808IbnKhaldun.Tarikh.JK005600-ara2
+../../OpenITI/Github_clone/0825AH/data/0808IbnKhaldun/0808IbnKhaldun.Tarikh/0808IbnKhaldun.Tarikh.Shamela0012320-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0750AH/data/0742Mizzi/0742Mizzi.TahdhibKamal/0742Mizzi.TahdhibKamal.Shamela0003722-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0750AH/data/0747MuhyiDinYunini/0747MuhyiDinYunini.Mashyakha/0747MuhyiDinYunini.Mashyakha.Shamela0026495-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0750AH/data/0730QasimTujibi/0730QasimTujibi.Barnamaj/0730QasimTujibi.Barnamaj.Shamela0009870-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0750AH/data/0726Suqaci/0726Suqaci.Tali/0726Suqaci.Tali.Kraken21040823-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0750AH/data/0750AbuHafsQazwini/0750AbuHafsQazwini.Mashyakha/0750AbuHafsQazwini.Mashyakha.Shamela0026802-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0750AH/data/0728IbnTaymiyya/0728IbnTaymiyya.MajmucFatawa/0728IbnTaymiyya.MajmucFatawa.JK000381-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0750AH/data/0749Wadiashi/0749Wadiashi.Barnamaj/0749Wadiashi.Barnamaj.Shamela0010740-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0350AH/data/0350Balawi/0350Balawi.SiratAhmadIbnTulun/0350Balawi.SiratAhmadIbnTulun.Kraken21033119-ara1.yml
+-> token and character counts changed
+URI 0718AbuIshaqWatwat.MabahijFikar.Shamela0000771-ara1 != filename 0718AbuIshaqWatwat.MabahijFikar.Shamela0000771-ara2
+-> URI replaced with 0718AbuIshaqWatwat.MabahijFikar.Shamela0000771-ara2
+URI 0718AbuIshaqWatwat.MabahijFikar.JK010771-ara1 != filename 0718AbuIshaqWatwat.MabahijFikar.JK010771-ara2
+-> URI replaced with 0718AbuIshaqWatwat.MabahijFikar.JK010771-ara2
+../../OpenITI/Github_clone/0725AH/data/0711IbnIbrahimCimadDinWasiti/0711IbnIbrahimCimadDinWasiti.QawacidFiSuluk/0711IbnIbrahimCimadDinWasiti.QawacidFiSuluk.LMN20200829-ara1.yml
+-> token and character counts changed
+URI 0711IbnManzurIfriqi.MukhtasarTarikhDimashq.Sham30K0032488-ara1 != filename 0711IbnManzurIfriqi.MukhtasarTarikhDimashq.Sham30K0032488-ara2
+-> URI replaced with 0711IbnManzurIfriqi.MukhtasarTarikhDimashq.Sham30K0032488-ara2
+URI 0711IbnManzurIfriqi.MukhtasarTarikhDimashq.Sham30K0036513-ara1 != filename 0711IbnManzurIfriqi.MukhtasarTarikhDimashq.Sham30K0036513-ara2
+-> URI replaced with 0711IbnManzurIfriqi.MukhtasarTarikhDimashq.Sham30K0036513-ara2
+../../OpenITI/Github_clone/0725AH/data/0711IbnManzurIfriqi/0711IbnManzurIfriqi.MukhtasarTarikhDimashq/0711IbnManzurIfriqi.MukhtasarTarikhDimashq.Shamela0003118-ara1.yml
+-> token and character counts changed
+URI 0711IbnManzurIfriqi.MukhtasarTarikhDimashq.JK010346-ara1 != filename 0711IbnManzurIfriqi.MukhtasarTarikhDimashq.JK010346-ara2
+-> URI replaced with 0711IbnManzurIfriqi.MukhtasarTarikhDimashq.JK010346-ara2
+../../OpenITI/Github_clone/0725AH/data/0711IbnManzurIfriqi/0711IbnManzurIfriqi.LisanCarab/0711IbnManzurIfriqi.LisanCarab.Shamela0001687-ara1.yml
+-> token and character counts changed
+URI 0711IbnManzurIfriqi.LisanCarab.ShamAY0034695-ara1 != filename 0711IbnManzurIfriqi.LisanCarab.ShamAY0034695-ara2
+-> URI replaced with 0711IbnManzurIfriqi.LisanCarab.ShamAY0034695-ara2
+../../OpenITI/Github_clone/0850AH/data/0842IbnNasirDinDimashqi/0842IbnNasirDinDimashqi.RaddWafir/0842IbnNasirDinDimashqi.RaddWafir.JK000366-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0450AH/data/0428IbnSina/0428IbnSina.Shifa/0428IbnSina.Shifa.GRAR000034-ara1.yml
+-> token and character counts changed
+URI 0428IbnSina.Shifa.GRAR000035-ara1 != filename 0428IbnSina.Shifa.GRAR000035-ara2
+-> URI replaced with 0428IbnSina.Shifa.GRAR000035-ara2
+../../OpenITI/Github_clone/0775AH/data/0771Subki/0771Subki.MucjamShuyukh/0771Subki.MucjamShuyukh.Shamela0026389-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0775AH/data/0771Subki/0771Subki.TabaqatShaficiyyaKubra/0771Subki.TabaqatShaficiyyaKubra.Shamela0006739-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0775AH/data/0771Subki/0771Subki.TabaqatShaficiyyaKubra/0771Subki.TabaqatShaficiyyaKubra.Shamela0006739-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0375AH/data/0370IbnCaliJassas/0370IbnCaliJassas.MukhtasarIkhtilafCulama/0370IbnCaliJassas.MukhtasarIkhtilafCulama.Shamela0006222-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0425AH/data/0420Musabbihi/0420Musabbihi.AkhbarMisr/0420Musabbihi.AkhbarMisr.MAB07012022-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0425AH/data/0420Musabbihi/0420Musabbihi.AkhbarMisr/0420Musabbihi.AkhbarMisr.Kraken210719221409-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0200AH/data/0189MuhammadShaybani/0189MuhammadShaybani.Asl/0189MuhammadShaybani.Asl.Sham19Y0014285-ara1.yml
+('../../OpenITI/Github_clone/0200AH/data/0189MuhammadShaybani/0189MuhammadShaybani.Asl/0189MuhammadShaybani.Asl.Sham19Y0014285-ara1.yml', 'no valid yml key in line', '80#VERS#COLLATED#\thttp://www.worldcat.org/oclc/816828542')
+invalid YML file structure: ../../OpenITI/Github_clone/0200AH/data/0189MuhammadShaybani/0189MuhammadShaybani.Asl/0189MuhammadShaybani.Asl.Sham19Y0014285-ara1.yml
+Error message: 'NoneType' object has no attribute 'keys'
+original yml file:
+
+00#VERS#CLENGTH##: 6859295
+00#VERS#LENGTH###: 1782029
+00#VERS#URI######: 0189MuhammadShaybani.Asl.Sham19Y0014285-ara1
+80#VERS#BASED####: 	http://www.worldcat.org/oclc/816828542
+80#VERS#COLLATED#	http://www.worldcat.org/oclc/816828542
+80#VERS#LINKS####:	https://archive.org/details/ELASLU10ImamMuhammedB.ElHasenEshShejbani
+90#VERS#ANNOTATOR:	Omar Abdel-Ghaffar  (SHARIAsource-CnC)
+90#VERS#COMMENT##:	The text is in good order and closely corresponds to the printed edition. I had to remove a few editorial parts, like footnotes. The entire first volume of the printed edition is editorial material. The annotations (bāb, kitāb, etc) all appeared at the top of the page rather than where they were located in the printed edition. I used the search function to replace all the ones I did not do while skimming the text.
+90#VERS#DATE#####:	18-11-2021
+90#VERS#ISSUES###:	NO_MAJOR_ISSUES
+
+
+Attempt to solve the issue:
+
+00#VERS#CLENGTH##: 6859295
+00#VERS#LENGTH###: 1782029
+00#VERS#URI######: 0189MuhammadShaybani.Asl.Sham19Y0014285-ara1
+80#VERS#BASED####: http://www.worldcat.org/oclc/816828542
+80#VERS#COLLATED#: http://www.worldcat.org/oclc/816828542
+80#VERS#LINKS####:
+    https://archive.org/details/ELASLU10ImamMuhammedB.ElHasenEshShejbani
+90#VERS#ANNOTATOR: Omar Abdel-Ghaffar  (SHARIAsource-CnC)
+90#VERS#COMMENT##: The text is in good order and closely corresponds to the
+    printed edition. I had to remove a few editorial parts, like footnotes. The
+    entire first volume of the printed edition is editorial material. The
+    annotations (bāb, kitāb, etc) all appeared at the top of the page rather than
+    where they were located in the printed edition. I used the search function to
+    replace all the ones I did not do while skimming the text.
+90#VERS#DATE#####: 18-11-2021
+90#VERS#ISSUES###: NO_MAJOR_ISSUES
+../../OpenITI/Github_clone/0200AH/data/0189MuhammadShaybani/0189MuhammadShaybani.Asl/0189MuhammadShaybani.Asl.Sham19Y0014285-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0200AH/data/0189MuhammadShaybani/0189MuhammadShaybani.HujjaCalaAhlMadina/0189MuhammadShaybani.HujjaCalaAhlMadina.Shamela0006161-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0475AH/data/0460ShaykhTusi/0460ShaykhTusi.Iqtisad/0460ShaykhTusi.Iqtisad.Shia000025-ara1.yml
+('../../OpenITI/Github_clone/0475AH/data/0460ShaykhTusi/0460ShaykhTusi.Iqtisad/0460ShaykhTusi.Iqtisad.Shia000025-ara1.yml', 'no valid yml key in line', '80#VERS#COLLATED#\thttp://www.worldcat.org/oclc/4771449574')
+invalid YML file structure: ../../OpenITI/Github_clone/0475AH/data/0460ShaykhTusi/0460ShaykhTusi.Iqtisad/0460ShaykhTusi.Iqtisad.Shia000025-ara1.yml
+Error message: 'NoneType' object has no attribute 'keys'
+original yml file:
+
+00#VERS#CLENGTH##:  	307049
+00#VERS#LENGTH###:	74634
+00#VERS#URI######: 	0460ShaykhTusi.Iqtisad.Shia000025-ara1
+80#VERS#BASED####: 	http://www.worldcat.org/oclc/928970241
+80#VERS#COLLATED#	http://www.worldcat.org/oclc/4771449574
+80#VERS#LINKS####:	https://archive.org/details/ghiloufik_gmail_20160808_1704/الإقتصاد%20فيما%20يتعلق%20بالإعتقاد%20-%20الشيخ%20محمد%20بن%20الحسن%20الطوسي/mode/2up
+90#VERS#ANNOTATOR:	Omar Abdel-Ghaffar (SHARIAsource-CnC)
+90#VERS#COMMENT##:	The text follows the printed edition closely.  I was unable to find an exact copy of the digital version, so the page numbers may not be accurate, but the two texts correspond very closely to each other.
+90#VERS#DATE#####:	2020-10-28
+90#VERS#ISSUES###:	NO_MAJOR_ISSUES
+
+
+Attempt to solve the issue:
+
+00#VERS#CLENGTH##: 307049
+00#VERS#LENGTH###: 74634
+00#VERS#URI######: 0460ShaykhTusi.Iqtisad.Shia000025-ara1
+80#VERS#BASED####: http://www.worldcat.org/oclc/928970241
+80#VERS#COLLATED#: http://www.worldcat.org/oclc/4771449574
+80#VERS#LINKS####:
+    https://archive.org/details/ghiloufik_gmail_20160808_1704/الإقتصاد%20فيما%20يتعلق%20بالإعتقاد%20-%20الشيخ%20محمد%20بن%20الحسن%20الطوسي/mode/2up
+90#VERS#ANNOTATOR: Omar Abdel-Ghaffar (SHARIAsource-CnC)
+90#VERS#COMMENT##: The text follows the printed edition closely.  I was unable
+    to find an exact copy of the digital version, so the page numbers may not be
+    accurate, but the two texts correspond very closely to each other.
+90#VERS#DATE#####: 2020-10-28
+90#VERS#ISSUES###: NO_MAJOR_ISSUES
+../../OpenITI/Github_clone/0475AH/data/0460ShaykhTusi/0460ShaykhTusi.Iqtisad/0460ShaykhTusi.Iqtisad.Shia000025-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0475AH/data/0460ShaykhTusi/0460ShaykhTusi.TahdhibAhkam/0460ShaykhTusi.TahdhibAhkam.Zaydiyya0000302-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0475AH/data/0460ShaykhTusi/0460ShaykhTusi.TahdhibAhkam/0460ShaykhTusi.TahdhibAhkam.Shia001161Vols-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0475AH/data/0460ShaykhTusi/0460ShaykhTusi.Istibsar/0460ShaykhTusi.Istibsar.Shia001157Vols-ara1.yml
+-> token and character counts changed
+URI 0548IbnCabdKarimShahrastani.MilalWaNihal.ShamAY0033890-ara1 != filename 0548IbnCabdKarimShahrastani.MilalWaNihal.ShamAY0033890-ara2
+-> URI replaced with 0548IbnCabdKarimShahrastani.MilalWaNihal.ShamAY0033890-ara2
+../../OpenITI/Github_clone/0550AH/data/0548IbnCabdKarimShahrastani/0548IbnCabdKarimShahrastani.MilalWaNihal/0548IbnCabdKarimShahrastani.MilalWaNihal.Shamela0011812-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0950AH/data/0945ShamsDinDawudi/0945ShamsDinDawudi.TabaqatMufassirin/0945ShamsDinDawudi.TabaqatMufassirin.Shamela0027084-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0950AH/data/0938IbnCaliBalawi/0938IbnCaliBalawi.Thabat/0938IbnCaliBalawi.Thabat.Shamela0010736-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0700AH/data/0685IbnCibri/0685IbnCibri.TarikhMukhtasarDuwal/0685IbnCibri.TarikhMukhtasarDuwal.Shamela0012348-ara1.yml
+-> token and character counts changed
+URI 0685IbnCibri.TarikhMukhtasarDuwal.JK010376-ara1 != filename 0685IbnCibri.TarikhMukhtasarDuwal.JK010376-ara2
+-> URI replaced with 0685IbnCibri.TarikhMukhtasarDuwal.JK010376-ara2
+../../OpenITI/Github_clone/0700AH/data/0677IbnMuyassar/0677IbnMuyassar.AkhbarMisr/0677IbnMuyassar.AkhbarMisr.Kraken210528115855-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0325AH/data/0310Tabari/0310Tabari.Tarikh/0310Tabari.Tarikh.Shamela0009783BK1-ara1.yml
+-> token and character counts changed
+URI 0303Nasai.DucafaWaMatrukin.ShamAY0034604-ara1 != filename 0303Nasai.DucafaWaMatrukin.ShamAY0034604-ara3
+-> URI replaced with 0303Nasai.DucafaWaMatrukin.ShamAY0034604-ara3
+../../OpenITI/Github_clone/0325AH/data/0303Nasai/0303Nasai.DucafaWaMatrukin/0303Nasai.DucafaWaMatrukin.Shia003076-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0325AH/data/0303Nasai/0303Nasai.Ighrab/0303Nasai.Ighrab.Shamela0026871-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0325AH/data/0303Nasai/0303Nasai.MajlisanMinImla/0303Nasai.MajlisanMinImla.JK000703-ara1.yml
+-> token and character counts changed
+URI 0303Nasai.SunanKubra.Shamela0008361-ara1 != filename 0303Nasai.SunanKubra.Shamela0008361-ara2
+-> URI replaced with 0303Nasai.SunanKubra.Shamela0008361-ara2
+../../OpenITI/Github_clone/0325AH/data/0303Nasai/0303Nasai.SunanKubra/0303Nasai.SunanKubra.JK000475-ara1.yml
+-> token and character counts changed
+URI 0303Nasai.SunanKubra.ShamAY0033997-ara1 != filename 0303Nasai.SunanKubra.ShamAY0033997-ara3
+-> URI replaced with 0303Nasai.SunanKubra.ShamAY0033997-ara3
+../../OpenITI/Github_clone/0325AH/data/0303Nasai/0303Nasai.Nucut/0303Nasai.Nucut.JK001202-ara1.yml
+-> token and character counts changed
+URI 0305AbuCuthmanDimashqi.MadkhalFurfuriyus.GRAR000063-ara1 != filename 0305AbuCuthmanDimashqi.MadkhalFurfuriyus.GRAR000063-ara2
+-> URI replaced with 0305AbuCuthmanDimashqi.MadkhalFurfuriyus.GRAR000063-ara2
+../../OpenITI/Github_clone/0150AH/data/0150AbuHanifa/0150AbuHanifa.FiqhAkbar/0150AbuHanifa.FiqhAkbar.JK001085-ara1.yml
+-> token and character counts changed
+URI 0261Muslim.Sahih.ShamAY0033938-ara1 != filename 0261Muslim.Sahih.ShamAY0033938-ara2
+-> URI replaced with 0261Muslim.Sahih.ShamAY0033938-ara2
+URI 0261Muslim.Sahih.Shia001723Vols-ara1 != filename 0261Muslim.Sahih.Shia001723Vols-ara3
+-> URI replaced with 0261Muslim.Sahih.Shia001723Vols-ara3
+../../OpenITI/Github_clone/0675AH/data/0659SainDinNaccal/0659SainDinNaccal.Mashyakha/0659SainDinNaccal.Mashyakha.Shamela0026432-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0400AH/data/0381MuhammadIbnYusufCamiri/0381MuhammadIbnYusufCamiri.SacadaWaIscad/0381MuhammadIbnYusufCamiri.SacadaWaIscad.SAWS20200409-ara1.yml
+-> token and character counts changed
+../../OpenITI/Github_clone/0400AH/data/0381IbnBabawayh/0381IbnBabawayh.ManLaYahduruhuFaqih/0381IbnBabawayh.ManLaYahduruhuFaqih.Shia001149Vols-ara1.yml
+('../../OpenITI/Github_clone/0400AH/data/0381IbnBabawayh/0381IbnBabawayh.ManLaYahduruhuFaqih/0381IbnBabawayh.ManLaYahduruhuFaqih.Shia001149Vols-ara1.yml', 'no valid yml key in line', '80#VERS#COLLATED#\thttp://www.worldcat.org/oclc/985869476')
+invalid YML file structure: ../../OpenITI/Github_clone/0400AH/data/0381IbnBabawayh/0381IbnBabawayh.ManLaYahduruhuFaqih/0381IbnBabawayh.ManLaYahduruhuFaqih.Shia001149Vols-ara1.yml
+Error message: 'NoneType' object has no attribute 'keys'
+original yml file:
+
+00#VERS#CLENGTH##: 2830888
+00#VERS#LENGTH###: 703717
+00#VERS#URI######: 0381IbnBabawayh.ManLaYahduruhuFaqih.Shia001149Vols-ara1
+80#VERS#BASED####: 	http://www.worldcat.org/oclc/985869476
+80#VERS#COLLATED#	http://www.worldcat.org/oclc/985869476
+80#VERS#LINKS####:	http://alfeker.net/library.php?id=1939
+90#VERS#ANNOTATOR:	Omar Abdel-Ghaffar  (SHARIAsource-CnC)
+90#VERS#COMMENT##:	The annotator annotated headings and removed editorial material.
+90#VERS#DATE#####:	12-16-2021
+90#VERS#ISSUES###:	NO_MAJOR_ISSUES
+
+
+Attempt to solve the issue:
+
+00#VERS#CLENGTH##: 2830888
+00#VERS#LENGTH###: 703717
+00#VERS#URI######: 0381IbnBabawayh.ManLaYahduruhuFaqih.Shia001149Vols-ara1
+80#VERS#BASED####: http://www.worldcat.org/oclc/985869476
+80#VERS#COLLATED#: http://www.worldcat.org/oclc/985869476
+80#VERS#LINKS####: http://alfeker.net/library.php?id=1939
+90#VERS#ANNOTATOR: Omar Abdel-Ghaffar  (SHARIAsource-CnC)
+90#VERS#COMMENT##: The annotator annotated headings and removed editorial
+    material.
+90#VERS#DATE#####: 12-16-2021
+90#VERS#ISSUES###: NO_MAJOR_ISSUES
+../../OpenITI/Github_clone/0400AH/data/0381IbnBabawayh/0381IbnBabawayh.ManLaYahduruhuFaqih/0381IbnBabawayh.ManLaYahduruhuFaqih.Shia001149Vols-ara1.yml
+-> token and character counts changed
+
+Processing time: 2413.23 sec
+================================================================================
+Collecting metadata...
+collecting metadata from OpenITI...
+1111Majlisi.BiharAnwar.Zaydiyya0000202A-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsB-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsC-ara1
+1111Majlisi.BiharAnwar.Shia001432VolsA-ara1
+1111Majlisi.BiharAnwar.Zaydiyya0000202B-ara1
+1111Majlisi.BiharAnwar.Zaydiyya0000202C-ara1
+https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Zaydiyya0000202A-ara1
+https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Zaydiyya0000202-ara1
+---
+https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Shia001432VolsB-ara1
+https://raw.githubusercontent.com/OpenITI/1125AH/master/data/1111Majlisi/1111Majlisi.BiharAnwar/1111Majlisi.BiharAnwar.Shia001432Vols-ara1
+---
+================================================================================
+COLLECTING INTO A CSV FILE (10394 LINES)...
+================================================================================
+Processing time: 2431.98 sec
+================================================================================
+Collecting issues from GitHub...
+logged in
+issue labels in this repo:
+   Label(name="Development")
+   Label(name="discrepancies")
+   Label(name="in progress")
+   Label(name="no edition found")
+   Label(name="PRI & SEC Versions")
+   Label(name="review finished")
+   Label(name="text quality")
+   Label(name="text tagged")
+   Label(name="urgent")
+   Label(name="URI change suggestion")
+getting relevant issues from GitHub...
+GitHub fetching time: 11.56 sec
+================================================================================
+Saving metadata...
+================================================================================
+7110
+6261
+9
+4247
+4729
+4728
+6162
+6162
+first_json_key['date'] 11 April 2022
+Tada!
+Total processing time: 2443.54 sec
