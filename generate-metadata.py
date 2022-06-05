@@ -570,8 +570,9 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                    and not bookD["40#BOOK#RELATED##:"].strip().startswith("URI of"):
                     rels = bookD["40#BOOK#RELATED##:"].strip()
                     rels = re.split(" ?; ?", rels)
+                    rels = re.sub(" *¶ *", "", rels)
                     for rel in rels:
-                        rel = re.sub("[ \r\n]+", " ", rel)
+                        rel = re.sub("[ \r\n¶]+", " ", rel)
                         try:
                             rel_types = re.findall("\(([^\)]+)", rel)[0]
                         except:
