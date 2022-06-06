@@ -406,6 +406,7 @@ def betacodeToArabic(text):
 
     #print("betacodeToArabic()")
     text = dictReplace(text, betacodeTranslit)
+    print(text)
     text = re.sub('\+' , '', text)
 
     # fix irrelevant variables for Arabic script
@@ -431,7 +432,8 @@ def betacodeToArabic(text):
 
     # initial HAMZAs
     text = re.sub("\\bʾ?a", "أَ", text)
-    text = re.sub("\\bʾ?i", "إِ", text)
+    text = re.sub("\\bʾi", "إِ", text)
+    text = re.sub("\\bi", "ﭐ", text)
     text = re.sub("\\bʾ?u", "أُ", text)
     text = re.sub("\\bʾ?ā", "آ", text)
     text = re.sub("\\bʾ?ī", "إِي", text)
@@ -440,6 +442,8 @@ def betacodeToArabic(text):
     # final HAMZAs
     
     text = re.sub(r'aʾ\b', "أ", text)
+    text = re.sub(r'uʾ\b', "ؤ", text)
+    text = re.sub(r'iʾ\b', "ئ", text)
     text = re.sub(r'yʾaȵ', r"يْئًا", text)
     text = re.sub(r'([%s])ʾuȵ' % cnsnnts, r"\1%s" % "ْءٌ", text)
     text = re.sub(r'([%s])ʾiȵ' % cnsnnts, r"\1%s" % "ْءٍ", text)
@@ -606,5 +610,3 @@ def betaCodeToArSimple(text):
 ###print(arabicToBetaCode(testStringArabic))
 ##print(betacodeToArabic(testBetaCode))
 ##print(betacodeToTranslit(testBetaCode))
-print(betacodeToArabic("Allāh al-Muwaṭṭaʾ"))
-print(re.sub('aʾ\\b', "أ", "Allāh al-Muwaṭṭaʾ"))
