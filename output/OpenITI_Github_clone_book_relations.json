@@ -24,6 +24,12 @@
       "dest": "0179MalikIbnAnas.Muwatta",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
+      "source": "0474IbnKhalafBaji.MuntaqaMinSharhMuwatta"
+    },
+    {
+      "dest": "0179MalikIbnAnas.Muwatta",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
       "source": "0521IbnMuhammadBatalyawsi.MushkilatMuwatta"
     },
     {
@@ -901,6 +907,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0567IbnKhashshabBaghdadi.Murtajal"
+    }
+  ],
+  "0474IbnKhalafBaji.MuntaqaMinSharhMuwatta": [
+    {
+      "dest": "0179MalikIbnAnas.Muwatta",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0474IbnKhalafBaji.MuntaqaMinSharhMuwatta"
     }
   ],
   "0476AbuIshaqShirazi.MuhadhdhabFiFiqh": [
