@@ -417,6 +417,7 @@ def betacodeToArabic(text):
     # complex combinations
     text = re.sub(r"li-?a?ll[āã]hi?", " لِـلّٰـهِ ".strip(), text) # Convert God's Name
     text = re.sub(r"bi-?a?ll[āã]hi?", "بِاللهِ", text) # Convert God's Name
+    text = re.sub(r"wa-?a?ll[āã]hi?", "وَاللهِ", text) # Convert God's Name
     text = re.sub("all[ãā]h", " ﭐلـلّٰـه ".strip(), text) # Convert God's Name
     text = re.sub(r"\bb\.", "بن", text) # Convert b. into ar bn
 
@@ -436,11 +437,10 @@ def betacodeToArabic(text):
     text = re.sub("\\bʾ?ī", "إِي", text)
     text = re.sub("\\bʾ?ū", "أُو", text)
 
-    text = re.sub("-|_", "", text)    
-
     # final HAMZAs
-    text = re.sub(r'yʾaȵ', r"يْئًا", text)
     
+    text = re.sub(r'aʾ\b', "أ", text)
+    text = re.sub(r'yʾaȵ', r"يْئًا", text)
     text = re.sub(r'([%s])ʾuȵ' % cnsnnts, r"\1%s" % "ْءٌ", text)
     text = re.sub(r'([%s])ʾiȵ' % cnsnnts, r"\1%s" % "ْءٍ", text)
     text = re.sub(r'([%s])ʾaȵ' % cnsnnts, r"\1%s" % "ْءًا", text)
@@ -550,7 +550,7 @@ def betacodeToArabic(text):
 
 
     text = dictReplace(text, translitArabic)
-    text = re.sub("-|_", "", text)
+    text = re.sub("-|_|ـ", "", text)
     #text = re.sub("-", "ـ ـ", text)
     return(text)
 
@@ -606,3 +606,5 @@ def betaCodeToArSimple(text):
 ###print(arabicToBetaCode(testStringArabic))
 ##print(betacodeToArabic(testBetaCode))
 ##print(betacodeToTranslit(testBetaCode))
+print(betacodeToArabic("Allāh al-Muwaṭṭaʾ"))
+print(re.sub('aʾ\\b', "أ", "Allāh al-Muwaṭṭaʾ"))
