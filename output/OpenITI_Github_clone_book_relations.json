@@ -700,6 +700,12 @@
   "0393IbnHammadJawhari.SihahTajLugha": [
     {
       "dest": "0393IbnHammadJawhari.SihahTajLugha",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "hashiya",
+      "source": "0582IbnBarri.Tanbih"
+    },
+    {
+      "dest": "0393IbnHammadJawhari.SihahTajLugha",
       "main_rel_type": "CONT",
       "sec_rel_type": "takmila",
       "source": "0650IbnMuhammadRadiDinSaghani.Takmila"
@@ -1209,6 +1215,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0581AbuQasimSuhayli.RawdUnuf"
+    }
+  ],
+  "0582IbnBarri.Tanbih": [
+    {
+      "dest": "0393IbnHammadJawhari.SihahTajLugha",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "hashiya",
+      "source": "0582IbnBarri.Tanbih"
     }
   ],
   "0586IbnMuhammadAbuNasrCattabi.SharhNukat": [
