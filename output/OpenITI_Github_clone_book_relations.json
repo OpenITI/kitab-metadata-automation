@@ -137,6 +137,14 @@
       "source": "0633IbnSacidRajraji.ManahijTahsil"
     }
   ],
+  "0244IbnSikkit.IslahMantiq": [
+    {
+      "dest": "0244IbnSikkit.IslahMantiq",
+      "main_rel_type": "REARR",
+      "sec_rel_type": "tartib",
+      "source": "1450MuhammadHasanBakkai.TartibIslahMantiq"
+    }
+  ],
   "0249AbuCuthmanMazini.Tasrif": [
     {
       "dest": "0249AbuCuthmanMazini.Tasrif",
@@ -4255,6 +4263,14 @@
       "main_rel_type": "ABR",
       "sec_rel_type": "mukhtasar",
       "source": "1450CabdAllahGhunayman.MukhtasarMinhajSunna"
+    }
+  ],
+  "1450MuhammadHasanBakkai.TartibIslahMantiq": [
+    {
+      "dest": "0244IbnSikkit.IslahMantiq",
+      "main_rel_type": "REARR",
+      "sec_rel_type": "tartib",
+      "source": "1450MuhammadHasanBakkai.TartibIslahMantiq"
     }
   ],
   "510IbnMascudBaghawi.MasabihSunna": [
