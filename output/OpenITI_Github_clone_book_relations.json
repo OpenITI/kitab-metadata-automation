@@ -781,12 +781,28 @@
       "source": "0673IbnBuzayza.RawdatMustabin"
     }
   ],
+  "0428IbnSina.FannShicr": [
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.FannShicr"
+    }
+  ],
   "0428IbnSina.QanunFiTibb": [
     {
       "dest": "0428IbnSina.QanunFiTibb",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0687IbnNafis.SharhTashrihQanun"
+    }
+  ],
+  "0428IbnSina.Shifa": [
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.FannShicr"
     }
   ],
   "0430AswadGhundijani.FarhatAdib": [
