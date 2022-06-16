@@ -1257,6 +1257,14 @@
       "source": "0577IbnHishamLakhmi.SharhFasih"
     }
   ],
+  "0578IbnBashkuwal.Sila": [
+    {
+      "dest": "0578IbnBashkuwal.Sila",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "0703MuhammadMarrakushi.DhaylWaTakmila"
+    }
+  ],
   "0581AbuQasimSuhayli.RawdUnuf": [
     {
       "dest": "0213IbnHisham.SiraNabawiyya",
@@ -1498,7 +1506,6 @@
       "sec_rel_type": "sharh",
       "source": "0772IbnHasanJamalDinIsnawi.MuhimmatFiSharhRawda"
     }
-
   ],
   "0623AbuQasimRafici.SharhMusnadShafici": [
     {
@@ -2120,14 +2127,6 @@
       "source": "0703MuhammadMarrakushi.DhaylWaTakmila"
     }
   ],
-  "0578IbnBashkuwal.Sila": [
-    {
-      "dest": "0578IbnBashkuwal.Sila",
-      "main_rel_type": "CONT",
-      "sec_rel_type": "dhayl",
-      "source": "0703MuhammadMarrakushi.DhaylWaTakmila"
-    }
-  ],
   "0705AbuMuhammadMalaqi.DurrNathir": [
     {
       "dest": "0444AbuCamrDani.TaysirFiQiraatSabc",
@@ -2266,6 +2265,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "radd",
       "source": "0728IbnTaymiyya.BayanTalbisJahmiyya"
+    }
+  ],
+  "0728IbnTaymiyya.Istighatha": [
+    {
+      "dest": "0728IbnTaymiyya.Istighatha",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "talkhis",
+      "source": "0774IbnKathir.TalkhisIstighatha"
     }
   ],
   "0728IbnTaymiyya.MinhajSunna": [
@@ -2798,6 +2805,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0773IbnMusaRahuni.TuhfatMasul"
+    }
+  ],
+  "0774IbnKathir.TalkhisIstighatha": [
+    {
+      "dest": "0728IbnTaymiyya.Istighatha",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "talkhis",
+      "source": "0774IbnKathir.TalkhisIstighatha"
     }
   ],
   "0774IbnRaficSallami.TarikhCulamaBaghdad": [
