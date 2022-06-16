@@ -532,10 +532,16 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
                 # 1) from the YML files:
 
+                # - explicit primary version:
+                primary_yml = False
+                if "PRIMARY_VERSION" in versD["90#VERS#ISSUES###:"]:
+                    primary_yml = True
+
                 # - length in number of characters:
 ##                versD = zfunc.readYML(versF)
 ##                versD = readYML(versF)
                 length = versD["00#VERS#LENGTH###:"].strip()
+                
                 recalc = False
                 if not length:
                     recalc = True
@@ -570,8 +576,9 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                    and not bookD["40#BOOK#RELATED##:"].strip().startswith("URI of"):
                     rels = bookD["40#BOOK#RELATED##:"].strip()
                     rels = re.split(" ?; ?", rels)
+                    rels = re.sub(" *¶ *", "", rels)
                     for rel in rels:
-                        rel = re.sub("[ \r\n]+", " ", rel)
+                        rel = re.sub("[ \r\n¶]+", " ", rel)
                         try:
                             rel_types = re.findall("\(([^\)]+)", rel)[0]
                         except:
@@ -710,7 +717,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 #   in the statusDic instead of their real length,
                 #   so that they will be chosen as primary version
                 #   once the lengths are compared:
-                status = "sec"
+                status = "sec"                
                 if os.path.isfile(local_pth+".inProgress"):
                     lenTemp = 100000000
                     uri.extension = "inProgress"
@@ -738,10 +745,11 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 # - add the uri to the statusDic if the file is not missing:
                 if os.path.exists(local_pth):
                     
-                    if bookURI in statusDic:
-                        statusDic[bookURI].append("%012d##" % int(lenTemp) + versURI)
-                    else:
+                    if bookURI not in statusDic:
                         statusDic[bookURI] = []
+                    if primary_yml:
+                        statusDic[bookURI].append("pri##" + versURI)
+                    else:
                         statusDic[bookURI].append("%012d##" % int(lenTemp) + versURI)
 
 
@@ -863,11 +871,19 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     split_files[m].append(versURI)
 
 
-    # Give primary status to "longest" version:
+    # define text file(s) that get primary status:
     for k, v in statusDic.items():
         v = sorted(v, reverse=True)
-        key = v[0].split("##")[1]
-        dataCSV[key] = dataCSV[key].replace("\tsec\t", "\tpri\t")
+        # give primary status to all text files that have "PRIMARY_VERSION" in version yml file:
+        if v[0].startswith("pri"): 
+            primary = [x for x in v if x.startswith("pri")]
+            for x in primary:
+                key = x.split("##")[1]
+                dataCSV[key] = dataCSV[key].replace("\tsec\t", "\tpri\t")
+        # If no yml file has "PRIMARY_VERSION", give primary status to "longest" version:
+        else:
+            key = v[0].split("##")[1]
+            dataCSV[key] = dataCSV[key].replace("\tsec\t", "\tpri\t")
 
 
     # define the csv file header: 

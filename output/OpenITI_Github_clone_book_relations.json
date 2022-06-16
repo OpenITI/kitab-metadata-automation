@@ -1303,17 +1303,15 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0593BurhanDinFarghaniMarghinani.HidayaFiSharhBidaya"
-    }
-  ],
-  "0593BurhanDinFarghaniMarghinani.HidayaFiSharhBidaya¶": [
+    },
     {
-      "dest": "0593BurhanDinFarghaniMarghinani.HidayaFiSharhBidaya¶",
+      "dest": "0593BurhanDinFarghaniMarghinani.HidayaFiSharhBidaya",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0786IbnMuhammadBabarti.CinayaSharhHidaya"
     },
     {
-      "dest": "0593BurhanDinFarghaniMarghinani.HidayaFiSharhBidaya¶",
+      "dest": "0593BurhanDinFarghaniMarghinani.HidayaFiSharhBidaya",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0855BadrDinCayni.BinayaSharhHidaya"
@@ -1493,7 +1491,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0770IbnMuhammadFayyumiHamawi.MisbahMunir"
+    },
+    {
+      "dest": "0623AbuQasimRafici.SharhKabir",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0772IbnHasanJamalDinIsnawi.MuhimmatFiSharhRawda"
     }
+
   ],
   "0623AbuQasimRafici.SharhMusnadShafici": [
     {
@@ -2109,7 +2114,15 @@
       "source": "0703MuhammadMarrakushi.DhaylWaTakmila"
     },
     {
-      "dest": "¶ 0578IbnBashkuwal.Sila",
+      "dest": "0578IbnBashkuwal.Sila",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "0703MuhammadMarrakushi.DhaylWaTakmila"
+    }
+  ],
+  "0578IbnBashkuwal.Sila": [
+    {
+      "dest": "0578IbnBashkuwal.Sila",
       "main_rel_type": "CONT",
       "sec_rel_type": "dhayl",
       "source": "0703MuhammadMarrakushi.DhaylWaTakmila"
@@ -2372,7 +2385,7 @@
     },
     {
       "dest": "0741IbnAhmadGharnatiKalbi.TashilLiCulumTanzil",
-      "main_rel_type": "¶ CONT",
+      "main_rel_type": "CONT",
       "sec_rel_type": "tadhyil",
       "source": "0745AbuHayyanGharnati.TadhyilTashil"
     }
@@ -2444,7 +2457,7 @@
     },
     {
       "dest": "0741IbnAhmadGharnatiKalbi.TashilLiCulumTanzil",
-      "main_rel_type": "¶ CONT",
+      "main_rel_type": "CONT",
       "sec_rel_type": "tadhyil",
       "source": "0745AbuHayyanGharnati.TadhyilTashil"
     }
@@ -2749,7 +2762,7 @@
       "source": "0772IbnHasanJamalDinIsnawi.MuhimmatFiSharhRawda"
     },
     {
-      "dest": "¶ 0623AbuQasimRafici.SharhKabir",
+      "dest": "0623AbuQasimRafici.SharhKabir",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0772IbnHasanJamalDinIsnawi.MuhimmatFiSharhRawda"
@@ -2813,7 +2826,7 @@
   ],
   "0786IbnMuhammadBabarti.CinayaSharhHidaya": [
     {
-      "dest": "0593BurhanDinFarghaniMarghinani.HidayaFiSharhBidaya¶",
+      "dest": "0593BurhanDinFarghaniMarghinani.HidayaFiSharhBidaya",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0786IbnMuhammadBabarti.CinayaSharhHidaya"
@@ -3267,7 +3280,7 @@
   ],
   "0855BadrDinCayni.BinayaSharhHidaya": [
     {
-      "dest": "0593BurhanDinFarghaniMarghinani.HidayaFiSharhBidaya¶",
+      "dest": "0593BurhanDinFarghaniMarghinani.HidayaFiSharhBidaya",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0855BadrDinCayni.BinayaSharhHidaya"
@@ -4371,22 +4384,6 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0885IbnSulaymanCalaDinMardawi.TahbirSharhTahrir"
-    }
-  ],
-  "¶ 0578IbnBashkuwal.Sila": [
-    {
-      "dest": "¶ 0578IbnBashkuwal.Sila",
-      "main_rel_type": "CONT",
-      "sec_rel_type": "dhayl",
-      "source": "0703MuhammadMarrakushi.DhaylWaTakmila"
-    }
-  ],
-  "¶ 0623AbuQasimRafici.SharhKabir": [
-    {
-      "dest": "¶ 0623AbuQasimRafici.SharhKabir",
-      "main_rel_type": "COMM",
-      "sec_rel_type": "sharh",
-      "source": "0772IbnHasanJamalDinIsnawi.MuhimmatFiSharhRawda"
     }
   ]
 }
