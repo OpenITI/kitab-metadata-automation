@@ -801,11 +801,13 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     # - author name (combine with the uri's author component)
                     #add_arabic_name = True
                     if shuhra:
+                        shuhra = re.sub("[ \r\n]*¶ *", " ", shuhra)
                         author_lat.append(shuhra)
                         author_ar.append(betaCodeToArSimple(shuhra))
                         #print("shuhra:", betaCodeToArSimple(shuhra))
                         #add_arabic_name = False
                     if full_name:
+                        full_name = re.sub("[ \r\n]*¶ *", " ", full_name)
                         author_lat.append(full_name)
                         author_ar.append(betaCodeToArSimple(full_name))
                         #add_arabic_name = False
