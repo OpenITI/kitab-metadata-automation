@@ -575,8 +575,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 if "40#BOOK#RELATED##:" in bookD \
                    and not bookD["40#BOOK#RELATED##:"].strip().startswith("URI of"):
                     rels = bookD["40#BOOK#RELATED##:"].strip()
-                    rels = re.split(" ?; ?", rels)
                     rels = re.sub(" *¶ *", "", rels)
+                    rels = re.split(" ?; ?", rels)
                     for rel in rels:
                         rel = re.sub("[ \r\n¶]+", " ", rel)
                         try:
