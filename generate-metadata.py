@@ -157,6 +157,7 @@ headings_dict = {
      'higrid': "Date",
      'HigriD': "Date",
      'auth' : "AuthorName",
+     'auth.x' : "AuthorName",
      'bk' : "Title", # 
      'cat' : "Genre", # Values: max 3-digit integer
      'name' : "Genre", 
@@ -189,16 +190,21 @@ headings_dict = {
      'ألحقها' : "Edition:Editor",
      'تقديم وإشراف ومراجعة' : "Edition:Editor", 
      '010.AuthorAKA' : "AuthorName", 
-     '010.AuthorNAME' : "AuthorName", 
+     '010.AuthorNAME' : "AuthorName",
+     '001.AuthorNAME' : "AuthorName",
      '011.AuthorDIED' : "Date", 
-     '019.AuthorDIED' : "Date", 
-     '020.BookTITLE' : "Title", 
+     '019.AuthorDIED' : "Date",
+     '006.AuthorDIED' : "Date", 
+     '020.BookTITLE' : "Title",
+     '010.BookTITLE' : "Title",
      '021.BookSUBJ' : "Genre", # separated by :: 
      '029.BookTITLEalt' : "Title", 
      '040.EdEDITOR' : "Edition:Editor", 
-     '043.EdPUBLISHER' : "Edition:Publisher", 
+     '043.EdPUBLISHER' : "Edition:Publisher",
+     '013.EdPUBLISHER' : "Edition:Publisher",
      '044.EdPLACE' : "Edition:Place", 
      '045.EdYEAR' : "Edition:Date",
+     '015.BookGENRE' : "Genre",
      'title' : "Title",
      'title_ar': "Title",
      'نام كتاب': "Title",
@@ -213,11 +219,14 @@ headings_dict = {
      'تاريخ وفات مؤلف' : "Date",
      'موضوع' : "Genre",
      'Title' : "Title",
+     'title' : "Title",
      'Editor': "Edition:Editor",
      'Publisher': "Edition:Publisher",
      'Place of Publication': "Edition:Place",
      'Date of Publication': "Edition:Date",
      'Author': "AuthorName",
+     'author': "AuthorName",
+     'source': "Edition:Place",  # in PAL texts: manuscript data
      }
 
 
