@@ -198,7 +198,8 @@ headings_dict = {
      '040.EdEDITOR' : "Edition:Editor", 
      '043.EdPUBLISHER' : "Edition:Publisher", 
      '044.EdPLACE' : "Edition:Place", 
-     '045.EdYEAR' : "Edition:Date", 
+     '045.EdYEAR' : "Edition:Date",
+     'title' : "Title",
      }
 
 
