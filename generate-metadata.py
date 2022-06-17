@@ -201,6 +201,15 @@ headings_dict = {
      '045.EdYEAR' : "Edition:Date",
      'title' : "Title",
      'title_ar': "Title",
+     'نام كتاب': "Title",
+     'نويسنده': "AuthorName",
+     'ناشر' : "Edition:Publisher",
+     'تاريخ نشر' : "Edition:Date",
+     'مكان چاپ' : "Edition:Place",
+     'تاريخ نشر' : "Edition:Editor",
+     '045.EdYEAR' : "Edition:Date",
+     'تاريخ وفات مؤلف' : "Date",
+     'موضوع' : "Genre",
      }
 
 
