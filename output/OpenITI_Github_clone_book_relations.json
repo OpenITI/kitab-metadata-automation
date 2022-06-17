@@ -781,12 +781,52 @@
       "source": "0673IbnBuzayza.RawdatMustabin"
     }
   ],
+  "0428IbnSina.AfcalWaInficalat": [
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.AfcalWaInficalat"
+    }
+  ],
   "0428IbnSina.FannShicr": [
     {
       "dest": "0428IbnSina.Shifa",
       "main_rel_type": "EXTRACT",
       "sec_rel_type": "",
       "source": "0428IbnSina.FannShicr"
+    }
+  ],
+  "0428IbnSina.Ilahiyyat": [
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.Ilahiyyat"
+    }
+  ],
+  "0428IbnSina.KawnWaFasad": [
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.KawnWaFasad"
+    }
+  ],
+  "0428IbnSina.Mantiq": [
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.Mantiq"
+    }
+  ],
+  "0428IbnSina.Nafs": [
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.Nafs"
     }
   ],
   "0428IbnSina.QanunFiTibb": [
@@ -802,7 +842,37 @@
       "dest": "0428IbnSina.Shifa",
       "main_rel_type": "EXTRACT",
       "sec_rel_type": "",
+      "source": "0428IbnSina.AfcalWaInficalat"
+    },
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
       "source": "0428IbnSina.FannShicr"
+    },
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.Ilahiyyat"
+    },
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.KawnWaFasad"
+    },
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.Mantiq"
+    },
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.Nafs"
     }
   ],
   "0430AswadGhundijani.FarhatAdib": [
