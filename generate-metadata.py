@@ -206,10 +206,18 @@ headings_dict = {
      'ناشر' : "Edition:Publisher",
      'تاريخ نشر' : "Edition:Date",
      'مكان چاپ' : "Edition:Place",
-     'تاريخ نشر' : "Edition:Editor",
-     '045.EdYEAR' : "Edition:Date",
+     'محقق/ مصحح' : "Edition:Editor",
+     'مصحح' : "Edition:Editor",
+     'محقق' : "Edition:Editor",
+     'تاريخ نشر' : "Edition:Date",
      'تاريخ وفات مؤلف' : "Date",
      'موضوع' : "Genre",
+     'Title' : "Title",
+     'Editor': "Edition:Editor",
+     'Publisher': "Edition:Publisher",
+     'Place of Publication': "Edition:Place",
+     'Date of Publication': "Edition:Date",
+     'Author': "AuthorName",
      }
 
 
