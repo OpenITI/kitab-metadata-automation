@@ -227,6 +227,7 @@ headings_dict = {
      'Author': "AuthorName",
      'author': "AuthorName",
      'source': "Edition:Place",  # in PAL texts: manuscript data
+     'Date': "Date",
      }
 
 
