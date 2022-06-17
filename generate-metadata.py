@@ -200,6 +200,7 @@ headings_dict = {
      '044.EdPLACE' : "Edition:Place", 
      '045.EdYEAR' : "Edition:Date",
      'title' : "Title",
+     'title_ar': "Title",
      }
 
 
