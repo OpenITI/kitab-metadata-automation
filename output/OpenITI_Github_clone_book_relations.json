@@ -512,12 +512,6 @@
       "dest": "0354Mutanabbi.Diwan",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
-      "source": "0392IbnJinniMawsili.FasrSaghir"
-    },
-    {
-      "dest": "0354Mutanabbi.Diwan",
-      "main_rel_type": "COMM",
-      "sec_rel_type": "sharh",
       "source": "0441IbnIflili.SharhShicrMutanabbi"
     },
     {
@@ -679,14 +673,6 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0388AbuSulaymanKhattabi.MacalimSunan"
-    }
-  ],
-  "0392IbnJinniMawsili.FasrSaghir": [
-    {
-      "dest": "0354Mutanabbi.Diwan",
-      "main_rel_type": "COMM",
-      "sec_rel_type": "sharh",
-      "source": "0392IbnJinniMawsili.FasrSaghir"
     }
   ],
   "0392IbnJinniMawsili.FathWahbi": [
