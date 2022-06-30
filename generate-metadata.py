@@ -491,8 +491,6 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
             title and author will be put into separate columns
     """
 
-    print("collecting metadata from OpenITI...")
-
     dataYML = []
     dataCSV = {}  # vers-uri, date, author, book, id, status, length, fullTextURL, instantiationURL, tags, localPath
     statusDic = {}
@@ -1529,6 +1527,7 @@ Command line arguments for generate-metadata.py:
     R_O_W_uris = []
     XXXYYY_uris = []
     auto_uris = []
+    error_uris = []
     for uri in geo_URIs:
         if uri not in thurayya_uris:
             if uri.endswith(("Auto", "AUTO", "auto")):
@@ -1536,32 +1535,54 @@ Command line arguments for generate-metadata.py:
             elif "XXXYYY" in uri:
                 XXXYYY_uris.append(uri)
             else:
-                print("*", uri)
-                for author_yml in geo_URIs[uri]:
-                    print("  -", author_yml)
+                error_uris.append(uri)
+##                print("*", uri)
+##                for author_yml in geo_URIs[uri]:
+##                    print("  -", author_yml)
         elif uri.endswith(("_R","_O","_W")):
             R_O_W_uris.append(uri)
+    if error_uris:
+        print("-"*80)
+        print("These URIs seem to be faulty:")
+        for uri in sorted(error_uris):
+            print("*", uri)        
     if auto_uris:
         print("-"*80)
         print("These URIs have been assigned only based on nisba and must be checked:")
-        for uri in auto_uris:
+        for uri in sorted(auto_uris):
             print("*", uri)
-            for author_yml in geo_URIs[uri]:
-                print("  -", author_yml)
+##            for author_yml in geo_URIs[uri]:
+##                print("  -", author_yml)
     if XXXYYY_uris:
         print("-"*80)
         print("These URIs should be added to Thurayya:")
-        for uri in XXXYYY_uris:
+        for uri in sorted(XXXYYY_uris):
             print("*", uri)
-            for author_yml in geo_URIs[uri]:
-                print("  -", author_yml)
+##            for author_yml in geo_URIs[uri]:
+##                print("  -", author_yml)
     if R_O_W_uris:
         print("-"*80)
         print("Thurayya URIs that exist but end with _R, _O or _W instead of _S:")
-        for uri in R_O_W_uris:
+        for uri in sorted(R_O_W_uris):
             print("*", uri)
+##            for author_yml in geo_URIs[uri]:
+##                print("  -", author_yml)
+    print("-"*80)
+    print("YML files that contain Thurayya URI issues can be found in")
+    print(pth_string+"Thurayya_URIs_to_be_checked.csv")
+
+    # write details to file:
+    csv_list = []
+    error_lists = [error_uris, auto_uris, XXXYYY_uris, R_O_W_uris]
+    error_labels = ["error", "auto", "XXXYYY", "R_O_W"]
+    for i, lst in enumerate([error_uris, auto_uris, XXXYYY_uris, R_O_W_uris]):
+        for uri in lst:
             for author_yml in geo_URIs[uri]:
-                print("  -", author_yml)
+                csv_list.append("{}\t{}\t{}".format(error_labels[i], uri, author_yml))
+    fp = pth_string+"_Thurayya_URIs_to_be_checked.csv"
+    with open(fp, mode="w", encoding="utf-8") as file:
+        file.write("URI problem type\tThurayya URI\tAuthor YML\n")
+        file.write("\n".join(sorted(csv_list)))        
     print("="*80)
         
     # 3b- check duplicate ids:
