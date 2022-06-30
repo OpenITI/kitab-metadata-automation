@@ -134,6 +134,7 @@ from utility.betaCode import betaCodeToArSimple
 
 splitter = "##RECORD"+"#"*64+"\n"
 all_header_meta = dict()
+version_ids = dict()
 VERBOSE = False
 
 def LoadTags():
@@ -264,7 +265,7 @@ def load_srt_meta(srt_folder, passim_runs):
             with open(fp, mode="r", encoding="utf-8") as file:
                 html = file.read()
             ids = re.findall('<a href="([^\-"]+-[^"]+)"', html)
-            print(len(ids))
+            #print(len(ids))
             for id_ in ids:
                 #id_ = re.sub("Vols[A-Z]*|BK\d+", "", id_)
                 bare_id = id_.split("-")[0]
@@ -317,7 +318,7 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
 ##    webserver_url = 'http://dev.kitab-project.org'
     srt_d = load_srt_meta("./utility/srt/", passim_runs)
 
-    with open(csv_fp) as csvfile:
+    with open(csv_fp, mode="r", encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile, delimiter='\t')
         record = {}
 
@@ -385,7 +386,7 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
     first_json_key['data'] = json_objects
     first_json_key['date'] = datetime.now().strftime("%d %B %Y")
     first_json_key['time'] = datetime.now().strftime("%H:%M:%S")
-    print("first_json_key['date']", first_json_key['date'])
+    #print("first_json_key['date']", first_json_key['date'])
     with open(out_fp, 'w') as json_file:
         json.dump(first_json_key, json_file,
                   ensure_ascii=False, sort_keys=True)
@@ -507,6 +508,12 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                          file):
                 uri = URI(os.path.join(root, file))
 
+                # add the version ID to the version_ids dictionary
+                # to check for duplicate IDs later:
+                if not uri.version in version_ids:
+                    version_ids[uri.version] = []
+                version_ids[uri.version].append(file)
+
                 # build the filepaths to all yml files related
                 # to the current version yml file:
                 if not flat_folder:
@@ -608,13 +615,18 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     rels = re.split(" ?; ?", rels)
                     for rel in rels:
                         rel = re.sub("[ \r\n¶]+", " ", rel)
-                        try:
-                            rel_types = re.findall("\(([^\)]+)", rel)[0]
-                        except:
-                            print(bookF, ":")
-                            print("    no relationship type found in ", rel)
-                            continue
-                        rel_book = re.sub(" *\(.+", "", rel).strip()
+                        if "@" in rel:
+                            rel_types = rel.split("@")[0]
+                            rel_book = rel.split("@")[1]
+                        else:
+                            try:
+                                rel_types = re.findall("\(([^\)]+)", rel)[0]
+                            except:
+                                print(bookF, ":")
+                                print("    no relationship type found in ", rel)
+                                continue
+                            rel_book = re.sub(" *\(.+", "", rel).strip()
+                        
                         bookURI = uri.build_uri("book")
                         if not bookURI in book_rel_d:
                             book_rel_d[bookURI] = []
@@ -895,7 +907,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 # Deal with files split into multiple parts because
                 # they were too big: 
                 if re.search("[A-Z]-", versURI):
-                    print(versURI)
+                    print("FILE SPLIT because it was too big:", versURI)
                     m = re.sub("[A-Z]-", "-", versURI)
                     if m not in split_files:
                         split_files[m] = []
@@ -962,12 +974,12 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
         file_csv_line[h.index("id")] = file_csv_line[h.index("id")][:-1]
         file_csv_line[h.index("status")] = "sec"
         file_csv_line[h.index("tok_length")] = str(file_length)
-        print(file_csv_line[h.index("url")])
+        #print(file_csv_line[h.index("url")])
         #file_csv_line[h.index("url")] = re.sub("Vols[A-Z]", "",
         file_csv_line[h.index("url")] = re.sub("[A-Z](-[a-z]{3}\d)", r"\1",
                                                file_csv_line[h.index("url")]) # fullTextURL
-        print(file_csv_line[h.index("url")])
-        print("---")
+        #print(file_csv_line[h.index("url")])
+        #print("---")
         if incl_char_length:
             file_csv_line[-1] = str(file_clength)
         file_csv_line = "\t".join(file_csv_line)
@@ -1255,6 +1267,7 @@ Command line arguments for generate-metadata.py:
     incl_char_length = cfg_dict["incl_char_length"]
     output_path = cfg_dict["output_path"]
     meta_tsv_fp = cfg_dict["meta_tsv_fp"]
+    print(meta_tsv_fp)
     meta_yml_fp = cfg_dict["meta_yml_fp"]
     meta_json_fp = cfg_dict["meta_json_fp"]
     meta_header_fp = cfg_dict["meta_header_fp"]
@@ -1396,7 +1409,7 @@ Command line arguments for generate-metadata.py:
 
 
     pth_string = re.sub("\.+[\\/]", "", corpus_path)
-    pth_string = re.sub(r"[\\/]", "_", pth_string)
+    pth_string = re.sub(r"[:\\/]+", "_", pth_string)
     pth_string = os.path.join(output_path, pth_string)
     if meta_yml_fp == None: 
         meta_yml_fp = pth_string + "_metadata_complete.yml"
@@ -1485,6 +1498,16 @@ Command line arguments for generate-metadata.py:
 
     with open(meta_header_fp, mode="w", encoding="utf-8") as file:
         json.dump(all_header_meta, file, ensure_ascii=False)
+
+    # 3- check duplicate ids:
+    duplicate_ids = False
+    for version_id, uris in version_ids.items():
+        if len(uris) > 1:
+            duplicate_ids = True
+            print("DUPLICATE ID:", uris)
+    if not duplicate_ids:
+        print("NO DUPLICATE IDS FOUND")
+            
 
     print("Tada!")
     print("Total processing time: {0:.2f} sec".format(end - start))
