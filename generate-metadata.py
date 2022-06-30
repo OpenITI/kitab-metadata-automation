@@ -135,6 +135,7 @@ from utility.betaCode import betaCodeToArSimple
 splitter = "##RECORD"+"#"*64+"\n"
 all_header_meta = dict()
 version_ids = dict()
+geo_URIs = dict()
 VERBOSE = False
 
 def LoadTags():
@@ -695,19 +696,40 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     full_name = " ".join(full_name)
 
                     # geo data:
+                    auth_yml = file.split(".")[0]+".yml"
+                    geo_regex = r"\w+_RE(?:_\w+)?|\w+_[RSNO]\b|\w+XXXYYY\w*"
                     
-                    born = re.findall("\w+_RE(?:_\w+)?|\w+_S",
-                                      authD["20#AUTH#BORN#####:"])
-                    geo += ["born@"+p for p in born]
-                    died = re.findall("\w+_RE(?:_\w+)?|\w+_S",
-                                      authD["20#AUTH#DIED#####:"])
-                    geo += ["died@"+p for p in died]
-                    resided = re.findall("\w+_RE(?:_\w+)?|\w+_S",
-                                         authD["20#AUTH#RESIDED##:"])
-                    geo += ["resided@"+p for p in resided]
-                    visited = re.findall("\w+_RE(?:_\w+)?|\w+_S",
-                                         authD["20#AUTH#VISITED##:"])
-                    geo += ["visited@"+p for p in visited]
+                    born = re.findall(geo_regex, authD["20#AUTH#BORN#####:"])
+                    #geo += ["born@"+p for p in born]
+                    for p in born:
+                        geo.append("born@"+p)
+                        if p not in geo_URIs:
+                            geo_URIs[p] = set()
+                        geo_URIs[p].add(auth_yml)
+                        
+                    died = re.findall(geo_regex, authD["20#AUTH#DIED#####:"])
+                    #geo += ["died@"+p for p in died]
+                    for p in died:
+                        geo.append("died@"+p)
+                        if p not in geo_URIs:
+                            geo_URIs[p] = set()
+                        geo_URIs[p].add(auth_yml)
+                    
+                    resided = re.findall(geo_regex, authD["20#AUTH#RESIDED##:"])
+                    #geo += ["resided@"+p for p in resided]
+                    for p in resided:
+                        geo.append("resided@"+p)
+                        if p not in geo_URIs:
+                            geo_URIs[p] = set()
+                        geo_URIs[p].add(auth_yml)
+                    
+                    visited = re.findall(geo_regex, authD["20#AUTH#VISITED##:"])
+                    #geo += ["visited@"+p for p in visited]
+                    for p in visited:
+                        geo.append("visited@"+p)
+                        if p not in geo_URIs:
+                            geo_URIs[p] = set()
+                        geo_URIs[p].add(auth_yml)
                     #geo = " :: ".join(geo)
                     
 
@@ -1499,7 +1521,50 @@ Command line arguments for generate-metadata.py:
     with open(meta_header_fp, mode="w", encoding="utf-8") as file:
         json.dump(all_header_meta, file, ensure_ascii=False)
 
-    # 3- check duplicate ids:
+
+    # 3a- check Thurayya URIs:
+    with open("utility/Thurayya_URIs.csv", mode="r", encoding="utf-8") as file:
+        thurayya_uris = set(file.read().splitlines())
+    print("Places that are not in al-Thurayya:")
+    R_O_W_uris = []
+    XXXYYY_uris = []
+    auto_uris = []
+    for uri in geo_URIs:
+        if uri not in thurayya_uris:
+            if uri.endswith(("Auto", "AUTO", "auto")):
+                auto_uris.append(uri)
+            elif "XXXYYY" in uri:
+                XXXYYY_uris.append(uri)
+            else:
+                print("*", uri)
+                for author_yml in geo_URIs[uri]:
+                    print("  -", author_yml)
+        elif uri.endswith(("_R","_O","_W")):
+            R_O_W_uris.append(uri)
+    if auto_uris:
+        print("-"*80)
+        print("These URIs have been assigned only based on nisba and must be checked:")
+        for uri in auto_uris:
+            print("*", uri)
+            for author_yml in geo_URIs[uri]:
+                print("  -", author_yml)
+    if XXXYYY_uris:
+        print("-"*80)
+        print("These URIs should be added to Thurayya:")
+        for uri in XXXYYY_uris:
+            print("*", uri)
+            for author_yml in geo_URIs[uri]:
+                print("  -", author_yml)
+    if R_O_W_uris:
+        print("-"*80)
+        print("Thurayya URIs that exist but end with _R, _O or _W instead of _S:")
+        for uri in R_O_W_uris:
+            print("*", uri)
+            for author_yml in geo_URIs[uri]:
+                print("  -", author_yml)
+    print("="*80)
+        
+    # 3b- check duplicate ids:
     duplicate_ids = False
     for version_id, uris in version_ids.items():
         if len(uris) > 1:
@@ -1507,6 +1572,7 @@ Command line arguments for generate-metadata.py:
             print("DUPLICATE ID:", uris)
     if not duplicate_ids:
         print("NO DUPLICATE IDS FOUND")
+    print("="*80)
             
 
     print("Tada!")
