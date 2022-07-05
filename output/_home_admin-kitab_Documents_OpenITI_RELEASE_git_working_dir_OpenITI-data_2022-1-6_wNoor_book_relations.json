@@ -4017,9 +4017,9 @@
       "source": "0972IbnAhmadFakihi.SharhKitabHududFiNahw"
     }
   ],
-  "0972IbnAhmadIbnNajjarHanbali": [
+  "0972IbnAhmadIbnNajjarHanbali.KawkabMunir": [
     {
-      "dest": "0972IbnAhmadIbnNajjarHanbali",
+      "dest": "0972IbnAhmadIbnNajjarHanbali.KawkabMunir",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0972IbnAhmadIbnNajjarHanbali.SharhKawkabMunir"
@@ -4041,7 +4041,7 @@
   ],
   "0972IbnAhmadIbnNajjarHanbali.SharhKawkabMunir": [
     {
-      "dest": "0972IbnAhmadIbnNajjarHanbali",
+      "dest": "0972IbnAhmadIbnNajjarHanbali.KawkabMunir",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0972IbnAhmadIbnNajjarHanbali.SharhKawkabMunir"
