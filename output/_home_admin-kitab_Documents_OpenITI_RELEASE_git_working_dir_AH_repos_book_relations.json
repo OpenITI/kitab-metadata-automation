@@ -1,10 +1,112 @@
 {
+  "0001Galen.CommentaryOnAphorisms": [
+    {
+      "dest": "0001Galen.CommentaryOnAphorisms",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "0259HunaynIbnIshaq.TafsirJalinusLiFusulAbuqrat"
+    }
+  ],
+  "0001Hippocrates.Aphorismoi": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0175Anonymous.SharhAfladhinushLiFusulAbuqrat"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0410AbuSahlNili.TalkhisTafsirJalinus"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0453CaliIbnRidwan.TacaliqLiTafsirJalinus"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0470IbnAbiSadiqNisaburi.SharhFusulAbuqrat"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0500Sinjari.TaysirWusul"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0601MusaIbnMaymun.SharhFusulAbuqrat"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0629CabdLatifBaghdadi.SharhFusulAbuqrat"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0642IbnMinfakh.RaddIctiradat"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0685IbnQuffKaraki.SharhFusulAbuqrat"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0687IbnNafis.SharhFusulAbuqrat"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0687PseudoIbnNafis.SharhFusulAbuqrat"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0750IbnQasimKilani.SharhFusulAbuqrat"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0800CabdRahimTabib.SharhLiWasailWusul"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0893Manawi.TahqiqWusul"
+    }
+  ],
   "0150AbuHanifa.Wasiya": [
     {
       "dest": "0150AbuHanifa.Wasiya",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0786IbnMuhammadBabarti.SharhWasiyyatAbiHanifa"
+    }
+  ],
+  "0175Anonymous.SharhAfladhinushLiFusulAbuqrat": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0175Anonymous.SharhAfladhinushLiFusulAbuqrat"
     }
   ],
   "0179MalikIbnAnas.Muwatta": [
@@ -231,6 +333,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0956IbnCumarShamsDinSafiri.MajalisWacziyya"
+    }
+  ],
+  "0259HunaynIbnIshaq.TafsirJalinusLiFusulAbuqrat": [
+    {
+      "dest": "0001Galen.CommentaryOnAphorisms",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "0259HunaynIbnIshaq.TafsirJalinusLiFusulAbuqrat"
     }
   ],
   "0261Khassaf.AdabQadi": [
@@ -745,6 +855,14 @@
       "source": "0656IbnAbiHadid.SharhNahjBalagha"
     }
   ],
+  "0410AbuSahlNili.TalkhisTafsirJalinus": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0410AbuSahlNili.TalkhisTafsirJalinus"
+    }
+  ],
   "0422QadiCabdWahhabThaclabi.SharhRisala": [
     {
       "dest": "0386IbnAbiZaydQayrawani.Risala",
@@ -925,6 +1043,14 @@
       "source": "0450Jubbi.SharhMudawwana"
     }
   ],
+  "0453CaliIbnRidwan.TacaliqLiTafsirJalinus": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0453CaliIbnRidwan.TacaliqLiTafsirJalinus"
+    }
+  ],
   "0455IbnFuraja.FathCalaAbiFath": [
     {
       "dest": "0392IbnJinniMawsili.FathWahbi",
@@ -1009,6 +1135,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0469IbnBabshadh.SharhMuqaddima"
+    }
+  ],
+  "0470IbnAbiSadiqNisaburi.SharhFusulAbuqrat": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0470IbnAbiSadiqNisaburi.SharhFusulAbuqrat"
     }
   ],
   "0471CabdQahirJurjani.Jumal": [
@@ -1117,6 +1251,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "radd",
       "source": "0487AbuCubaydBakri.TanbihCalaAwham"
+    }
+  ],
+  "0500Sinjari.TaysirWusul": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0500Sinjari.TaysirWusul"
     }
   ],
   "0505Ghazali.IhyaCulumDin": [
@@ -1445,6 +1587,14 @@
       "source": "0734IbnCaliTajDinFakihani.RiyadAfham"
     }
   ],
+  "0601MusaIbnMaymun.SharhFusulAbuqrat": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0601MusaIbnMaymun.SharhFusulAbuqrat"
+    }
+  ],
   "0606FakhrDinRazi.AsasTaqdis": [
     {
       "dest": "0606FakhrDinRazi.AsasTaqdis",
@@ -1587,6 +1737,14 @@
       "source": "0627ZaynUmanaIbnCasakir.FawaidMuntaqatDhuhli"
     }
   ],
+  "0629CabdLatifBaghdadi.SharhFusulAbuqrat": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0629CabdLatifBaghdadi.SharhFusulAbuqrat"
+    }
+  ],
   "0629IbnNuqta.TaqyidLiMacrifa": [
     {
       "dest": "0629IbnNuqta.TaqyidLiMacrifa",
@@ -1645,6 +1803,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0639IbnKhabbaz.TawjihLumac"
+    }
+  ],
+  "0642IbnMinfakh.RaddIctiradat": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0642IbnMinfakh.RaddIctiradat"
     }
   ],
   "0642IbnNajjar.DhaylTarikhBaghdad": [
@@ -2051,6 +2217,14 @@
       "source": "0684ShihabDinQarafi.SharhTanqih"
     }
   ],
+  "0685IbnQuffKaraki.SharhFusulAbuqrat": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0685IbnQuffKaraki.SharhFusulAbuqrat"
+    }
+  ],
   "0685NasirDinBaydawi.MatnMinhajWusul": [
     {
       "dest": "0685NasirDinBaydawi.MatnMinhajWusul",
@@ -2089,12 +2263,28 @@
       "source": "0686RadiDinAstarabadhi.SharhRadiCalaKafiya"
     }
   ],
+  "0687IbnNafis.SharhFusulAbuqrat": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0687IbnNafis.SharhFusulAbuqrat"
+    }
+  ],
   "0687IbnNafis.SharhTashrihQanun": [
     {
       "dest": "0428IbnSina.QanunFiTibb",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0687IbnNafis.SharhTashrihQanun"
+    }
+  ],
+  "0687PseudoIbnNafis.SharhFusulAbuqrat": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0687PseudoIbnNafis.SharhFusulAbuqrat"
     }
   ],
   "0689AhmadIbnCabdRahmanIbnQudama.MukhtasarMinhajQasidin": [
@@ -2655,6 +2845,14 @@
       "source": "0749ZaynDinIbnWardi.SharhAlfiyyatIbnMalik"
     }
   ],
+  "0750IbnQasimKilani.SharhFusulAbuqrat": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0750IbnQasimKilani.SharhFusulAbuqrat"
+    }
+  ],
   "0751IbnQayyimJawziyya.HashiyaCalaSunanAbiDawud": [
     {
       "dest": "0275AbuDawudSijistani.Sunan",
@@ -2995,6 +3193,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0795IbnRajabHanbali.SharhCilalTirmidhi"
+    }
+  ],
+  "0800CabdRahimTabib.SharhLiWasailWusul": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0800CabdRahimTabib.SharhLiWasailWusul"
     }
   ],
   "0801CabdLatifIbnMalak.MabariqAzhar": [
@@ -3529,6 +3735,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0893IbnIsmacilShihabDinKurani.KawtharJari"
+    }
+  ],
+  "0893Manawi.TahqiqWusul": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0893Manawi.TahqiqWusul"
     }
   ],
   "0894IbnQasimRassacTunisi.SharhHudud": [
