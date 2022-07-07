@@ -78,6 +78,12 @@
       "dest": "0001Hippocrates.Aphorismoi",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
+      "source": "0725CabdAllahSiwasi.CumdatFuhul"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
       "source": "0750IbnQasimKilani.SharhFusulAbuqrat"
     },
     {
@@ -2463,6 +2469,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0855ShamsDinDikunquz.SharhCalaMarahArwah"
+    }
+  ],
+  "0725CabdAllahSiwasi.CumdatFuhul": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0725CabdAllahSiwasi.CumdatFuhul"
     }
   ],
   "0726CallamaHilli.IrshadAdhhan": [

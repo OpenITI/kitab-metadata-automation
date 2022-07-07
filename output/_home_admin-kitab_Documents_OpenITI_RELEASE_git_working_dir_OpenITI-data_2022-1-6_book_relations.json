@@ -78,6 +78,12 @@
       "dest": "0001Hippocrates.Aphorismoi",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
+      "source": "0725CabdAllahSiwasi.CumdatFuhul"
+    },
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
       "source": "0750IbnQasimKilani.SharhFusulAbuqrat"
     },
     {
@@ -883,6 +889,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0673IbnBuzayza.RawdatMustabin"
+    }
+  ],
+  "0426AbuIshaqKazaruni,translation_of": [
+    {
+      "dest": "0426AbuIshaqKazaruni,translation_of",
+      "main_rel_type": "biography_of",
+      "sec_rel_type": "",
+      "source": "0750MahmudIbnCuthman.FirdawsMurshidiyya"
     }
   ],
   "0428IbnSina.AfcalWaInficalat": [
@@ -2465,6 +2479,14 @@
       "source": "0855ShamsDinDikunquz.SharhCalaMarahArwah"
     }
   ],
+  "0725CabdAllahSiwasi.CumdatFuhul": [
+    {
+      "dest": "0001Hippocrates.Aphorismoi",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0725CabdAllahSiwasi.CumdatFuhul"
+    }
+  ],
   "0726CallamaHilli.IrshadAdhhan": [
     {
       "dest": "0726CallamaHilli.IrshadAdhhan",
@@ -2851,6 +2873,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0750IbnQasimKilani.SharhFusulAbuqrat"
+    }
+  ],
+  "0750MahmudIbnCuthman.FirdawsMurshidiyya": [
+    {
+      "dest": "0426AbuIshaqKazaruni,translation_of",
+      "main_rel_type": "biography_of",
+      "sec_rel_type": "",
+      "source": "0750MahmudIbnCuthman.FirdawsMurshidiyya"
     }
   ],
   "0751IbnQayyimJawziyya.HashiyaCalaSunanAbiDawud": [
