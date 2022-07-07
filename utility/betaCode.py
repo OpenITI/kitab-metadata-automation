@@ -406,7 +406,7 @@ def betacodeToArabic(text):
 
     #print("betacodeToArabic()")
     text = dictReplace(text, betacodeTranslit)
-    print(text)
+    #print(text)
     text = re.sub('\+' , '', text)
 
     # fix irrelevant variables for Arabic script

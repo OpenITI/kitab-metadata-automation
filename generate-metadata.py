@@ -134,6 +134,8 @@ from utility.betaCode import betaCodeToArSimple
 
 splitter = "##RECORD"+"#"*64+"\n"
 all_header_meta = dict()
+version_ids = dict()
+geo_URIs = dict()
 VERBOSE = False
 
 def LoadTags():
@@ -264,7 +266,7 @@ def load_srt_meta(srt_folder, passim_runs):
             with open(fp, mode="r", encoding="utf-8") as file:
                 html = file.read()
             ids = re.findall('<a href="([^\-"]+-[^"]+)"', html)
-            print(len(ids))
+            #print(len(ids))
             for id_ in ids:
                 #id_ = re.sub("Vols[A-Z]*|BK\d+", "", id_)
                 bare_id = id_.split("-")[0]
@@ -317,7 +319,7 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
 ##    webserver_url = 'http://dev.kitab-project.org'
     srt_d = load_srt_meta("./utility/srt/", passim_runs)
 
-    with open(csv_fp) as csvfile:
+    with open(csv_fp, mode="r", encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile, delimiter='\t')
         record = {}
 
@@ -385,7 +387,7 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
     first_json_key['data'] = json_objects
     first_json_key['date'] = datetime.now().strftime("%d %B %Y")
     first_json_key['time'] = datetime.now().strftime("%H:%M:%S")
-    print("first_json_key['date']", first_json_key['date'])
+    #print("first_json_key['date']", first_json_key['date'])
     with open(out_fp, 'w') as json_file:
         json.dump(first_json_key, json_file,
                   ensure_ascii=False, sort_keys=True)
@@ -489,8 +491,6 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
             title and author will be put into separate columns
     """
 
-    print("collecting metadata from OpenITI...")
-
     dataYML = []
     dataCSV = {}  # vers-uri, date, author, book, id, status, length, fullTextURL, instantiationURL, tags, localPath
     statusDic = {}
@@ -506,6 +506,12 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
             if re.search("^\d{4}[A-Za-z]+\.[A-Za-z\d]+\.\w+-(ara|per)\d\.yml$",
                          file):
                 uri = URI(os.path.join(root, file))
+
+                # add the version ID to the version_ids dictionary
+                # to check for duplicate IDs later:
+                if not uri.version in version_ids:
+                    version_ids[uri.version] = []
+                version_ids[uri.version].append(file)
 
                 # build the filepaths to all yml files related
                 # to the current version yml file:
@@ -608,13 +614,18 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     rels = re.split(" ?; ?", rels)
                     for rel in rels:
                         rel = re.sub("[ \r\n¶]+", " ", rel)
-                        try:
-                            rel_types = re.findall("\(([^\)]+)", rel)[0]
-                        except:
-                            print(bookF, ":")
-                            print("    no relationship type found in ", rel)
-                            continue
-                        rel_book = re.sub(" *\(.+", "", rel).strip()
+                        if "@" in rel:
+                            rel_types = rel.split("@")[0]
+                            rel_book = rel.split("@")[1]
+                        else:
+                            try:
+                                rel_types = re.findall("\(([^\)]+)", rel)[0]
+                            except:
+                                print(bookF, ":")
+                                print("    no relationship type found in ", rel)
+                                continue
+                            rel_book = re.sub(" *\(.+", "", rel).strip()
+                        
                         bookURI = uri.build_uri("book")
                         if not bookURI in book_rel_d:
                             book_rel_d[bookURI] = []
@@ -683,19 +694,40 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     full_name = " ".join(full_name)
 
                     # geo data:
+                    auth_yml = file.split(".")[0]+".yml"
+                    geo_regex = r"\w+_RE(?:_\w+)?|\w+_[RSNO]\b|\w+XXXYYY\w*"
                     
-                    born = re.findall("\w+_RE(?:_\w+)?|\w+_S",
-                                      authD["20#AUTH#BORN#####:"])
-                    geo += ["born@"+p for p in born]
-                    died = re.findall("\w+_RE(?:_\w+)?|\w+_S",
-                                      authD["20#AUTH#DIED#####:"])
-                    geo += ["died@"+p for p in died]
-                    resided = re.findall("\w+_RE(?:_\w+)?|\w+_S",
-                                         authD["20#AUTH#RESIDED##:"])
-                    geo += ["resided@"+p for p in resided]
-                    visited = re.findall("\w+_RE(?:_\w+)?|\w+_S",
-                                         authD["20#AUTH#VISITED##:"])
-                    geo += ["visited@"+p for p in visited]
+                    born = re.findall(geo_regex, authD["20#AUTH#BORN#####:"])
+                    #geo += ["born@"+p for p in born]
+                    for p in born:
+                        geo.append("born@"+p)
+                        if p not in geo_URIs:
+                            geo_URIs[p] = set()
+                        geo_URIs[p].add(auth_yml)
+                        
+                    died = re.findall(geo_regex, authD["20#AUTH#DIED#####:"])
+                    #geo += ["died@"+p for p in died]
+                    for p in died:
+                        geo.append("died@"+p)
+                        if p not in geo_URIs:
+                            geo_URIs[p] = set()
+                        geo_URIs[p].add(auth_yml)
+                    
+                    resided = re.findall(geo_regex, authD["20#AUTH#RESIDED##:"])
+                    #geo += ["resided@"+p for p in resided]
+                    for p in resided:
+                        geo.append("resided@"+p)
+                        if p not in geo_URIs:
+                            geo_URIs[p] = set()
+                        geo_URIs[p].add(auth_yml)
+                    
+                    visited = re.findall(geo_regex, authD["20#AUTH#VISITED##:"])
+                    #geo += ["visited@"+p for p in visited]
+                    for p in visited:
+                        geo.append("visited@"+p)
+                        if p not in geo_URIs:
+                            geo_URIs[p] = set()
+                        geo_URIs[p].add(auth_yml)
                     #geo = " :: ".join(geo)
                     
 
@@ -895,7 +927,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 # Deal with files split into multiple parts because
                 # they were too big: 
                 if re.search("[A-Z]-", versURI):
-                    print(versURI)
+                    print("FILE SPLIT because it was too big:", versURI)
                     m = re.sub("[A-Z]-", "-", versURI)
                     if m not in split_files:
                         split_files[m] = []
@@ -962,12 +994,12 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
         file_csv_line[h.index("id")] = file_csv_line[h.index("id")][:-1]
         file_csv_line[h.index("status")] = "sec"
         file_csv_line[h.index("tok_length")] = str(file_length)
-        print(file_csv_line[h.index("url")])
+        #print(file_csv_line[h.index("url")])
         #file_csv_line[h.index("url")] = re.sub("Vols[A-Z]", "",
         file_csv_line[h.index("url")] = re.sub("[A-Z](-[a-z]{3}\d)", r"\1",
                                                file_csv_line[h.index("url")]) # fullTextURL
-        print(file_csv_line[h.index("url")])
-        print("---")
+        #print(file_csv_line[h.index("url")])
+        #print("---")
         if incl_char_length:
             file_csv_line[-1] = str(file_clength)
         file_csv_line = "\t".join(file_csv_line)
@@ -1255,6 +1287,7 @@ Command line arguments for generate-metadata.py:
     incl_char_length = cfg_dict["incl_char_length"]
     output_path = cfg_dict["output_path"]
     meta_tsv_fp = cfg_dict["meta_tsv_fp"]
+    print(meta_tsv_fp)
     meta_yml_fp = cfg_dict["meta_yml_fp"]
     meta_json_fp = cfg_dict["meta_json_fp"]
     meta_header_fp = cfg_dict["meta_header_fp"]
@@ -1396,7 +1429,7 @@ Command line arguments for generate-metadata.py:
 
 
     pth_string = re.sub("\.+[\\/]", "", corpus_path)
-    pth_string = re.sub(r"[\\/]", "_", pth_string)
+    pth_string = re.sub(r"[:\\/]+", "_", pth_string)
     pth_string = os.path.join(output_path, pth_string)
     if meta_yml_fp == None: 
         meta_yml_fp = pth_string + "_metadata_complete.yml"
@@ -1485,6 +1518,83 @@ Command line arguments for generate-metadata.py:
 
     with open(meta_header_fp, mode="w", encoding="utf-8") as file:
         json.dump(all_header_meta, file, ensure_ascii=False)
+
+
+    # 3a- check Thurayya URIs:
+    with open("utility/Thurayya_URIs.csv", mode="r", encoding="utf-8") as file:
+        thurayya_uris = set(file.read().splitlines())
+    print("Places that are not in al-Thurayya:")
+    R_O_W_uris = []
+    XXXYYY_uris = []
+    auto_uris = []
+    error_uris = []
+    for uri in geo_URIs:
+        if uri not in thurayya_uris:
+            if uri.endswith(("Auto", "AUTO", "auto")):
+                auto_uris.append(uri)
+            elif "XXXYYY" in uri:
+                XXXYYY_uris.append(uri)
+            else:
+                error_uris.append(uri)
+##                print("*", uri)
+##                for author_yml in geo_URIs[uri]:
+##                    print("  -", author_yml)
+        elif uri.endswith(("_R","_O","_W")):
+            R_O_W_uris.append(uri)
+    if error_uris:
+        print("-"*80)
+        print("These URIs seem to be faulty:")
+        for uri in sorted(error_uris):
+            print("*", uri)        
+    if auto_uris:
+        print("-"*80)
+        print("These URIs have been assigned only based on nisba and must be checked:")
+        for uri in sorted(auto_uris):
+            print("*", uri)
+##            for author_yml in geo_URIs[uri]:
+##                print("  -", author_yml)
+    if XXXYYY_uris:
+        print("-"*80)
+        print("These URIs should be added to Thurayya:")
+        for uri in sorted(XXXYYY_uris):
+            print("*", uri)
+##            for author_yml in geo_URIs[uri]:
+##                print("  -", author_yml)
+    if R_O_W_uris:
+        print("-"*80)
+        print("Thurayya URIs that exist but end with _R, _O or _W instead of _S:")
+        for uri in sorted(R_O_W_uris):
+            print("*", uri)
+##            for author_yml in geo_URIs[uri]:
+##                print("  -", author_yml)
+    print("-"*80)
+    print("YML files that contain Thurayya URI issues can be found in")
+    print(pth_string+"Thurayya_URIs_to_be_checked.csv")
+
+    # write details to file:
+    csv_list = []
+    error_lists = [error_uris, auto_uris, XXXYYY_uris, R_O_W_uris]
+    error_labels = ["error", "auto", "XXXYYY", "R_O_W"]
+    for i, lst in enumerate([error_uris, auto_uris, XXXYYY_uris, R_O_W_uris]):
+        for uri in lst:
+            for author_yml in geo_URIs[uri]:
+                csv_list.append("{}\t{}\t{}".format(error_labels[i], uri, author_yml))
+    fp = pth_string+"_Thurayya_URIs_to_be_checked.csv"
+    with open(fp, mode="w", encoding="utf-8") as file:
+        file.write("URI problem type\tThurayya URI\tAuthor YML\n")
+        file.write("\n".join(sorted(csv_list)))        
+    print("="*80)
+        
+    # 3b- check duplicate ids:
+    duplicate_ids = False
+    for version_id, uris in version_ids.items():
+        if len(uris) > 1:
+            duplicate_ids = True
+            print("DUPLICATE ID:", uris)
+    if not duplicate_ids:
+        print("NO DUPLICATE IDS FOUND")
+    print("="*80)
+            
 
     print("Tada!")
     print("Total processing time: {0:.2f} sec".format(end - start))
