@@ -699,9 +699,15 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                                   "10#AUTH#NASAB##AR:",
                                   "10#AUTH#NISBA##AR:"]
                     full_name = [authD[x] for x in name_comps \
-                                 if not ("Fulān" in authD[x] \
-                                         or "none" in authD[x].lower())]
+                                 if x in authD \
+                                 and not ("Fulān" in authD[x] \
+                                             or "none" in authD[x].lower())]
                     full_name = " ".join(full_name)
+                    name_comps_en = [x.replace("#AR:", "#EN:") for x in name_comps]
+                    english_name = [authD[x] for x in name_comps_en \
+                                    if x in authD and \
+                                    not ("Fulān" in authD[x] \
+                                         or "none" in authD[x].lower())]
 
                     # collect author name elements:
                     for lang in ["AR", "EN", "FA"]:
@@ -764,9 +770,11 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
                 # - author:
 ##                author = insert_spaces(uri.author)
+                author_ar = []
                 author_from_uri = insert_spaces(uri.author)
                 author_lat = [author_from_uri, ]
-                author_ar = []
+                if english_name:
+                    author_lat.append(" ".join(english_name))
 
                 # - book title:
 ##                if not title:
