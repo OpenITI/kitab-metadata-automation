@@ -388,7 +388,7 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
     first_json_key['date'] = datetime.now().strftime("%d %B %Y")
     first_json_key['time'] = datetime.now().strftime("%H:%M:%S")
     #print("first_json_key['date']", first_json_key['date'])
-    with open(out_fp, 'w') as json_file:
+    with open(out_fp, 'w', encoding="utf-8") as json_file:
         json.dump(first_json_key, json_file,
                   ensure_ascii=False, sort_keys=True)
 
@@ -471,8 +471,15 @@ def insert_spaces(s):
     """Split the camel-case string s and insert a space before each capital."""
     return re.sub("([a-z])([A-Z])", r"\1 \2", s)
 
+def get_name_el(d, k):
+    if k in d:
+        if not "fulān" in d[k].lower() and not "none" in d[k].lower():
+            return d[k]
+    return ""
+    
+
 def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
-                    book_rel_outpth,
+                    book_rel_outpth, name_el_outpth,
                     incl_char_length=False, split_ar_lat=False,
                     flat_folder=False, output_files_path=None):
     """Collect the metadata from URIs, YML files and text file headers
@@ -497,6 +504,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
     split_files = dict()
     start_folder = re.sub("\\\\", "/", start_folder)
     book_rel_d = dict()
+    name_elements_d = dict()
 
     for root, dirs, files in os.walk(start_folder):
         dirs[:] = [d for d in sorted(dirs) if d not in exclude]
@@ -677,9 +685,11 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 ##                authD = zfunc.readYML(authF)
                 shuhra = ""
                 full_name = ""
-
+                name_d = dict()
+                authorURI = uri.build_uri("author")
                 geo = []
                 if authD:
+                    # create a full name from the name elements:
                     if not ("Fulān" in authD["10#AUTH#SHUHRA#AR:"]\
                             or "none" in authD["10#AUTH#SHUHRA#AR:"].lower()):
                         shuhra = authD["10#AUTH#SHUHRA#AR:"].strip()
@@ -689,9 +699,31 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                                   "10#AUTH#NASAB##AR:",
                                   "10#AUTH#NISBA##AR:"]
                     full_name = [authD[x] for x in name_comps \
-                                 if not ("Fulān" in authD[x] \
-                                         or "none" in authD[x].lower())]
+                                 if x in authD \
+                                 and not ("Fulān" in authD[x] \
+                                             or "none" in authD[x].lower())]
                     full_name = " ".join(full_name)
+                    name_comps_en = [x.replace("#AR:", "#EN:") for x in name_comps]
+                    english_name = [authD[x] for x in name_comps_en \
+                                    if x in authD and \
+                                    not ("Fulān" in authD[x] \
+                                         or "none" in authD[x].lower())]
+
+                    # collect author name elements:
+                    for lang in ["AR", "EN", "FA"]:
+                        lang_d = dict()
+                        add = False
+                        for yml_k in ["10#AUTH#SHUHRA#AR:"]+name_comps:
+                            yml_k = yml_k.replace("#AR:", "#{}:".format(lang))
+                            k = re.findall("(?<=10#AUTH#)\w+", yml_k)[0].lower()
+                            lang_d[k] = get_name_el(authD, yml_k)
+                            
+                            if lang_d[k]:
+                                add = True
+                        if add:
+                            name_d[lang] = lang_d
+                    if name_d:
+                        name_elements_d[authorURI] = name_d
 
                     # geo data:
                     auth_yml = file.split(".")[0]+".yml"
@@ -738,9 +770,11 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
                 # - author:
 ##                author = insert_spaces(uri.author)
+                author_ar = []
                 author_from_uri = insert_spaces(uri.author)
                 author_lat = [author_from_uri, ]
-                author_ar = []
+                if english_name:
+                    author_lat.append(" ".join(english_name))
 
                 # - book title:
 ##                if not title:
@@ -1024,6 +1058,23 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
     # also save the combined yml data in a master yml file: 
     with open(yml_outpth, "w", encoding="utf8") as outfile:
         outfile.write("\n".join(dataYML))
+
+##    # also save the name elements to a tsv file:
+##    tsv = ["authorURI\tlang\tism\tnasab\tkunya\tlaqab\tnisba\tshuhra"]
+##    keys = tsv[0].split("\t")
+##    
+##    for authorURI in name_elements_d:
+##        for lang in name_elements_d[authorURI]:
+##            row = [authorURI, lang]
+##            row += [name_elements_d[authorURI][lang][k] for k in keys[2:]]
+##            tsv.append("\t".join(row))
+##    name_els_fp = re.sub("\.[tc]sv", "_name_elements.tsv", csv_outpth)
+##    with open(name_els_fp, mode="w", encoding="utf-8") as outfile:
+##        outfile.write("\n".join(tsv))
+
+    # also save the name elements to a json file:
+    with open(name_el_outpth, mode="w", encoding="utf-8") as outfile:
+        json.dump(name_elements_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
 
     # Finally, save the book relations:
     with open(book_rel_outpth, "w", encoding="utf-8") as outfile:
@@ -1440,6 +1491,7 @@ Command line arguments for generate-metadata.py:
     if meta_header_fp == None:
         meta_header_fp = pth_string + "_header_metadata.json"
     book_rel_fp = pth_string + "_book_relations.json"
+    name_el_fp = pth_string + "_name_elements.json"
 
 ##def main(corpus_path, exclude, data_in_25_year_repos, perform_yml_check, 
 ##         check_token_counts, incl_char_length, output_path, meta_tsv_fp,
@@ -1485,7 +1537,7 @@ Command line arguments for generate-metadata.py:
     print("="*80)
     print("Collecting metadata...")
     collectMetadata(corpus_path, exclude, meta_tsv_fp, meta_yml_fp,
-                    book_rel_fp, incl_char_length=incl_char_length,
+                    book_rel_fp, name_el_fp, incl_char_length=incl_char_length,
                     split_ar_lat=split_ar_lat, flat_folder=flat_folder,
                     output_files_path=output_files_path)
     temp = end
@@ -1528,6 +1580,7 @@ Command line arguments for generate-metadata.py:
     XXXYYY_uris = []
     auto_uris = []
     error_uris = []
+    any_errors = False
     for uri in geo_URIs:
         if uri not in thurayya_uris:
             if uri.endswith(("Auto", "AUTO", "auto")):
@@ -1542,11 +1595,13 @@ Command line arguments for generate-metadata.py:
         elif uri.endswith(("_R","_O","_W")):
             R_O_W_uris.append(uri)
     if error_uris:
+        any_errors = True
         print("-"*80)
         print("These URIs seem to be faulty:")
         for uri in sorted(error_uris):
             print("*", uri)        
     if auto_uris:
+        any_errors = True
         print("-"*80)
         print("These URIs have been assigned only based on nisba and must be checked:")
         for uri in sorted(auto_uris):
@@ -1554,6 +1609,7 @@ Command line arguments for generate-metadata.py:
 ##            for author_yml in geo_URIs[uri]:
 ##                print("  -", author_yml)
     if XXXYYY_uris:
+        any_errors = True
         print("-"*80)
         print("These URIs should be added to Thurayya:")
         for uri in sorted(XXXYYY_uris):
@@ -1561,15 +1617,19 @@ Command line arguments for generate-metadata.py:
 ##            for author_yml in geo_URIs[uri]:
 ##                print("  -", author_yml)
     if R_O_W_uris:
+        any_errors = True
         print("-"*80)
         print("Thurayya URIs that exist but end with _R, _O or _W instead of _S:")
         for uri in sorted(R_O_W_uris):
             print("*", uri)
 ##            for author_yml in geo_URIs[uri]:
 ##                print("  -", author_yml)
-    print("-"*80)
-    print("YML files that contain Thurayya URI issues can be found in")
-    print(pth_string+"Thurayya_URIs_to_be_checked.csv")
+    if not any_errors:
+        print("    no problems found with Thurayya URIs")
+    else:
+        print("-"*80)
+        print("YML files that contain Thurayya URI issues can be found in")
+        print(pth_string+"Thurayya_URIs_to_be_checked.csv")
 
     # write details to file:
     csv_list = []
