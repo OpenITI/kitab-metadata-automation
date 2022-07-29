@@ -99,9 +99,9 @@
       "source": "0893Manawi.TahqiqWusul"
     }
   ],
-  "0150AbuHanifa.Wasiya": [
+  "0150AbuHanifa.Wasiyya": [
     {
-      "dest": "0150AbuHanifa.Wasiya",
+      "dest": "0150AbuHanifa.Wasiyya",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0786IbnMuhammadBabarti.SharhWasiyyatAbiHanifa"
@@ -3141,7 +3141,7 @@
   ],
   "0786IbnMuhammadBabarti.SharhWasiyyatAbiHanifa": [
     {
-      "dest": "0150AbuHanifa.Wasiya",
+      "dest": "0150AbuHanifa.Wasiyya",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0786IbnMuhammadBabarti.SharhWasiyyatAbiHanifa"

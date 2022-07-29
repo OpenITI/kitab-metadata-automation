@@ -265,7 +265,7 @@
       "kunya": "Abū al-Ḥawārī",
       "laqab": "al-Aʿmá",
       "nasab": "b. al-Ḥawārī b. ʿUṯmān",
-      "nisba": "al-Ḥawārī",
+      "nisba": "al-ʿUmānī",
       "shuhra": "Abū al-Ḥawārī al-Aʿmá"
     }
   },
@@ -306,7 +306,7 @@
       "laqab": "",
       "nasab": "",
       "nisba": "",
-      "shuhra": "Usṭāṯ (Eustathius)"
+      "shuhra": "Usṭāṯ"
     },
     "EN": {
       "ism": "",
@@ -314,7 +314,7 @@
       "laqab": "",
       "nasab": "",
       "nisba": "",
-      "shuhra": "Usṭāth (Eustathius)"
+      "shuhra": "Eustathius"
     }
   },
   "0276IbnQutaybaDinawari": {
@@ -824,7 +824,15 @@
       "laqab": "",
       "nasab": "b. Aḥmad",
       "nisba": "",
-      "shuhra": "al-Maqdisī, al-Bašārī"
+      "shuhra": "al-Maqdisī, al-Baššārī"
+    },
+    "EN": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "al-Muqaddasī"
     }
   },
   "0395IbnJazzar": {
@@ -945,6 +953,14 @@
       "nasab": "b. ʿAbd Al-lãh b. Sīnā",
       "nisba": "",
       "shuhra": "Ibn Sīnā"
+    },
+    "EN": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Avicenna"
     }
   },
   "0429AbuMansurThacalibi": {
@@ -2289,12 +2305,20 @@
   },
   "1313CorneliusVanDyck": {
     "AR": {
-      "ism": "Cornelius Van Allen Van Dyck, Kurniliyūs Fān Ālin Fān Dīk",
+      "ism": "Kurniliyūs Fān Ālin Fān Dīk",
       "kunya": "",
       "laqab": "",
       "nasab": "",
       "nisba": "",
-      "shuhra": "Cornelius Van Dyck, Kurniliyūs Fān Dīk"
+      "shuhra": "Kurniliyūs Fān Dīk"
+    },
+    "EN": {
+      "ism": "Cornelius Van Allen Van Dyck",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Cornelius Van Dyck"
     }
   },
   "1334CaliKhaqani": {
@@ -2334,7 +2358,7 @@
       "laqab": "",
       "nasab": "",
       "nisba": "Ṭabāṭabāʾī",
-      "shuhra": "Sayyid Ṭabāṭabāʾī, Callāmaŧ Ṭabāṭabāʾī"
+      "shuhra": "Sayyid Ṭabāṭabāʾī, ʿAllāmaŧ Ṭabāṭabāʾī"
     }
   }
 }
