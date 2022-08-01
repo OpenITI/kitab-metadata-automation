@@ -1163,6 +1163,16 @@
       "shuhra": "Nāṣir Ḫusraw"
     }
   },
+  "0482AbuIshaqHabbal": {
+    "AR": {
+      "ism": "Ibrāhīm",
+      "kunya": "Abū Isḥāq",
+      "laqab": "al-Ḥāfiẓ",
+      "nasab": "b. Saʿīd b. ʿAbd Al-lãh",
+      "nisba": "",
+      "shuhra": "al-Habbāl"
+    }
+  },
   "0487AbuCubaydBakri": {
     "AR": {
       "ism": "ʿAbdallāh",
@@ -1275,9 +1285,9 @@
   },
   "0555IbnQalanisi": {
     "AR": {
-      "ism": "Ḥamza",
+      "ism": "Ḥamzaŧ",
       "kunya": "Abū Yaʿlá",
-      "laqab": "",
+      "laqab": "Maǧd al-Ruʾasāʾ",
       "nasab": "b. Asad b. ʿAlī b. Muḥammad",
       "nisba": "al-Tamīmī",
       "shuhra": "Ibn al-Qalānisī"
@@ -1291,6 +1301,26 @@
       "nasab": "b. Muḥammad b. ʿAbd Allāh b. Idrīs",
       "nisba": "al-Ḥammūdī al-Ḥusaynī",
       "shuhra": "al-Šarīf al-Idrīsī"
+    }
+  },
+  "0562Samcani": {
+    "AR": {
+      "ism": "ʿAbd al-Karīm",
+      "kunya": "Abū Saʿd",
+      "laqab": "Tāǧ al-ʾIslām Ḳawām al-dīn",
+      "nasab": "b. Abī Bakr Muḥammad b. Abī al-Muẓaffar Manṣūr",
+      "nisba": "al-Tamīmī al-Samʿānī al-Marwazī al-Šāfiʿī",
+      "shuhra": "al-Samʿānī"
+    }
+  },
+  "0565IbnFunduqBayhaqi": {
+    "AR": {
+      "ism": "ʿAlī",
+      "kunya": "Abū al-Ḥasan",
+      "laqab": "Ẓahīr al-dīn",
+      "nasab": "b. Zayd b. Muḥammad b. al-Ḥusayn b. Funduq",
+      "nisba": "al-Bayhaqī",
+      "shuhra": "Ibn Funduq/Fanduq (the former is recorded in EIr and the latter is recorded in the editor's introduction to Tarikh Bayhaq)"
     }
   },
   "0569CumaraYamani": {
@@ -1321,6 +1351,16 @@
       "nasab": "b. Ḫayr b. ʿUmar b. Ḫalīfaŧ",
       "nisba": "al-Lamtūnī al-Amawī al-Išbīlī",
       "shuhra": "Ibn Ḫayr al-Išbīlī"
+    }
+  },
+  "0577AbuBarakatAnbari": {
+    "AR": {
+      "ism": "ʿAbd al-Raḥmān",
+      "kunya": "Kamāl al-dīn",
+      "laqab": "Abū al-barakāt",
+      "nasab": "b. Muḥammad b. ʿUbayd Al-lãh b. Abī Saʿīd",
+      "nisba": "al-Anbārī",
+      "shuhra": "Ibn al-Anbārī"
     }
   },
   "0580IbnCimrani": {
@@ -1471,6 +1511,26 @@
       "nasab": "b. ʿAlī b. Muḥammad b. ʿArabī",
       "nisba": "al-Ḥātimī al-Ṭāʾī",
       "shuhra": "Ibn ʿArabī al-Šayḫ al-akbar"
+    }
+  },
+  "0640AbuHafsDunaysiri": {
+    "AR": {
+      "ism": "ʿUmar",
+      "kunya": "Abū Ḥafṣ",
+      "laqab": "",
+      "nasab": "b. Ḫiḍr",
+      "nisba": "al-Turkī Dunaysirī",
+      "shuhra": "Dunaysirī"
+    }
+  },
+  "0642IbnNajjar": {
+    "AR": {
+      "ism": "Muḥammad",
+      "kunya": "Abū ʿAbd Al-lãh",
+      "laqab": "Ḥāfiẓ Muḥib al-dīn",
+      "nasab": "b. Maḥmūd b. al-Ḥasan",
+      "nisba": "al-Baġdādī",
+      "shuhra": "Ibn Naǧǧār"
     }
   },
   "0643IbnSalahShahrazuri": {
