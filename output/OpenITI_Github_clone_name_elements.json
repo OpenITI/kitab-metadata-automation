@@ -853,6 +853,50 @@
       "shuhra": "Ḥubayš b. al-Ḥasan"
     }
   },
+  "0300IbnKhurdadhbih": {
+    "AR": {
+      "ism": "عبيد الله",
+      "kunya": "أبو القاسم",
+      "laqab": "",
+      "nasab": "بن أحمد بن خرداذبه",
+      "nisba": "",
+      "shuhra": "ابن خرداذبه"
+    },
+    "EN": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Ibn Khurradādhbih"
+    },
+    "LA": {
+      "ism": "ʿUbayd Allāh",
+      "kunya": "Abū al-Qāsim",
+      "laqab": "",
+      "nasab": "b. Aḥmad b. Ḫurdāḏbih",
+      "nisba": "",
+      "shuhra": "Ibn Ḫurdāḏbih"
+    }
+  },
+  "0300IbnRusta": {
+    "AR": {
+      "ism": "أحمد",
+      "kunya": "أبو علي",
+      "laqab": "",
+      "nasab": "بن عمر بن رسته",
+      "nisba": "",
+      "shuhra": "ابن رسته"
+    },
+    "LA": {
+      "ism": "Aḥmad",
+      "kunya": "Abū ʿAlī",
+      "laqab": "",
+      "nasab": "b. ʿUmar b. Rustah",
+      "nisba": "",
+      "shuhra": "Ibn Rustah"
+    }
+  },
   "0300IbnShahdaKarkhi": {
     "AR": {
       "ism": "",
@@ -1265,6 +1309,24 @@
       "nasab": "b. ʿAdī b. ʿAbd Allāh b. Muḥammad b. al-Mubārak",
       "nisba": "al-Jurjānī",
       "shuhra": "Ibn ʿAdī, Ibn al-Qaṭṭān"
+    }
+  },
+  "0365IbnFaqihHamadhani": {
+    "AR": {
+      "ism": "أحمد",
+      "kunya": "أبو عبد الله",
+      "laqab": "",
+      "nasab": "بن محمد بن اسحاق بن الفقيه",
+      "nisba": "الهمذاني",
+      "shuhra": "ابن الفقيه"
+    },
+    "LA": {
+      "ism": "Aḥmad",
+      "kunya": "Abū ʿAbd Allāh",
+      "laqab": "",
+      "nasab": "b. Muḥammad b. Isḥāq b. al-Faqīh",
+      "nisba": "al-Hamaḏānī",
+      "shuhra": "Ibn al-Faqīh"
     }
   },
   "0366IbnCabdJabbarNiffari": {

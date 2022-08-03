@@ -267,6 +267,22 @@
       "source": "0392IbnJinniMawsili.Munsif"
     }
   ],
+  "0255Jahiz.Amsar": [
+    {
+      "dest": "0255Jahiz.Amsar",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "",
+      "source": "0255Jahiz.AwtanWaBuldan"
+    }
+  ],
+  "0255Jahiz.AwtanWaBuldan": [
+    {
+      "dest": "0255Jahiz.Amsar",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "",
+      "source": "0255Jahiz.AwtanWaBuldan"
+    }
+  ],
   "0256Bukhari.Sahih": [
     {
       "dest": "0256Bukhari.Sahih",
