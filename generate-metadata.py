@@ -130,7 +130,7 @@ from openiti.helper.uri import URI, check_yml_files
 from openiti.git import get_issues
 from openiti.helper.yml import readYML, dicToYML, fix_broken_yml
 from openiti.helper.ara import deNoise, ar_cnt_file
-from utility.betaCode import 
+from utility.betaCode import betaCodeToArSimple
 
 splitter = "##RECORD"+"#"*64+"\n"
 all_header_meta = dict()
