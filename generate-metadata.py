@@ -130,7 +130,7 @@ from openiti.helper.uri import URI, check_yml_files
 from openiti.git import get_issues
 from openiti.helper.yml import readYML, dicToYML, fix_broken_yml
 from openiti.helper.ara import deNoise, ar_cnt_file
-from utility.betaCode import betaCodeToArSimple
+from utility.betaCode import 
 
 splitter = "##RECORD"+"#"*64+"\n"
 all_header_meta = dict()
@@ -721,7 +721,15 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                             if lang_d[k]:
                                 add = True
                         if add:
-                            name_d[lang] = lang_d
+                            if lang == "EN":
+                                name_d[lang] = lang_d
+                            else:
+                                # store a version of the name in transcription and Arabic script:
+                                name_d["LA"] = lang_d
+                                lang_d_converted = {k: betaCodeToArSimple(v) for k,v in lang_d.items()}
+                                name_d[lang] = lang_d_converted
+                                
+                            
                     if name_d:
                         name_elements_d[authorURI] = name_d
 
