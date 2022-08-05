@@ -635,6 +635,14 @@
       "source": "0367IbnHawqal.SuratArd"
     }
   ],
+  "0346Mascudi.AkhbarZaman": [
+    {
+      "dest": "0346Mascudi.AkhbarZaman",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "0596IbnWasifShah.MukhtasarCajaibDunya"
+    }
+  ],
   "0347IbnDurustawayh.TashihFasih": [
     {
       "dest": "0291IbnYahyaThaclab.Fasih",
@@ -1585,6 +1593,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0977KhatibShirbini.Iqnac"
+    }
+  ],
+  "0596IbnWasifShah.MukhtasarCajaibDunya": [
+    {
+      "dest": "0346Mascudi.AkhbarZaman",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "0596IbnWasifShah.MukhtasarCajaibDunya"
     }
   ],
   "0597IbnJawzi.KashfMushkil": [

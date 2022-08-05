@@ -1509,6 +1509,24 @@
       "shuhra": "Ibn Zabr al-Rabʿī"
     }
   },
+  "0380Muhallabi": {
+    "AR": {
+      "ism": "الحسن",
+      "kunya": "أبو الحسين",
+      "laqab": "",
+      "nasab": "بن أحمد",
+      "nisba": "المهلبي",
+      "shuhra": "المهلبي"
+    },
+    "LA": {
+      "ism": "al-Ḥasan",
+      "kunya": "Abū al-Ḥusayn",
+      "laqab": "",
+      "nasab": "b. Aḥmad",
+      "nisba": "al-Muhallabī",
+      "shuhra": "al-Muhallabī"
+    }
+  },
   "0381IbnBabawayhSaduq": {
     "AR": {
       "ism": "محمد",
@@ -1901,6 +1919,24 @@
       "nasab": "b. Abī Ṭālib Ḥammūš b. Muḥammad b. Muḫtār",
       "nisba": "al-Qaysī, al-Qayrawānī, al-Andalusī, al-Qurṭubī, al-¶    Mālikī",
       "shuhra": "Makkī b. Ḥammūš al-Qaysī"
+    }
+  },
+  "0443AbuSacidGardizi": {
+    "AR": {
+      "ism": "عبد الحي",
+      "kunya": "أبو سعيد",
+      "laqab": "",
+      "nasab": "بن الضحاك بن محمود",
+      "nisba": "الگرديزي",
+      "shuhra": "گرديزي"
+    },
+    "LA": {
+      "ism": "ʿAbd al-Ḥayy",
+      "kunya": "Abū Saʿīd",
+      "laqab": "",
+      "nasab": "b. al-Ḍaḥḥāk b. Maḥmūd",
+      "nisba": "al-Gardīzī",
+      "shuhra": "Gardīzī"
     }
   },
   "0450AbuHasanMawardi": {
@@ -4187,16 +4223,16 @@
       "kunya": "أبو الوهاب",
       "laqab": "",
       "nasab": "بن أحمد بن علي",
-      "nisba": "الأنصاري، السهعراني",
-      "shuhra": "عبد الوهاب السهعراني"
+      "nisba": "الأنصاري، الشعراني",
+      "shuhra": "عبد الوهاب الشعراني"
     },
     "LA": {
       "ism": "ʿAbd al-Wahhāb",
       "kunya": "Abū al-Wahhāb",
       "laqab": "",
       "nasab": "b. Aḥmad b. ʿAlī",
-      "nisba": "al-Anṣārī, al-Shaʿrānī",
-      "shuhra": "ʿAbd al-Wahhāb al-Shaʿrānī"
+      "nisba": "al-Anṣārī, al-Šaʿrānī",
+      "shuhra": "ʿAbd al-Wahhāb al-Šaʿrānī"
     }
   },
   "0992CaliIbnBaliManq": {
