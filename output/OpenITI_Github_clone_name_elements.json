@@ -1927,7 +1927,7 @@
       "kunya": "أبو سعيد",
       "laqab": "",
       "nasab": "بن الضحاك بن محمود",
-      "nisba": "الگرديزي",
+      "nisba": "الگرديزي / الجرديزي",
       "shuhra": "گرديزي"
     },
     "LA": {
@@ -1935,7 +1935,7 @@
       "kunya": "Abū Saʿīd",
       "laqab": "",
       "nasab": "b. al-Ḍaḥḥāk b. Maḥmūd",
-      "nisba": "al-Gardīzī",
+      "nisba": "al-Gardīzī / al-Ǧardīzī",
       "shuhra": "Gardīzī"
     }
   },
@@ -2387,6 +2387,24 @@
       "nasab": "b. Muḥammad b. al-Ḥusayn b. Muḥammad b. Ḫalaf b. Aḥmad b. al-Farrāʾ",
       "nisba": "al-Farrāʾ al-Baġdādī al-Ḥanbalī",
       "shuhra": "Ibn Abī Yaʿlá"
+    }
+  },
+  "0533Kharaqi": {
+    "AR": {
+      "ism": "عبد الجبار",
+      "kunya": "أبو محمد",
+      "laqab": "",
+      "nasab": "بن عبد الجبار بن محمد",
+      "nisba": "الثابتي الحسيني المروزي الخرقي",
+      "shuhra": "الخرقي"
+    },
+    "LA": {
+      "ism": "ʿAbd al-Ǧabbār",
+      "kunya": "Abū Muḥammad",
+      "laqab": "",
+      "nasab": "b. ʿAbd al-Ǧabbār b. Muḥammad",
+      "nisba": "al-Ṯābitī al-Ḥusaynī al-Marwazī al-Ḫaraqī",
+      "shuhra": "al-Ḫaraqī"
     }
   },
   "0535QadiMaristan": {
