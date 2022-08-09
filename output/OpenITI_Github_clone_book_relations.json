@@ -231,6 +231,14 @@
       "source": "0487AbuCubaydBakri.FaslMaqal"
     }
   ],
+  "0227AbuMuhammadAzraqi.Makka": [
+    {
+      "dest": "0227AbuMuhammadAzraqi.Makka",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "",
+      "source": "0249Azraqi.AkhbarMakka"
+    }
+  ],
   "0240SahnunIbnSacid.MudawwanaKubra": [
     {
       "dest": "0240SahnunIbnSacid.MudawwanaKubra",
@@ -265,6 +273,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0392IbnJinniMawsili.Munsif"
+    }
+  ],
+  "0249Azraqi.AkhbarMakka": [
+    {
+      "dest": "0227AbuMuhammadAzraqi.Makka",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "",
+      "source": "0249Azraqi.AkhbarMakka"
     }
   ],
   "0255Jahiz.Amsar": [
