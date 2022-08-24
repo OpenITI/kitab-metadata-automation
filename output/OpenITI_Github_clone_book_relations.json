@@ -2887,20 +2887,6 @@
       "source": "0748Dhahabi.MuntaqaMinMinhajIctidal"
     }
   ],
-  "0748Dhahabi.TabaqatHuffaz": [
-    {
-      "dest": "0748Dhahabi.TabaqatHuffaz",
-      "main_rel_type": "CONT",
-      "sec_rel_type": "dhayl",
-      "source": "0871IbnFahdMakki.LahzAlhaz"
-    },
-    {
-      "dest": "0748Dhahabi.TabaqatHuffaz",
-      "main_rel_type": "CONT",
-      "sec_rel_type": "dhayl",
-      "source": "0911Suyuti.DhaylTabaqatHuffaz"
-    }
-  ],
   "0748Dhahabi.TadhhibTahdhib": [
     {
       "dest": "0742Mizzi.TahdhibKamal",
@@ -2921,6 +2907,18 @@
       "main_rel_type": "CONT",
       "sec_rel_type": "dhayl",
       "source": "0765AbuMahasinHusayni.DhaylTadhkira"
+    },
+    {
+      "dest": "0748Dhahabi.TadhkiratHuffaz",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "0871IbnFahdMakki.LahzAlhaz"
+    },
+    {
+      "dest": "0748Dhahabi.TadhkiratHuffaz",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "0911Suyuti.DhaylTabaqatHuffaz"
     }
   ],
   "0748Dhahabi.TalkhisMawducatIbnJawzi": [
@@ -3799,7 +3797,7 @@
   ],
   "0871IbnFahdMakki.LahzAlhaz": [
     {
-      "dest": "0748Dhahabi.TabaqatHuffaz",
+      "dest": "0748Dhahabi.TadhkiratHuffaz",
       "main_rel_type": "CONT",
       "sec_rel_type": "dhayl",
       "source": "0871IbnFahdMakki.LahzAlhaz"
@@ -3983,7 +3981,7 @@
   ],
   "0911Suyuti.DhaylTabaqatHuffaz": [
     {
-      "dest": "0748Dhahabi.TabaqatHuffaz",
+      "dest": "0748Dhahabi.TadhkiratHuffaz",
       "main_rel_type": "CONT",
       "sec_rel_type": "dhayl",
       "source": "0911Suyuti.DhaylTabaqatHuffaz"
