@@ -4199,6 +4199,24 @@
       "shuhra": "Ibn Nāṣir al-dīn"
     }
   },
+  "0843IbnKhatibNasiriya": {
+    "AR": {
+      "ism": "علي",
+      "kunya": "أبو الحسن",
+      "laqab": "علاء الدين",
+      "nasab": "بن محمد",
+      "nisba": "الجبريني الشافعي",
+      "shuhra": "ابن خطيب النصري"
+    },
+    "LA": {
+      "ism": "ʿAlī",
+      "kunya": "Abū al-Ḥasan",
+      "laqab": "ʿAlāʾ al-dīn",
+      "nasab": "b. Muḥammad",
+      "nisba": "al-Ǧibrīnī al-Šāfiʿī",
+      "shuhra": "Ibn Ḫaṭīb al-Naṣriyya"
+    }
+  },
   "0845Maqrizi": {
     "AR": {
       "ism": "أحمد",
@@ -4235,22 +4253,40 @@
       "shuhra": "Ibn Ḥaǧar al-ʿAsqalānī"
     }
   },
-  "0855BadrDinCayni": {
+  "0854IbnCarabshah": {
     "AR": {
-      "ism": "مه̣م̄د",
-      "kunya": "أب̄ محمد",
-      "laqab": "بدر الد̄ن",
-      "nasab": "بن أه̣مد بن موسى بن أحمد",
-      "nisba": "العين̄، الحنفي",
-      "shuhra": "بدر الد̄ن العين̄"
+      "ism": "أحمد",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "بن محمد بن عبد الله",
+      "nisba": "",
+      "shuhra": "ابن عربشاه"
     },
     "LA": {
-      "ism": "Maḥmūd",
-      "kunya": "Abū Muḥammad",
-      "laqab": "Badr al-Dīn",
+      "ism": "Aḥmad",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "b. Muḥammad b. ʿAbd Allāh",
+      "nisba": "",
+      "shuhra": "Ibn ʿArabšāh"
+    }
+  },
+  "0855BadrDinCayni": {
+    "AR": {
+      "ism": "مه̣مود",
+      "kunya": "أبو محمد",
+      "laqab": "بدر الدين",
+      "nasab": "بن أه̣مد بن موسى بن أحمد",
+      "nisba": "العيني، الحنفي",
+      "shuhra": "بدر الدين العيني"
+    },
+    "LA": {
+      "ism": "Maḥmūd",
+      "kunya": "Abū Muḥammad",
+      "laqab": "Badr al-Dīn",
       "nasab": "b. Aḥmad b. Mūsá b. Aḥmad",
-      "nisba": "al-ʿAynī, al-Ḥanafī",
-      "shuhra": "Badr al-Dīn al-ʿAynī"
+      "nisba": "al-ʿAynī, al-Ḥanafī",
+      "shuhra": "Badr al-Dīn al-ʿAynī"
     }
   },
   "0859ShamsDinNawaji": {
