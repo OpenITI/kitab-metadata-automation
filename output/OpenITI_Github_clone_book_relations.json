@@ -1790,6 +1790,12 @@
     },
     {
       "dest": "0623AbuQasimRafici.SharhKabir",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "0676Nawawi.RawdatTalibin"
+    },
+    {
+      "dest": "0623AbuQasimRafici.SharhKabir",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0770IbnMuhammadFayyumiHamawi.MisbahMunir"
@@ -2256,6 +2262,12 @@
     }
   ],
   "0676Nawawi.RawdatTalibin": [
+    {
+      "dest": "0623AbuQasimRafici.SharhKabir",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "0676Nawawi.RawdatTalibin"
+    },
     {
       "dest": "0676Nawawi.RawdatTalibin",
       "main_rel_type": "COMM",
