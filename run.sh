@@ -33,6 +33,7 @@ git config user.email kitab-project@outlook.com
 git config user.name 'KITAB Project'
 git add .
 git commit -m 'output generated' 
+git pull
 git push
 
 date
