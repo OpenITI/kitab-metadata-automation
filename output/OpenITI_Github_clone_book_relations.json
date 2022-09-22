@@ -551,10 +551,24 @@
   ],
   "0310Tabari.MuntakhabMinDhayl": [
     {
-      "dest": "0310Tabari.MuntakhabMinDhayl",
+      "dest": "0310Tabari.Tarikh",
       "main_rel_type": "CONT",
       "sec_rel_type": "dhayl",
       "source": "0310Tabari.MuntakhabMinDhayl"
+    }
+  ],
+  "0310Tabari.Tarikh": [
+    {
+      "dest": "0310Tabari.Tarikh",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "0310Tabari.MuntakhabMinDhayl"
+    },
+    {
+      "dest": "0310Tabari.Tarikh",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "sila",
+      "source": "0370CaribQurtubi.SilaTarikhTabari"
     }
   ],
   "0321Tahawi.MatnCaqida": [
@@ -741,6 +755,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "radd",
       "source": "0430AswadGhundijani.FarhatAdib"
+    }
+  ],
+  "0370CaribQurtubi.SilaTarikhTabari": [
+    {
+      "dest": "0310Tabari.Tarikh",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "sila",
+      "source": "0370CaribQurtubi.SilaTarikhTabari"
     }
   ],
   "0370IbnCaliJassas.SharhMukhtasarTahawi": [
