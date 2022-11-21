@@ -635,6 +635,22 @@
       "source": "0909IbnMabrid.DurrNaqi"
     }
   ],
+  "0335Suli.Awraq": [
+    {
+      "dest": "0335Suli.Awraq",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0335Suli.QitcaNadira"
+    }
+  ],
+  "0335Suli.QitcaNadira": [
+    {
+      "dest": "0335Suli.Awraq",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0335Suli.QitcaNadira"
+    }
+  ],
   "0337IbnIshaqZajjaji.JumalFiNahw": [
     {
       "dest": "0337IbnIshaqZajjaji.JumalFiNahw",
@@ -949,6 +965,22 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0410AbuSahlNili.TalkhisTafsirJalinus"
+    }
+  ],
+  "0414AbuHayyanTawhidi": [
+    {
+      "dest": "0414AbuHayyanTawhidi",
+      "main_rel_type": "CORRESPONDENT",
+      "sec_rel_type": "",
+      "source": "0421Miskawayh.HawamilWaShawamil"
+    }
+  ],
+  "0421Miskawayh.HawamilWaShawamil": [
+    {
+      "dest": "0414AbuHayyanTawhidi",
+      "main_rel_type": "CORRESPONDENT",
+      "sec_rel_type": "",
+      "source": "0421Miskawayh.HawamilWaShawamil"
     }
   ],
   "0422QadiCabdWahhabThaclabi.SharhRisala": [
