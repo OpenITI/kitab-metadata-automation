@@ -279,7 +279,6 @@ def load_srt_meta(srt_folder, passim_runs):
     year_regex = "(?<=passim\d{4})\d{4}"
     month_regex = "(?<=passim\d{2})\d{2}"
     srt_d = {k: sorted(v, key = lambda x: (re.findall(year_regex, x[1]), re.findall(month_regex, x[1]))) for k,v in srt_d.items()}
-    print(srt_d["ALCorpus00007"])
     return srt_d
 
 
