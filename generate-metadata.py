@@ -265,7 +265,7 @@ def load_srt_meta(srt_folder, passim_runs):
             fp = os.path.join(srt_folder, fn)
             with open(fp, mode="r", encoding="utf-8") as file:
                 html = file.read()
-            ids = re.findall('<a href="([^\-"]+-[^"]+)"', html)
+            ids = re.findall('<a href="(?:http://dev.kitab-project.org/passim\d+/)?([^\-"]+-[^"]+)"', html)
             #print(len(ids))
             for id_ in ids:
                 #id_ = re.sub("Vols[A-Z]*|BK\d+", "", id_)
@@ -275,10 +275,14 @@ def load_srt_meta(srt_folder, passim_runs):
                 srt_d[bare_id].append([runs[fn[:-5]], "/".join([u, fn[:-5], id_])])
 ##    with open("output/srt_d.json", mode="w", encoding="utf-8") as file:
 ##        json.dump(srt_d, file, indent=2, sort_keys=True, ensure_ascii=False)
+    # sort by year and month:
+    year_regex = "(?<=passim\d{4})\d{4}"
+    month_regex = "(?<=passim\d{2})\d{2}"
+    srt_d = {k: sorted(v, key = lambda x: (re.findall(year_regex, x[1]), re.findall(month_regex, x[1]))) for k,v in srt_d.items()}
+    print(srt_d["ALCorpus00007"])
     return srt_d
-        
-        
-        
+
+
 ##def create_book_relations_json(csv_fp, out_fp):
 ##    """Create a json file that contains book relations info for each URI 
 ##    for which the book yml file contains book relations information
