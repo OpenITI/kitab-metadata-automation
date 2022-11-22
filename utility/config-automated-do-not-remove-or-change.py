@@ -46,7 +46,8 @@ passim_runs = [['October 2017 (V1)', 'passim1017'],
                ['February 2021', 'passim01022021'],
                ['February 2021 (Aggregated)', 'aggregated01022021'],
                ['October 2021', 'passim01102021'],
-               ['July 2022', 'passim01072022']]
+               ['July 2022', 'passim01072022'],
+               ['October 2022', 'passim01102022_']]
 
 # Set to True to allow the script to make changes to yml files without asking:
 silent = True  # True/False
