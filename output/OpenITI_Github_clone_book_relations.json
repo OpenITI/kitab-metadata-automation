@@ -2288,6 +2288,12 @@
       "dest": "0676Nawawi.MinhajTalibin",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
+      "source": "0864IbnAhmadJalalDinMahalli.KanzRaghibin"
+    },
+    {
+      "dest": "0676Nawawi.MinhajTalibin",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
       "source": "0874BadrDinIbnQadiShuhba.BidayatMuhtaj"
     },
     {
@@ -3851,6 +3857,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "hashiya",
       "source": "0926ZakariyyaAnsari.HashiyaCalaSharhJamcJawamic"
+    }
+  ],
+  "0864IbnAhmadJalalDinMahalli.KanzRaghibin": [
+    {
+      "dest": "0676Nawawi.MinhajTalibin",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0864IbnAhmadJalalDinMahalli.KanzRaghibin"
     }
   ],
   "0864IbnAhmadJalalDinMahalli.SharhWaraqatFiUsulFiqh": [
