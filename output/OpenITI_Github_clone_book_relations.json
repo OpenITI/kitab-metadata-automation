@@ -620,7 +620,21 @@
       "dest": "0335Suli.Awraq",
       "main_rel_type": "PART",
       "sec_rel_type": "",
+      "source": "0335Suli.MaLamYunshar"
+    },
+    {
+      "dest": "0335Suli.Awraq",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
       "source": "0335Suli.QitcaNadira"
+    }
+  ],
+  "0335Suli.MaLamYunshar": [
+    {
+      "dest": "0335Suli.Awraq",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0335Suli.MaLamYunshar"
     }
   ],
   "0335Suli.QitcaNadira": [
