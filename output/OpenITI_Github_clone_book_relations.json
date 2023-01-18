@@ -1707,6 +1707,14 @@
       "source": "0689AhmadIbnCabdRahmanIbnQudama.MukhtasarMinhajQasidin"
     }
   ],
+  "0600CabdGhaniMaqdisi.Kamal": [
+    {
+      "dest": "0600CabdGhaniMaqdisi.Kamal",
+      "main_rel_type": "REWORK",
+      "sec_rel_type": "tahdhib",
+      "source": "0742Mizzi.TahdhibKamal"
+    }
+  ],
   "0600CabdGhaniMuqaddasi.CumdatAhkam": [
     {
       "dest": "0600CabdGhaniMuqaddasi.CumdatAhkam",
@@ -1725,14 +1733,6 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0734IbnCaliTajDinFakihani.RiyadAfham"
-    }
-  ],
-  "0600CabdGhaniMuqaddasi.Kamal": [
-    {
-      "dest": "0600CabdGhaniMuqaddasi.Kamal",
-      "main_rel_type": "REWORK",
-      "sec_rel_type": "tahdhib",
-      "source": "0742Mizzi.TahdhibKamal"
     }
   ],
   "0600PseudoMascudi.AkhbarZaman": [
@@ -1765,6 +1765,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0684ShihabDinQarafi.NafaisUsul"
+    }
+  ],
+  "0606IbnAthirMajdDin.JamicUsul": [
+    {
+      "dest": "0606IbnAthirMajdDin.JamicUsul",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "taysir",
+      "source": "0606IbnAthirMajdDin.JamicUsul"
     }
   ],
   "0606IbnAthirMajdDin.Shafi": [
@@ -2857,7 +2865,7 @@
   ],
   "0742Mizzi.TahdhibKamal": [
     {
-      "dest": "0600CabdGhaniMuqaddasi.Kamal",
+      "dest": "0600CabdGhaniMaqdisi.Kamal",
       "main_rel_type": "REWORK",
       "sec_rel_type": "tahdhib",
       "source": "0742Mizzi.TahdhibKamal"
@@ -2955,6 +2963,14 @@
       "source": "0748Dhahabi.DhaylDiwanDucafa"
     }
   ],
+  "0748Dhahabi.MacrifaQurraKibar": [
+    {
+      "dest": "0748Dhahabi.MacrifaQurraKibar",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "0749IbnMaktum.Risala"
+    }
+  ],
   "0748Dhahabi.MizanIctidal": [
     {
       "dest": "0748Dhahabi.MizanIctidal",
@@ -3035,6 +3051,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0749IbnCabdRahmanShamsDinIsbahani.BayanMukhtasar"
+    }
+  ],
+  "0749IbnMaktum.Risala": [
+    {
+      "dest": "0748Dhahabi.MacrifaQurraKibar",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "0749IbnMaktum.Risala"
     }
   ],
   "0749ZaynDinIbnWardi.BahjatHawi": [
@@ -4781,9 +4805,9 @@
       "source": "1230IbnAhmadDasuqi.HashiyaCalaMukhtasarMacani"
     }
   ],
-  "1250Shawkani.DurarBahiyya": [
+  "1255Shawkani.DurarBahiyya": [
     {
-      "dest": "1250Shawkani.DurarBahiyya",
+      "dest": "1255Shawkani.DurarBahiyya",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "1307Qannawji.RawdaNadiyya"
@@ -4799,7 +4823,7 @@
   ],
   "1307Qannawji.RawdaNadiyya": [
     {
-      "dest": "1250Shawkani.DurarBahiyya",
+      "dest": "1255Shawkani.DurarBahiyya",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "1307Qannawji.RawdaNadiyya"
