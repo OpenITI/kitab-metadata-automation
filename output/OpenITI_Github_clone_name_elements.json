@@ -2587,6 +2587,24 @@
       "shuhra": "al-Šīrāzī"
     }
   },
+  "0478Cudhri": {
+    "AR": {
+      "ism": "أحمد",
+      "kunya": "أبو العباس",
+      "laqab": "",
+      "nasab": "بن عمر بن أنس",
+      "nisba": "العذري الدلئي",
+      "shuhra": "العذري"
+    },
+    "LA": {
+      "ism": "Aḥmad",
+      "kunya": "Abū al-ʿAbbās",
+      "laqab": "",
+      "nasab": "b. ʿUmar b. Anas",
+      "nisba": "al-ʿUḏrī al-Dalaʾī",
+      "shuhra": "al-ʿUḏrī"
+    }
+  },
   "0481AnsariHarawi": {
     "AR": {
       "ism": "عبد اللاه",
@@ -2891,6 +2909,24 @@
       "nasab": "b. ʿAbd al-Karīm b. Abī Bakr Aḥmad",
       "nisba": "al-Šahrastānī",
       "shuhra": "al-Šahrastānī"
+    }
+  },
+  "0550AbuCabdAllahZuhri": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "أبو عبد الله",
+      "laqab": "",
+      "nasab": "بن أبي بكر",
+      "nisba": "الزهري",
+      "shuhra": "أبو عبد الله الزهري"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "Abū ʿAbd Allāh",
+      "laqab": "",
+      "nasab": "b. Abī Bakr",
+      "nisba": "al-Zuhrī",
+      "shuhra": "Abū ʿAbd Allāh al-Zuhrī"
     }
   },
   "0553BayanHaqqNaysaburi": {

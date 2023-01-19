@@ -99,6 +99,14 @@
       "source": "0893Manawi.TahqiqWusul"
     }
   ],
+  "0001Orosius.HistoriaeAdversumPaganos": [
+    {
+      "dest": "0001Orosius.HistoriaeAdversumPaganos",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "0375AnonymousTranslator.TarikhCalamUrusiyus"
+    }
+  ],
   "0150AbuHanifa.Wasiyya": [
     {
       "dest": "0150AbuHanifa.Wasiyya",
@@ -785,6 +793,14 @@
       "source": "0372AbuSacidQayruwani.TahdhibMudawwana"
     }
   ],
+  "0375AnonymousTranslator.TarikhCalamUrusiyus": [
+    {
+      "dest": "0001Orosius.HistoriaeAdversumPaganos",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "0375AnonymousTranslator.TarikhCalamUrusiyus"
+    }
+  ],
   "0377IbnAhmadFarisi.HujjaLiQurraSabca": [
     {
       "dest": "0324IbnMujahid.SabcaFiQiraa",
@@ -1157,6 +1173,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0450Jubbi.SharhMudawwana"
+    }
+  ],
+  "0450Najashi.Rijal": [
+    {
+      "dest": "0450Najashi.Rijal",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1424MuhammadCaliAbtahi.TahdhibMaqal"
     }
   ],
   "0453CaliIbnRidwan.TacaliqLiTafsirJalinus": [
@@ -4875,6 +4899,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "1338Tawzari.TawdihAhkam"
+    }
+  ],
+  "1424MuhammadCaliAbtahi.TahdhibMaqal": [
+    {
+      "dest": "0450Najashi.Rijal",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1424MuhammadCaliAbtahi.TahdhibMaqal"
     }
   ],
   "1450CabdAllahGhunayman.MukhtasarMinhajSunna": [
