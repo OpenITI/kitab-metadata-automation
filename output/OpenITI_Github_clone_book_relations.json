@@ -3011,6 +3011,14 @@
       "source": "0748Dhahabi.MuntaqaMinMinhajIctidal"
     }
   ],
+  "0748Dhahabi.SiyarAclamNubala": [
+    {
+      "dest": "0748Dhahabi.SiyarAclamNubala",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "0832TaqiFasi.Tacrif"
+    }
+  ],
   "0748Dhahabi.TadhhibTahdhib": [
     {
       "dest": "0742Mizzi.TahdhibKamal",
@@ -3651,6 +3659,14 @@
       "main_rel_type": "COMP",
       "sec_rel_type": "muntakhab",
       "source": "0832TaqiFasi.MuntakhabMukhtar"
+    }
+  ],
+  "0832TaqiFasi.Tacrif": [
+    {
+      "dest": "0748Dhahabi.SiyarAclamNubala",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "0832TaqiFasi.Tacrif"
     }
   ],
   "0833IbnJazari.Hidaya": [
