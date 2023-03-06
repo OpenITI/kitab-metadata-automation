@@ -71,6 +71,24 @@
       "shuhra": "åbn Isḥāq"
     }
   },
+  "0161SufyanThawri": {
+    "AR": {
+      "ism": "سفيان",
+      "kunya": "أبو عبد الله",
+      "laqab": "",
+      "nasab": "بن سعيد بن مسروق",
+      "nisba": "الكوفي، الثوري",
+      "shuhra": "سفيان الثوري"
+    },
+    "LA": {
+      "ism": "Sufyān",
+      "kunya": "ʾAbū ʿAbd Allãh",
+      "laqab": "",
+      "nasab": "b. Saʿīd b. Masrūq",
+      "nisba": "al-Kūfī, al-Ṯawrī",
+      "shuhra": "Sufyān al-Ṯawrī"
+    }
+  },
   "0180Sibawayhi": {
     "AR": {
       "ism": "عمرو",
@@ -3225,6 +3243,24 @@
       "nasab": "b. Taqī al-dīn ʿUmar b. Šāhanšāh b. Ayyūb",
       "nisba": "al-Ayyūbī",
       "shuhra": ""
+    }
+  },
+  "0620IbnQudamaMaqdisi": {
+    "AR": {
+      "ism": "عبد ءالله",
+      "kunya": "أبو محمد",
+      "laqab": "موفق الدين",
+      "nasab": "بن أحمد بن محمد",
+      "nisba": "المقدسي",
+      "shuhra": "ابن قدام المقدسي"
+    },
+    "LA": {
+      "ism": "ʿAbd ʾAllãh",
+      "kunya": "Abū Muḥammad",
+      "laqab": "Muwaffaq al-dīn",
+      "nasab": "b. ʾAḥmad b. Muḥammad",
+      "nisba": "al-Maqdisī",
+      "shuhra": "Ibn Qudāma al-Maqdisī"
     }
   },
   "0626YaqutHamawi": {
