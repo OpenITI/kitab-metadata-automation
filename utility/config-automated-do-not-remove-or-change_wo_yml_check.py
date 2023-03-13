@@ -37,15 +37,27 @@ meta_json_fp = None
 meta_header_fp = None
 
 # List of lists (description, run_id on server):  
-passim_runs = [['October 2017 (V1)', 'passim1017'],
-               ['February 2019 (V2)', 'passim01022019'],
-#               ['May 2019 (Aggregated)', 'aggregated01052019'],
-               ['February 2020', 'passim01022020'],
-               ['October 2020', 'passim01102020'],
-               ['October 2020 (Aggregated)', 'aggregated01102020'],
-               ['Feb 2021', 'passim01022021'],
-               ['Feb 2021 (Aggregated)', 'aggregated01022021'],
-               ['Oct 2021', 'passim01102021']]
+# passim_runs = [['October 2017 (V1)', 'passim1017'],
+#                ['February 2019 (V2)', 'passim01022019'],
+# #               ['May 2019 (Aggregated)', 'aggregated01052019'],
+#                ['February 2020', 'passim01022020'],
+#                ['October 2020', 'passim01102020'],
+#                ['October 2020 (Aggregated)', 'aggregated01102020'],
+#                ['February 2021', 'passim01022021'],
+#                ['February 2021 (Aggregated)', 'aggregated01022021'],
+#                ['October 2021', 'passim01102021'],
+#                ['July 2022', 'passim01072022'],
+#                ['October 2022', 'passim01102022']]
+
+passim_runs = [['2017 (V1)', 'passim1017'],
+               ['2019.1.1', 'passim01022019'],
+               ['2020.1.2', 'passim01022020'],
+               ['2020.2.3', 'passim01102020'],
+               ['2020.2.3 (Aggregated)', 'aggregated01102020'],
+               ['2021.1.4', 'passim01022021'],
+               ['2021.1.4 (Aggregated)', 'aggregated01022021'],
+               ['2021.2.5', 'passim01102021'],
+               ['2022.1.6', 'passim01102022']]
 
 # Set to True to allow the script to make changes to yml files without asking:
 silent = True  # True/False
