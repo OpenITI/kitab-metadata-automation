@@ -1521,6 +1521,14 @@
       "source": "0918IbnQasimShamsDinGhazzi.FathQarib"
     }
   ],
+  "0529CabdGhafirFarisi.Siyaq": [
+    {
+      "dest": "0529CabdGhafirFarisi.Siyaq",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "0641Sarifini.Muntakhab"
+    }
+  ],
   "0536IbnCaliMazariTamimi.SharhTalqin": [
     {
       "dest": "0422QadiCabdWahhabThaclabi.TalqinFiFiqh",
@@ -1989,6 +1997,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0639IbnKhabbaz.TawjihLumac"
+    }
+  ],
+  "0641Sarifini.Muntakhab": [
+    {
+      "dest": "0529CabdGhafirFarisi.Siyaq",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "0641Sarifini.Muntakhab"
     }
   ],
   "0642IbnMinfakh.RaddIctiradat": [
