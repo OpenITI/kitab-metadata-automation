@@ -1526,6 +1526,12 @@
       "dest": "0529CabdGhafirFarisi.Siyaq",
       "main_rel_type": "ABR",
       "sec_rel_type": "mukhtasar",
+      "source": "0600Anonymous.MukhtasarSiyaq"
+    },
+    {
+      "dest": "0529CabdGhafirFarisi.Siyaq",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
       "source": "0641Sarifini.Muntakhab"
     }
   ],
@@ -1729,6 +1735,14 @@
       "main_rel_type": "ABR",
       "sec_rel_type": "mukhtasar",
       "source": "0689AhmadIbnCabdRahmanIbnQudama.MukhtasarMinhajQasidin"
+    }
+  ],
+  "0600Anonymous.MukhtasarSiyaq": [
+    {
+      "dest": "0529CabdGhafirFarisi.Siyaq",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "mukhtasar",
+      "source": "0600Anonymous.MukhtasarSiyaq"
     }
   ],
   "0600CabdGhaniMaqdisi.Kamal": [
