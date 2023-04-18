@@ -107,6 +107,14 @@
       "source": "0375AnonymousTranslator.TarikhCalamUrusiyus"
     }
   ],
+  "0001Ptolemy.Almagest": [
+    {
+      "dest": "0001Ptolemy.Almagest",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "0288ThabitIbnQurra.Majisti"
+    }
+  ],
   "0150AbuHanifa.Wasiyya": [
     {
       "dest": "0150AbuHanifa.Wasiyya",
@@ -493,6 +501,34 @@
       "source": "0795IbnRajabHanbali.SharhCilalTirmidhi"
     }
   ],
+  "0288ThabitIbnQurra": [
+    {
+      "dest": "0288ThabitIbnQurra",
+      "main_rel_type": "CORR",
+      "sec_rel_type": "tashih",
+      "source": "0288ThabitIbnQurra.Majisti"
+    }
+  ],
+  "0288ThabitIbnQurra.Majisti": [
+    {
+      "dest": "0001Ptolemy.Almagest",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "0288ThabitIbnQurra.Majisti"
+    },
+    {
+      "dest": "0298IshaqIbnHunay",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "tarjama",
+      "source": "0288ThabitIbnQurra.Majisti"
+    },
+    {
+      "dest": "0288ThabitIbnQurra",
+      "main_rel_type": "CORR",
+      "sec_rel_type": "tashih",
+      "source": "0288ThabitIbnQurra.Majisti"
+    }
+  ],
   "0291IbnYahyaThaclab.Fasih": [
     {
       "dest": "0291IbnYahyaThaclab.Fasih",
@@ -527,6 +563,14 @@
       "main_rel_type": "ABR",
       "sec_rel_type": "mukhtasar",
       "source": "0845Maqrizi.MukhtasarQiyamRamadan"
+    }
+  ],
+  "0298IshaqIbnHunay": [
+    {
+      "dest": "0298IshaqIbnHunay",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "tarjama",
+      "source": "0288ThabitIbnQurra.Majisti"
     }
   ],
   "0303Nasai.SunanKubra": [
@@ -953,6 +997,14 @@
       "main_rel_type": "CONT",
       "sec_rel_type": "dhayl",
       "source": "0703IbnCabdMalikMarrakushi.DhaylWaTakmila"
+    }
+  ],
+  "0405HakimNaysaburi.TarikhNaysabur": [
+    {
+      "dest": "0405HakimNaysaburi.TarikhNaysabur",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "talkhis",
+      "source": "0800KhalifaNaysaburi.TalkhisTarikhNaysabur"
     }
   ],
   "0406SharifRadi.NahjBalagha": [
@@ -1527,12 +1579,6 @@
       "main_rel_type": "ABR",
       "sec_rel_type": "mukhtasar",
       "source": "0600Anonymous.MukhtasarSiyaq"
-    },
-    {
-      "dest": "0529CabdGhafirFarisi.Siyaq",
-      "main_rel_type": "ABR",
-      "sec_rel_type": "mukhtasar",
-      "source": "0641Sarifini.Muntakhab"
     }
   ],
   "0536IbnCaliMazariTamimi.SharhTalqin": [
@@ -1605,6 +1651,14 @@
       "main_rel_type": "CONT",
       "sec_rel_type": "dhayl",
       "source": "0637IbnDubaythi.DhaylTarikhBaghdad"
+    }
+  ],
+  "0565IbnFunduqBayhaqi.TarikhBayhaq": [
+    {
+      "dest": "0565IbnFunduqBayhaqi.TarikhBayhaq",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "1450YusufHadi.TarikhBayhaq"
     }
   ],
   "0567IbnKhashshabBaghdadi.Murtajal": [
@@ -2013,14 +2067,6 @@
       "source": "0639IbnKhabbaz.TawjihLumac"
     }
   ],
-  "0641Sarifini.Muntakhab": [
-    {
-      "dest": "0529CabdGhafirFarisi.Siyaq",
-      "main_rel_type": "ABR",
-      "sec_rel_type": "mukhtasar",
-      "source": "0641Sarifini.Muntakhab"
-    }
-  ],
   "0642IbnMinfakh.RaddIctiradat": [
     {
       "dest": "0001Hippocrates.Aphorismoi",
@@ -2099,6 +2145,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0715RuknDinAstarabadhi.SharhShafiya"
+    }
+  ],
+  "0650Anonymous.MukhtasarSaljuqnama": [
+    {
+      "dest": "0650Anonymous.MukhtasarSaljuqnama",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "1450MuhammadSacidJamalDin.AkhbarSalajiqatRum"
     }
   ],
   "0650IbnMuhammadRadiDinSaghani.MashariqAnwar": [
@@ -3503,6 +3557,14 @@
       "source": "0800CabdRahimTabib.SharhLiWasailWusul"
     }
   ],
+  "0800KhalifaNaysaburi.TalkhisTarikhNaysabur": [
+    {
+      "dest": "0405HakimNaysaburi.TarikhNaysabur",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "talkhis",
+      "source": "0800KhalifaNaysaburi.TalkhisTarikhNaysabur"
+    }
+  ],
   "0801CabdLatifIbnMalak.MabariqAzhar": [
     {
       "dest": "0650IbnMuhammadRadiDinSaghani.MashariqAnwar",
@@ -4011,6 +4073,22 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0884AbuIshaqIbnMuflih.MubdicFiSharhMuqnic"
+    }
+  ],
+  "0885Biqaci.CunwanCunwan": [
+    {
+      "dest": "0885Biqaci.CunwanZaman",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "",
+      "source": "0885Biqaci.CunwanCunwan"
+    }
+  ],
+  "0885Biqaci.CunwanZaman": [
+    {
+      "dest": "0885Biqaci.CunwanZaman",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "",
+      "source": "0885Biqaci.CunwanCunwan"
     }
   ],
   "0885CalaDinMardawi.TahbirSharhTahrir": [
@@ -4787,6 +4865,14 @@
       "source": "1088IbnAhmadKhalwati.HashiyaCalaMuntahaIradat"
     }
   ],
+  "1095AwliyaShalabi.Siyahatnameh": [
+    {
+      "dest": "1095AwliyaShalabi.Siyahatnameh",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "1425HusaynMujibMisri.RihlatShalabiIlaMisr"
+    }
+  ],
   "1097IbnQaid.Hashiya": [
     {
       "dest": "0972IbnAhmadIbnNajjarHanbali.MuntahaIradat",
@@ -4939,6 +5025,14 @@
       "source": "1424MuhammadCaliAbtahi.TahdhibMaqal"
     }
   ],
+  "1425HusaynMujibMisri.RihlatShalabiIlaMisr": [
+    {
+      "dest": "1095AwliyaShalabi.Siyahatnameh",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "1425HusaynMujibMisri.RihlatShalabiIlaMisr"
+    }
+  ],
   "1450CabdAllahGhunayman.MukhtasarMinhajSunna": [
     {
       "dest": "0728IbnTaymiyya.MinhajSunna",
@@ -4953,6 +5047,22 @@
       "main_rel_type": "REARR",
       "sec_rel_type": "tartib",
       "source": "1450MuhammadHasanBakkai.TartibIslahMantiq"
+    }
+  ],
+  "1450MuhammadSacidJamalDin.AkhbarSalajiqatRum": [
+    {
+      "dest": "0650Anonymous.MukhtasarSaljuqnama",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "1450MuhammadSacidJamalDin.AkhbarSalajiqatRum"
+    }
+  ],
+  "1450YusufHadi.TarikhBayhaq": [
+    {
+      "dest": "0565IbnFunduqBayhaqi.TarikhBayhaq",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "1450YusufHadi.TarikhBayhaq"
     }
   ]
 }
