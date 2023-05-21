@@ -1311,6 +1311,24 @@
       "shuhra": "Ibn Abī ʿAwn al-Baġdādī"
     }
   },
+  "0325IbnCabdAllahWarraq": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "أبو الحسن",
+      "laqab": "",
+      "nasab": "بن عبد الله بن العباس",
+      "nisba": "",
+      "shuhra": "ابن الوراق"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "Abū al-Ḥasan",
+      "laqab": "",
+      "nasab": "b. ʿAbd Allāh b. al-ʿAbbās",
+      "nisba": "",
+      "shuhra": "Ibn al-Warrāq"
+    }
+  },
   "0328AbuBishrIbnYunus": {
     "AR": {
       "ism": "متى",
