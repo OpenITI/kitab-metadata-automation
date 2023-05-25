@@ -1187,6 +1187,14 @@
       "source": "0705AbuMuhammadMalaqi.DurrNathir"
     }
   ],
+  "0446IbnCaliAhwazi.Mathalib": [
+    {
+      "dest": "0446IbnCaliAhwazi.Mathalib",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "radd",
+      "source": "0571IbnCasakir.TabyinKadhib"
+    }
+  ],
   "0449AbuCalaMacarri.MucjizAhmad": [
     {
       "dest": "0354Mutanabbi.Diwan",
@@ -1667,6 +1675,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0567IbnKhashshabBaghdadi.Murtajal"
+    }
+  ],
+  "0571IbnCasakir.TabyinKadhib": [
+    {
+      "dest": "0446IbnCaliAhwazi.Mathalib",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "radd",
+      "source": "0571IbnCasakir.TabyinKadhib"
     }
   ],
   "0577IbnHishamLakhmi.SharhFasih": [
