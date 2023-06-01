@@ -884,7 +884,7 @@ def aggregate_arabic_names(all_vers_meta_d, all_book_meta_d, all_auth_meta_d):
     # if no Arabic book title is provided in the yml file,
     # aggregate the Arabic book titles found in all text files of the book:
     for book_uri, book_d in all_book_meta_d.items():
-        if not book_d["title_ar"]:
+        if "title_ar" in book_d and not book_d["title_ar"]:
             for vers_uri in book_d["versions"]:
                 vers_d = all_vers_meta_d[vers_uri]
                 if "title_ar" in vers_d and vers_d["title_ar"]:
