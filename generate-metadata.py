@@ -778,7 +778,7 @@ def extract_book_meta(uri, book_yml_d, tags_dic, all_book_meta_d, book_rel_d):
         if rels.startswith("URI of"):
             rels = ""
         rels = re.sub("[ \r\n¶]+", " ", rels)
-        rels = re.split(" *[;,:]+ *", rels)
+        rels = re.split(" *[;:]+ *", rels)
         rels = [rel for rel in rels if rel.strip()]
         for rel in rels:
             if "@" in rel:  # new format: COMM.sharh@0255Jahiz.Hayawan
