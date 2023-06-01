@@ -115,6 +115,14 @@
       "source": "0288ThabitIbnQurra.Majisti"
     }
   ],
+  "0094ZaynCabidin": [
+    {
+      "dest": "0094ZaynCabidin",
+      "main_rel_type": "PUTATIVEAUTHOR",
+      "sec_rel_type": "",
+      "source": "0786ShahidAwwal.SahifaSajjadiyya"
+    }
+  ],
   "0150AbuHanifa.Wasiyya": [
     {
       "dest": "0150AbuHanifa.Wasiyya",
@@ -2037,6 +2045,12 @@
       "main_rel_type": "ABR",
       "sec_rel_type": "mukhtasar",
       "source": "0732AbuFida.MukhtasarFiAkhbar"
+    },
+    {
+      "dest": "0630IbnAthirCizzDin.Kamil",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "0732AbuFida.MukhtasarFiAkhbar"
     }
   ],
   "0633IbnSacidRajraji.ManahijTahsil": [
@@ -2891,6 +2905,12 @@
       "main_rel_type": "ABR",
       "sec_rel_type": "mukhtasar",
       "source": "0732AbuFida.MukhtasarFiAkhbar"
+    },
+    {
+      "dest": "0630IbnAthirCizzDin.Kamil",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "0732AbuFida.MukhtasarFiAkhbar"
     }
   ],
   "0733ShujacDinTurkistani.SharhCaqidaTahawiyya": [
@@ -2950,6 +2970,18 @@
       "dest": "0741IbnAhmadGharnatiKalbi.TashilLiCulumTanzil",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
+      "source": "0745AbuHayyanGharnati.TadhyilTashil"
+    },
+    {
+      "dest": "0741IbnAhmadGharnatiKalbi.TashilLiCulumTanzil",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "tadhyil",
+      "source": "0745AbuHayyanGharnati.TadhyilTashil"
+    },
+    {
+      "dest": "0741IbnAhmadGharnatiKalbi.TashilLiCulumTanzil",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "takmil",
       "source": "0745AbuHayyanGharnati.TadhyilTashil"
     }
   ],
@@ -3022,6 +3054,18 @@
       "dest": "0741IbnAhmadGharnatiKalbi.TashilLiCulumTanzil",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
+      "source": "0745AbuHayyanGharnati.TadhyilTashil"
+    },
+    {
+      "dest": "0741IbnAhmadGharnatiKalbi.TashilLiCulumTanzil",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "tadhyil",
+      "source": "0745AbuHayyanGharnati.TadhyilTashil"
+    },
+    {
+      "dest": "0741IbnAhmadGharnatiKalbi.TashilLiCulumTanzil",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "takmil",
       "source": "0745AbuHayyanGharnati.TadhyilTashil"
     }
   ],
@@ -3469,6 +3513,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0965ShahidThani.RawdaBahiyya"
+    }
+  ],
+  "0786ShahidAwwal.SahifaSajjadiyya": [
+    {
+      "dest": "0094ZaynCabidin",
+      "main_rel_type": "PUTATIVEAUTHOR",
+      "sec_rel_type": "",
+      "source": "0786ShahidAwwal.SahifaSajjadiyya"
     }
   ],
   "0786ShamsDinKirmani.Kawakib": [
