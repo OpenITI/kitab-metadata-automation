@@ -546,6 +546,7 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
     # gather all extracted metadata in a dictionary:
     vers_d = dict()
     vers_d["uri"] = vers_uri
+    vers_d["id"] = uri.version
     vers_d["primary_yml"] = primary_yml
     vers_d["status"] = "sec"   # temporary status, will be changed later
     vers_d["tok_length"] = length
