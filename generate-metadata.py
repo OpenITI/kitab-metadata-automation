@@ -1107,7 +1107,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
         json.dump(split_files, outfile, indent=4)  
 
     # add compound data for text files split because of their size:
-    all_vers_meta_d = add_split_files_meta(split_files, all_vers_meta_d)
+    all_vers_meta_d = add_split_files_meta(split_files, all_vers_meta_d, incl_char_length)
 
     # save metadat to tsv:
     save_as_tsv(all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
@@ -1154,7 +1154,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
         json.dump(all_vers_meta_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
 
 
-def add_split_files_meta(split_files, all_vers_meta_d):
+def add_split_files_meta(split_files, all_vers_meta_d, incl_char_length):
     # add data for files split into multiple parts:
     
     for file in split_files:
