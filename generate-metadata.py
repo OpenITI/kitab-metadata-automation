@@ -116,6 +116,7 @@ import textwrap
 import time
 import getopt
 from datetime import datetime
+import copy
 
 
 # (in a later stage to be imported from the openiti python library):
@@ -145,12 +146,13 @@ def LoadTags():
         dic = {}
         data = f1.read().split("\n")
 
-        for d in data:
-            d = d.split("\t")
-            dic[d[0]] = re.sub(";", " :: ", d[1])
+        for row in data:
+            id_, tags = row.split("\t")
+            #dic[d[0]] = re.sub(";", " :: ", d[1])
+            dic[id_] = tags.split(";")
     return dic
 
-tagsDic = LoadTags()
+tags_dic = LoadTags()
 
 # define a metadata category for all relevant items in the text file headers:
 headings_dict = {  
@@ -254,12 +256,6 @@ def load_srt_meta(srt_folder, passim_runs):
     runs = {item[1]: item[0] for item in passim_runs}
     for fn in os.listdir(srt_folder):
         if fn[:-5] in runs:
-##            # extract passim run date from `fn` and format as YYYY-MM-DD
-##            date = re.sub("\D+", "", fn)
-##            if len(date) == 8:
-##                date = "{}-{}-{}".format(date[4:], date[2:4], date[:2])
-##            elif len(date) == 4:
-##                date = "20{}-{}".format(date[2:], date[:2])
 
             # extract text ids from html file and add their links to `srt_d`
             fp = os.path.join(srt_folder, fn)
@@ -273,30 +269,12 @@ def load_srt_meta(srt_folder, passim_runs):
                 if not bare_id in srt_d:
                     srt_d[bare_id] = []
                 srt_d[bare_id].append([runs[fn[:-5]], "/".join([u, fn[:-5], id_])])
-##    with open("output/srt_d.json", mode="w", encoding="utf-8") as file:
-##        json.dump(srt_d, file, indent=2, sort_keys=True, ensure_ascii=False)
+
     # sort by year and month:
     year_regex = "(?<=passim\d{4})\d{4}"
     month_regex = "(?<=passim\d{2})\d{2}"
     srt_d = {k: sorted(v, key = lambda x: (re.findall(year_regex, x[1]), re.findall(month_regex, x[1]))) for k,v in srt_d.items()}
     return srt_d
-
-
-##def create_book_relations_json(csv_fp, out_fp):
-##    """Create a json file that contains book relations info for each URI 
-##    for which the book yml file contains book relations information
-##    """
-##    br_d = dict()
-##    with open(csv_fp) as csvfile:
-##        reader = csv.DictReader(csvfile, delimiter='\t')
-##        record = {}
-##
-##        for row in reader:
-##            if "relations" in row:
-##                
-            
-    
-    
 
 
 def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
@@ -479,7 +457,491 @@ def get_name_el(d, k):
         if not "fulān" in d[k].lower() and not "none" in d[k].lower():
             return d[k]
     return ""
+
+
+def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
+                         output_files_path, start_folder,
+                         status_dic, incl_char_length):
+    """"""
+
+    vers_uri = uri.build_uri("version")
+
+    # - explicit primary version:
+    primary_yml = False
+    if "PRIMARY_VERSION" in vers_yml_d["90#VERS#ISSUES###:"]:
+        primary_yml = True
+
+    # - length in number of characters:
+    recalc = False
     
+    length = vers_yml_d["00#VERS#LENGTH###:"].strip()
+    # if length is not a number, recalculate:
+    try:
+        int(length) 
+    except:
+        recalc = True
+    
+    char_length = ""
+    if not length:
+        recalc = True
+    if incl_char_length:
+        try:
+            char_length = vers_yml_d["00#VERS#CLENGTH##:"].strip()
+            int(char_length) # if char_length is not a number, recalculate
+            if not char_length:
+                recalc = True
+        except:
+            recalc = True
+
+    # recalculate the token length and character length if needed:
+    if recalc:
+        uri.extension = ""
+        #pth = uri.build_pth(uri_type="version_file")
+        pth = vers_yml_pth[:-4]
+        for ext in [".mARkdown", ".completed", ".inProgress", ""]:
+            version_fp = pth + ext
+            if os.path.exists(version_fp):
+                if incl_char_length:
+                    char_length = ar_cnt_file(version_fp, mode="char")
+                    char_length = str(char_length)
+                    vers_yml_d["00#VERS#CLENGTH##:"] = char_length
+                length = ar_cnt_file(version_fp, mode="token")
+                length = str(length)
+                vers_yml_d["00#VERS#LENGTH###:"] = length
+                ymlS = dicToYML(vers_yml_d)
+                with open(vers_yml_pth, mode="w", encoding="utf-8") as file:
+                    file.write(ymlS)
+                break
+
+    # - edition information:
+    ed_info = vers_yml_d["80#VERS#BASED####:"].strip()
+    if ed_info.startswith("perma") or ed_info.upper().startswith("NO"):
+        ed_info = []
+    else:
+        ed_info = re.split("[ \r\n¶]*[,;:]+[ \r\n¶]*", ed_info)
+    
+    # - version tags (e.g., INCOMPLETE_TEXT, FOOTNOTES, ...):
+    version_tags = re.findall("[A-Z_]{5,}",
+                              vers_yml_d["90#VERS#ISSUES###:"])
+
+    # - get the most advanced text file of this version
+    #   (if different text files with the same extension exist in the folder)
+    #   and give it a temporary secondary status:
+    local_pth, status_score = give_status_score(vers_yml_pth, uri, length)
+
+    # - build the link/path to the text file in the output file:
+    fullTextURL = local_pth_to_fullTextURL(local_pth, start_folder, output_files_path)
+
+    # - add the uri to the status_dic if the file is not missing:
+    if os.path.exists(local_pth):
+        book_uri = uri.build_uri("book")
+        if book_uri not in status_dic:
+            status_dic[book_uri] = []
+        if primary_yml:
+            status_indication = "pri##"
+        else:
+            status_indication = "%012d##" % int(status_score)
+        status_dic[book_uri].append(status_indication + vers_uri)
+
+    # gather all extracted metadata in a dictionary:
+    vers_d = dict()
+    vers_d["uri"] = vers_uri
+    vers_d["primary_yml"] = primary_yml
+    vers_d["status"] = "sec"   # temporary status, will be changed later
+    vers_d["tok_length"] = length
+    vers_d["char_length"] = char_length
+    vers_d["ed_info"] = ed_info
+    vers_d["comment_tags"] = version_tags
+    vers_d["local_pth"] = local_pth
+    vers_d["fullTextURL"] = fullTextURL
+
+    return vers_d, uri, status_dic
+
+def give_status_score(vers_yml_pth, uri, length):
+    """Select the text file with the most advanced extension for a specific version
+    and define a score for it to later decide
+    which version of a book should be the primary version"""
+    #   The primary version of a book is the one that
+    #   has the most developed annotation
+    #   (signalled by the extension: mARkdown>completed>inProgress)
+    #   If no version has an extension,
+    #   the longest version will provisorally be considered primary.
+    #   The length comparison can take place only after all versions
+    #   have been documented.
+    #   For this reason, versions with an extension
+    #   are provisionally given a very high number
+    #   in the status_dic instead of their real length,
+    #   so that they will be chosen as primary version
+    #   once the lengths are compared
+
+    # - make a provisional (i.e., without extension)
+    #   local filepath to the current version:
+    uri.extension = ""
+    local_pth = re.sub(r"\\", "/", vers_yml_pth[:-4])
+    
+    if os.path.isfile(local_pth+".mARkdown"):
+        status_score = 10000000000 + int(length)
+        uri.extension = "mARkdown"
+    elif os.path.isfile(local_pth+".completed"):
+        status_score = 1000000000 + int(length)
+        uri.extension = "completed"
+    elif os.path.isfile(local_pth+".inProgress"):
+        status_score = 100000000 + int(length)
+        uri.extension = "inProgress"
+    elif "Sham30K" in local_pth: # give Sham30K files lowest priority
+        status_score = 0
+        uri.extension = ""
+    else:
+        uri.extension = ""
+        if length:
+            status_score = int(length)
+        else:
+            status_score = 0
+
+    # - rebuild the local_path, with the extension
+    #   (in case there is more than one text file with the same ID
+    #   but different extensions):
+    if uri.extension:
+        local_pth+= "." + uri.extension
+
+    return local_pth, status_score
+
+def local_pth_to_fullTextURL(local_pth, start_folder, output_files_path):
+    if output_files_path:
+        fullTextURL = re.sub(start_folder, output_files_path, local_pth)
+    else:
+        fullTextURL = local_pth
+    if "githubusercontent" in fullTextURL:
+        fullTextURL = re.sub("data/", "master/data/", fullTextURL)
+    return fullTextURL
+
+
+
+def extract_author_meta(uri, auth_yml_d, all_auth_meta_d, name_elements_d):
+    """"""
+
+    auth_uri = uri.build_uri("author")
+
+    # do not extract the book metadata from the yml file
+    # if it has already been extracted before
+    # or if no readable book YML file was found:
+
+    if auth_uri in all_auth_meta_d:
+        return all_auth_meta_d[auth_uri], name_elements_d
+
+    if not auth_yml_d:
+        return dict(), name_elements_d
+
+    # - extract author's name:
+    
+    shuhra = ""
+    full_name = ""
+    author_lat = []
+    author_ar = []
+    
+    ## Get the author's shuhra:
+    shuhra = auth_yml_d["10#AUTH#SHUHRA#AR:"].strip()
+    if "Fulān" in shuhra or "none" in shuhra.lower():
+        shuhra = ""
+    if shuhra:
+        shuhra = re.sub("[ \r\n¶]+", " ", shuhra).strip()
+        author_lat.append(shuhra)
+        author_ar.append(betaCodeToArSimple(shuhra))
+
+    ## create a full (Latin-script) name from the name elements:
+    
+    name_comps = ["10#AUTH#LAQAB##AR:",
+                  "10#AUTH#KUNYA##AR:",
+                  "10#AUTH#ISM####AR:",
+                  "10#AUTH#NASAB##AR:",
+                  "10#AUTH#NISBA##AR:"]
+    
+    full_name = [auth_yml_d[x] for x in name_comps \
+                 if x in auth_yml_d \
+                 and not ("Fulān" in auth_yml_d[x] \
+                          or "none" in auth_yml_d[x].lower())]
+    full_name = " ".join(full_name)
+
+    if full_name:
+        full_name = re.sub("[ \r\n¶]+", " ", full_name).strip()
+        author_lat.append(full_name)
+        author_ar.append(betaCodeToArSimple(full_name))
+
+    ## create a full English-language name from the name elements:
+    
+    name_comps_en = [x.replace("#AR:", "#EN:") for x in name_comps]
+    english_name = [auth_yml_d[x] for x in name_comps_en \
+                    if x in auth_yml_d and \
+                    not ("Fulān" in auth_yml_d[x] \
+                         or "none" in auth_yml_d[x].lower())]
+    english_name = " ".join(english_name)
+
+    # Add the latinized name from the URI:
+    author_name_from_uri = insert_spaces(auth_uri)[4:]
+
+    # collect author name elements in different languages/scripts:
+    name_d = dict()
+    for lang in ["AR", "EN", "FA"]:
+        lang_d = dict()
+        add = False
+        for yml_k in ["10#AUTH#SHUHRA#AR:"]+name_comps:
+            yml_k = yml_k.replace("#AR:", "#{}:".format(lang))
+            k = re.findall("(?<=10#AUTH#)\w+", yml_k)[0].lower()
+            lang_d[k] = get_name_el(auth_yml_d, yml_k)
+            
+            if lang_d[k]:
+                add = True
+        if add:
+            if lang == "EN":
+                name_d[lang] = lang_d
+            else:
+                # store a version of the name in transcription and Arabic script:
+                name_d["LA"] = lang_d
+                lang_d_converted = {k: betaCodeToArSimple(v) for k,v in lang_d.items()}
+                name_d[lang] = lang_d_converted
+                
+    if name_d:
+        name_elements_d[auth_uri] = name_d
+
+    # - extract geo data related to author:
+    geo = []
+    auth_yml_fn = auth_uri + ".yml"
+    geo_regex = r"\w+_RE(?:_\w+)?|\w+_[RSNO]\b|\w+XXXYYY\w*"
+    
+    born = re.findall(geo_regex, auth_yml_d["20#AUTH#BORN#####:"])
+    for p in born:
+        geo.append("born@"+p)
+        if p not in geo_URIs:
+            geo_URIs[p] = set()
+        geo_URIs[p].add(auth_yml_fn)    # SIDE_EFFECT!
+
+        
+    died = re.findall(geo_regex, auth_yml_d["20#AUTH#DIED#####:"])
+    for p in died:
+        geo.append("died@"+p)
+        if p not in geo_URIs:
+            geo_URIs[p] = set()
+        geo_URIs[p].add(auth_yml_fn)    # SIDE_EFFECT!
+    
+    resided = re.findall(geo_regex, auth_yml_d["20#AUTH#RESIDED##:"])
+    for p in resided:
+        geo.append("resided@"+p)
+        if p not in geo_URIs:
+            geo_URIs[p] = set()
+        geo_URIs[p].add(auth_yml_fn)    # SIDE_EFFECT!
+
+    visited = re.findall(geo_regex, auth_yml_d["20#AUTH#VISITED##:"])
+    for p in visited:
+        geo.append("visited@"+p)
+        if p not in geo_URIs:
+            geo_URIs[p] = set()
+        geo_URIs[p].add(auth_yml_fn)    # SIDE_EFFECT!
+
+
+    # Add the extracted metadata to a dictionary:
+    author_d = dict()
+    author_d["uri"] = auth_uri
+    author_d["date"] = uri.date
+    author_d["shuhra"] = shuhra
+    author_d["full_name"] = full_name
+    author_d["name_elements"] = name_d
+    author_d["author_lat"] = author_lat
+    author_d["author_ar"] = author_ar
+    author_d["author_name_from_uri"] = author_name_from_uri
+    author_d["vers_uri"] = english_name
+    author_d["name_lat"] = [x for x in (english_name, author_name_from_uri) if x]
+    author_d["geo"] = geo
+    author_d["books"] = []
+
+    return author_d, name_elements_d
+
+
+def extract_book_meta(uri, book_yml_d, tags_dic, all_book_meta_d, book_rel_d):
+    """"""
+    
+    book_uri = uri.build_uri("book")
+
+    # do not extract the book metadata from the yml file
+    # if it has already been extracted before
+    # or if no readable book YML file was found:
+    
+    if book_uri in all_book_meta_d:
+        return all_book_meta_d[book_uri], book_rel_d
+    if not book_yml_d:
+        return dict(), book_rel_d
+
+    # - extract book relations:
+    
+    if "40#BOOK#RELATED##:" in book_yml_d:
+        rels = book_yml_d["40#BOOK#RELATED##:"].strip()
+        if rels.startswith("URI of"):
+            rels = ""
+        rels = re.sub("[ \r\n¶]+", " ", rels)
+        rels = re.split(" *[;,:]+ *", rels)
+        rels = [rel for rel in rels if rel.strip()]
+        for rel in rels:
+            if "@" in rel:  # new format: COMM.sharh@0255Jahiz.Hayawan
+                rel_types = rel.strip().split("@")[0]
+                rel_book = rel.strip().split("@")[1]
+            else:           # old format: 0255Jahiz.Hayawan (COMM.sharh)
+                try:
+                    rel_types = re.findall("\(([^\)]+)", rel)[0].strip()
+                except:
+                    print(book_uri, ":")
+                    print("    no relationship type found in ", [rel])
+                    continue
+                rel_book = re.sub(" *\(.+", "", rel).strip()
+            
+            
+            if not book_uri in book_rel_d:
+                book_rel_d[book_uri] = []
+            if not rel_book in book_rel_d:
+                book_rel_d[rel_book] = []
+            for rel_type in re.split(" *, *", rel_types):
+                if "." in rel_type:
+                    main_rel_type = re.split(" *\. *", rel_type)[0]
+                    sec_rel_type = re.split(" *\. *", rel_type)[1]
+                else:
+                    main_rel_type = rel_type
+                    sec_rel_type = ""
+                rel = {"source": book_uri,
+                       "main_rel_type": main_rel_type,
+                       "sec_rel_type": sec_rel_type,
+                       "dest": rel_book}
+                if not rel in  book_rel_d[book_uri]:
+                    book_rel_d[book_uri].append(rel)
+                if not rel in book_rel_d[rel_book]:
+                    book_rel_d[rel_book].append(rel)
+        
+
+    # - extract title metadata:
+
+    title_lat = []
+    title_ar = []
+    if book_yml_d:
+        for c in ["10#BOOK#TITLEA#AR:", "10#BOOK#TITLEB#AR:"]:
+            if not ("al-Muʾallif" in book_yml_d[c]\
+                    or "none" in book_yml_d[c].lower()):
+                title_lat.append(book_yml_d[c].strip())
+                title_ar.append(betaCodeToArSimple(title_lat[-1]))
+
+    if not title_lat:
+        title_lat.append(insert_spaces(uri.title))
+
+    # - extract genre tags:
+
+    genre_tags = book_yml_d["10#BOOK#GENRES###:"].strip()
+    if genre_tags.startswith("src"):
+        genre_tags = []
+    if genre_tags:
+        genre_tags = re.split(" *[;:,]+ *", genre_tags)
+
+    # - add genre tags from Maxim's tag file:
+    
+    if uri.version in tags_dic:
+        genre_tags += tags_dic[uri.version]
+
+    # Add the extracted metadata to a dictionary:
+    book_d = dict()
+    book_d["uri"] = book_uri
+    book_d["title_ar"] = title_ar
+    book_d["title_lat"] = title_lat
+    book_d["genre_tags"] = list(set(genre_tags))
+    book_d["versions"] = []
+    book_d["relations"] = []
+
+    return book_d, book_rel_d
+
+def load_yml(yml_pth):
+    try:
+        yml_d = readYML(yml_pth)
+        if not yml_d:
+            yml_d = fix_broken_yml(yml_pth)
+    except:
+        print("YML file not found:", yml_pth)
+        yml_d = {}
+    return yml_d
+
+def list2str(arr, sep=" :: "):
+    return sep.join(arr)
+
+def aggregate_arabic_names(all_vers_meta_d, all_book_meta_d, all_auth_meta_d):
+    # if no Arabic author name is provided in the yml file,
+    # aggregate the Arabic names found in all text files by the author:
+    for auth_uri, auth_d in all_auth_meta_d.items():
+        if not auth_d["author_ar"]:
+            for book_uri in auth_d["books"]:
+                book_d = all_book_meta_d[book_uri]
+                for vers_uri in book_d["versions"]:
+                    vers_d = all_vers_meta_d[vers_uri]
+                    if "author_ar" in vers_d and vers_d["author_ar"]:
+                        for name in vers_d["author_ar"]:
+                            if name not in auth_d["author_ar"]:
+                                auth_d["author_ar"].append(name)
+        
+
+    # if no Arabic book title is provided in the yml file,
+    # aggregate the Arabic book titles found in all text files of the book:
+    for book_uri, book_d in all_book_meta_d.items():
+        if not book_d["title_ar"]:
+            for vers_uri in book_d["versions"]:
+                vers_d = all_vers_meta_d[vers_uri]
+                if "title_ar" in vers_d and vers_d["title_ar"]:
+                    for title in vers_d["title_ar"]:
+                        if title not in book_d["title_ar"]:
+                            book_d["title_ar"].append(title)
+
+    return all_vers_meta_d, all_book_meta_d, all_auth_meta_d
+
+    
+        
+
+def create_tsv_row(vers_uri, all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
+                   split_ar_lat=True, incl_char_length=True, sep="\t"):
+    # get the relevant dictionaries:
+    
+    vers_d = all_vers_meta_d[vers_uri]
+    uri = URI(vers_d["fullTextURL"])
+    book_uri = uri.build_uri("book")
+    book_d = all_book_meta_d[book_uri]
+    auth_uri = uri.build_uri("author")
+    auth_d = all_auth_meta_d[auth_uri]
+
+    # prepare values for the tsv row:
+
+    print("author_ar:", auth_d["author_ar"])
+    
+    author_ar = list2str(auth_d["author_ar"])
+    if not author_ar and "author_ar" in vers_d:
+        author_ar = list2str(vers_d["author_ar"])
+    author_lat = list2str(auth_d["author_lat"])
+    title_ar = list2str(book_d["title_ar"])
+    if not title_ar and "title_ar" in vers_d:
+        title_ar = list2str(vers_d["title_ar"])
+    title_lat = list2str(book_d["title_lat"])
+    ed_info = list2str(vers_d["ed_info"])    
+    tags = book_d["genre_tags"] + auth_d["geo"] + vers_d["comment_tags"]
+    if uri.extension:
+        tags.append(uri.extension.upper())
+    tags = list2str(tags)
+
+    # build the tsv row:
+    
+    if not split_ar_lat:
+        author = list2str([author_lat, author_ar])
+        title = list2str([title_lat, title_ar])
+    else:
+        author = author_ar + sep + author_lat
+        title = title_ar + sep + title_lat
+    row = [vers_uri, auth_d["date"], author,
+           book_uri, title, ed_info, uri.version, vers_d["status"],
+           vers_d["tok_length"], vers_d["fullTextURL"],
+           tags, auth_d["author_name_from_uri"],
+           auth_d["shuhra"], auth_d["full_name"]]
+    if incl_char_length:
+        row.append(vers_d["char_length"])
+
+    return sep.join([str(cell) for cell in row])
 
 def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     book_rel_outpth, name_el_outpth,
@@ -502,514 +964,141 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
     """
 
     dataYML = []
-    dataCSV = {}  # vers-uri, date, author, book, id, status, length, fullTextURL, instantiationURL, tags, localPath
-    statusDic = {}
+    dataCSV = {}  
+    status_dic = {}
     split_files = dict()
     start_folder = re.sub("\\\\", "/", start_folder)
     book_rel_d = dict()
     name_elements_d = dict()
+    all_book_meta_d = dict()    # will contain all book-level metadata
+    all_auth_meta_d = dict()    # will contain all author-level metadata
+    all_vers_meta_d = dict() # will contain all version-level metadata
 
+    version_yml_regex = "^\d{4}[A-Za-z]+\.[A-Za-z\d]+\.\w+-[a-z]{3}\d+\.yml$"
     for root, dirs, files in os.walk(start_folder):
         dirs[:] = [d for d in sorted(dirs) if d not in exclude]
         
-        for file in files:
+        for fn in files:
             # select only the version yml files:
-            if re.search("^\d{4}[A-Za-z]+\.[A-Za-z\d]+\.\w+-(ara|per)\d\.yml$",
-                         file):
-                uri = URI(os.path.join(root, file))
+            if re.search(version_yml_regex, fn):
+                # build the relevant URIs:
+                uri = URI(os.path.join(root, fn))
+                vers_uri = uri.build_uri("version")
+                book_uri = uri.build_uri("book")
+                auth_uri = uri.build_uri("author")
 
                 # add the version ID to the version_ids dictionary
                 # to check for duplicate IDs later:
                 if not uri.version in version_ids:
                     version_ids[uri.version] = []
-                version_ids[uri.version].append(file)
+                version_ids[uri.version].append(fn)
 
                 # build the filepaths to all yml files related
                 # to the current version yml file:
                 if not flat_folder:
-                    #versF = uri.build_pth(uri_type="version_yml")
-                    #bookF = uri.build_pth(uri_type="book_yml")
-                    #authF = uri.build_pth(uri_type="author_yml")
                     auth_folder = os.path.dirname(root)
                 else:
-                    #versF = os.path.join(root, file)
-                    #bookF = os.path.join(root, uri.build_uri(uri_type="book")+".yml")
-                    #authF = os.path.join(root, uri.build_uri(uri_type="author")+".yml")
                     auth_folder = root
-                versF = os.path.join(root, file)
-                bookF = os.path.join(root, uri.build_uri(uri_type="book")+".yml")
-                authF = os.path.join(auth_folder, uri.build_uri(uri_type="author")+".yml")
-                #print("versF:", versF)
-                #print("bookF:", bookF)
-                #print("authF:", authF)
+                vers_yml_pth = os.path.join(root, fn)
+                book_yml_pth = os.path.join(root, uri.build_uri(uri_type="book")+".yml")
+                auth_yml_pth = os.path.join(auth_folder, uri.build_uri(uri_type="author")+".yml")
 
                 # bring together all yml data related to the current version
                 # and store in the master dataYML variable:
-##                versD = zfunc.dicToYML(zfunc.readYML(versF)) + "\n"
-##                bookD = zfunc.dicToYML(zfunc.readYML(bookF)) + "\n"
-##                authD = zfunc.dicToYML(zfunc.readYML(authF)) + "\n"
-                versD = readYML(versF)
-                if not versD:
-                    versD = fix_broken_yml(versF)
-                versD_yml = dicToYML(versD) + "\n"
-                try:
-                    bookD = readYML(bookF)
-                    if not bookD:
-                        bookD = fix_broken_yml(bookF)
-                    bookD_yml = dicToYML(bookD) + "\n"
-                except:
-                    print("No book yml file found", bookF)
-                    bookD = ""
-                    bookD_yml = ""
-                try:
-                    authD = readYML(authF)
-                    if not authD:
-                        authD = fix_broken_yml(authF)
-                    authD_yml = dicToYML(authD) + "\n"
-                except:
-                    print("No author yml file found", authF)
-                    authD = ""
-                    bookD_yml = ""
-                record = splitter + versD_yml + bookD_yml + authD_yml
+                vers_yml_d = load_yml(vers_yml_pth)
+                book_yml_d = load_yml(book_yml_pth)
+                auth_yml_d = load_yml(auth_yml_pth)
+
+                record = "{}\n{}\n{}\n{}\n".format(splitter, dicToYML(vers_yml_d),
+                                                   dicToYML(book_yml_d), dicToYML(auth_yml_d))
                 dataYML.append(record)
 
-                # collect the metadata related to the current version:
+                # 1. collect the metadata related to the current version:
 
+                ## A) from the author YML file:
 
-                # 1) from the YML files:
+                auth_d, name_elements_d = extract_author_meta(uri, auth_yml_d, all_auth_meta_d,
+                                                              name_elements_d)
+                if book_uri not in auth_d["books"]:
+                    auth_d["books"].append(book_uri)
 
-                # - explicit primary version:
-                primary_yml = False
-                if "PRIMARY_VERSION" in versD["90#VERS#ISSUES###:"]:
-                    primary_yml = True
+                ## B) from the book yml file:
 
-                # - length in number of characters:
-##                versD = zfunc.readYML(versF)
-##                versD = readYML(versF)
-                length = versD["00#VERS#LENGTH###:"].strip()
-                
-                recalc = False
-                if not length:
-                    recalc = True
-                if incl_char_length:
-                    try:
-                        char_length = versD["00#VERS#CLENGTH##:"].strip()
-                        if not char_length:
-                            recalc = True
-                    except:
-                        recalc = True
-                if recalc:
-                    uri.extension = ""
-                    #pth = uri.build_pth(uri_type="version_file")
-                    pth = versF[:-4]
-                    for ext in [".mARkdown", ".completed", ".inProgress", ""]:
-                        version_fp = pth + ext
-                        if os.path.exists(version_fp):
-                            if incl_char_length:
-                                char_length = ar_cnt_file(version_fp, mode="char")
-                                char_length = str(char_length)
-                                versD["00#VERS#CLENGTH##:"] = char_length
-                            length = ar_cnt_file(version_fp, mode="token")
-                            length = str(length)
-                            versD["00#VERS#LENGTH###:"] = length
-                            ymlS = dicToYML(versD)
-                            with open(versF, mode="w", encoding="utf-8") as file:
-                                file.write(ymlS)
-                            break
+                book_d, book_rel_d = extract_book_meta(uri, book_yml_d, tags_dic,
+                                                       all_book_meta_d, book_rel_d)
+                book_d["versions"].append(vers_uri)
 
-                # - book relations:
-                if "40#BOOK#RELATED##:" in bookD \
-                   and not bookD["40#BOOK#RELATED##:"].strip().startswith("URI of"):
-                    rels = bookD["40#BOOK#RELATED##:"].strip()
-                    rels = re.sub(" *¶ *", "", rels)
-                    rels = re.split(" ?; ?", rels)
-                    for rel in rels:
-                        rel = re.sub("[ \r\n¶]+", " ", rel)
-                        if "@" in rel:
-                            rel_types = rel.split("@")[0]
-                            rel_book = rel.split("@")[1]
-                        else:
-                            try:
-                                rel_types = re.findall("\(([^\)]+)", rel)[0]
-                            except:
-                                print(bookF, ":")
-                                print("    no relationship type found in ", rel)
-                                continue
-                            rel_book = re.sub(" *\(.+", "", rel).strip()
-                        
-                        bookURI = uri.build_uri("book")
-                        if not bookURI in book_rel_d:
-                            book_rel_d[bookURI] = []
-                        if not rel_book in book_rel_d:
-                            book_rel_d[rel_book] = []
-                        for rel_type in re.split(" *, *", rel_types):
-                            if "." in rel_type:
-                                main_rel_type = re.split(" *\. *", rel_type)[0]
-                                sec_rel_type = re.split(" *\. *", rel_type)[1]
-                            else:
-                                main_rel_type = rel_type
-                                sec_rel_type = ""
-                            rel = {"source": bookURI,
-                                   "main_rel_type": main_rel_type,
-                                   "sec_rel_type": sec_rel_type,
-                                   "dest": rel_book}
-                            if not rel in  book_rel_d[bookURI]:
-                                book_rel_d[bookURI].append(rel)
-                            if not rel in book_rel_d[rel_book]:
-                                book_rel_d[rel_book].append(rel)
+                ## C) from the version YML file:
 
+                vers_d, uri, status_dic = extract_version_meta(uri, vers_yml_d, vers_yml_pth,
+                                                               output_files_path, start_folder,
+                                                               status_dic, incl_char_length)
 
-                # - edition information:
-                ed_info = []
-                if not versD["80#VERS#BASED####:"].strip().startswith("perma")\
-                   and not versD["80#VERS#BASED####:"].strip().startswith("NO"):
-                    ed_info = [versD["80#VERS#BASED####:"].strip(), ]
-
-                # - title:
-##                bookD = zfunc.readYML(bookF)
-                title_lat = []
-                title_ar = []
-##                try:
-##                    bookD = readYML(bookF)
-##                    #title = []
-                if bookD:
-                    for c in ["10#BOOK#TITLEA#AR:", "10#BOOK#TITLEB#AR:"]:
-                        if not ("al-Muʾallif" in bookD[c]\
-                                or "none" in bookD[c].lower()):
-    ##                        title.append(bookD[c].strip())
-    ##                        title.append(betaCodeToArSimple(title[-1]))
-                            title_lat.append(bookD[c].strip())
-                            title_ar.append(betaCodeToArSimple(title_lat[-1]))
-##                except:
-##                    print("No book yml file found")
-
- 
-                # - author:
-##                authD = zfunc.readYML(authF)
-                shuhra = ""
-                full_name = ""
-                name_d = dict()
-                authorURI = uri.build_uri("author")
-                geo = []
-                if authD:
-                    # create a full name from the name elements:
-                    if not ("Fulān" in authD["10#AUTH#SHUHRA#AR:"]\
-                            or "none" in authD["10#AUTH#SHUHRA#AR:"].lower()):
-                        shuhra = authD["10#AUTH#SHUHRA#AR:"].strip()
-                    name_comps = ["10#AUTH#LAQAB##AR:",
-                                  "10#AUTH#KUNYA##AR:",
-                                  "10#AUTH#ISM####AR:",
-                                  "10#AUTH#NASAB##AR:",
-                                  "10#AUTH#NISBA##AR:"]
-                    full_name = [authD[x] for x in name_comps \
-                                 if x in authD \
-                                 and not ("Fulān" in authD[x] \
-                                             or "none" in authD[x].lower())]
-                    full_name = " ".join(full_name)
-                    name_comps_en = [x.replace("#AR:", "#EN:") for x in name_comps]
-                    english_name = [authD[x] for x in name_comps_en \
-                                    if x in authD and \
-                                    not ("Fulān" in authD[x] \
-                                         or "none" in authD[x].lower())]
-
-                    # collect author name elements:
-                    for lang in ["AR", "EN", "FA"]:
-                        lang_d = dict()
-                        add = False
-                        for yml_k in ["10#AUTH#SHUHRA#AR:"]+name_comps:
-                            yml_k = yml_k.replace("#AR:", "#{}:".format(lang))
-                            k = re.findall("(?<=10#AUTH#)\w+", yml_k)[0].lower()
-                            lang_d[k] = get_name_el(authD, yml_k)
-                            
-                            if lang_d[k]:
-                                add = True
-                        if add:
-                            if lang == "EN":
-                                name_d[lang] = lang_d
-                            else:
-                                # store a version of the name in transcription and Arabic script:
-                                name_d["LA"] = lang_d
-                                lang_d_converted = {k: betaCodeToArSimple(v) for k,v in lang_d.items()}
-                                name_d[lang] = lang_d_converted
-                                
-                            
-                    if name_d:
-                        name_elements_d[authorURI] = name_d
-
-                    # geo data:
-                    auth_yml = file.split(".")[0]+".yml"
-                    geo_regex = r"\w+_RE(?:_\w+)?|\w+_[RSNO]\b|\w+XXXYYY\w*"
-                    
-                    born = re.findall(geo_regex, authD["20#AUTH#BORN#####:"])
-                    #geo += ["born@"+p for p in born]
-                    for p in born:
-                        geo.append("born@"+p)
-                        if p not in geo_URIs:
-                            geo_URIs[p] = set()
-                        geo_URIs[p].add(auth_yml)
-                        
-                    died = re.findall(geo_regex, authD["20#AUTH#DIED#####:"])
-                    #geo += ["died@"+p for p in died]
-                    for p in died:
-                        geo.append("died@"+p)
-                        if p not in geo_URIs:
-                            geo_URIs[p] = set()
-                        geo_URIs[p].add(auth_yml)
-                    
-                    resided = re.findall(geo_regex, authD["20#AUTH#RESIDED##:"])
-                    #geo += ["resided@"+p for p in resided]
-                    for p in resided:
-                        geo.append("resided@"+p)
-                        if p not in geo_URIs:
-                            geo_URIs[p] = set()
-                        geo_URIs[p].add(auth_yml)
-                    
-                    visited = re.findall(geo_regex, authD["20#AUTH#VISITED##:"])
-                    #geo += ["visited@"+p for p in visited]
-                    for p in visited:
-                        geo.append("visited@"+p)
-                        if p not in geo_URIs:
-                            geo_URIs[p] = set()
-                        geo_URIs[p].add(auth_yml)
-                    #geo = " :: ".join(geo)
-                    
-
-                # 2) from the URI: 
-
-                # - date:
-                date = uri.date
-
-                # - author:
-##                author = insert_spaces(uri.author)
-                author_ar = []
-                author_from_uri = insert_spaces(uri.author)
-                author_lat = [author_from_uri, ]
-                if english_name:
-                    author_lat.append(" ".join(english_name))
-
-                # - book title:
-##                if not title:
-##                    title.append(insert_spaces(uri.title))
-                if not title_lat:
-                    title_lat.append(insert_spaces(uri.title))
-
-                # - book URI
-                bookURI = uri.build_uri("book")
-
-                # - version URI:
-                versURI = uri.build_uri("version")
-
-                # - collection ID:
-                coll_id = re.findall("[A-Za-z]+", versURI.split(".")[-1])[0]
-
-                # - make a provisional (i.e., without extension)
-                #   local filepath  to the current version:
-                uri.extension = ""
-                #local_pth = uri.build_pth("version_file")
-                local_pth = re.sub(r"\\", "/", versF[:-4])
-                #print("local_pth:", local_pth)
-                #print(local_pth)
-
-                # - set temporary secondary status for every book.
-                #   the primary version of a book is the one that
-                #   has the most developed annotation
-                #   (signalled by the extension: mARkdown>completed>inProgress)
-                #   If no version has an extension,
-                #   the longest version will provisorally be considered primary.
-                #   The length comparison can take place only after all versions
-                #   have been documented.
-                #   For this reason, versions with an extension
-                #   are provisionally given a very high number
-                #   in the statusDic instead of their real length,
-                #   so that they will be chosen as primary version
-                #   once the lengths are compared:
-                status = "sec"                
-                if os.path.isfile(local_pth+".inProgress"):
-                    lenTemp = 100000000
-                    uri.extension = "inProgress"
-                elif os.path.isfile(local_pth+".completed"):
-                    lenTemp = 1000000000
-                    uri.extension = "completed"
-                elif os.path.isfile(local_pth+".mARkdown"):
-                    lenTemp = 10000000000
-                    uri.extension = "mARkdown"
-                elif "Sham30K" in local_pth: # give Sham30K files lowest priority
-                    lenTemp = 0
-                    uri.extension = ""
-                else:
-                    uri.extension = ""
-                    if length:
-                        lenTemp = length
-                    else:
-                        lenTemp = 0
-
-                # - rebuild the local_path, with the extension:
-                #local_pth = uri.build_pth("version_file")
-                if uri.extension:
-                    local_pth+= "." + uri.extension
-
-                # - add the uri to the statusDic if the file is not missing:
-                if os.path.exists(local_pth):
-                    
-                    if bookURI not in statusDic:
-                        statusDic[bookURI] = []
-                    if primary_yml:
-                        statusDic[bookURI].append("pri##" + versURI)
-                    else:
-                        statusDic[bookURI].append("%012d##" % int(lenTemp) + versURI)
-
-
-##                # - build the path to the full text file on Github:
-##                if URI.data_in_25_year_repos:
-##                    uri.base_pth = "https://raw.githubusercontent.com/OpenITI"
-##                    #fullTextURL = re.sub("data/", "master/data/", uri.build_pth("version_file"))
-##                    fullTextURL = re.sub("data/", "master/data/", local_pth) 
-##                else:
-##                    uri.base_pth = "data"
-##                    #fullTextURL = uri.build_pth("version_file")
-##                    fullTextURL = re.sub(".+?/data/", "data/", local_pth)
-
-                # - build the link/path to the text file in the output file:
-                
-                #print(fullTextURL)
-                if output_files_path:
-                    fullTextURL = re.sub(start_folder, output_files_path, local_pth)
-                else:
-                    fullTextURL = local_pth
-                if "githubusercontent" in fullTextURL:
-                    fullTextURL = re.sub("data/", "master/data/", fullTextURL)
-
-                # - tags (for extension + "genres")
-                tags = ""
-                if uri.extension:
-                    tags += uri.extension.upper()+","
-                if uri.version in tagsDic:
-                    tags += tagsDic[uri.version]
-                    #print(uri.version, tagsDic[uri.version])
-                if bookD and not bookD["10#BOOK#GENRES###:"].startswith("src"):
-                    tags += "," + bookD["10#BOOK#GENRES###:"]
-                version_tags = re.findall("[A-Z_]{5,}",
-                                          versD["90#VERS#ISSUES###:"])
-                if version_tags:
-                    tags += "," + ",".join(version_tags)
-                
-
-
-                # 3) collect additional metadata (mostly in Arabic!)
+                # 2. collect additional metadata (mostly in Arabic!)
                 #    from the text file headers:
 
+                local_pth = vers_d["local_pth"]
                 if not os.path.exists(local_pth):
                     print("MISSING FILE? {} does not exist".format(local_pth))
                 else:
                     header_meta = extract_metadata_from_header(local_pth)
-                    #print(local_pth, header_meta)
 
-                    # - author name (combine with the uri's author component)
-                    #add_arabic_name = True
-                    if shuhra:
-                        shuhra = re.sub("[ \r\n]*¶ *", " ", shuhra)
-                        author_lat.append(shuhra)
-                        author_ar.append(betaCodeToArSimple(shuhra))
-                        #print("shuhra:", betaCodeToArSimple(shuhra))
-                        #add_arabic_name = False
-                    if full_name:
-                        full_name = re.sub("[ \r\n]*¶ *", " ", full_name)
-                        author_lat.append(full_name)
-                        author_ar.append(betaCodeToArSimple(full_name))
-                        #add_arabic_name = False
-                    #if add_arabic_name:
-##                        author = [author,] + list(set(header_meta["AuthorName"]))
-                    if not author_ar: # if no Arabic author name was taken from YML files:
-                        author_ar = list(set(header_meta["AuthorName"]))
+                    # - author name:
 
-                    # - book title (combine with the uri's title component)
-##                    if len(title) < 2: # if no title was taken from the YML file
-##                        title += list(set(header_meta["Title"]))
-                    if not title_ar: # if no title was taken from the YML file
-                        title_ar += list(set(header_meta["Title"]))
+                    #if not auth_d["author_ar"]: # if no Arabic author name was found in YML file:
+                    #    auth_d["author_ar"] = list(set(header_meta["AuthorName"]))
+                    vers_d["author_ar"] = list(set(header_meta["AuthorName"]))
 
-                    # - information about the current version's edition: 
+                    # - book title:
+                    
+                    #if not book_d["title_ar"]: # if no title was found in the YML file
+                    #    book_d["title_ar"] += list(set(header_meta["Title"]))
+                    vers_d["title_ar"] = list(set(header_meta["Title"]))
+
+                    # - information about the current version's edition:
+                    
                     ed_info = header_meta["Edition:Editor"] +\
                               header_meta["Edition:Place"] +\
                               header_meta["Edition:Date"] +\
-                              header_meta["Edition:Publisher"] +\
-                              ed_info
+                              header_meta["Edition:Publisher"]
+                    vers_d["ed_info"] += ed_info
 
                     # - additional genre tags:
-##                    tags = tags.split(",") + list(set(header_meta["Genre"]))
-                    tags = tags.split(",")
+                    
+                    coll_id = re.findall("[A-Za-z]+", uri.version)[0]
                     for el in header_meta["Genre"]:
                         for t in el.split(" :: "):
-                            if coll_id+"@"+t not in tags:
-                                tags.append(coll_id+"@"+t)
+                            if coll_id+"@"+t not in book_d["genre_tags"]:
+                                book_d["genre_tags"].append(coll_id+"@"+t)
 
-                    # - add geo data:
-                    tags += geo
-
-                    # if there are multiple values: separate with " :: ":
-##                    cats = [author, title, ed_info, tags]
-##                    author, title, ed_info, tags = [" :: ".join(x) for x in cats]
-                    cats = [author_ar, author_lat, title_ar, title_lat, ed_info, tags]
-                    author_ar, author_lat, title_ar, title_lat, ed_info, tags = [" :: ".join(x) for x in cats]
-
-                    # compile the data in a tsv line and store in dataCSV dict:
-                    if not split_ar_lat:
-                        title = " :: ".join([title_lat, title_ar])
-                        author = " :: ".join([author_lat,author_ar])
-                        v = [versURI, date, author, bookURI, title, ed_info,
-                             uri.version, status, length, fullTextURL, tags,
-                             author_from_uri, shuhra, full_name]
-                    else:
-                        v = [versURI, date, author_ar, author_lat, bookURI,
-                             title_ar, title_lat, ed_info,
-                             uri.version, status, length, fullTextURL, tags,
-                             author_from_uri, shuhra, full_name]
-                    if incl_char_length:
-                        v.append(char_length)
-                    value = "\t".join(v)
-                    dataCSV[versURI] = value
 
                 # Deal with files split into multiple parts because
-                # they were too big: 
-                if re.search("[A-Z]-", versURI):
-                    print("FILE SPLIT because it was too big:", versURI)
-                    m = re.sub("[A-Z]-", "-", versURI)
+                # they were too large: 
+                if re.search("[A-Z]-", vers_uri):
+                    print("FILE SPLIT because it was too big:", vers_uri)
+                    m = re.sub("[A-Z]-", "-", vers_uri)
                     if m not in split_files:
                         split_files[m] = []
-                    split_files[m].append(versURI)
+                    split_files[m].append(vers_uri)
 
+                # Add the extracted metadata to the relevant aggregating dictionaries:
+                all_auth_meta_d[auth_uri] = auth_d
+                all_book_meta_d[book_uri] = book_d
+                all_vers_meta_d[vers_uri] = vers_d
 
-    # define text file(s) that get primary status:
-    for k, v in statusDic.items():
-        v = sorted(v, reverse=True)
+    # define which text file(s) get primary status:
+    for book_uri, versions in status_dic.items():
+        versions = sorted(versions, reverse=True)
         # give primary status to all text files that have "PRIMARY_VERSION" in version yml file:
-        if v[0].startswith("pri"): 
-            primary = [x for x in v if x.startswith("pri")]
+        if versions[0].startswith("pri"): 
+            primary = [x for x in versions if x.startswith("pri")]
             for x in primary:
-                key = x.split("##")[1]
-                dataCSV[key] = dataCSV[key].replace("\tsec\t", "\tpri\t")
+                vers_uri = x.split("##")[1]
+                all_vers_meta_d[vers_uri]["status"] = "pri"
         # If no yml file has "PRIMARY_VERSION", give primary status to "longest" version:
         else:
-            key = v[0].split("##")[1]
-            dataCSV[key] = dataCSV[key].replace("\tsec\t", "\tpri\t")
-
-
-    # define the csv file header: 
-    if not split_ar_lat:
-        h = ["versionUri", "date", "author", "book",
-             "title", "ed_info", "id", "status",
-             "tok_length", "url",
-             #"instantiation", "localPath",
-             "tags", "author_from_uri", "author_shuhra", "author_full_name"]
-    else:
-        h = ["versionUri", "date", "author_ar", "author_lat", "book",
-             "title_ar", "title_lat", "ed_info", "id", "status",
-             "tok_length", "url",
-             #"instantiation", "localPath",
-             "tags", "author_from_uri", "author_lat_shuhra", "author_lat_full_name"]
-    if incl_char_length:
-        h.append("char_length")
-    header = "\t".join(h)
+            vers_uri = versions[0].split("##")[1]
+            all_vers_meta_d[vers_uri]["status"] = "pri"
 
     # Write a json file containing all texts that have been split
     # into parts because they were too big (URIs with VolsA, VolsB, ...):
@@ -1017,79 +1106,121 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
     with open(split_files_fp, mode='w', encoding='utf-8') as outfile:
         json.dump(split_files, outfile, indent=4)  
 
-    # add data for files split into multiple parts:
-    
-    for file in split_files:
-##        print(file, "consists of mutltiple files:")
-##        print(split_files[file])
-        first_part = split_files[file][0]
-        file_length = 0
-        file_clength = 0
-        for part in split_files[file]:
-            # make each part a primary version:
-            dataCSV[part] = dataCSV[part].replace("\tsec\t", "\tpri\t")
-            # collect the token and character length from each part
-            file_length += int(dataCSV[part].split("\t")[h.index("tok_length")])
-            if incl_char_length:
-                file_clength += int(dataCSV[part].split("\t")[-1])
-        # add an extra line to the csv data with metadata of the compound file:
-        file_csv_line = dataCSV[first_part].split("\t")
-        file_csv_line[h.index("versionUri")] = file
-        #file_csv_line[h.index("id")] = re.sub("Vols[A-Z]", "", file_csv_line[h.index("id")])
-        file_csv_line[h.index("id")] = file_csv_line[h.index("id")][:-1]
-        file_csv_line[h.index("status")] = "sec"
-        file_csv_line[h.index("tok_length")] = str(file_length)
-        #print(file_csv_line[h.index("url")])
-        #file_csv_line[h.index("url")] = re.sub("Vols[A-Z]", "",
-        file_csv_line[h.index("url")] = re.sub("[A-Z](-[a-z]{3}\d)", r"\1",
-                                               file_csv_line[h.index("url")]) # fullTextURL
-        #print(file_csv_line[h.index("url")])
-        #print("---")
-        if incl_char_length:
-            file_csv_line[-1] = str(file_clength)
-        file_csv_line = "\t".join(file_csv_line)
-        dataCSV[file] = file_csv_line
+    # add compound data for text files split because of their size:
+    all_vers_meta_d = add_split_files_meta(split_files, all_vers_meta_d)
 
-    # Sort the tsv data and save it to file: 
-    dataCSV_New = []
-    for k, v in dataCSV.items():
-        #print("\t"+k)
-        dataCSV_New.append(v)
-    dataCSV = sorted(dataCSV_New)
+    # save metadat to tsv:
+    save_as_tsv(all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
+                csv_outpth, split_ar_lat=split_ar_lat,
+                incl_char_length=incl_char_length)
 
-    print("="*80)
-    print("COLLECTING INTO A CSV FILE ({} LINES)...".format(len(dataCSV)))
-    print("="*80)
-
-
-    # save csv file:
-    with open(csv_outpth, "w", encoding="utf8") as outfile:
-        outfile.write(header+"\n"+"\n".join(dataCSV))#.replace(" ", ""))
-
-    # also save the combined yml data in a master yml file: 
+    # save the combined yml data in a master yml file: 
     with open(yml_outpth, "w", encoding="utf8") as outfile:
         outfile.write("\n".join(dataYML))
 
-##    # also save the name elements to a tsv file:
-##    tsv = ["authorURI\tlang\tism\tnasab\tkunya\tlaqab\tnisba\tshuhra"]
-##    keys = tsv[0].split("\t")
-##    
-##    for authorURI in name_elements_d:
-##        for lang in name_elements_d[authorURI]:
-##            row = [authorURI, lang]
-##            row += [name_elements_d[authorURI][lang][k] for k in keys[2:]]
-##            tsv.append("\t".join(row))
-##    name_els_fp = re.sub("\.[tc]sv", "_name_elements.tsv", csv_outpth)
-##    with open(name_els_fp, mode="w", encoding="utf-8") as outfile:
-##        outfile.write("\n".join(tsv))
-
-    # also save the name elements to a json file:
+    # save the name elements to a json file:
     with open(name_el_outpth, mode="w", encoding="utf-8") as outfile:
         json.dump(name_elements_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
 
-    # Finally, save the book relations:
+    # save the book relations:
     with open(book_rel_outpth, "w", encoding="utf-8") as outfile:
         json.dump(book_rel_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
+
+    # store the book relations in the all_book_meta_d:
+    for book_uri in book_rel_d:
+        try:
+            all_book_meta_d[book_uri]["relations"] = book_rel_d[book_uri]
+        except:
+            all_book_meta_d[book_uri] = dict()
+            all_book_meta_d[book_uri]["relations"] = book_rel_d[book_uri]
+
+    # aggregate Arabic author and title names from metadata headers
+    # if none are given in the yml files:
+
+    r = aggregate_arabic_names(all_vers_meta_d, all_book_meta_d, all_auth_meta_d)
+    [all_vers_meta_d, all_book_meta_d, all_auth_meta_d] = r
+
+    # store all version, book and author metadata in json files:
+    book_fp = re.sub("metadata_light.csv", "all_book_meta.json", csv_outpth)
+    with open(book_fp, mode="w", encoding="utf-8") as outfile:
+        json.dump(all_book_meta_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
+
+    auth_fp = re.sub("metadata_light.csv", "all_author_meta.json", csv_outpth)
+    with open(auth_fp, mode="w", encoding="utf-8") as outfile:
+        json.dump(all_auth_meta_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
+
+    vers_fp = re.sub("metadata_light.csv", "all_version_meta.json", csv_outpth)
+    with open(vers_fp, mode="w", encoding="utf-8") as outfile:
+        json.dump(all_vers_meta_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
+
+
+def add_split_files_meta(split_files, all_vers_meta_d):
+    # add data for files split into multiple parts:
+    
+    for file in split_files:
+        # make sure each part has the same status:
+        statuses = [all_vers_meta_d[part]["status"] for part in split_files[file]]
+        for part in split_files[file]:
+            if "pri" in statuses:
+                all_vers_meta_d[part]["status"] = "pri"
+
+        # aggregate the length of the parts:
+        file_length = 0
+        file_clength = 0
+        for part in split_files[file]:
+            file_length += int(all_vers_meta_d[part]["tok_length"])
+            if incl_char_length:
+                file_clength += int(all_vers_meta_d[part]["char_length"])
+                
+        # add an extra line to the csv data with metadata of the compound file:
+        first_part = split_files[file][0]
+        vers_d = copy.deepcopy(all_vers_meta_d[first_part])
+        vers_d["versionUri"] = file
+        vers_d["id"] = vers_d["id"][:-1] # drop the letter
+        vers_d["status"] = "sec"  # give the compound text secondary status so that it is not selected for passim etc.
+        vers_d["tok_length"] = file_length
+        vers_d["url"] = re.sub("[A-Z](-[a-z]{3}\d)", r"\1", vers_d["url"])
+        if incl_char_length:
+            vers_d["char_length"] = file_clength
+        all_vers_meta_d[file] = vers_d
+
+    return all_vers_meta_d
+
+def save_as_tsv(all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
+                csv_outpth, split_ar_lat, incl_char_length):
+
+    # define the tsv file header:
+    if not split_ar_lat:
+        author = "author"
+        title = "title"
+    else:
+        author = "author_ar\tauthor_lat"
+        title = "title_ar\ttitle_lat"
+    header = ["versionUri", "date", author, "book",
+              title, "ed_info", "id", "status",
+              "tok_length", "url",
+              "tags", "author_from_uri", "author_shuhra", "author_full_name"]
+    if incl_char_length:
+        header.append("char_length")
+    header = "\t".join(header)
+
+    tsv = [header, ]
+
+    print("="*80)
+    print("COLLECTING INTO A CSV FILE ({} LINES)...".format(len(all_vers_meta_d)))
+    print("="*80)
+
+    for vers_uri in sorted(all_vers_meta_d.keys()):
+        row = create_tsv_row(vers_uri, all_vers_meta_d,
+                             all_book_meta_d, all_auth_meta_d,
+                             split_ar_lat=split_ar_lat,
+                             incl_char_length=incl_char_length)
+        tsv.append(row)
+
+    # save csv file:
+    with open(csv_outpth, "w", encoding="utf8") as outfile:
+        outfile.write("\n".join(tsv))
+
 
 def restore_config_to_default():
     def_config = """\
@@ -1241,6 +1372,78 @@ def setup_flat_structure_test(test_folder="test/25-years-folders",
                     fp = os.path.join(root, fn)
                     shutil.copyfile(fp, os.path.join(temp_folder, fn))
 
+def check_thurayya_uris():
+    with open("utility/Thurayya_URIs.csv", mode="r", encoding="utf-8") as file:
+        thurayya_uris = set(file.read().splitlines())
+    print("Places that are not in al-Thurayya:")
+    R_O_W_uris = []
+    XXXYYY_uris = []
+    auto_uris = []
+    error_uris = []
+    any_errors = False
+    for uri in geo_URIs:
+        if uri not in thurayya_uris:
+            if uri.endswith(("Auto", "AUTO", "auto")):
+                auto_uris.append(uri)
+            elif "XXXYYY" in uri:
+                XXXYYY_uris.append(uri)
+            else:
+                error_uris.append(uri)
+##                print("*", uri)
+##                for author_yml in geo_URIs[uri]:
+##                    print("  -", author_yml)
+        elif uri.endswith(("_R","_O","_W")):
+            R_O_W_uris.append(uri)
+    if error_uris:
+        any_errors = True
+        print("-"*80)
+        print("These URIs seem to be faulty:")
+        for uri in sorted(error_uris):
+            print("*", uri)        
+    if auto_uris:
+        any_errors = True
+        print("-"*80)
+        print("These URIs have been assigned only based on nisba and must be checked:")
+        for uri in sorted(auto_uris):
+            print("*", uri)
+##            for author_yml in geo_URIs[uri]:
+##                print("  -", author_yml)
+    if XXXYYY_uris:
+        any_errors = True
+        print("-"*80)
+        print("These URIs should be added to Thurayya:")
+        for uri in sorted(XXXYYY_uris):
+            print("*", uri)
+##            for author_yml in geo_URIs[uri]:
+##                print("  -", author_yml)
+    if R_O_W_uris:
+        any_errors = True
+        print("-"*80)
+        print("Thurayya URIs that exist but end with _R, _O or _W instead of _S:")
+        for uri in sorted(R_O_W_uris):
+            print("*", uri)
+##            for author_yml in geo_URIs[uri]:
+##                print("  -", author_yml)
+    if not any_errors:
+        print("    no problems found with Thurayya URIs")
+    else:
+        print("-"*80)
+        print("YML files that contain Thurayya URI issues can be found in")
+        print(pth_string+"Thurayya_URIs_to_be_checked.csv")
+
+    # write details to file:
+    csv_list = []
+    error_lists = [error_uris, auto_uris, XXXYYY_uris, R_O_W_uris]
+    error_labels = ["error", "auto", "XXXYYY", "R_O_W"]
+    for i, lst in enumerate([error_uris, auto_uris, XXXYYY_uris, R_O_W_uris]):
+        for uri in lst:
+            for author_yml in geo_URIs[uri]:
+                csv_list.append("{}\t{}\t{}".format(error_labels[i], uri, author_yml))
+    fp = pth_string+"_Thurayya_URIs_to_be_checked.csv"
+    with open(fp, mode="w", encoding="utf-8") as file:
+        file.write("URI problem type\tThurayya URI\tAuthor YML\n")
+        file.write("\n".join(sorted(csv_list)))        
+    print("="*80)
 
 
 def main():
@@ -1307,32 +1510,15 @@ Command line arguments for generate-metadata.py:
             # load variables from custom config file provided in command line:
             print ("config", arg)
             shutil.copy(arg, "utility/temp_config.py")
-##            from utility.temp_config import corpus_path, \
-##                               exclude, data_in_25_year_repos, \
-##                               perform_yml_check, check_token_counts, \
-##                               incl_char_length, output_path, \
-##                               meta_tsv_fp, meta_yml_fp, \
-##                               meta_json_fp, meta_header_fp, \
-##                               passim_runs, silent, split_ar_lat
             cfg_dict = read_config("utility/temp_config.py")
             os.remove("utility/temp_config.py")
             configured = True
         elif opt in ["-d", "--restore_default"]:
             restore_config_to_default()
             print("default values in config.py restored")
+
     if not configured: # load variables from default configuration file
         cfg_dict = read_config("utility/config.py")
-##        from utility.config import corpus_path, exclude, \
-##                               data_in_25_year_repos, \
-##                               perform_yml_check, check_token_counts, \
-##                               incl_char_length, output_path, \
-##                               meta_tsv_fp, meta_yml_fp, \
-##                               meta_json_fp, meta_header_fp, \
-##                               passim_runs, silent, split_ar_lat
-
-##    for k,v in cfg_dict.items():
-##        print([k,v])
-##    input("continue?")
 
     v_list = ["corpus_path", "exclude", "data_in_25_year_repos",
               "perform_yml_check", "check_token_counts",
@@ -1444,13 +1630,6 @@ Command line arguments for generate-metadata.py:
             output_files_path = input(msg)
  
     if data_in_25_year_repos == None:
-##        print("Is the data in 25-years folders? (press 'N' for RELEASE data)")
-##        resp = input("Y/N: ")
-##        check_input(msg, responses={"Y": True, "N": False})
-##        if resp.upper() == "N":
-##            data_in_25_year_repos = False
-##        else:
-##            data_in_25_year_repos = True
         msg = "Is the data in 25-years folders? (press 'N' for RELEASE data)"
         data_in_25_year_repos = check_input(msg)
         if not data_in_25_year_repos:
@@ -1459,10 +1638,6 @@ Command line arguments for generate-metadata.py:
     URI.data_in_25_year_repos = data_in_25_year_repos
 
     if perform_yml_check == None:
-##        print("Do you want to check completeness of the yml files?")
-##        resp = input("Y/N: ")
-##        if resp.upper() == "Y":
-##            perform_yml_check = True
         msg = "Do you want to check completeness of the yml files?"
         perform_yml_check = check_input(msg)
         if perform_yml_check:
@@ -1475,12 +1650,6 @@ Command line arguments for generate-metadata.py:
                 check_token_counts = False
  
     if incl_char_length == None:
-##        print("Do you want to include character count in addition to token count?")
-##        resp = input("Y/N: ")
-##        if resp.upper() == "Y":
-##            incl_char_length = True
-##        else:
-##            incl_char_length = False
         msg = "Do you want to include character count in addition to token count?"
         incl_char_length = check_input(msg)
 
@@ -1504,9 +1673,6 @@ Command line arguments for generate-metadata.py:
     book_rel_fp = pth_string + "_book_relations.json"
     name_el_fp = pth_string + "_name_elements.json"
 
-##def main(corpus_path, exclude, data_in_25_year_repos, perform_yml_check, 
-##         check_token_counts, incl_char_length, output_path, meta_tsv_fp,
-##         meta_yml_fp, meta_json_fp, meta_header_fp, silent, output_files_path):
 
     print("corpus_path", corpus_path)
     print("exclude", exclude)
@@ -1570,10 +1736,6 @@ Command line arguments for generate-metadata.py:
     print("Saving metadata...")
     print("="*80)
 
-##    passim_runs = [['October 2017 (V1)', 'passim1017'],
-##                   ['February 2019 (V2)', 'passim01022019'],
-##                   ['May 2019 (Aggregated)', 'aggregated01052019'],
-##                   ['February 2020', 'passim01022020']]
     createJsonFile(meta_tsv_fp, meta_json_fp, passim_runs, issues_uri_dict)
 
     
@@ -1584,77 +1746,8 @@ Command line arguments for generate-metadata.py:
 
 
     # 3a- check Thurayya URIs:
-    with open("utility/Thurayya_URIs.csv", mode="r", encoding="utf-8") as file:
-        thurayya_uris = set(file.read().splitlines())
-    print("Places that are not in al-Thurayya:")
-    R_O_W_uris = []
-    XXXYYY_uris = []
-    auto_uris = []
-    error_uris = []
-    any_errors = False
-    for uri in geo_URIs:
-        if uri not in thurayya_uris:
-            if uri.endswith(("Auto", "AUTO", "auto")):
-                auto_uris.append(uri)
-            elif "XXXYYY" in uri:
-                XXXYYY_uris.append(uri)
-            else:
-                error_uris.append(uri)
-##                print("*", uri)
-##                for author_yml in geo_URIs[uri]:
-##                    print("  -", author_yml)
-        elif uri.endswith(("_R","_O","_W")):
-            R_O_W_uris.append(uri)
-    if error_uris:
-        any_errors = True
-        print("-"*80)
-        print("These URIs seem to be faulty:")
-        for uri in sorted(error_uris):
-            print("*", uri)        
-    if auto_uris:
-        any_errors = True
-        print("-"*80)
-        print("These URIs have been assigned only based on nisba and must be checked:")
-        for uri in sorted(auto_uris):
-            print("*", uri)
-##            for author_yml in geo_URIs[uri]:
-##                print("  -", author_yml)
-    if XXXYYY_uris:
-        any_errors = True
-        print("-"*80)
-        print("These URIs should be added to Thurayya:")
-        for uri in sorted(XXXYYY_uris):
-            print("*", uri)
-##            for author_yml in geo_URIs[uri]:
-##                print("  -", author_yml)
-    if R_O_W_uris:
-        any_errors = True
-        print("-"*80)
-        print("Thurayya URIs that exist but end with _R, _O or _W instead of _S:")
-        for uri in sorted(R_O_W_uris):
-            print("*", uri)
-##            for author_yml in geo_URIs[uri]:
-##                print("  -", author_yml)
-    if not any_errors:
-        print("    no problems found with Thurayya URIs")
-    else:
-        print("-"*80)
-        print("YML files that contain Thurayya URI issues can be found in")
-        print(pth_string+"Thurayya_URIs_to_be_checked.csv")
+    check_thurayya_uris()
 
-    # write details to file:
-    csv_list = []
-    error_lists = [error_uris, auto_uris, XXXYYY_uris, R_O_W_uris]
-    error_labels = ["error", "auto", "XXXYYY", "R_O_W"]
-    for i, lst in enumerate([error_uris, auto_uris, XXXYYY_uris, R_O_W_uris]):
-        for uri in lst:
-            for author_yml in geo_URIs[uri]:
-                csv_list.append("{}\t{}\t{}".format(error_labels[i], uri, author_yml))
-    fp = pth_string+"_Thurayya_URIs_to_be_checked.csv"
-    with open(fp, mode="w", encoding="utf-8") as file:
-        file.write("URI problem type\tThurayya URI\tAuthor YML\n")
-        file.write("\n".join(sorted(csv_list)))        
-    print("="*80)
         
     # 3b- check duplicate ids:
     duplicate_ids = False
