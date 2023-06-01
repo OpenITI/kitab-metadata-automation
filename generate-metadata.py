@@ -1180,7 +1180,7 @@ def add_split_files_meta(split_files, all_vers_meta_d, incl_char_length):
         vers_d["id"] = vers_d["id"][:-1] # drop the letter
         vers_d["status"] = "sec"  # give the compound text secondary status so that it is not selected for passim etc.
         vers_d["tok_length"] = file_length
-        vers_d["url"] = re.sub("[A-Z](-[a-z]{3}\d)", r"\1", vers_d["url"])
+        vers_d["fullTextURL"] = re.sub("[A-Z](-[a-z]{3}\d)", r"\1", vers_d["fullTextURL"])
         if incl_char_length:
             vers_d["char_length"] = file_clength
         all_vers_meta_d[file] = vers_d
