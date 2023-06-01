@@ -909,8 +909,6 @@ def create_tsv_row(vers_uri, all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
     auth_d = all_auth_meta_d[auth_uri]
 
     # prepare values for the tsv row:
-
-    print("author_ar:", auth_d["author_ar"])
     
     author_ar = list2str(auth_d["author_ar"])
     if not author_ar and "author_ar" in vers_d:
@@ -1373,7 +1371,7 @@ def setup_flat_structure_test(test_folder="test/25-years-folders",
                     fp = os.path.join(root, fn)
                     shutil.copyfile(fp, os.path.join(temp_folder, fn))
 
-def check_thurayya_uris():
+def check_thurayya_uris(pth_string):
     with open("utility/Thurayya_URIs.csv", mode="r", encoding="utf-8") as file:
         thurayya_uris = set(file.read().splitlines())
     print("Places that are not in al-Thurayya:")
@@ -1747,7 +1745,7 @@ Command line arguments for generate-metadata.py:
 
 
     # 3a- check Thurayya URIs:
-    check_thurayya_uris()
+    check_thurayya_uris(pth_string)
 
         
     # 3b- check duplicate ids:
