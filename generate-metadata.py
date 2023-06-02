@@ -518,7 +518,7 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
     if ed_info.startswith("perma") or ed_info.upper().startswith("NO"):
         ed_info = []
     else:
-        ed_info = re.split("[ \r\n¶]*[,;:]+[ \r\n¶]*", ed_info)
+        ed_info = re.split("[ \r\n¶]*[,;]+[ \r\n¶]*", ed_info)
     
     # - version tags (e.g., INCOMPLETE_TEXT, FOOTNOTES, ...):
     version_tags = re.findall("[A-Z_]{5,}",
