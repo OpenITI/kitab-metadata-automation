@@ -639,6 +639,10 @@ def extract_author_meta(uri, auth_yml_d, all_auth_meta_d, name_elements_d):
     full_name = ""
     author_lat = []
     author_ar = []
+
+    # Add the latinized name from the URI:
+    author_name_from_uri = insert_spaces(auth_uri)[4:]
+    author_lat.append(author_name_from_uri)
     
     ## Get the author's shuhra:
     shuhra = auth_yml_d["10#AUTH#SHUHRA#AR:"].strip()
@@ -676,9 +680,9 @@ def extract_author_meta(uri, auth_yml_d, all_auth_meta_d, name_elements_d):
                     not ("Fulān" in auth_yml_d[x] \
                          or "none" in auth_yml_d[x].lower())]
     english_name = " ".join(english_name)
-
-    # Add the latinized name from the URI:
-    author_name_from_uri = insert_spaces(auth_uri)[4:]
+    if english_name.strip():
+        author_lat.append(english_name)
+      
 
     # collect author name elements in different languages/scripts:
     name_d = dict()
@@ -750,7 +754,6 @@ def extract_author_meta(uri, auth_yml_d, all_auth_meta_d, name_elements_d):
     author_d["author_ar"] = author_ar
     author_d["author_name_from_uri"] = author_name_from_uri
     author_d["vers_uri"] = english_name
-    author_d["name_lat"] = [x for x in (english_name, author_name_from_uri) if x]
     author_d["geo"] = geo
     author_d["books"] = []
 
@@ -1186,22 +1189,26 @@ def add_split_files_meta(split_files, all_vers_meta_d, incl_char_length):
     return all_vers_meta_d
 
 def save_as_tsv(all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
-                csv_outpth, split_ar_lat, incl_char_length):
+                csv_outpth, split_ar_lat, incl_char_length, sep="\t"):
 
     # define the tsv file header:
     if not split_ar_lat:
         author = "author"
         title = "title"
+        author_shuhra = "author_shuhra"
+        author_full_name = "author_full_name"
     else:
-        author = "author_ar\tauthor_lat"
-        title = "title_ar\ttitle_lat"
+        author = "author_ar" + sep + "author_lat"
+        title = "title_ar" + sep + "title_lat"
+        author_shuhra = "author_lat_shuhra"
+        author_full_name = "author_lat_full_name"
     header = ["versionUri", "date", author, "book",
               title, "ed_info", "id", "status",
               "tok_length", "url",
-              "tags", "author_from_uri", "author_shuhra", "author_full_name"]
+              "tags", "author_from_uri", author_shuhra, author_full_name]
     if incl_char_length:
         header.append("char_length")
-    header = "\t".join(header)
+    header = sep.join(header)
 
     tsv = [header, ]
 
