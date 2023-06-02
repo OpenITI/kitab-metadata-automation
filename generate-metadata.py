@@ -867,7 +867,8 @@ def load_yml(yml_pth):
     return yml_d
 
 def list2str(arr, sep=" :: "):
-    return sep.join(arr)
+    """Turn a list into a string (removing empty elements and using a specified separator between elements)"""
+    return sep.join([str(el) for el in arr if str(el).strip()])
 
 def aggregate_arabic_names(all_vers_meta_d, all_book_meta_d, all_auth_meta_d):
     # if no Arabic author name is provided in the yml file,
