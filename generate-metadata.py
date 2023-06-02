@@ -349,14 +349,17 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
             if uri("book") in issues_uri_dict:
                 book_issues = issues_uri_dict[uri("book")]
                 book_issues = [[x.number, x.labels[0].name] for x in book_issues]
+                print(uri("book"), book_issues)
             author_issues = []
             if uri("author") in issues_uri_dict:
                 author_issues += issues_uri_dict[uri("author")]
                 author_issues = [[x.number, x.labels[0].name] for x in author_issues]
+                print(uri("author"), author_issues)
             version_issues = []
             if uri("version") in issues_uri_dict:
                 version_issues = issues_uri_dict[uri("version")]
                 version_issues = [[x.number, x.labels[0].name] for x in version_issues]
+                print(uri("version"), version_issues)
             record["author_issues"] = author_issues
             record["book_issues"] = book_issues
             record["version_issues"] = version_issues
@@ -1307,6 +1310,7 @@ def get_github_issues(token_fp="GitHub personalAccessTokenReadOnly.txt"):
                                                  "PRI & SEC Versions"])
     issues = get_issues.define_text_uris(issues)
     issues_uri_dict = get_issues.sort_issues_by_uri(issues)
+    print(issues_uri_dict)
     return issues_uri_dict
 
 def supplement_config_variables(cfg_dict, v_list):
