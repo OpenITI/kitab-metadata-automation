@@ -5045,6 +5045,24 @@
       "shuhra": "al-Qāḍī Saʿīd al-Qummī"
     }
   },
+  "1111Majlisi": {
+    "AR": {
+      "ism": "محمد باقر",
+      "kunya": "أبو عبيد الله",
+      "laqab": "",
+      "nasab": "بن محمد تقي بن مقصود علي",
+      "nisba": "المجلسي الاصفهاني",
+      "shuhra": "العلامة المجلسي"
+    },
+    "LA": {
+      "ism": "Muḥammad Bāqir",
+      "kunya": "Abū ʿUbayd Allāh",
+      "laqab": "",
+      "nasab": "b. Muḥammad Taqī b. Maqṣūd ʿAlī",
+      "nisba": "al-Maǧlisī al-Iṣfahānī",
+      "shuhra": "al-ʿAllāmaŧ al-Maǧlisī"
+    }
+  },
   "1127KhayrDinIbnIlyas": {
     "AR": {
       "ism": "",
