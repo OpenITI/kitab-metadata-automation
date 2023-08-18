@@ -315,6 +315,14 @@
       "source": "0500Anonymous.AwtanWaBuldan"
     }
   ],
+  "0255Jahiz.MiatKalima": [
+    {
+      "dest": "0255Jahiz.MiatKalima",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "0573RashidWatwat.MatlubKullTalib"
+    }
+  ],
   "0256Bukhari.Sahih": [
     {
       "dest": "0256Bukhari.Sahih",
@@ -1691,6 +1699,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "radd",
       "source": "0571IbnCasakir.TabyinKadhib"
+    }
+  ],
+  "0573RashidWatwat.MatlubKullTalib": [
+    {
+      "dest": "0255Jahiz.MiatKalima",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "0573RashidWatwat.MatlubKullTalib"
     }
   ],
   "0577IbnHishamLakhmi.SharhFasih": [

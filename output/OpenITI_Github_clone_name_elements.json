@@ -2075,6 +2075,24 @@
       "shuhra": "al-Šarīf al-Raḍī"
     }
   },
+  "0411HamidDinKirmani": {
+    "AR": {
+      "ism": "أحمد",
+      "kunya": "",
+      "laqab": "حميد الدين",
+      "nasab": "بن عبد الله",
+      "nisba": "الكرماني",
+      "shuhra": "الكرماني"
+    },
+    "LA": {
+      "ism": "Aḥmad",
+      "kunya": "",
+      "laqab": "Ḥamīd al-dīn",
+      "nasab": "b. ʿAbd Al-lãh",
+      "nisba": "al-Kirmānī",
+      "shuhra": "al-Kirmānī"
+    }
+  },
   "0412Sulami": {
     "AR": {
       "ism": "محمد",
@@ -4701,6 +4719,24 @@
       "nasab": "b. Muḥammad b. ʿAbd Al-lãh b. ʿAbd al-Munʿim b. ʿAbd al-Nūr",
       "nisba": "al-Ḥimyarī",
       "shuhra": "Ibn ʿAbd al-Munʿim al-Ḥimyarī"
+    }
+  },
+  "0904Burayhi": {
+    "AR": {
+      "ism": "عبد الوهاب",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "بن عبد الرحمان",
+      "nisba": "البريهي السكسكي اليمني",
+      "shuhra": "البريهي"
+    },
+    "LA": {
+      "ism": "ʿAbd al-wahhāb",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "b. ʿAbd al-Raḥmān",
+      "nisba": "al-Burayhī al-Saksakī al-Yamanī",
+      "shuhra": "al-Burayhī"
     }
   },
   "0909IbnMabrid": {
