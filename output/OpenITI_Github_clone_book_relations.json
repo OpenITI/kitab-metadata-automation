@@ -209,6 +209,20 @@
       "source": "0385IbnHasanSirafi.SharhAbyatSibawayhi"
     }
   ],
+  "0199IbnZabala.AkhbarMadina": [
+    {
+      "dest": "0199IbnZabala.AkhbarMadina",
+      "main_rel_type": "RECONSTR",
+      "sec_rel_type": "",
+      "source": "1450SalahCabdCazizZaynSalama.AkhbarMadina"
+    },
+    {
+      "dest": "0199IbnZabala.AkhbarMadina",
+      "main_rel_type": "STUDY",
+      "sec_rel_type": "",
+      "source": "1450SalahCabdCazizZaynSalama.AkhbarMadina"
+    }
+  ],
   "0204Shafici.Musnad": [
     {
       "dest": "0204Shafici.Musnad",
@@ -5115,6 +5129,20 @@
       "main_rel_type": "TRANSL",
       "sec_rel_type": "",
       "source": "1450MuhammadSacidJamalDin.AkhbarSalajiqatRum"
+    }
+  ],
+  "1450SalahCabdCazizZaynSalama.AkhbarMadina": [
+    {
+      "dest": "0199IbnZabala.AkhbarMadina",
+      "main_rel_type": "RECONSTR",
+      "sec_rel_type": "",
+      "source": "1450SalahCabdCazizZaynSalama.AkhbarMadina"
+    },
+    {
+      "dest": "0199IbnZabala.AkhbarMadina",
+      "main_rel_type": "STUDY",
+      "sec_rel_type": "",
+      "source": "1450SalahCabdCazizZaynSalama.AkhbarMadina"
     }
   ],
   "1450YusufHadi.TarikhBayhaq": [
