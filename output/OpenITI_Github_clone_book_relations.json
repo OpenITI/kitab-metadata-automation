@@ -595,6 +595,22 @@
       "source": "0845Maqrizi.MukhtasarQiyamRamadan"
     }
   ],
+  "0298HadiIlaHaqqYahya.BalighMudrik": [
+    {
+      "dest": "0298HadiIlaHaqqYahya.BalighMudrik",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0298HadiIlaHaqqYahya.SharhBalighMudrak"
+    }
+  ],
+  "0298HadiIlaHaqqYahya.SharhBalighMudrak": [
+    {
+      "dest": "0298HadiIlaHaqqYahya.BalighMudrik",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0298HadiIlaHaqqYahya.SharhBalighMudrak"
+    }
+  ],
   "0298IshaqIbnHunay": [
     {
       "dest": "0298IshaqIbnHunay",
