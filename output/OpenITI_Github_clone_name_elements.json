@@ -1329,6 +1329,24 @@
       "shuhra": "Abū Bišr Mattá b. Yūnus"
     }
   },
+  "0328IbnCabdRabbih": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "أبو عمر",
+      "laqab": "",
+      "nasab": "بن محمد بن عبد ربه",
+      "nisba": "",
+      "shuhra": "ابن عبد ربه"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "Abū ʿUmar",
+      "laqab": "",
+      "nasab": "b. Muḥammad b. ʿAbd Rabbih",
+      "nisba": "",
+      "shuhra": "Ibn ʿAbd Rabbih"
+    }
+  },
   "0329IbnYacqubKulayni": {
     "AR": {
       "ism": "محمد",
@@ -1543,6 +1561,24 @@
       "nasab": "b. Yūsuf b. Yaʿqūb b. Ḥafṣ",
       "nisba": "al-Tuǧībī al-Kindī",
       "shuhra": "Muḥammad al-Kindī"
+    }
+  },
+  "0356AbuCaliQali": {
+    "AR": {
+      "ism": "اسماعيل",
+      "kunya": "أبو علي",
+      "laqab": "",
+      "nasab": "بن القاسم",
+      "nisba": "القالي",
+      "shuhra": "أبو علي القالي"
+    },
+    "LA": {
+      "ism": "Ismāʿīl",
+      "kunya": "Abū ʿAlī",
+      "laqab": "",
+      "nasab": "b. al-Qāsim",
+      "nisba": "al-Qālī",
+      "shuhra": "Abū ʿAlī al-Qālī"
     }
   },
   "0361AbuSacidKudami": {
@@ -1797,6 +1833,24 @@
       "shuhra": "al-Muhallabī"
     }
   },
+  "0380Qabisi": {
+    "AR": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "القبيصي",
+      "shuhra": "القبيصي"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "al-Qabīṣī",
+      "shuhra": "al-Qabīṣī"
+    }
+  },
   "0381IbnBabawayhSaduq": {
     "AR": {
       "ism": "محمد",
@@ -1967,6 +2021,32 @@
       "shuhra": "Maslamaŧ al-Majrīṭī"
     }
   },
+  "0400AbuQasimZahrawi": {
+    "AR": {
+      "ism": "خلف",
+      "kunya": "أبو القاسم",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "الزهراوي",
+      "shuhra": "أبو القاسم الزهراوي"
+    },
+    "EN": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Abulcasis"
+    },
+    "LA": {
+      "ism": "Ḫalaf",
+      "kunya": "Abū al-Qāsim",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "al-Zahrāwī",
+      "shuhra": "Abū al-Qāsim al-Zahrāwī"
+    }
+  },
   "0400AnonTranslator": {
     "AR": {
       "ism": "",
@@ -2001,6 +2081,24 @@
       "nasab": "",
       "nisba": "",
       "shuhra": "ʿUbayd Allãh b. Ḥassān"
+    }
+  },
+  "0400PseudoFarabi": {
+    "AR": {
+      "ism": "",
+      "kunya": "أبو نصر",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "الفرابي",
+      "shuhra": "أبو نصر الفرابي"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "Abū Naṣr",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "al-Farābī",
+      "shuhra": "Abū Naṣr al-Farābī"
     }
   },
   "0403IbnFaradi": {
@@ -2201,6 +2299,24 @@
       "shuhra": "al-Sahmī"
     }
   },
+  "0428AbuCubaydJuzjani": {
+    "AR": {
+      "ism": "",
+      "kunya": "أبو عبيد",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "الجوزجاني",
+      "shuhra": "أبو عبيد الجوزجاني"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "Abū ʿUbayd",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "al-Ǧūzǧānī",
+      "shuhra": "Abū ʿUbayd al-Ǧūzǧānī"
+    }
+  },
   "0428IbnSina": {
     "AR": {
       "ism": "الحسين",
@@ -2261,6 +2377,24 @@
       "nasab": "b. ʿAbd Al-lãh b. Isḥāq b. Mūsá b. Mihrān",
       "nisba": "al-Šāfiʿī, al-Iṣbahānī",
       "shuhra": "al-Iṣbahānī"
+    }
+  },
+  "0430IbnHaytham": {
+    "AR": {
+      "ism": "الحسن",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "بن الحسن بن الهيثم",
+      "nisba": "",
+      "shuhra": "ابن الهيثم"
+    },
+    "LA": {
+      "ism": "al-Ḥasan",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "b. al-Ḥasan b. al-Hayṯam",
+      "nisba": "",
+      "shuhra": "Ibn al-Hayṯam"
     }
   },
   "0437MakkiIbnHammushQaysi": {
@@ -2731,6 +2865,24 @@
       "shuhra": "Ibn Baṣṣāl"
     }
   },
+  "0500Anonymous": {
+    "AR": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "مؤلف مجهول"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Muʾallif maǧhūl"
+    }
+  },
   "0500Sinjari": {
     "AR": {
       "ism": "",
@@ -2837,6 +2989,24 @@
       "nasab": "b. Aḥmad b. Muḥammad b. Hibaŧ Al-lãh b. ʿAlī",
       "nisba": "al-Anṣārī al-Dimašqī",
       "shuhra": "Ibn al-Akfānī"
+    }
+  },
+  "0524IbnTumart": {
+    "AR": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "ابن تومرت"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Ibn Tūmart"
     }
   },
   "0526IbnAbiYacla": {
@@ -4685,6 +4855,24 @@
       "shuhra": "Ibn Quṭlūbuġā"
     }
   },
+  "0880IbnAhmadShamsDinAsyuti": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "",
+      "laqab": "شمس الدين",
+      "nasab": "بن أحمد بن علي",
+      "nisba": "الأسيوطي",
+      "shuhra": ""
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "",
+      "laqab": "Šams al-dīn",
+      "nasab": "b. Aḥmad b. ʿAlī",
+      "nisba": "al-Asyūṭī",
+      "shuhra": ""
+    }
+  },
   "0900IbnCabdMuncimHimyari": {
     "AR": {
       "ism": "محمد",
@@ -4719,6 +4907,24 @@
       "nasab": "b. ʿAbd al-Raḥmān",
       "nisba": "al-Burayhī al-Saksakī al-Yamanī",
       "shuhra": "al-Burayhī"
+    }
+  },
+  "0906IbnMajid": {
+    "AR": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "ابن ماجد"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Ibn Māǧid"
     }
   },
   "0909IbnMabrid": {
@@ -4881,6 +5087,24 @@
       "nasab": "b. ʿAlī b. Aḥmad",
       "nisba": "al-Dāwūdī al-Mālikī",
       "shuhra": "al-Dāwūdī"
+    }
+  },
+  "0961SulaymanMahri": {
+    "AR": {
+      "ism": "سليمان",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "بن أحمد بن سليمان",
+      "nisba": "المهري",
+      "shuhra": "سليمان المهري"
+    },
+    "LA": {
+      "ism": "Sulaymān",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "b. Aḥmad b. Sulaymān",
+      "nisba": "al-Mahrī",
+      "shuhra": "Sulaymān al-Mahrī"
     }
   },
   "0968Tashkuprizadah": {
@@ -5153,6 +5377,24 @@
       "shuhra": "Ibn Abī Nabhān al-Ḫarūṣī"
     }
   },
+  "1300Anonymous": {
+    "AR": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "مؤلف مجهول"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Muʾallif maǧhūl"
+    }
+  },
   "1300MansurKharusi": {
     "AR": {
       "ism": "منصور",
@@ -5287,6 +5529,24 @@
       "shuhra": "Āqā Buzurg Tihrānī"
     }
   },
+  "1389GregoriusPaulusBehnam": {
+    "AR": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "غريغوريوس بولس بهنام"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Ġrīġūriyūs Būlus Bihnām"
+    }
+  },
   "1396KhayrDinZirikli": {
     "AR": {
       "ism": "خير الدين",
@@ -5305,6 +5565,24 @@
       "shuhra": "al-Ziriklī"
     }
   },
+  "1400MuhammadIbrahimSalim": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "ابراهيم سليم",
+      "nisba": "",
+      "shuhra": "محمد ابراهيم سليم"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "Ibrāhīm Salīm",
+      "nisba": "",
+      "shuhra": "Muḥammad Ibrāhīm Salīm"
+    }
+  },
   "1402SayyidTabatabai": {
     "AR": {
       "ism": "محمد حسين",
@@ -5321,6 +5599,24 @@
       "nasab": "",
       "nisba": "Ṭabāṭabāʾī",
       "shuhra": "Sayyid Ṭabāṭabāʾī, ʿAllāmaŧ Ṭabāṭabāʾī"
+    }
+  },
+  "1450MutamarImamRida": {
+    "AR": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "مؤتمر الامام رضى"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Muʾtamar al-Imām Riḍá"
     }
   }
 }
