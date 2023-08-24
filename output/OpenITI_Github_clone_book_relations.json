@@ -1,4 +1,12 @@
 {
+  "0001Aristotle.DeAnima": [
+    {
+      "dest": "0001Aristotle.DeAnima",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.Nafs"
+    }
+  ],
   "0001Galen.CommentaryOnAphorisms": [
     {
       "dest": "0001Galen.CommentaryOnAphorisms",
@@ -1142,7 +1150,13 @@
   "0428IbnSina.AfcalWaInficalat": [
     {
       "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "EXTRACT",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.AfcalWaInficalat"
+    },
+    {
+      "dest": "0428IbnSina.ShifaTabiciyyat",
+      "main_rel_type": "PART",
       "sec_rel_type": "",
       "source": "0428IbnSina.AfcalWaInficalat"
     }
@@ -1150,7 +1164,13 @@
   "0428IbnSina.FannShicr": [
     {
       "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "EXTRACT",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.FannShicr"
+    },
+    {
+      "dest": "0428IbnSina.ShifaMantiq",
+      "main_rel_type": "PART",
       "sec_rel_type": "",
       "source": "0428IbnSina.FannShicr"
     }
@@ -1158,7 +1178,7 @@
   "0428IbnSina.Ilahiyyat": [
     {
       "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "EXTRACT",
+      "main_rel_type": "PART",
       "sec_rel_type": "",
       "source": "0428IbnSina.Ilahiyyat"
     }
@@ -1166,7 +1186,13 @@
   "0428IbnSina.KawnWaFasad": [
     {
       "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "EXTRACT",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.KawnWaFasad"
+    },
+    {
+      "dest": "0428IbnSina.ShifaTabiciyyat",
+      "main_rel_type": "PART",
       "sec_rel_type": "",
       "source": "0428IbnSina.KawnWaFasad"
     }
@@ -1174,7 +1200,7 @@
   "0428IbnSina.Mantiq": [
     {
       "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "EXTRACT",
+      "main_rel_type": "PART",
       "sec_rel_type": "",
       "source": "0428IbnSina.Mantiq"
     }
@@ -1182,7 +1208,19 @@
   "0428IbnSina.Nafs": [
     {
       "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "EXTRACT",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.Nafs"
+    },
+    {
+      "dest": "0428IbnSina.Tabiciyyat",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.Nafs"
+    },
+    {
+      "dest": "0001Aristotle.DeAnima",
+      "main_rel_type": "COMM",
       "sec_rel_type": "",
       "source": "0428IbnSina.Nafs"
     }
@@ -1204,37 +1242,79 @@
     },
     {
       "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "EXTRACT",
+      "main_rel_type": "PART",
       "sec_rel_type": "",
       "source": "0428IbnSina.AfcalWaInficalat"
     },
     {
       "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "EXTRACT",
+      "main_rel_type": "PART",
       "sec_rel_type": "",
       "source": "0428IbnSina.FannShicr"
     },
     {
       "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "EXTRACT",
+      "main_rel_type": "PART",
       "sec_rel_type": "",
       "source": "0428IbnSina.Ilahiyyat"
     },
     {
       "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "EXTRACT",
+      "main_rel_type": "PART",
       "sec_rel_type": "",
       "source": "0428IbnSina.KawnWaFasad"
     },
     {
       "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "EXTRACT",
+      "main_rel_type": "PART",
       "sec_rel_type": "",
       "source": "0428IbnSina.Mantiq"
     },
     {
       "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "EXTRACT",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.Nafs"
+    },
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.ShifaTabiciyyat"
+    }
+  ],
+  "0428IbnSina.ShifaMantiq": [
+    {
+      "dest": "0428IbnSina.ShifaMantiq",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.FannShicr"
+    }
+  ],
+  "0428IbnSina.ShifaTabiciyyat": [
+    {
+      "dest": "0428IbnSina.ShifaTabiciyyat",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.AfcalWaInficalat"
+    },
+    {
+      "dest": "0428IbnSina.ShifaTabiciyyat",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.KawnWaFasad"
+    },
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.ShifaTabiciyyat"
+    }
+  ],
+  "0428IbnSina.Tabiciyyat": [
+    {
+      "dest": "0428IbnSina.Tabiciyyat",
+      "main_rel_type": "PART",
       "sec_rel_type": "",
       "source": "0428IbnSina.Nafs"
     }
@@ -1503,6 +1583,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0751IbnQayyimJawziyya.MadarijSalikin"
+    }
+  ],
+  "0481NasirKhusraw.SafarNamah": [
+    {
+      "dest": "0481NasirKhusraw.SafarNamah",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "1432YahyaKhashshab.SafarNamah"
     }
   ],
   "0482IbnMuhammadBazdawi.KanzWusul": [
@@ -5223,6 +5311,14 @@
       "main_rel_type": "TRANSL",
       "sec_rel_type": "",
       "source": "1425HusaynMujibMisri.RihlatShalabiIlaMisr"
+    }
+  ],
+  "1432YahyaKhashshab.SafarNamah": [
+    {
+      "dest": "0481NasirKhusraw.SafarNamah",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "1432YahyaKhashshab.SafarNamah"
     }
   ],
   "1450CabdAllahGhunayman.MukhtasarMinhajSunna": [

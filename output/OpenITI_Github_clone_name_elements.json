@@ -2173,6 +2173,24 @@
       "shuhra": "al-Kirmānī"
     }
   },
+  "0412IbnAbiFawaris": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "أبو الفتح",
+      "laqab": "",
+      "nasab": "بن أحمد بن أبي الفوارس",
+      "nisba": "",
+      "shuhra": "ابن أبي الفوارس"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "Abū al-Fatḥ",
+      "laqab": "",
+      "nasab": "b. Aḥmad b. Abī al-Fawāris",
+      "nisba": "",
+      "shuhra": "Ibn Abī al-Fawāris"
+    }
+  },
   "0412Sulami": {
     "AR": {
       "ism": "محمد",
@@ -2377,6 +2395,24 @@
       "nasab": "b. ʿAbd Al-lãh b. Isḥāq b. Mūsá b. Mihrān",
       "nisba": "al-Šāfiʿī, al-Iṣbahānī",
       "shuhra": "al-Iṣbahānī"
+    }
+  },
+  "0430CabdMalikIbnBishranUmawi": {
+    "AR": {
+      "ism": "علي",
+      "kunya": "أبو الحسين",
+      "laqab": "",
+      "nasab": "بن محمد بن عبد الله بن بشران",
+      "nisba": "",
+      "shuhra": "ابن بشران"
+    },
+    "LA": {
+      "ism": "ʿAlī",
+      "kunya": "Abū al-Ḥusayn",
+      "laqab": "",
+      "nasab": "b. Muḥammad b. ʿAbd Allāh b. Bišrān",
+      "nisba": "",
+      "shuhra": "Ibn Bišrān"
     }
   },
   "0430IbnHaytham": {
@@ -2791,24 +2827,6 @@
       "nasab": "b. Muḥammad b. ʿAlī b. Muḥammad b. Aḥmad b. ʿAlī b. Ǧaʿfar b. Manṣūr",
       "nisba": "al-Anṣārī al-Harawī",
       "shuhra": "Abū Ismāʿīl al-Harawī"
-    }
-  },
-  "0481NasirKhusraw": {
-    "AR": {
-      "ism": "ناصر",
-      "kunya": "أبو معين",
-      "laqab": "حميد الدين",
-      "nasab": "بن خسرو بن حارث",
-      "nisba": "قبادياني بلخي",
-      "shuhra": "ناصر خسرو"
-    },
-    "LA": {
-      "ism": "Nāṣir",
-      "kunya": "Abū Muʿīn",
-      "laqab": "Ḥamīd al-Dīn",
-      "nasab": "b. Ḫusraw b. Ḥāriṯ",
-      "nisba": "Qubādiyānī Balḫī",
-      "shuhra": "Nāṣir Ḫusraw"
     }
   },
   "0482AbuIshaqHabbal": {
@@ -5599,6 +5617,24 @@
       "nasab": "",
       "nisba": "Ṭabāṭabāʾī",
       "shuhra": "Sayyid Ṭabāṭabāʾī, ʿAllāmaŧ Ṭabāṭabāʾī"
+    }
+  },
+  "1432YahyaKhashshab": {
+    "AR": {
+      "ism": "يحيى",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "الخشاب",
+      "shuhra": "يحيى الخشاب"
+    },
+    "LA": {
+      "ism": "Yaḥyá",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "al-Ḫaššāb",
+      "shuhra": "Yaḥyá al-Ḫaššāb"
     }
   },
   "1450MutamarImamRida": {
