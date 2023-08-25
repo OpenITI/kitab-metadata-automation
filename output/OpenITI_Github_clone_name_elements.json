@@ -1311,6 +1311,24 @@
       "shuhra": "Ibn al-Warrāq"
     }
   },
+  "0327AbuBakrKharaiti": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "أبو بكر",
+      "laqab": "",
+      "nasab": "بن جعفر بن محمد بن سهل",
+      "nisba": "الخرائطي، السامري",
+      "shuhra": "أبو بكر الخرائطي"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "Abū Bakr",
+      "laqab": "",
+      "nasab": "b. Ǧaʿfar b. Muḥammad b. Sahl",
+      "nisba": "al-Ḫarāʾiṭī, al-Sāmirī",
+      "shuhra": "Abū Bakr al-Ḫarāʾiṭī"
+    }
+  },
   "0328AbuBishrIbnYunus": {
     "AR": {
       "ism": "متى",
@@ -2279,6 +2297,24 @@
       "nasab": "b. Suwār b. Bābā b. al-Ḫammār",
       "nisba": "",
       "shuhra": "Ibn Suwār"
+    }
+  },
+  "0426IbnShuhaydAshjaci": {
+    "AR": {
+      "ism": "أحمد",
+      "kunya": "أبو عامر",
+      "laqab": "",
+      "nasab": "بن عبد الملك بن أحمد بن عبد الملك بن عمر بن محمد بن عيسا بن شهيد",
+      "nisba": "الأشجعي، القرطبي",
+      "shuhra": "ابن شهيد"
+    },
+    "LA": {
+      "ism": "Aḥmad",
+      "kunya": "Abū ʿĀmir",
+      "laqab": "",
+      "nasab": "b. ʿAbd al-Malik b. Aḥmad b. ʿAbd al-Malik b. ʿUmar b. Muḥammad b. ʿĪsā b. Šuhayd",
+      "nisba": "al-Ašǧaʿī, al-Qurṭubī",
+      "shuhra": "Ibn Šuhayd"
     }
   },
   "0427AbuIshaqThaclabi": {
@@ -5565,6 +5601,24 @@
       "shuhra": "Ġrīġūriyūs Būlus Bihnām"
     }
   },
+  "1392CazraHaddad": {
+    "AR": {
+      "ism": "عزرا",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "حداد",
+      "nisba": "",
+      "shuhra": "عزرا حداد"
+    },
+    "LA": {
+      "ism": "ʿAzrā",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "Ḥaddād",
+      "nisba": "",
+      "shuhra": "ʿAzrā Ḥaddād"
+    }
+  },
   "1396KhayrDinZirikli": {
     "AR": {
       "ism": "خير الدين",
@@ -5624,7 +5678,7 @@
       "ism": "يحيى",
       "kunya": "",
       "laqab": "",
-      "nasab": "",
+      "nasab": "محمد عمر",
       "nisba": "الخشاب",
       "shuhra": "يحيى الخشاب"
     },
@@ -5632,7 +5686,7 @@
       "ism": "Yaḥyá",
       "kunya": "",
       "laqab": "",
-      "nasab": "",
+      "nasab": "Muḥammad ʿUmar",
       "nisba": "al-Ḫaššāb",
       "shuhra": "Yaḥyá al-Ḫaššāb"
     }

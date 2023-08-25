@@ -345,14 +345,6 @@
       "source": "0500Anonymous.AwtanWaBuldan"
     }
   ],
-  "0255Jahiz.MiatKalima": [
-    {
-      "dest": "0255Jahiz.MiatKalima",
-      "main_rel_type": "TRANSL",
-      "sec_rel_type": "",
-      "source": "0573RashidWatwat.MatlubKullTalib"
-    }
-  ],
   "0256Bukhari.Sahih": [
     {
       "dest": "0256Bukhari.Sahih",
@@ -1873,6 +1865,14 @@
       "source": "0567IbnKhashshabBaghdadi.Murtajal"
     }
   ],
+  "0569BinyaminTutili.Rihla": [
+    {
+      "dest": "0569BinyaminTutili.Rihla",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "1392CazraHaddad.RihlatBinyaminTutili"
+    }
+  ],
   "0571IbnCasakir.TabyinKadhib": [
     {
       "dest": "0446IbnCaliAhwazi.Mathalib",
@@ -1881,12 +1881,34 @@
       "source": "0571IbnCasakir.TabyinKadhib"
     }
   ],
-  "0573RashidWatwat.MatlubKullTalib": [
+  "0571IbnCasakir.TarikhDimashq": [
     {
-      "dest": "0255Jahiz.MiatKalima",
-      "main_rel_type": "TRANSL",
+      "dest": "0571IbnCasakir.TarikhDimashq",
+      "main_rel_type": "EXTRACT",
       "sec_rel_type": "",
-      "source": "0573RashidWatwat.MatlubKullTalib"
+      "source": "0571IbnCasakir.TarjamatHasan"
+    },
+    {
+      "dest": "0571IbnCasakir.TarikhDimashq",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0571IbnCasakir.TarjamatHusayn"
+    }
+  ],
+  "0571IbnCasakir.TarjamatHasan": [
+    {
+      "dest": "0571IbnCasakir.TarikhDimashq",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0571IbnCasakir.TarjamatHasan"
+    }
+  ],
+  "0571IbnCasakir.TarjamatHusayn": [
+    {
+      "dest": "0571IbnCasakir.TarikhDimashq",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0571IbnCasakir.TarjamatHusayn"
     }
   ],
   "0577IbnHishamLakhmi.SharhFasih": [
@@ -5287,6 +5309,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "1338Tawzari.TawdihAhkam"
+    }
+  ],
+  "1392CazraHaddad.RihlatBinyaminTutili": [
+    {
+      "dest": "0569BinyaminTutili.Rihla",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "1392CazraHaddad.RihlatBinyaminTutili"
     }
   ],
   "1400MuhammadIbrahimSalim.TabaicNisa": [
