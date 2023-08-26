@@ -2429,6 +2429,22 @@
       "source": "0656IbnAbiHadid.SharhNahjBalagha"
     }
   ],
+  "0660IbnCadim.BughyatTalab": [
+    {
+      "dest": "0660IbnCadim.BughyatTalab",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0660IbnCadim.TarjamatHusayn"
+    }
+  ],
+  "0660IbnCadim.TarjamatHusayn": [
+    {
+      "dest": "0660IbnCadim.BughyatTalab",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0660IbnCadim.TarjamatHusayn"
+    }
+  ],
   "0661Turibishti.Muyassar": [
     {
       "dest": "0510IbnMascudBaghawi.MasabihSunna",
