@@ -3117,6 +3117,14 @@
       "source": "0728IbnTaymiyya.SharhCumdatFiqh"
     }
   ],
+  "0730Banakti.RawdatUliAlbab": [
+    {
+      "dest": "0730Banakti.RawdatUliAlbab",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "1450MahmudCabdKarimCali.RawdatUliAlbab"
+    }
+  ],
   "0730IbnAhmadCalaDinBukhari.KashfAsrar": [
     {
       "dest": "0482IbnMuhammadBazdawi.KanzWusul",
@@ -3368,6 +3376,12 @@
   "0748Dhahabi.SiyarAclamNubala": [
     {
       "dest": "0748Dhahabi.SiyarAclamNubala",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0748Dhahabi.TarjamatIbnTaymiyya"
+    },
+    {
+      "dest": "0748Dhahabi.SiyarAclamNubala",
       "main_rel_type": "CONT",
       "sec_rel_type": "dhayl",
       "source": "0832TaqiFasi.Tacrif"
@@ -3413,6 +3427,14 @@
       "main_rel_type": "ABR",
       "sec_rel_type": "talkhis",
       "source": "0748Dhahabi.TalkhisMawducatIbnJawzi"
+    }
+  ],
+  "0748Dhahabi.TarjamatIbnTaymiyya": [
+    {
+      "dest": "0748Dhahabi.SiyarAclamNubala",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "0748Dhahabi.TarjamatIbnTaymiyya"
     }
   ],
   "0749BadrDinMisriMuradi.TawdihMaqasid": [
@@ -5373,6 +5395,14 @@
       "main_rel_type": "ABR",
       "sec_rel_type": "mukhtasar",
       "source": "1450CabdAllahGhunayman.MukhtasarMinhajSunna"
+    }
+  ],
+  "1450MahmudCabdKarimCali.RawdatUliAlbab": [
+    {
+      "dest": "0730Banakti.RawdatUliAlbab",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "1450MahmudCabdKarimCali.RawdatUliAlbab"
     }
   ],
   "1450MuhammadHasanBakkai.TartibIslahMantiq": [

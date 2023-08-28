@@ -4621,6 +4621,24 @@
       "shuhra": "Ibn Farḥūn"
     }
   },
+  "0806IbnHusaynZaynDinCiraqi": {
+    "AR": {
+      "ism": "عبد الرحيم",
+      "kunya": "أبو الفضل",
+      "laqab": "زين الدين",
+      "nasab": "بن الحسين بن عبد الرحمن بن أبي بكر بن ابراهيم",
+      "nisba": "العراقي",
+      "shuhra": "زين الدين العراقي"
+    },
+    "LA": {
+      "ism": "ʿAbd al-Raḥīm",
+      "kunya": "Abū al-Faḍl",
+      "laqab": "Zayn al-dīn",
+      "nasab": "b. al-Ḥusayn b. ʿAbd al-Raḥmãn b. Abī Bakr b. Ibrāhīm",
+      "nisba": "al-ʿIrāqī",
+      "shuhra": "Zayn al-Dīn al-ʿIrāqī"
+    }
+  },
   "0807IbnFurat": {
     "AR": {
       "ism": "محمد",
@@ -4711,6 +4729,24 @@
       "shuhra": "al-Qalqašandī, al-Fazārīو al-Šāfiʿī"
     }
   },
+  "0840IbnWazirYamani": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "أبو عبد الله",
+      "laqab": "عز الدين",
+      "nasab": "بن ابراهيم بن علي بن المرتضى بن المفضل",
+      "nisba": "الحسني، القاسمي، اليمني",
+      "shuhra": "ابن الوزير"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "Abū ʿAbd Allāh",
+      "laqab": "ʿIzz al-Dīn",
+      "nasab": "b. Ibrāhīm b. ʿAlī b. al-Murtaḍá b. al-Mufaḍḍal",
+      "nisba": "al-Ḥasanī, al-Qāsimī, al-Yamanī",
+      "shuhra": "Ibn al-Wazīr"
+    }
+  },
   "0842IbnNasirDinDimashqi": {
     "AR": {
       "ism": "محمد",
@@ -4729,22 +4765,22 @@
       "shuhra": "Ibn Nāṣir al-dīn"
     }
   },
-  "0843IbnKhatibNasiriya": {
+  "0843IbnKhatibNasiriyya": {
     "AR": {
       "ism": "علي",
       "kunya": "أبو الحسن",
       "laqab": "علاء الدين",
-      "nasab": "بن محمد",
-      "nisba": "الجبريني الشافعي",
-      "shuhra": "ابن خطيب النصري"
+      "nasab": "بن محمد بنسعد",
+      "nisba": "الطائي، الجبريني، الشافعي",
+      "shuhra": "ابن خطيب الناصري"
     },
     "LA": {
       "ism": "ʿAlī",
       "kunya": "Abū al-Ḥasan",
       "laqab": "ʿAlāʾ al-dīn",
-      "nasab": "b. Muḥammad",
-      "nisba": "al-Ǧibrīnī al-Šāfiʿī",
-      "shuhra": "Ibn Ḫaṭīb al-Naṣriyya"
+      "nasab": "b. Muḥammad b.Saʿd",
+      "nisba": "al-Ṭāʾī, al-Ǧibrīnī, al-Šāfiʿī",
+      "shuhra": "Ibn Ḫaṭīb al-Nāṣiriyya"
     }
   },
   "0845Maqrizi": {
@@ -5395,6 +5431,24 @@
       "shuhra": "Yūsuf al-Maḥallī"
     }
   },
+  "1163MuhammadHayatSindi": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "حياة",
+      "nisba": "السندي",
+      "shuhra": "محمد حياة السندي"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "Ḥayāŧ",
+      "nisba": "al-Sindī",
+      "shuhra": "Muḥammad Ḥayāŧ al-Sindī"
+    }
+  },
   "1206Muradi": {
     "AR": {
       "ism": "محمد خليل",
@@ -5689,6 +5743,24 @@
       "nasab": "Muḥammad ʿUmar",
       "nisba": "al-Ḫaššāb",
       "shuhra": "Yaḥyá al-Ḫaššāb"
+    }
+  },
+  "1450MahmudCabdKarimCali": {
+    "AR": {
+      "ism": "محمود",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "عبد الكريم علي",
+      "nisba": "",
+      "shuhra": "محمود عبد الكريم علي"
+    },
+    "LA": {
+      "ism": "Maḥmūd",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "ʿAbd al-Karīm ʿAlī",
+      "nisba": "",
+      "shuhra": "Maḥmūd ʿAbd al-Karīm ʿAlī"
     }
   },
   "1450MutamarImamRida": {
