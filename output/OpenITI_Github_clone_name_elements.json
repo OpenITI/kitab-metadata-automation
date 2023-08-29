@@ -781,6 +781,24 @@
       "shuhra": "Balāḏurī"
     }
   },
+  "0279IbnAbiKhaythama": {
+    "AR": {
+      "ism": "أحمد",
+      "kunya": "أبو بكر",
+      "laqab": "",
+      "nasab": "بن زهير بن حرب",
+      "nisba": "",
+      "shuhra": "ابن أبي خيثمة"
+    },
+    "LA": {
+      "ism": "Aḥmad",
+      "kunya": "Abū Bakr",
+      "laqab": "",
+      "nasab": "b. Zuhayr b. Ḥarb",
+      "nisba": "",
+      "shuhra": "Ibn Abī Ḫayṯamaŧ"
+    }
+  },
   "0280CuthmanIbnSacidDarimi": {
     "AR": {
       "ism": "عثمان",
