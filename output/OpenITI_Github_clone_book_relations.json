@@ -5117,6 +5117,14 @@
       "source": "1021ShihabDinShalabi.HashiyaCalaTabyinHaqaiq"
     }
   ],
+  "1023MuhammadAminAstarabadi.FawaidMadaniyya": [
+    {
+      "dest": "1023MuhammadAminAstarabadi.FawaidMadaniyya",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1062NurDinMusawiCamili.ShawahidMakkiyya"
+    }
+  ],
   "1025IbnQadiMaknasi.DurratHijal": [
     {
       "dest": "0681IbnKhallikan.WafayatAcyan",
@@ -5139,6 +5147,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "1135IbnCumarTaghlibiShaybani.NaylMaarib"
+    }
+  ],
+  "1062NurDinMusawiCamili.ShawahidMakkiyya": [
+    {
+      "dest": "1023MuhammadAminAstarabadi.FawaidMadaniyya",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1062NurDinMusawiCamili.ShawahidMakkiyya"
     }
   ],
   "1069IbnCammarShurunbulali.MaraqiFalahSharhNurIdah": [
