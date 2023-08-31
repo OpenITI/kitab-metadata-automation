@@ -5025,6 +5025,14 @@
       "source": "0992IbnQasimCibadi.HashiyaCalaTuhfatMuhtaj"
     }
   ],
+  "0974IbnHajarHaythami.TuhfatMuhtaj": [
+    {
+      "dest": "0974IbnHajarHaythami.TuhfatMuhtaj",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "Hashiya",
+      "source": "1118CabdHamidShirwani.HashiyaCalaTuhfatMuhtaj"
+    }
+  ],
   "0977KhatibShirbini.Iqnac": [
     {
       "dest": "0593IbnHusaynShihabDinIsbahani.GhayaWaTaqrib",
@@ -5237,6 +5245,14 @@
       "source": "1107QadiSacidQummi.SharhTawhidSaduq"
     }
   ],
+  "1118CabdHamidShirwani.HashiyaCalaTuhfatMuhtaj": [
+    {
+      "dest": "0974IbnHajarHaythami.TuhfatMuhtaj",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "Hashiya",
+      "source": "1118CabdHamidShirwani.HashiyaCalaTuhfatMuhtaj"
+    }
+  ],
   "1135IbnCumarTaghlibiShaybani.NaylMaarib": [
     {
       "dest": "1033MarciKarmi.DalilTalibLiNaylMatalib",
@@ -5363,6 +5379,36 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "1338Tawzari.TawdihAhkam"
+    }
+  ],
+  "1389AghaBuzurgTihrani.TASHAnwarSatica": [
+    {
+      "dest": "1389AghaBuzurgTihrani.TabaqatAclamShica",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "1389AghaBuzurgTihrani.TASHAnwarSatica"
+    }
+  ],
+  "1389AghaBuzurgTihrani.TASHNawabighRuwat": [
+    {
+      "dest": "1389AghaBuzurgTihrani.TabaqatAclamShica",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "1389AghaBuzurgTihrani.TASHNawabighRuwat"
+    }
+  ],
+  "1389AghaBuzurgTihrani.TabaqatAclamShica": [
+    {
+      "dest": "1389AghaBuzurgTihrani.TabaqatAclamShica",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "1389AghaBuzurgTihrani.TASHAnwarSatica"
+    },
+    {
+      "dest": "1389AghaBuzurgTihrani.TabaqatAclamShica",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "1389AghaBuzurgTihrani.TASHNawabighRuwat"
     }
   ],
   "1392CazraHaddad.RihlatBinyaminTutili": [
