@@ -1705,6 +1705,14 @@
       "source": "0854IbnMalak.SharhMasabih"
     }
   ],
+  "0513Tughrai.LamiyyatCajam": [
+    {
+      "dest": "0513Tughrai.LamiyyatCajam",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0808MuhammadDamiri.SharhLamiyyatCajam"
+    }
+  ],
   "0516IbnCaliHariri.DurratGhawwas": [
     {
       "dest": "0516IbnCaliHariri.DurratGhawwas",
@@ -4009,6 +4017,14 @@
       "source": "0808MuhammadDamiri.NajmWahhaj"
     }
   ],
+  "0808MuhammadDamiri.SharhLamiyyatCajam": [
+    {
+      "dest": "0513Tughrai.LamiyyatCajam",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0808MuhammadDamiri.SharhLamiyyatCajam"
+    }
+  ],
   "0826IbnCiraqi.GhaythHamic": [
     {
       "dest": "0771TajDinSubki.JamcJawamic",
@@ -4949,9 +4965,9 @@
       "source": "0970IbnIbrahimIbnNujaymMisri.BahrRaiq"
     }
   ],
-  "0972IbnAhmadFakihi.HududFiNahw": [
+  "0972IbnAhmadFakihi.HududNahw": [
     {
-      "dest": "0972IbnAhmadFakihi.HududFiNahw",
+      "dest": "0972IbnAhmadFakihi.HududNahw",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0972IbnAhmadFakihi.SharhHududFiNahw"
@@ -4959,7 +4975,7 @@
   ],
   "0972IbnAhmadFakihi.SharhHududFiNahw": [
     {
-      "dest": "0972IbnAhmadFakihi.HududFiNahw",
+      "dest": "0972IbnAhmadFakihi.HududNahw",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0972IbnAhmadFakihi.SharhHududFiNahw"

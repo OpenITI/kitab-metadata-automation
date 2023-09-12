@@ -5619,6 +5619,24 @@
       "shuhra": "Ismāʿīl Bāšā Baġdādī"
     }
   },
+  "1345IbnJacfarKattani": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "بن جعفر",
+      "nisba": "الكتاني",
+      "shuhra": "ابن جعفر الكتاني"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "b. Ǧaʿfar",
+      "nisba": "al-Kattānī",
+      "shuhra": "Ibn Ǧaʿfar al-Kattānī"
+    }
+  },
   "1386SayyidQutb": {
     "AR": {
       "ism": "سيد",
