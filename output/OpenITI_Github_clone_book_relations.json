@@ -4,7 +4,7 @@
       "dest": "0001Aristotle.DeAnima",
       "main_rel_type": "COMM",
       "sec_rel_type": "",
-      "source": "0428IbnSina.Nafs"
+      "source": "0428IbnSina.ShifaNafs"
     }
   ],
   "0001Galen.CommentaryOnAphorisms": [
@@ -217,6 +217,14 @@
       "source": "0385IbnHasanSirafi.SharhAbyatSibawayhi"
     }
   ],
+  "0197IbnWahbQurashi.JamicFiHadith": [
+    {
+      "dest": "0197IbnWahbQurashi.JamicFiHadith",
+      "main_rel_type": "PART",
+      "sec_rel_type": "juz",
+      "source": "0275Anonymous.JuzJamicIbnWahb"
+    }
+  ],
   "0199IbnZabala.AkhbarMadina": [
     {
       "dest": "0199IbnZabala.AkhbarMadina",
@@ -311,6 +319,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0633IbnSacidRajraji.ManahijTahsil"
+    }
+  ],
+  "0241IbnHanbal.Warac": [
+    {
+      "dest": "0241IbnHanbal.Warac",
+      "main_rel_type": "TRANSM",
+      "sec_rel_type": "riwaya",
+      "source": "0275AbuBakrMarrudhi.Warac"
     }
   ],
   "0244IbnSikkit.IslahMantiq": [
@@ -477,6 +493,14 @@
       "source": "0911Suyuti.MisbahZujaja"
     }
   ],
+  "0275AbuBakrMarrudhi.Warac": [
+    {
+      "dest": "0241IbnHanbal.Warac",
+      "main_rel_type": "TRANSM",
+      "sec_rel_type": "riwaya",
+      "source": "0275AbuBakrMarrudhi.Warac"
+    }
+  ],
   "0275AbuDawudSijistani.Sunan": [
     {
       "dest": "0275AbuDawudSijistani.Sunan",
@@ -507,6 +531,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0855BadrDinCayni.SharhSunanAbiDawud"
+    }
+  ],
+  "0275Anonymous.JuzJamicIbnWahb": [
+    {
+      "dest": "0197IbnWahbQurashi.JamicFiHadith",
+      "main_rel_type": "PART",
+      "sec_rel_type": "juz",
+      "source": "0275Anonymous.JuzJamicIbnWahb"
     }
   ],
   "0275Sukkari.SharhAshcarHudhaliyyin": [
@@ -608,15 +640,15 @@
       "dest": "0298HadiIlaHaqqYahya.BalighMudrik",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
-      "source": "0298HadiIlaHaqqYahya.SharhBalighMudrak"
+      "source": "0298HadiIlaHaqqYahya.SharhBalighMudrik"
     }
   ],
-  "0298HadiIlaHaqqYahya.SharhBalighMudrak": [
+  "0298HadiIlaHaqqYahya.SharhBalighMudrik": [
     {
       "dest": "0298HadiIlaHaqqYahya.BalighMudrik",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
-      "source": "0298HadiIlaHaqqYahya.SharhBalighMudrak"
+      "source": "0298HadiIlaHaqqYahya.SharhBalighMudrik"
     }
   ],
   "0298IshaqIbnHunay": [
@@ -1139,84 +1171,6 @@
       "source": "0428AbuCubaydJuzjani.Madkhal"
     }
   ],
-  "0428IbnSina.AfcalWaInficalat": [
-    {
-      "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "PART",
-      "sec_rel_type": "",
-      "source": "0428IbnSina.AfcalWaInficalat"
-    },
-    {
-      "dest": "0428IbnSina.ShifaTabiciyyat",
-      "main_rel_type": "PART",
-      "sec_rel_type": "",
-      "source": "0428IbnSina.AfcalWaInficalat"
-    }
-  ],
-  "0428IbnSina.FannShicr": [
-    {
-      "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "PART",
-      "sec_rel_type": "",
-      "source": "0428IbnSina.FannShicr"
-    },
-    {
-      "dest": "0428IbnSina.ShifaMantiq",
-      "main_rel_type": "PART",
-      "sec_rel_type": "",
-      "source": "0428IbnSina.FannShicr"
-    }
-  ],
-  "0428IbnSina.Ilahiyyat": [
-    {
-      "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "PART",
-      "sec_rel_type": "",
-      "source": "0428IbnSina.Ilahiyyat"
-    }
-  ],
-  "0428IbnSina.KawnWaFasad": [
-    {
-      "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "PART",
-      "sec_rel_type": "",
-      "source": "0428IbnSina.KawnWaFasad"
-    },
-    {
-      "dest": "0428IbnSina.ShifaTabiciyyat",
-      "main_rel_type": "PART",
-      "sec_rel_type": "",
-      "source": "0428IbnSina.KawnWaFasad"
-    }
-  ],
-  "0428IbnSina.Mantiq": [
-    {
-      "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "PART",
-      "sec_rel_type": "",
-      "source": "0428IbnSina.Mantiq"
-    }
-  ],
-  "0428IbnSina.Nafs": [
-    {
-      "dest": "0428IbnSina.Shifa",
-      "main_rel_type": "PART",
-      "sec_rel_type": "",
-      "source": "0428IbnSina.Nafs"
-    },
-    {
-      "dest": "0428IbnSina.Tabiciyyat",
-      "main_rel_type": "PART",
-      "sec_rel_type": "",
-      "source": "0428IbnSina.Nafs"
-    },
-    {
-      "dest": "0001Aristotle.DeAnima",
-      "main_rel_type": "COMM",
-      "sec_rel_type": "",
-      "source": "0428IbnSina.Nafs"
-    }
-  ],
   "0428IbnSina.QanunFiTibb": [
     {
       "dest": "0428IbnSina.QanunFiTibb",
@@ -1236,37 +1190,37 @@
       "dest": "0428IbnSina.Shifa",
       "main_rel_type": "PART",
       "sec_rel_type": "",
-      "source": "0428IbnSina.AfcalWaInficalat"
+      "source": "0428IbnSina.ShifaAfcalWaInficalat"
     },
     {
       "dest": "0428IbnSina.Shifa",
       "main_rel_type": "PART",
       "sec_rel_type": "",
-      "source": "0428IbnSina.FannShicr"
+      "source": "0428IbnSina.ShifaIlahiyyat"
     },
     {
       "dest": "0428IbnSina.Shifa",
       "main_rel_type": "PART",
       "sec_rel_type": "",
-      "source": "0428IbnSina.Ilahiyyat"
+      "source": "0428IbnSina.ShifaKawnWaFasad"
     },
     {
       "dest": "0428IbnSina.Shifa",
       "main_rel_type": "PART",
       "sec_rel_type": "",
-      "source": "0428IbnSina.KawnWaFasad"
+      "source": "0428IbnSina.ShifaMantiq"
     },
     {
       "dest": "0428IbnSina.Shifa",
       "main_rel_type": "PART",
       "sec_rel_type": "",
-      "source": "0428IbnSina.Mantiq"
+      "source": "0428IbnSina.ShifaNafs"
     },
     {
       "dest": "0428IbnSina.Shifa",
       "main_rel_type": "PART",
       "sec_rel_type": "",
-      "source": "0428IbnSina.Nafs"
+      "source": "0428IbnSina.ShifaShicr"
     },
     {
       "dest": "0428IbnSina.Shifa",
@@ -1275,12 +1229,88 @@
       "source": "0428IbnSina.ShifaTabiciyyat"
     }
   ],
+  "0428IbnSina.ShifaAfcalWaInficalat": [
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.ShifaAfcalWaInficalat"
+    },
+    {
+      "dest": "0428IbnSina.ShifaTabiciyyat",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.ShifaAfcalWaInficalat"
+    }
+  ],
+  "0428IbnSina.ShifaIlahiyyat": [
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.ShifaIlahiyyat"
+    }
+  ],
+  "0428IbnSina.ShifaKawnWaFasad": [
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.ShifaKawnWaFasad"
+    },
+    {
+      "dest": "0428IbnSina.ShifaTabiciyyat",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.ShifaKawnWaFasad"
+    }
+  ],
   "0428IbnSina.ShifaMantiq": [
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.ShifaMantiq"
+    },
     {
       "dest": "0428IbnSina.ShifaMantiq",
       "main_rel_type": "PART",
       "sec_rel_type": "",
-      "source": "0428IbnSina.FannShicr"
+      "source": "0428IbnSina.ShifaShicr"
+    }
+  ],
+  "0428IbnSina.ShifaNafs": [
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.ShifaNafs"
+    },
+    {
+      "dest": "0428IbnSina.Tabiciyyat",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.ShifaNafs"
+    },
+    {
+      "dest": "0001Aristotle.DeAnima",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.ShifaNafs"
+    }
+  ],
+  "0428IbnSina.ShifaShicr": [
+    {
+      "dest": "0428IbnSina.Shifa",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.ShifaShicr"
+    },
+    {
+      "dest": "0428IbnSina.ShifaMantiq",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0428IbnSina.ShifaShicr"
     }
   ],
   "0428IbnSina.ShifaTabiciyyat": [
@@ -1288,13 +1318,13 @@
       "dest": "0428IbnSina.ShifaTabiciyyat",
       "main_rel_type": "PART",
       "sec_rel_type": "",
-      "source": "0428IbnSina.AfcalWaInficalat"
+      "source": "0428IbnSina.ShifaAfcalWaInficalat"
     },
     {
       "dest": "0428IbnSina.ShifaTabiciyyat",
       "main_rel_type": "PART",
       "sec_rel_type": "",
-      "source": "0428IbnSina.KawnWaFasad"
+      "source": "0428IbnSina.ShifaKawnWaFasad"
     },
     {
       "dest": "0428IbnSina.Shifa",
@@ -1308,7 +1338,7 @@
       "dest": "0428IbnSina.Tabiciyyat",
       "main_rel_type": "PART",
       "sec_rel_type": "",
-      "source": "0428IbnSina.Nafs"
+      "source": "0428IbnSina.ShifaNafs"
     }
   ],
   "0430AswadGhundijani.FarhatAdib": [
@@ -2368,7 +2398,7 @@
       "dest": "0646IbnCumarIbnHajibKurdi.MukhtasarMuntaha",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
-      "source": "0749IbnCabdRahmanShamsDinIsbahani.BayanMukhtasar"
+      "source": "0749AbuThanaIsbahani.BayanMukhtasar"
     },
     {
       "dest": "0646IbnCumarIbnHajibKurdi.MukhtasarMuntaha",
@@ -3445,20 +3475,20 @@
       "source": "0748Dhahabi.TarjamatIbnTaymiyya"
     }
   ],
+  "0749AbuThanaIsbahani.BayanMukhtasar": [
+    {
+      "dest": "0646IbnCumarIbnHajibKurdi.MukhtasarMuntaha",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0749AbuThanaIsbahani.BayanMukhtasar"
+    }
+  ],
   "0749BadrDinMisriMuradi.TawdihMaqasid": [
     {
       "dest": "0672IbnMalik.AlfiyyatIbnMalik",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0749BadrDinMisriMuradi.TawdihMaqasid"
-    }
-  ],
-  "0749IbnCabdRahmanShamsDinIsbahani.BayanMukhtasar": [
-    {
-      "dest": "0646IbnCumarIbnHajibKurdi.MukhtasarMuntaha",
-      "main_rel_type": "COMM",
-      "sec_rel_type": "sharh",
-      "source": "0749IbnCabdRahmanShamsDinIsbahani.BayanMukhtasar"
     }
   ],
   "0749IbnMaktum.Risala": [
@@ -4211,9 +4241,9 @@
       "source": "0852IbnHajarCasqalani.NukatZiraf"
     }
   ],
-  "0852IbnHajarCasqalani.NukhbatFikr": [
+  "0852IbnHajarCasqalani.NukhbatFikar": [
     {
-      "dest": "0852IbnHajarCasqalani.NukhbatFikr",
+      "dest": "0852IbnHajarCasqalani.NukhbatFikar",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "1031CabdRaufMunawi.YawaqitWaDurar"
@@ -5159,7 +5189,7 @@
   ],
   "1031CabdRaufMunawi.YawaqitWaDurar": [
     {
-      "dest": "0852IbnHajarCasqalani.NukhbatFikr",
+      "dest": "0852IbnHajarCasqalani.NukhbatFikar",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "1031CabdRaufMunawi.YawaqitWaDurar"

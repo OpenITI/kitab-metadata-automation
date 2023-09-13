@@ -12,6 +12,7 @@ R_O_W	FARAB_682E427N_R	0393IbnHammadJawhari.yml
 R_O_W	FARGHANA_720E403N_R	0483IbnAhmadSarakhsi.yml
 R_O_W	HAWFSHARQI_315E305N_R	0926ZakariyyaAnsari.yml
 R_O_W	HAWFSHARQI_315E305N_R	0974IbnHajarHaytami.yml
+R_O_W	HIJAZ_390E235N_R	0161SufyanThawri.yml
 R_O_W	ISBAHAN_516E326N_R	0287IbnAbiCasim.yml
 R_O_W	ISBAHAN_516E326N_R	0327IbnAbiHatimRazi.yml
 R_O_W	ISBAHAN_516E326N_R	0360Tabarani.yml
@@ -235,7 +236,6 @@ auto	Iraq_RE_Auto	0322KatibBaghdadi.yml
 auto	Iraq_RE_Auto	0323CaliHimyari.yml
 auto	Iraq_RE_Auto	0323Niftawayh.yml
 auto	Iraq_RE_Auto	0324IbnMuhammadCanbari.yml
-auto	Iraq_RE_Auto	0325IbnCabdAllahWarraq.yml
 auto	Iraq_RE_Auto	0330IbnIsmacilMahamili.yml
 auto	Iraq_RE_Auto	0330IbnMuhammadSulami.yml
 auto	Iraq_RE_Auto	0333IbnCuqdahKufi.yml
@@ -256,6 +256,7 @@ auto	Iraq_RE_Auto	0369IbnMasiBaghdadi.yml
 auto	Iraq_RE_Auto	0372AbuBakrDaqqaq.yml
 auto	Iraq_RE_Auto	0375IbnHamzaBasri.yml
 auto	Iraq_RE_Auto	0378IbnIsmacilWarraq.yml
+auto	Iraq_RE_Auto	0381IbnWarraq.yml
 auto	Iraq_RE_Auto	0381IbnYusufCallaf.yml
 auto	Iraq_RE_Auto	0383IbnHayawayhKhazzaz.yml
 auto	Iraq_RE_Auto	0384IbnCaliTanukhi.yml
@@ -317,7 +318,6 @@ auto	Iraq_RE_Auto	1174AbuBarakatSuwaydi.yml
 auto	Iraq_RE_Auto	1242DiyaDinKhalidBaghdadi.yml
 auto	Iraq_RE_Auto	1299IbnSibghatAllahFasihDinHaydari.yml
 auto	Iraq_RE_Auto	1339IsmacilBashaBaghdadi.yml
-auto	JaziratArab_RE_Auto	0130CurwaIbnCudhayna.yml
 auto	JaziratArab_RE_Auto	0130IbnBashirKhariji.yml
 auto	JaziratArab_RE_Auto	0148AbuHamzaThumali.yml
 auto	JaziratArab_RE_Auto	0157AbuMikhnafAzdi.yml
@@ -611,7 +611,6 @@ auto	Sham_RE_Auto	0778AbuHafsMaraghi.yml
 auto	Sham_RE_Auto	0779IbnHabibHalabi.yml
 auto	Sham_RE_Auto	0791IbnCumarHalabiHamawi.yml
 auto	Sham_RE_Auto	0792SadrDinIbnAbiCizzAdhraci.yml
-auto	Sham_RE_Auto	0800IbnCadilHanbali.yml
 auto	Sham_RE_Auto	0803IbnLahhamCalaDinBacli.yml
 auto	Sham_RE_Auto	0815Ghuzuli.yml
 auto	Sham_RE_Auto	0829TaqiDinDimashqiHisni.yml
@@ -620,9 +619,10 @@ auto	Sham_RE_Auto	0837IbnHijjaHamawi.yml
 auto	Sham_RE_Auto	0841BurhanDinSibtIbnCajami.yml
 auto	Sham_RE_Auto	0844IbnRassamHamawi.yml
 auto	Sham_RE_Auto	0852SirajDinIbnWardi.yml
-auto	Sham_RE_Auto	0855IbnFaramurzMullaKhusraw.yml
 auto	Sham_RE_Auto	0871IbnAhmadShamsDinBacuni.yml
+auto	Sham_RE_Auto	0880IbnCadilHanbali.yml
 auto	Sham_RE_Auto	0885CalaDinMardawi.yml
+auto	Sham_RE_Auto	0885IbnFaramurzMullaKhusraw.yml
 auto	Sham_RE_Auto	0894IbnMuhammadDimashqiHaydari.yml
 auto	Sham_RE_Auto	0895SibtMaridini.yml
 auto	Sham_RE_Auto	0900IbnMuhammadBurhanDinQabibati.yml
