@@ -337,6 +337,456 @@
       "source": "1450MuhammadHasanBakkai.TartibIslahMantiq"
     }
   ],
+  "0246QasimRassi.CadlWaTawhid": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.CadlWaTawhid"
+    }
+  ],
+  "0246QasimRassi.CalimWaWafid": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.CalimWaWafid"
+    }
+  ],
+  "0246QasimRassi.CuzzatBiLugha": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.CuzzatBiLugha"
+    }
+  ],
+  "0246QasimRassi.DalilKabir": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.DalilKabir"
+    }
+  ],
+  "0246QasimRassi.DalilSaghir": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.DalilSaghir"
+    }
+  ],
+  "0246QasimRassi.FusulFiTawhid": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.FusulFiTawhid"
+    }
+  ],
+  "0246QasimRassi.HijraLiZalimin": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.HijraLiZalimin"
+    }
+  ],
+  "0246QasimRassi.ImamMuftaridTaca": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.ImamMuftaridTaca"
+    }
+  ],
+  "0246QasimRassi.ImamaQablCali": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.ImamaQablCali"
+    }
+  ],
+  "0246QasimRassi.ImamatCali": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.ImamatCali"
+    }
+  ],
+  "0246QasimRassi.MadihQuranKabir": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.MadihQuranKabir"
+    }
+  ],
+  "0246QasimRassi.MadihQuranSaghir": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.MadihQuranSaghir"
+    }
+  ],
+  "0246QasimRassi.MafahimIslamiyya": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.MafahimIslamiyya"
+    }
+  ],
+  "0246QasimRassi.Majmuc": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.CadlWaTawhid"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.CalimWaWafid"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.CuzzatBiLugha"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.DalilKabir"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.DalilSaghir"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.FusulFiTawhid"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.HijraLiZalimin"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.ImamMuftaridTaca"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.ImamaQablCali"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.ImamatCali"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.MadihQuranKabir"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.MadihQuranSaghir"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.MafahimIslamiyya"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.Maknun"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.Masail"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.MasalaLiRajulayn"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.MunazaraMacaMulhid"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.Mustarshid"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.NasikhWaMansukh"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.Qatl"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.RaddCalaMujabbira"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.RaddCalaNasara"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.RaddCalaRafida"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.RaddCalaRawafid"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.RaddCalaZindiq"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.SalatYawmWaLayla"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.SiyasatNafs"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.TafsirCarshWaKursi"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.TafsirQuran"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.Tahara"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.TathbitImama"
+    },
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.UsulCadlWaTawhid"
+    }
+  ],
+  "0246QasimRassi.Maknun": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.Maknun"
+    }
+  ],
+  "0246QasimRassi.Masail": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.Masail"
+    }
+  ],
+  "0246QasimRassi.MasalaLiRajulayn": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.MasalaLiRajulayn"
+    }
+  ],
+  "0246QasimRassi.MunazaraMacaMulhid": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.MunazaraMacaMulhid"
+    }
+  ],
+  "0246QasimRassi.Mustarshid": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.Mustarshid"
+    }
+  ],
+  "0246QasimRassi.NasikhWaMansukh": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.NasikhWaMansukh"
+    }
+  ],
+  "0246QasimRassi.Qatl": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.Qatl"
+    }
+  ],
+  "0246QasimRassi.RaddCalaMujabbira": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.RaddCalaMujabbira"
+    }
+  ],
+  "0246QasimRassi.RaddCalaNasara": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.RaddCalaNasara"
+    }
+  ],
+  "0246QasimRassi.RaddCalaRafida": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.RaddCalaRafida"
+    }
+  ],
+  "0246QasimRassi.RaddCalaRawafid": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.RaddCalaRawafid"
+    }
+  ],
+  "0246QasimRassi.RaddCalaZindiq": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.RaddCalaZindiq"
+    }
+  ],
+  "0246QasimRassi.SalatYawmWaLayla": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.SalatYawmWaLayla"
+    }
+  ],
+  "0246QasimRassi.SiyasatNafs": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.SiyasatNafs"
+    }
+  ],
+  "0246QasimRassi.TafsirCarshWaKursi": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.TafsirCarshWaKursi"
+    }
+  ],
+  "0246QasimRassi.TafsirQuran": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.TafsirQuran"
+    }
+  ],
+  "0246QasimRassi.Tahara": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.Tahara"
+    }
+  ],
+  "0246QasimRassi.TathbitImama": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.TathbitImama"
+    }
+  ],
+  "0246QasimRassi.UsulCadlWaTawhid": [
+    {
+      "dest": "0246QasimRassi.Majmuc",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0246QasimRassi.UsulCadlWaTawhid"
+    }
+  ],
   "0249AbuCuthmanMazini.Tasrif": [
     {
       "dest": "0249AbuCuthmanMazini.Tasrif",
@@ -3379,6 +3829,26 @@
       "source": "0748Dhahabi.DhaylDiwanDucafa"
     }
   ],
+  "0748Dhahabi.DhaylTarikhIslam": [
+    {
+      "dest": "0748Dhahabi.DhaylTarikhIslam",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0748Dhahabi.TarjamatBirzali"
+    },
+    {
+      "dest": "0748Dhahabi.DhaylTarikhIslam",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0748Dhahabi.TarjamatIbnTaymiyya"
+    },
+    {
+      "dest": "0748Dhahabi.DhaylTarikhIslam",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0748Dhahabi.TarjamatMizzi"
+    }
+  ],
   "0748Dhahabi.MacrifaQurraKibar": [
     {
       "dest": "0748Dhahabi.MacrifaQurraKibar",
@@ -3412,12 +3882,6 @@
     }
   ],
   "0748Dhahabi.SiyarAclamNubala": [
-    {
-      "dest": "0748Dhahabi.SiyarAclamNubala",
-      "main_rel_type": "EXTRACT",
-      "sec_rel_type": "",
-      "source": "0748Dhahabi.TarjamatIbnTaymiyya"
-    },
     {
       "dest": "0748Dhahabi.SiyarAclamNubala",
       "main_rel_type": "CONT",
@@ -3467,12 +3931,28 @@
       "source": "0748Dhahabi.TalkhisMawducatIbnJawzi"
     }
   ],
+  "0748Dhahabi.TarjamatBirzali": [
+    {
+      "dest": "0748Dhahabi.DhaylTarikhIslam",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0748Dhahabi.TarjamatBirzali"
+    }
+  ],
   "0748Dhahabi.TarjamatIbnTaymiyya": [
     {
-      "dest": "0748Dhahabi.SiyarAclamNubala",
-      "main_rel_type": "EXTRACT",
+      "dest": "0748Dhahabi.DhaylTarikhIslam",
+      "main_rel_type": "PART",
       "sec_rel_type": "",
       "source": "0748Dhahabi.TarjamatIbnTaymiyya"
+    }
+  ],
+  "0748Dhahabi.TarjamatMizzi": [
+    {
+      "dest": "0748Dhahabi.DhaylTarikhIslam",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0748Dhahabi.TarjamatMizzi"
     }
   ],
   "0749AbuThanaIsbahani.BayanMukhtasar": [
