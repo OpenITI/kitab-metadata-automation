@@ -3441,6 +3441,24 @@
       "shuhra": "ʿImād al-Dīn al-kātib al-Iṣfahānī"
     }
   },
+  "0600CabdGhaniMaqdisi": {
+    "AR": {
+      "ism": "عبد الغني",
+      "kunya": "أبو محمد",
+      "laqab": "تقي الدين",
+      "nasab": "بن عبد الواحد بن علي بن سرور",
+      "nisba": "المقدسي الجماعلي الدمشقي الحنبلي",
+      "shuhra": ""
+    },
+    "LA": {
+      "ism": "ʿAbd al-Ġanī",
+      "kunya": "Abū Muḥammad",
+      "laqab": "Taqī al-dīn",
+      "nasab": "b. ʿAbd al-Wāḥid b. ʿAlī b. Surūr",
+      "nisba": "al-Maqdisī al-Ǧamāʿilī al-Dimašqī al-Ḥanbalī",
+      "shuhra": ""
+    }
+  },
   "0601MusaIbnMaymun": {
     "EN": {
       "ism": "",
@@ -3863,6 +3881,24 @@
       "nasab": "b. Šaraf b. Murī b. Ḥasan b. Ḥusayn b. Muḥammad b. Ǧumʿaŧ b. Ḥizām",
       "nisba": "al-Ḥizāmī, al-Dimašqī",
       "shuhra": "al-Nawawī"
+    }
+  },
+  "0677IbnMuyassar": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "",
+      "laqab": "تاج الدين",
+      "nasab": "بن علي بن يوسف",
+      "nisba": "",
+      "shuhra": "ابن ميسر"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "",
+      "laqab": "Tāǧ al-Dīn",
+      "nasab": "b. ʿAlī b. Yūsuf",
+      "nisba": "",
+      "shuhra": "Ibn Muyassar"
     }
   },
   "0680IbnSabuni": {
@@ -5285,6 +5321,24 @@
       "nasab": "b. Bālī b. Muḥammad",
       "nisba": "al-Qusṭanṭīnī, al-Āydīnī",
       "shuhra": "ʿAlī b. Bālī Manq"
+    }
+  },
+  "1041Maqqari": {
+    "AR": {
+      "ism": "أحمد",
+      "kunya": "",
+      "laqab": "شهاب الدين",
+      "nasab": "بن محمد",
+      "nisba": "المققري التلمساني",
+      "shuhra": "المققري"
+    },
+    "LA": {
+      "ism": "Aḥmad",
+      "kunya": "",
+      "laqab": "Šahāb al-Dīn",
+      "nasab": "b. Muḥammad",
+      "nisba": "al-Maqqarī al-Tilimsānī",
+      "shuhra": "al-Maqqarī"
     }
   },
   "1041MirDamad": {
