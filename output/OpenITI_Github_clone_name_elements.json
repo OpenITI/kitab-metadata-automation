@@ -521,6 +521,24 @@
       "shuhra": "Ibn ʿAbd al-Ḥakam"
     }
   },
+  "0259HunaynIbnIshaq": {
+    "AR": {
+      "ism": "حنين",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "بن اسحاق",
+      "nisba": "العبادي",
+      "shuhra": "حنين بن اسحاق"
+    },
+    "LA": {
+      "ism": "Ḥunayn",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "b. Isḥāq",
+      "nisba": "al-ʿIbādī",
+      "shuhra": "Ḥunayn b. Isḥāq"
+    }
+  },
   "0261AbuHasanCijli": {
     "AR": {
       "ism": "أحمد",
@@ -5521,6 +5539,24 @@
       "shuhra": "ʿAlī b. Bālī Manq"
     }
   },
+  "1035DawudIbnHadi": {
+    "AR": {
+      "ism": "داوود",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "بن الهادي بن أحمد بن المهدي بن عز الدين بن الحسن",
+      "nisba": "المؤيدي",
+      "shuhra": "داوود بن الهادي"
+    },
+    "LA": {
+      "ism": "Dāwūd",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "b. al-Hādī b. Aḥmad b. al-Mahdī b. ʿIzz al-Dīn b. al-Ḥasan",
+      "nisba": "al-Muʾayyadī",
+      "shuhra": "Dāwūd b. al-Hādī"
+    }
+  },
   "1041Maqqari": {
     "AR": {
       "ism": "أحمد",
@@ -5555,6 +5591,24 @@
       "nasab": "b. Šams al-dīn Muḥammad",
       "nisba": "al-Ḥusaynī al-Astarābādī",
       "shuhra": "al-Dāmād"
+    }
+  },
+  "1055AhmadSharafi": {
+    "AR": {
+      "ism": "أحمد",
+      "kunya": "",
+      "laqab": "شمس الدين",
+      "nasab": "بن محمد بن صلاح",
+      "nisba": "الشرفي",
+      "shuhra": "شمس الدين الشرفي"
+    },
+    "LA": {
+      "ism": "Aḥmad",
+      "kunya": "",
+      "laqab": "Šams al-Dīn",
+      "nasab": "b. Muḥammad b. Ṣalāḥ",
+      "nisba": "al-Šarafī",
+      "shuhra": "Šams al-Dīn al-Šarafī"
     }
   },
   "1060IbnQaysar": {
@@ -5645,6 +5699,24 @@
       "nasab": "b. Muḥammad",
       "nisba": "",
       "shuhra": "al-Adnahwī"
+    }
+  },
+  "1100Izkawi": {
+    "AR": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "الازكاوي"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "al-Izkāwī"
     }
   },
   "1107QadiSacidQummi": {
@@ -6067,6 +6139,24 @@
       "nasab": "ʿAbd al-Karīm ʿAlī",
       "nisba": "",
       "shuhra": "Maḥmūd ʿAbd al-Karīm ʿAlī"
+    }
+  },
+  "1450MarzuqZahrani": {
+    "AR": {
+      "ism": "مرزوق",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "بن هياس آل مرزوق",
+      "nisba": "الزهراني",
+      "shuhra": "مرزوق الزهراني"
+    },
+    "LA": {
+      "ism": "Marzūq",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "b. Hiyās Āl Marzūq",
+      "nisba": "al-Zahrānī",
+      "shuhra": "Marzūq al-Zahrānī"
     }
   },
   "1450MutamarImamRida": {

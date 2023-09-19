@@ -3783,6 +3783,14 @@
       "source": "0943CisamDinIsfarayini.Atwal"
     }
   ],
+  "0740CabdQahirTabrizi.ManzumaTabriziyya": [
+    {
+      "dest": "0740CabdQahirTabrizi.ManzumaTabriziyya",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1450MarzuqZahrani.SharhManzumaTabriziyya"
+    }
+  ],
   "0741IbnAhmadGharnatiKalbi.TashilLiCulumTanzil": [
     {
       "dest": "0741IbnAhmadGharnatiKalbi.TashilLiCulumTanzil",
@@ -5339,6 +5347,20 @@
       "source": "0995AhmadManjur.SharhManhajMuntakhab"
     }
   ],
+  "0916IbnFanad.MaathirAbrar": [
+    {
+      "dest": "0916IbnFanad.MaathirAbrar",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "1035DawudIbnHadi.DhaylBisama"
+    },
+    {
+      "dest": "0916IbnFanad.MaathirAbrar",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "1055AhmadSharafi.Manzuma"
+    }
+  ],
   "0918BafadlHadrami.MuqaddimaHadramiyya": [
     {
       "dest": "0918BafadlHadrami.MuqaddimaHadramiyya",
@@ -5817,6 +5839,22 @@
       "source": "1135IbnCumarTaghlibiShaybani.NaylMaarib"
     }
   ],
+  "1035DawudIbnHadi.DhaylBisama": [
+    {
+      "dest": "0916IbnFanad.MaathirAbrar",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "1035DawudIbnHadi.DhaylBisama"
+    }
+  ],
+  "1055AhmadSharafi.Manzuma": [
+    {
+      "dest": "0916IbnFanad.MaathirAbrar",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "1055AhmadSharafi.Manzuma"
+    }
+  ],
   "1062NurDinMusawiCamili.ShawahidMakkiyya": [
     {
       "dest": "1023MuhammadAminAstarabadi.FawaidMadaniyya",
@@ -6125,6 +6163,14 @@
       "main_rel_type": "TRANSL",
       "sec_rel_type": "",
       "source": "1450MahmudCabdKarimCali.RawdatUliAlbab"
+    }
+  ],
+  "1450MarzuqZahrani.SharhManzumaTabriziyya": [
+    {
+      "dest": "0740CabdQahirTabrizi.ManzumaTabriziyya",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1450MarzuqZahrani.SharhManzumaTabriziyya"
     }
   ],
   "1450MuhammadHasanBakkai.TartibIslahMantiq": [
