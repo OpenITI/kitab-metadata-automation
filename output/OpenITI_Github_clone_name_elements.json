@@ -1617,6 +1617,24 @@
       "shuhra": "Muḥammad al-Kindī"
     }
   },
+  "0353AbuCabbasHasani": {
+    "AR": {
+      "ism": "أحمد",
+      "kunya": "أبو العباس",
+      "laqab": "",
+      "nasab": "بن ابراهيم بن الحسن بن ابراهيم بن ابراهيم بن محمد بن سليمان بن داود بن الحسن بن علي بن أبي طالب",
+      "nisba": "الحسني",
+      "shuhra": "أبو العباس الحسني"
+    },
+    "LA": {
+      "ism": "Aḥmad",
+      "kunya": "Abū al-ʿAbbās",
+      "laqab": "",
+      "nasab": "b. Ibrāhīm b. al-Ḥasan b. Ibrāhīm b. Ibrāhīm b. Muḥammad b. Sulaymān b. Dāwud b. al-Ḥasan b. ʿAlī b. Abī Ṭālib",
+      "nisba": "al-Ḥasanī",
+      "shuhra": "Abū al-ʿAbbās al-Ḥasanī"
+    }
+  },
   "0356AbuCaliQali": {
     "AR": {
       "ism": "اسماعيل",
@@ -2039,6 +2057,24 @@
       "shuhra": "al-Maqdisī, al-Baššārī"
     }
   },
+  "0393AbuTahirMukhallis": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "أبو طاهر",
+      "laqab": "",
+      "nasab": "بن عبد الرحمن بن العباس",
+      "nisba": "البغدادي، الذهبي",
+      "shuhra": "أبو طاهر المخلص"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "Abū Ṭāhir",
+      "laqab": "",
+      "nasab": "b. ʿAbd al-Raḥmãn b. al-ʿAbbās",
+      "nisba": "al-Baġdādī, al-Ḏahabī",
+      "shuhra": "Abū Ṭāhir al-Muḫalliṣ"
+    }
+  },
   "0395IbnJazzar": {
     "AR": {
       "ism": "أحمد",
@@ -2091,6 +2127,24 @@
       "nasab": "b. Aḥmad b. Qāsim",
       "nisba": "al-Majrīṭī, al-Fara=dī, al-Qurṭubī, al-Andalusī",
       "shuhra": "Maslamaŧ al-Majrīṭī"
+    }
+  },
+  "0399AbuBakrBaqqal": {
+    "AR": {
+      "ism": "أحمد",
+      "kunya": "أبو بكر",
+      "laqab": "",
+      "nasab": "بن أبي غالب بن الطلاية",
+      "nisba": "البققال، الوراق",
+      "shuhra": "أبو بكر البققال ابن الطلاية"
+    },
+    "LA": {
+      "ism": "Aḥmad",
+      "kunya": "Abū Bakr",
+      "laqab": "",
+      "nasab": "b. Abī Ġālib b. al-Ṭalāyaŧ",
+      "nisba": "al-Baqqāl, al-Warrāq",
+      "shuhra": "Abū Bakr al-Baqqāl Ibn al-Ṭalāyaŧ"
     }
   },
   "0400AbuQasimZahrawi": {
@@ -2243,6 +2297,24 @@
       "nasab": "b. ʿAbd Al-lãh",
       "nisba": "al-Kirmānī",
       "shuhra": "al-Kirmānī"
+    }
+  },
+  "0412AbuFathIbnAbiFawaris": {
+    "AR": {
+      "ism": "",
+      "kunya": "أبو الفتح",
+      "laqab": "",
+      "nasab": "بن أبي الفوارس",
+      "nisba": "",
+      "shuhra": "أبو الفتح بن أبي الفوارس"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "Abū al-Fatḥ",
+      "laqab": "",
+      "nasab": "b. Abī al-Fawāris",
+      "nisba": "",
+      "shuhra": "Abū al-Fatḥ b. Abī al-Fawāris"
     }
   },
   "0412IbnAbiFawaris": {
@@ -2593,6 +2665,24 @@
       "nasab": "b. Muḥammad b. Ḥabīb",
       "nisba": "al-Baṣrī, al-Baġdādī",
       "shuhra": "al-Māwardī"
+    }
+  },
+  "0450CaliIbnBilal": {
+    "AR": {
+      "ism": "علي",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "بن بلال",
+      "nisba": "الآملي الزيدي",
+      "shuhra": "علي بن بلال"
+    },
+    "LA": {
+      "ism": "ʿAlī",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "b. Bilāl",
+      "nisba": "al-Āmulī al-Zaydī",
+      "shuhra": "ʿAlī b. Bilāl"
     }
   },
   "0450FadlIbnMufarraj": {
@@ -4349,6 +4439,24 @@
       "nasab": "b. ʿAbd al-ʿAzīz b. Mūsá",
       "nisba": "al-Sīwāsī",
       "shuhra": "al-Sīwāsī"
+    }
+  },
+  "0726CallamaHilli": {
+    "AR": {
+      "ism": "الحسن",
+      "kunya": "أبو منصور",
+      "laqab": "",
+      "nasab": "بن يونس بن المطهر",
+      "nisba": "الأسدي، الحلي",
+      "shuhra": "العلامة الحلي"
+    },
+    "LA": {
+      "ism": "al-Ḥasan",
+      "kunya": "Abū Manṣūr",
+      "laqab": "",
+      "nasab": "b. Yūnus b. al-Muṭahhar",
+      "nisba": "al-Asadī, al-Ḥillī",
+      "shuhra": "al-ʿAllāmaŧ al-Ḥillī"
     }
   },
   "0728IbnTaymiyya": {

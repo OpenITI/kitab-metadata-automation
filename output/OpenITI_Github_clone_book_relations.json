@@ -1287,6 +1287,14 @@
       "source": "0347IbnDurustawayh.TashihFasih"
     }
   ],
+  "0353AbuCabbasHasani.Masabih": [
+    {
+      "dest": "0353AbuCabbasHasani.Masabih",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "tatimma",
+      "source": "0450CaliIbnBilal.TatimmatMasabih"
+    }
+  ],
   "0354IbnHibbanBusti.Sahih": [
     {
       "dest": "0354IbnHibbanBusti.Sahih",
@@ -1529,6 +1537,56 @@
       "source": "0442AbuQasimThamanini.SharhTasrif"
     }
   ],
+  "0393AbuTahirMukhallis": [
+    {
+      "dest": "0393AbuTahirMukhallis",
+      "main_rel_type": "TRANSM",
+      "sec_rel_type": "riwaya",
+      "source": "0393AbuTahirMukhallis.JuzFihiAhadith"
+    },
+    {
+      "dest": "0393AbuTahirMukhallis",
+      "main_rel_type": "TRANSM",
+      "sec_rel_type": "riwaya",
+      "source": "0393AbuTahirMukhallis.SabcatMajalis"
+    },
+    {
+      "dest": "0393AbuTahirMukhallis",
+      "main_rel_type": "TRANSM",
+      "sec_rel_type": "riwaya",
+      "source": "0700Anonymous.MuntaqaMinMuntaqaSabcatAjzaMukhallis"
+    }
+  ],
+  "0393AbuTahirMukhallis.JuzFihiAhadith": [
+    {
+      "dest": "0393AbuTahirMukhallis",
+      "main_rel_type": "TRANSM",
+      "sec_rel_type": "riwaya",
+      "source": "0393AbuTahirMukhallis.JuzFihiAhadith"
+    }
+  ],
+  "0393AbuTahirMukhallis.Mukhallisiyyat": [
+    {
+      "dest": "0393AbuTahirMukhallis.Mukhallisiyyat",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "muntaqa",
+      "source": "0399AbuBakrBaqqal.MuntaqaMukhallisiyyat"
+    },
+    {
+      "dest": "0393AbuTahirMukhallis.Mukhallisiyyat",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "muntaqa",
+      "source": "0412AbuFathIbnAbiFawaris.MuntaqaMukhallisiyyat"
+    }
+  ],
+  "0393AbuTahirMukhallis.SabcatMajalis": [
+    {
+      "dest": "0393AbuTahirMukhallis",
+      "main_rel_type": "TRANSM",
+      "sec_rel_type": "riwaya",
+      "source": "0393AbuTahirMukhallis.SabcatMajalis"
+    }
+  ],
   "0393IbnHammadJawhari.SihahTajLugha": [
     {
       "dest": "0393IbnHammadJawhari.SihahTajLugha",
@@ -1541,6 +1599,14 @@
       "main_rel_type": "CONT",
       "sec_rel_type": "takmila",
       "source": "0650IbnMuhammadRadiDinSaghani.Takmila"
+    }
+  ],
+  "0399AbuBakrBaqqal.MuntaqaMukhallisiyyat": [
+    {
+      "dest": "0393AbuTahirMukhallis.Mukhallisiyyat",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "muntaqa",
+      "source": "0399AbuBakrBaqqal.MuntaqaMukhallisiyyat"
     }
   ],
   "0403IbnFaradi.TarikhCulamaAndalus": [
@@ -1573,6 +1639,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0410AbuSahlNili.TalkhisTafsirJalinus"
+    }
+  ],
+  "0412AbuFathIbnAbiFawaris.MuntaqaMukhallisiyyat": [
+    {
+      "dest": "0393AbuTahirMukhallis.Mukhallisiyyat",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "muntaqa",
+      "source": "0412AbuFathIbnAbiFawaris.MuntaqaMukhallisiyyat"
     }
   ],
   "0414AbuHayyanTawhidi": [
@@ -1853,6 +1927,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0450AbuHasanMawardi.HawiKabir"
+    }
+  ],
+  "0450CaliIbnBilal.TatimmatMasabih": [
+    {
+      "dest": "0353AbuCabbasHasani.Masabih",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "tatimma",
+      "source": "0450CaliIbnBilal.TatimmatMasabih"
     }
   ],
   "0450Jubbi.SharhMudawwana": [
@@ -3455,6 +3537,14 @@
       "main_rel_type": "ABR",
       "sec_rel_type": "mukhtasar",
       "source": "0699IbnCabdRahmanQazwiniShafici.MukhtasarShucabIman"
+    }
+  ],
+  "0700Anonymous.MuntaqaMinMuntaqaSabcatAjzaMukhallis": [
+    {
+      "dest": "0393AbuTahirMukhallis",
+      "main_rel_type": "TRANSM",
+      "sec_rel_type": "riwaya",
+      "source": "0700Anonymous.MuntaqaMinMuntaqaSabcatAjzaMukhallis"
     }
   ],
   "0702IbnDaqiqCidQushayri.IhkamAhkamSharhCumdatAhkam": [
