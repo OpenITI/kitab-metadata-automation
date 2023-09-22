@@ -2649,6 +2649,24 @@
       "shuhra": "al-Ḫalīlī"
     }
   },
+  "0448HilalSabi": {
+    "AR": {
+      "ism": "هلال",
+      "kunya": "أبو الحسين",
+      "laqab": "",
+      "nasab": "بن محسن بن ابراهيم",
+      "nisba": "الصابئ",
+      "shuhra": "هلال الصابئ"
+    },
+    "LA": {
+      "ism": "Hilāl",
+      "kunya": "Abū al-Ḥusayn",
+      "laqab": "",
+      "nasab": "b. Muḥassin b. Ibrāhīm",
+      "nisba": "al-Ṣābiʾ",
+      "shuhra": "Hilāl al-Ṣābiʾ"
+    }
+  },
   "0450AbuHasanMawardi": {
     "AR": {
       "ism": "علي",
@@ -3025,6 +3043,24 @@
       "nasab": "b. ʿAbd al-ʿAzīz b. Muḥammad b. Ayyūb b. ʿAmrů",
       "nisba": "al-Bakrī",
       "shuhra": "Abū ʿUbayd al-Bakrī"
+    }
+  },
+  "0488ZahirDin": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "أبو شجاع",
+      "laqab": "ظهير الدين",
+      "nasab": "بن الحسين",
+      "nisba": "الروذرواري",
+      "shuhra": "ظهير الدين الروذرواري"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "Abū Šuǧāʿ",
+      "laqab": "Ẓahīr al-dīn",
+      "nasab": "b. al-Ḥusayn",
+      "nisba": "al-Rūḏrawārī",
+      "shuhra": "Ẓahīr al-Dīn al-Rūḏrawārī"
     }
   },
   "0499IbnBassal": {

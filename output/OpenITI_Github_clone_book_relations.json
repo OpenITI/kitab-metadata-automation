@@ -1665,6 +1665,14 @@
       "source": "0421Miskawayh.HawamilWaShawamil"
     }
   ],
+  "0421Miskawayh.Tajarib": [
+    {
+      "dest": "0421Miskawayh.Tajarib",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "0488ZahirDin.DhaylTajaribUmam"
+    }
+  ],
   "0422QadiCabdWahhabThaclabi.SharhRisala": [
     {
       "dest": "0386IbnAbiZaydQayrawani.Risala",
@@ -2201,6 +2209,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0597IbnJawzi.KashfMushkil"
+    }
+  ],
+  "0488ZahirDin.DhaylTajaribUmam": [
+    {
+      "dest": "0421Miskawayh.Tajarib",
+      "main_rel_type": "CONT",
+      "sec_rel_type": "dhayl",
+      "source": "0488ZahirDin.DhaylTajaribUmam"
     }
   ],
   "0500Anonymous.AwtanWaBuldan": [
