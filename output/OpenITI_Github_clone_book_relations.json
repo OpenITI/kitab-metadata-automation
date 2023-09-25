@@ -1115,6 +1115,12 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0911Suyuti.SharhSunanNasai"
+    },
+    {
+      "dest": "0303Nasai.SunanKubra",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "1450Anonymous.MiatHadithSaqitaMinSunanKubra"
     }
   ],
   "0310Tabari.MuntakhabMinDhayl": [
@@ -4459,6 +4465,14 @@
       "source": "0773IbnMusaRahuni.TuhfatMasul"
     }
   ],
+  "0774IbnKathir.IkhtisarCulumHadith": [
+    {
+      "dest": "0774IbnKathir.IkhtisarCulumHadith",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1377AhmadMuhammadShakir.BacithHathith"
+    }
+  ],
   "0774IbnKathir.TalkhisIstighatha": [
     {
       "dest": "0728IbnTaymiyya.Istighatha",
@@ -5149,20 +5163,20 @@
       "source": "0884AbuIshaqIbnMuflih.MubdicFiSharhMuqnic"
     }
   ],
-  "0885Biqaci.CunwanCunwan": [
-    {
-      "dest": "0885Biqaci.CunwanZaman",
-      "main_rel_type": "ABR",
-      "sec_rel_type": "",
-      "source": "0885Biqaci.CunwanCunwan"
-    }
-  ],
   "0885Biqaci.CunwanZaman": [
     {
       "dest": "0885Biqaci.CunwanZaman",
       "main_rel_type": "ABR",
       "sec_rel_type": "",
-      "source": "0885Biqaci.CunwanCunwan"
+      "source": "0885BurhanDinBiqaci.CunwanCunwan"
+    }
+  ],
+  "0885BurhanDinBiqaci.CunwanCunwan": [
+    {
+      "dest": "0885Biqaci.CunwanZaman",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "",
+      "source": "0885BurhanDinBiqaci.CunwanCunwan"
     }
   ],
   "0885CalaDinMardawi.TahbirSharhTahrir": [
@@ -6185,6 +6199,14 @@
       "source": "1338Tawzari.TawdihAhkam"
     }
   ],
+  "1377AhmadMuhammadShakir.BacithHathith": [
+    {
+      "dest": "0774IbnKathir.IkhtisarCulumHadith",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1377AhmadMuhammadShakir.BacithHathith"
+    }
+  ],
   "1389AghaBuzurgTihrani.TASHAnwarSatica": [
     {
       "dest": "1389AghaBuzurgTihrani.TabaqatAclamShica",
@@ -6253,6 +6275,14 @@
       "main_rel_type": "TRANSL",
       "sec_rel_type": "",
       "source": "1432YahyaKhashshab.SafarNamah"
+    }
+  ],
+  "1450Anonymous.MiatHadithSaqitaMinSunanKubra": [
+    {
+      "dest": "0303Nasai.SunanKubra",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "1450Anonymous.MiatHadithSaqitaMinSunanKubra"
     }
   ],
   "1450CabdAllahGhunayman.MukhtasarMinhajSunna": [
