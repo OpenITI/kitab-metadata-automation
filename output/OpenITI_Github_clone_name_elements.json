@@ -611,6 +611,24 @@
       "shuhra": "al-Muzanī"
     }
   },
+  "0271CabbasDuri": {
+    "AR": {
+      "ism": "عباس",
+      "kunya": "أبو الفضل",
+      "laqab": "",
+      "nasab": "بن محمد بن حاتم",
+      "nisba": "الدوري",
+      "shuhra": "عباس الدوري"
+    },
+    "LA": {
+      "ism": "ʿAbbās",
+      "kunya": "Abū al-Faḍl",
+      "laqab": "",
+      "nasab": "b. Muḥammad b. Ḥātim",
+      "nisba": "al-Dūrī",
+      "shuhra": "ʿAbbās al-Dūrī"
+    }
+  },
   "0272IbnIshaqFakihi": {
     "AR": {
       "ism": "محمد",

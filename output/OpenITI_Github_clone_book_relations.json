@@ -301,6 +301,14 @@
       "source": "0249Azraqi.AkhbarMakka"
     }
   ],
+  "0233YahyaIbnMacin.TarikhIbnMacin": [
+    {
+      "dest": "0233YahyaIbnMacin.TarikhIbnMacin",
+      "main_rel_type": "TRANSM",
+      "sec_rel_type": "riwaya",
+      "source": "0271CabbasDuri.TarikhIbnMacin"
+    }
+  ],
   "0240SahnunIbnSacid.MudawwanaKubra": [
     {
       "dest": "0240SahnunIbnSacid.MudawwanaKubra",
@@ -927,6 +935,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0450AbuHasanMawardi.HawiKabir"
+    }
+  ],
+  "0271CabbasDuri.TarikhIbnMacin": [
+    {
+      "dest": "0233YahyaIbnMacin.TarikhIbnMacin",
+      "main_rel_type": "TRANSM",
+      "sec_rel_type": "riwaya",
+      "source": "0271CabbasDuri.TarikhIbnMacin"
     }
   ],
   "0273IbnMaja.Sunan": [
