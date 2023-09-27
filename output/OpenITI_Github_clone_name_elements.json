@@ -2013,6 +2013,24 @@
       "shuhra": "al-Rummānī"
     }
   },
+  "0384IbnCaliTanukhi": {
+    "AR": {
+      "ism": "المحسن",
+      "kunya": "أبو علي",
+      "laqab": "",
+      "nasab": "بن علي بن محمد",
+      "nisba": "التنوخي، القاضي",
+      "shuhra": "القاضي التنوخي"
+    },
+    "LA": {
+      "ism": "al-Muḥassin",
+      "kunya": "Abū ʿAlī",
+      "laqab": "",
+      "nasab": "b. ʿAlī b. Muḥammad",
+      "nisba": "al-Tanūḫī, al-Qāḍī",
+      "shuhra": "al-Qāḍī al-Tanūḫī"
+    }
+  },
   "0385Daraqutni": {
     "AR": {
       "ism": "علي",
@@ -4493,6 +4511,24 @@
       "nasab": "b. ʿAbd al-ʿAzīz b. Mūsá",
       "nisba": "al-Sīwāsī",
       "shuhra": "al-Sīwāsī"
+    }
+  },
+  "0725HasanCabbasi": {
+    "AR": {
+      "ism": "الحسن",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "بن عبد الله",
+      "nisba": "العباسي",
+      "shuhra": "الحسن العباسي"
+    },
+    "LA": {
+      "ism": "al-Ḥasan",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "b. ʿAbd Allāh",
+      "nisba": "al-ʿAbbāsī",
+      "shuhra": "al-Ḥasan al-ʿAbbāsī"
     }
   },
   "0726CallamaHilli": {
