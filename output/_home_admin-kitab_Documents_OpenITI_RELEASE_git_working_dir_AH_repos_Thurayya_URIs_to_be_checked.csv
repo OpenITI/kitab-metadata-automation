@@ -22,7 +22,6 @@ R_O_W	JABALJALIL_363E348N_O	0966ShahidThani.yml
 R_O_W	JABALJALIL_363E348N_O	0993MuhaqqiqArdabili.yml
 R_O_W	JABALNAFUSA_113E318N_O	0750IsmacilJaytali.yml
 R_O_W	JABALNAFUSA_113E318N_O	0928AbuCabbasShammakhi.yml
-R_O_W	JABALQALAMUN_365E339N_O	0885BurhanDinBiqaci.yml
 R_O_W	JANAD_441E136N_R	0558IbnAbiKhayrCimraniYamani.yml
 R_O_W	JAZIRAKHADRA_054W361N_R	0745AbuHayyanGharnati.yml
 R_O_W	JURJAN_549E373N_R	0365IbnCadiJurjani.yml
@@ -673,3 +672,5 @@ auto	Yaman_RE_Auto	1129CaliAmirSancani.yml
 auto	Yaman_RE_Auto	1147CabdAllahSancani.yml
 auto	Yaman_RE_Auto	1276IbnAhmadRibaciSancani.yml
 auto	Yaman_RE_Auto	1381MuhammadSancani.yml
+error	JIBAL_RE	0488ZahirDin.yml
+error	KHURASAN_RE	0271CabbasDuri.yml
