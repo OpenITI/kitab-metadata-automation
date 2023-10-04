@@ -1,230 +1,4 @@
 {
-  "0001Princeton": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "مكتبة جامعت برينستون"
-    },
-    "EN": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Princeton University Library"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Maktabaŧ Ǧāmiʿat Brīnstūn"
-    }
-  },
-  "0001Yale": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "مكتبة جامعة ييل"
-    },
-    "EN": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Yale University"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Maktabaŧ Ǧāmiʿaŧ Yayl"
-    }
-  },
-  "0033Bnf": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "المكتبة الوطنية الفرنسية"
-    },
-    "EN": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Bibliothèque nationale de France"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "al-Maktabaŧ al-waṭaniyyaŧ al-faransiyyaŧ"
-    }
-  },
-  "0034Bne": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "المكتبة الوطنية لاسبانية"
-    },
-    "EN": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Biblioteca Nacional de España"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "al-Maktabaŧ al-waṭaniyyaŧ li-Isbāniyaŧ"
-    }
-  },
-  "0039Vatican": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "مكتبة الفاتيكان"
-    },
-    "EN": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Vatican Library"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Maktabaŧ al-Fātīkān"
-    }
-  },
-  "0049Bsb": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "المكتبة البافارية الحكومية"
-    },
-    "EN": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Bavarian State Library"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "al-Maktabaŧ al-bāfāriyaŧ al-ḥukūmiyyaŧ"
-    }
-  },
-  "0049Leipzig": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "مكتبة جامعة ليبزيغ"
-    },
-    "EN": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Leipzig University Library"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Maktabaŧ Ǧāmiʿaŧ Laybzīġ"
-    }
-  },
-  "0049Sbb": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "بeرلن ستتe لبرري"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Berlin State Library"
-    }
-  },
-  "0049Tuebingen": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "مكتبة جامعة توبينغن"
-    },
-    "EN": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Tübingen University Library"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Maktabaŧ Ǧāmiʿaŧ Tūbīnġin"
-    }
-  },
   "0110HasanBasri": {
     "AR": {
       "ism": "الحسن",
@@ -5891,50 +5665,6 @@
       "shuhra": "al-Dāwūdī"
     }
   },
-  "0961Aub": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "مكتبة الجامعة الأمريكية في بيروت"
-    },
-    "EN": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Library of the American University of Beirut"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Maktabaŧ al-Ǧāmiʿaŧ al-amrīkiyyaŧ fī Bayrūt"
-    }
-  },
-  "0961Kaslik": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "هoلي سپرت أنveرستي لبرري، كسلك"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Holy Spirit University Library, Kaslik"
-    }
-  },
   "0961SulaymanMahri": {
     "AR": {
       "ism": "سليمان",
@@ -5951,58 +5681,6 @@
       "nasab": "b. Aḥmad b. Sulaymān",
       "nisba": "al-Mahrī",
       "shuhra": "Sulaymān al-Mahrī"
-    }
-  },
-  "0963Gopal": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "مكتبة بطريركية أنطاكية وسائر المشرق لالروم الأرثوذكس"
-    },
-    "EN": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Greek Orthodox Patriarchy of Antioch Library"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Maktabaŧ Baṭriyarkiyyaŧ Anṭākiyaŧ wa-sāʾir al-Mašriq li-al-Rūm al-Urṯūḏuks"
-    }
-  },
-  "0966Ksu": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "مكتبة جامعة الملك سعود"
-    },
-    "EN": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "King Saud University Library"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Maktabaŧ Ǧāmiʿaŧ al-Malik Saʿūd"
     }
   },
   "0968Tashkuprizadah": {
@@ -6659,6 +6337,24 @@
       "nasab": "ʿAbd al-Karīm ʿAlī",
       "nisba": "",
       "shuhra": "Maḥmūd ʿAbd al-Karīm ʿAlī"
+    }
+  },
+  "1450MarzuqZahrani": {
+    "AR": {
+      "ism": "مرزوق",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "بن هياس آل مرزوق",
+      "nisba": "الزهراني",
+      "shuhra": "مرزوق الزهراني"
+    },
+    "LA": {
+      "ism": "Marzūq",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "b. Hiyās Āl Marzūq",
+      "nisba": "al-Zahrānī",
+      "shuhra": "Marzūq al-Zahrānī"
     }
   },
   "1450MutamarImamRida": {

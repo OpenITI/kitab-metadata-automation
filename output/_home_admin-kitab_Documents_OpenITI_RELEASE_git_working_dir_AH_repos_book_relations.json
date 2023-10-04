@@ -1131,6 +1131,12 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0911Suyuti.SharhSunanNasai"
+    },
+    {
+      "dest": "0303Nasai.SunanKubra",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "1450Anonymous.MiatHadithSaqitaMinSunanKubra"
     }
   ],
   "0310Tabari.MuntakhabMinDhayl": [
@@ -3905,6 +3911,14 @@
       "source": "0943CisamDinIsfarayini.Atwal"
     }
   ],
+  "0740CabdQahirTabrizi.ManzumaTabriziyya": [
+    {
+      "dest": "0740CabdQahirTabrizi.ManzumaTabriziyya",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1450MarzuqZahrani.SharhManzumaTabriziyya"
+    }
+  ],
   "0741IbnAhmadGharnatiKalbi.TashilLiCulumTanzil": [
     {
       "dest": "0741IbnAhmadGharnatiKalbi.TashilLiCulumTanzil",
@@ -6279,6 +6293,14 @@
       "source": "1432YahyaKhashshab.SafarNamah"
     }
   ],
+  "1450Anonymous.MiatHadithSaqitaMinSunanKubra": [
+    {
+      "dest": "0303Nasai.SunanKubra",
+      "main_rel_type": "EXTRACT",
+      "sec_rel_type": "",
+      "source": "1450Anonymous.MiatHadithSaqitaMinSunanKubra"
+    }
+  ],
   "1450CabdAllahGhunayman.MukhtasarMinhajSunna": [
     {
       "dest": "0728IbnTaymiyya.MinhajSunna",
@@ -6293,6 +6315,14 @@
       "main_rel_type": "TRANSL",
       "sec_rel_type": "",
       "source": "1450MahmudCabdKarimCali.RawdatUliAlbab"
+    }
+  ],
+  "1450MarzuqZahrani.SharhManzumaTabriziyya": [
+    {
+      "dest": "0740CabdQahirTabrizi.ManzumaTabriziyya",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1450MarzuqZahrani.SharhManzumaTabriziyya"
     }
   ],
   "1450MuhammadHasanBakkai.TartibIslahMantiq": [
