@@ -2721,6 +2721,24 @@
       "shuhra": "al-Māwardī"
     }
   },
+  "0450Anonymous": {
+    "AR": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "مؤلف مجهول"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Muʾallif maǧhūl"
+    }
+  },
   "0450CaliIbnBilal": {
     "AR": {
       "ism": "علي",
@@ -4063,6 +4081,24 @@
       "shuhra": "al-Naʿʿāl"
     }
   },
+  "0660CuthmanNabulusi": {
+    "AR": {
+      "ism": "عثمان",
+      "kunya": "أبو عمرو",
+      "laqab": "علاء الدين",
+      "nasab": "بن ابراهيم بن خالد",
+      "nisba": "القرشي، النابلسي",
+      "shuhra": "عثمان النابلسي"
+    },
+    "LA": {
+      "ism": "ʿUṯmān",
+      "kunya": "Abū ʿAmrů",
+      "laqab": "ʿAlāʾ al-dīn",
+      "nasab": "b. Ibrāhīm b. Ḫālid",
+      "nisba": "al-Qurašī, al-Nābulusī",
+      "shuhra": "ʿUṯmān al-Nābulusī"
+    }
+  },
   "0660IbnCadim": {
     "AR": {
       "ism": "عمر",
@@ -4421,6 +4457,24 @@
       "nasab": "b. Mukarram b. ʿAlī b. Aḥmad",
       "nisba": "al-Anṣārī al-Ifrīqī al-Miṣrī",
       "shuhra": "Ibn Manẓūr"
+    }
+  },
+  "0714AhmadGhibrini": {
+    "AR": {
+      "ism": "أحمد",
+      "kunya": "أبو العباس",
+      "laqab": "",
+      "nasab": "بن أحمد بن عبد الله",
+      "nisba": "الغبريني",
+      "shuhra": ""
+    },
+    "LA": {
+      "ism": "Aḥmad",
+      "kunya": "Abū al-ʿAbbās",
+      "laqab": "",
+      "nasab": "b. Aḥmad b. ʿAbd Al-lãh",
+      "nisba": "al-Ġibrīnī",
+      "shuhra": ""
     }
   },
   "0717CalaDinIbnCabdZahir": {
@@ -5647,6 +5701,24 @@
       "shuhra": "al-Šammāḫī"
     }
   },
+  "0929IbnKayyal": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "أبو البركات",
+      "laqab": "",
+      "nasab": "بن أحمد",
+      "nisba": "",
+      "shuhra": "ابن كيال"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "Abū al-Barakāt",
+      "laqab": "",
+      "nasab": "b. Aḥmad",
+      "nisba": "",
+      "shuhra": "Ibn Kayyāl"
+    }
+  },
   "0938IbnCaliBalawi": {
     "AR": {
       "ism": "أحمد",
@@ -6193,6 +6265,24 @@
       "nasab": "b. Ǧaʿfar",
       "nisba": "al-Kattānī",
       "shuhra": "Ibn Ǧaʿfar al-Kattānī"
+    }
+  },
+  "1349MuhammadMuwaylihi": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "بن ابراهيم بن عبد الخالق",
+      "nisba": "المويلحي",
+      "shuhra": "محمد المويلحي"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "b. Ibrāhīm b. ʿAbd al-Ḫāliq",
+      "nisba": "al-Muwayliḥī",
+      "shuhra": "Muḥammad al-Muwayliḥī"
     }
   },
   "1386SayyidQutb": {
