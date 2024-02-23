@@ -72,7 +72,7 @@ with open(infp, mode="r", encoding="utf-8") as file:
         if "UNCORRECTED_OCR" in d["tags"]:
             row.append("TRUE")
         else:
-            append("FALSE")
+            row.append("FALSE")
         row.append(release)
 
         # do not include files that are not public:
