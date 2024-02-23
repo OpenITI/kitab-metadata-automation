@@ -35,7 +35,9 @@ generated_keys = [
     "one2all_data_url",
     "one2all_stats_url",
     "one2all_vis_url",
-    "pairwise_data_url"
+    "pairwise_data_url",
+    "uncorrected_ocr",
+    "release_version",
     ]
 header = relevant_keys + generated_keys
 new_csv = ["\t".join(header), ]
@@ -67,6 +69,11 @@ with open(infp, mode="r", encoding="utf-8") as file:
         row.append(one2all_stats_url.format(id_))
         row.append(one2all_vis_url.format(id_w_extension))
         row.append(pairwise_data_url.format(id_w_extension))
+        if "UNCORRECTED_OCR" in d["tags"]:
+            row.append("TRUE")
+        else:
+            append("FALSE")
+        row.append(release)
 
         # do not include files that are not public:
         if "noorlib" in path.lower():
