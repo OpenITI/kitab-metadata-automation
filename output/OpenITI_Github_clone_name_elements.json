@@ -5395,6 +5395,24 @@
       "shuhra": "Šams al-Dīn al-Nawāǧī"
     }
   },
+  "0872CimadDinIdris": {
+    "AR": {
+      "ism": "ادريس",
+      "kunya": "",
+      "laqab": "عماد الدين",
+      "nasab": "بن حسن",
+      "nisba": "القرشي",
+      "shuhra": "عماد الدين القرشي"
+    },
+    "LA": {
+      "ism": "Idrīs",
+      "kunya": "",
+      "laqab": "ʿImād al-dīn",
+      "nasab": "b. Ḥasan",
+      "nisba": "al-Qurašī",
+      "shuhra": "ʿImād al-dīn al-Qurašī"
+    }
+  },
   "0874IbnTaghribirdi": {
     "AR": {
       "ism": "يوسف",
