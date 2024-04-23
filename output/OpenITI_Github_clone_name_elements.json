@@ -2425,6 +2425,24 @@
       "shuhra": "al-QāḍīʿAbd al-Ǧabbār"
     }
   },
+  "0420Musabbihi": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "أبو عبد الله",
+      "laqab": "عز الملك",
+      "nasab": "بن عبيد الله بن أحمد بن اسماعيل بن عبد العزيز",
+      "nisba": "الحراني المسبحي",
+      "shuhra": ""
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "Abū ʿAbd Al-lãh",
+      "laqab": "ʿIzz al-Mulk",
+      "nasab": "b. ʿUbayd Al-lãh b. Aḥmad b. Ismāʿīl b. ʿAbd al-ʿAzīz",
+      "nisba": "al-Ḥarrānī al-Musabbiḥī",
+      "shuhra": ""
+    }
+  },
   "0421AbuSacdAbi": {
     "AR": {
       "ism": "منصور",
@@ -4995,8 +5013,26 @@
       "kunya": "Abū al-Ṣafāʾ",
       "laqab": "Ṣalāḥ al-dīn",
       "nasab": "b. Aybak",
-      "nisba": "al-ṣafadī",
-      "shuhra": "al-ṣafadī"
+      "nisba": "al-Ṣafadī",
+      "shuhra": "al-Ṣafadī"
+    }
+  },
+  "0765AbuMahasinHusayni": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "أبو المحاسن",
+      "laqab": "شمس الدين",
+      "nasab": "بن علي بن الحسن",
+      "nisba": "الحسيني",
+      "shuhra": ""
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "Abū al-Maḥāsin",
+      "laqab": "Šams al-Dīn",
+      "nasab": "b. ʿAlī b. al-Ḥasan",
+      "nisba": "al-Ḥusaynī",
+      "shuhra": ""
     }
   },
   "0767Balawi": {
