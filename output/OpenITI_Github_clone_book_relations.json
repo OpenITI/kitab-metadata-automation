@@ -3085,6 +3085,22 @@
       "source": "0715RuknDinAstarabadhi.SharhShafiya"
     }
   ],
+  "0650AbuKhayrIbnTayyib.RaddCalaMuslimin": [
+    {
+      "dest": "0650AbuKhayrIbnTayyib.Tibb",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0650AbuKhayrIbnTayyib.RaddCalaMuslimin"
+    }
+  ],
+  "0650AbuKhayrIbnTayyib.Tibb": [
+    {
+      "dest": "0650AbuKhayrIbnTayyib.Tibb",
+      "main_rel_type": "PART",
+      "sec_rel_type": "",
+      "source": "0650AbuKhayrIbnTayyib.RaddCalaMuslimin"
+    }
+  ],
   "0650Anonymous.MukhtasarSaljuqnama": [
     {
       "dest": "0650Anonymous.MukhtasarSaljuqnama",

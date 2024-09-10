@@ -2183,6 +2183,24 @@
       "shuhra": "Abū Bakr al-Baqqāl Ibn al-Ṭalāyaŧ"
     }
   },
+  "0400AbuMajdalus": {
+    "AR": {
+      "ism": "",
+      "kunya": "أبو المجدلوس",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "أبو المجدلوس"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "Abū al-Maǧdalūs",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Abū al-Maǧdalūs"
+    }
+  },
   "0400AbuQasimZahrawi": {
     "AR": {
       "ism": "خلف",
@@ -2629,6 +2647,24 @@
       "nasab": "b. al-Ḥasan b. al-Hayṯam",
       "nisba": "",
       "shuhra": "Ibn al-Hayṯam"
+    }
+  },
+  "0435AbuFarajIbnTayyib": {
+    "AR": {
+      "ism": "عبد الله",
+      "kunya": "أبو الفرج",
+      "laqab": "",
+      "nasab": "بن الطيب",
+      "nisba": "",
+      "shuhra": "أبو الفرج ابن الطيب"
+    },
+    "LA": {
+      "ism": "ʿAbd Allāh",
+      "kunya": "Abū al-Faraǧ",
+      "laqab": "",
+      "nasab": "b. al-Ṭayyib",
+      "nisba": "",
+      "shuhra": "Abū al-Faraǧ Ibn al-Ṭayyib"
     }
   },
   "0437MakkiIbnHammushQaysi": {
@@ -3729,6 +3765,24 @@
       "shuhra": ""
     }
   },
+  "0600Jirasimus": {
+    "AR": {
+      "ism": "جيراسيموس",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "جيراسيموس رئيس دير سمعان العمودي"
+    },
+    "LA": {
+      "ism": "Ǧīrāsīmūs",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Ǧīrāsīmūs raʾīs Dayr Simʿān al-ʿamūdī"
+    }
+  },
   "0601MusaIbnMaymun": {
     "EN": {
       "ism": "",
@@ -4061,6 +4115,24 @@
       "nasab": "b. Yūsuf b. Ibrāhīm  b. ʿAbd al-wāḥid",
       "nisba": "al-Qifṭī, al-Šaybānī",
       "shuhra": "Ibn al-Qifṭī"
+    }
+  },
+  "0650AbuKhayrIbnTayyib": {
+    "AR": {
+      "ism": "",
+      "kunya": "أبو الخير",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "بن الطيب",
+      "shuhra": "أبو الخير ابن الطيب"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "Abū al-Ḫayr",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "b. al-Ṭayyib",
+      "shuhra": "Abū al-Ḫayr Ibn al-Ṭayyib"
     }
   },
   "0658IbnAbbar": {
