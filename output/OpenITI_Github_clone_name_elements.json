@@ -6151,6 +6151,24 @@
       "shuhra": "al-Qāḍī Saʿīd al-Qummī"
     }
   },
+  "1109MuhammadMahdiFasi": {
+    "AR": {
+      "ism": "محمد",
+      "kunya": "",
+      "laqab": "المهدي",
+      "nasab": "بن أحمد بن علي بن يوسف",
+      "nisba": "الفاسي، الفهري",
+      "shuhra": "محمد المهدي الفاسي"
+    },
+    "LA": {
+      "ism": "Muḥammad",
+      "kunya": "",
+      "laqab": "al-Mahdī",
+      "nasab": "b. Aḥmad b. ʿAlī b. Yūsuf",
+      "nisba": "al-Fāsī, al-Fihrī",
+      "shuhra": "Muḥammad al-Mahdī al-Fāsī"
+    }
+  },
   "1111Majlisi": {
     "AR": {
       "ism": "محمد باقر",

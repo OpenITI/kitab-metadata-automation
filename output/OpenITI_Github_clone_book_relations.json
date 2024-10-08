@@ -891,6 +891,12 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0956IbnCumarShamsDinSafiri.MajalisWacziyya"
+    },
+    {
+      "dest": "0256Bukhari.Sahih",
+      "main_rel_type": "COMP",
+      "sec_rel_type": "",
+      "source": "1450MultipleAuthors.KutubSitta"
     }
   ],
   "0259HunaynIbnIshaq.TafsirJalinusLiFusulAbuqrat": [
@@ -1211,6 +1217,14 @@
       "main_rel_type": "EXTR",
       "sec_rel_type": "",
       "source": "1400MuhammadIbrahimSalim.TabaicNisa"
+    }
+  ],
+  "0329IbnYacqubKulayni.Kafi": [
+    {
+      "dest": "0329IbnYacqubKulayni.Kafi",
+      "main_rel_type": "COMP",
+      "sec_rel_type": "",
+      "source": "1450MultipleAuthors.KutubArbaca"
     }
   ],
   "0330IbnMuhammadSulami.Juz": [
@@ -6355,6 +6369,22 @@
       "main_rel_type": "TRANSL",
       "sec_rel_type": "",
       "source": "1450MuhammadSacidJamalDin.AkhbarSalajiqatRum"
+    }
+  ],
+  "1450MultipleAuthors.KutubArbaca": [
+    {
+      "dest": "0329IbnYacqubKulayni.Kafi",
+      "main_rel_type": "COMP",
+      "sec_rel_type": "",
+      "source": "1450MultipleAuthors.KutubArbaca"
+    }
+  ],
+  "1450MultipleAuthors.KutubSitta": [
+    {
+      "dest": "0256Bukhari.Sahih",
+      "main_rel_type": "COMP",
+      "sec_rel_type": "",
+      "source": "1450MultipleAuthors.KutubSitta"
     }
   ],
   "1450MutamarImamRida.MustadrakMasail": [
