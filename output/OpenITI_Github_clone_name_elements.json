@@ -1069,6 +1069,24 @@
       "shuhra": "(mutarjim majhūl)"
     }
   },
+  "0300Anonymous": {
+    "AR": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "مؤلف مجهول"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Muʾallif maǧhūl"
+    }
+  },
   "0300CisaIbnYahya": {
     "AR": {
       "ism": "عيسى",
@@ -6005,6 +6023,24 @@
       "nasab": "b. Šams al-dīn Muḥammad",
       "nisba": "al-Ḥusaynī al-Astarābādī",
       "shuhra": "al-Dāmād"
+    }
+  },
+  "1050SacidIbrahimJarrari": {
+    "AR": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "سعيد بن ابراهيم الجراري"
+    },
+    "LA": {
+      "ism": "",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "",
+      "shuhra": "Saʿīd b. Ibrāhīm al-Ǧarrārī"
     }
   },
   "1055AhmadSharafi": {
