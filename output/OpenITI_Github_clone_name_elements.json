@@ -4297,6 +4297,24 @@
       "shuhra": ""
     }
   },
+  "0672MakinIbnCamid": {
+    "AR": {
+      "ism": "جرجس",
+      "kunya": "أبو اليسير",
+      "laqab": "المكين",
+      "nasab": "بن أبي المكارم بن أبو لطيب",
+      "nisba": "",
+      "shuhra": "المكين بن العميد"
+    },
+    "LA": {
+      "ism": "Jirjis",
+      "kunya": "Abū al-Yasīr",
+      "laqab": "al-Makīn",
+      "nasab": "b. Abī al-Makārim b. Abū l-Ṭayyib",
+      "nisba": "",
+      "shuhra": "al-Makīn b. al-ʿAmīd"
+    }
+  },
   "0676Nawawi": {
     "AR": {
       "ism": "يحيى",
