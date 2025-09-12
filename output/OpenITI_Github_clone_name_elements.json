@@ -6007,6 +6007,24 @@
       "shuhra": "ʿAlī b. Bālī Manq"
     }
   },
+  "1029QasimIbnMuhammadImam": {
+    "AR": {
+      "ism": "القاسم",
+      "kunya": "",
+      "laqab": "المنصور بالله",
+      "nasab": "بن محمد بن علي بن محمد بن علي بن الرشيد",
+      "nisba": "الحسني الهادوي",
+      "shuhra": "المنصور بالله القاسم"
+    },
+    "LA": {
+      "ism": "al-Qāsim",
+      "kunya": "",
+      "laqab": "al-Manṣūr bi-Allāh",
+      "nasab": "b. Muḥammad b. ʿAlī b. Muḥammad b. ʿAlī b. al-Rašīd",
+      "nisba": "al-Ḥasanī al-Hādawī",
+      "shuhra": "al-Manṣūr bi-Allāh al-Qāsim"
+    }
+  },
   "1035DawudIbnHadi": {
     "AR": {
       "ism": "داوود",
