@@ -449,6 +449,24 @@
       "shuhra": "ʿAbd al-Masīḥ al-Nāʿimī"
     }
   },
+  "0250ThabitIbnAbiThabit": {
+    "AR": {
+      "ism": "ثابت",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "بن أبي ثابت",
+      "nisba": "اللغوي",
+      "shuhra": "ثابت بن أبي ثابت"
+    },
+    "LA": {
+      "ism": "Ṯābit",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "b. Abī Ṯābit",
+      "nisba": "al-Luġawī",
+      "shuhra": "Ṯābit b. Abī Ṯābit"
+    }
+  },
   "0255Jahiz": {
     "AR": {
       "ism": "عمرو",
