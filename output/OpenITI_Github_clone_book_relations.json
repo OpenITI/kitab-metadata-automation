@@ -2975,6 +2975,14 @@
       "source": "0633IbnSacidRajraji.ManahijTahsil"
     }
   ],
+  "0636AbuCabdAllahIbnCaskar.Iclam": [
+    {
+      "dest": "0639AbuBakrMalaqi",
+      "main_rel_type": "COAUTHOR",
+      "sec_rel_type": "",
+      "source": "0636AbuCabdAllahIbnCaskar.Iclam"
+    }
+  ],
   "0636IbnCaskar.Takmila": [
     {
       "dest": "0581AbuQasimSuhayli.Tacrif",
@@ -3009,6 +3017,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "radd",
       "source": "0956IbnMuhammadHalabiHanafi.NicmatDharica"
+    }
+  ],
+  "0639AbuBakrMalaqi": [
+    {
+      "dest": "0639AbuBakrMalaqi",
+      "main_rel_type": "COAUTHOR",
+      "sec_rel_type": "",
+      "source": "0636AbuCabdAllahIbnCaskar.Iclam"
     }
   ],
   "0639IbnKhabbaz.TawjihLumac": [
