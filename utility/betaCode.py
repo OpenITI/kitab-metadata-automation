@@ -558,11 +558,27 @@ def betacodeToArabic(text):
     #text = re.sub("-", "ـ ـ", text)
     return(text)
 
-def betaCodeToArSimple(text):
+def betaCodeToArSimple(text, lang_code=None):
     text = betacodeToArabic(text)
     text = text.replace("ﭐ", "ا")
     text = deNoise(text)
     text = re.sub(r"\bإبن\b", "ابن", text)
+    replacements = {
+        "ar": {},
+        "fa": {
+            "ك": "ک",
+            "ي": "ي",
+            },
+        "ur": {
+            "ك": "ک",
+            "ي": "ي",
+            }
+    }
+    if lang_code:
+        lang_code = lang_code.lower()[:2]
+        if lang_code in replacements:
+            for char, repl in replacements[lang_code]:
+                text = re.sub(char, repl, text)
     return(text)
     
 
