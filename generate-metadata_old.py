@@ -13,8 +13,6 @@ You can adapt the parameters in a number of ways:
   (`python generate-metadata.py`)
   and replying to the questions when prompted (see example below)
 
-NB: the script now works with the traditional OpenITI repos
-    as well as manuscript/document repo(s)
 
 Examples:
     $ python3 generate-metadata.py --help
@@ -78,20 +76,18 @@ Examples:
     N/Y? Y
 
 The script takes as inputs:
-* the uris of all text versions / transcriptions in the corpus
-* all yml files for authors, books and versions
-  (and locations, manuscripts and transcriptions) in the corpus
+* the uris of all text versions in the corpus
+* all yml files for authors, books and versions in the corpus
 * all issues in the OpenITI/Annotation GitHub repository
 * a tsv file ID_TAGS.txt containing normalized tags from the source libraries
   and Brockelmann
 
-NB:
-  - Arabic author names and book titles are taken from the yml files alone
+NB: Arabic author names and book titles are taken from the yml files alone
     if the yml files contain this info; otherwise they are taken from the
     text file headers.
     => if the text file headers contain wrong metadata,
        add the correct metadata to the yml file!
-  - Dates are taken from the URI alone.
+    Dates are taken from the URI alone.
     
 
 And creates the following outputs:
@@ -152,7 +148,7 @@ def LoadTags():
 
         for row in data:
             id_, tags = row.split("\t")
-            #dic[d[0]] = re.sub(r";", " :: ", d[1])
+            #dic[d[0]] = re.sub(";", " :: ", d[1])
             dic[id_] = tags.split(";")
     return dic
 
@@ -265,18 +261,18 @@ def load_srt_meta(srt_folder, passim_runs):
             fp = os.path.join(srt_folder, fn)
             with open(fp, mode="r", encoding="utf-8") as file:
                 html = file.read()
-            ids = re.findall(r'<a href="(?:http://dev.kitab-project.org/passim\d+/)?([^\-"]+-[^"]+)"', html)
+            ids = re.findall('<a href="(?:http://dev.kitab-project.org/passim\d+/)?([^\-"]+-[^"]+)"', html)
             #print(len(ids))
             for id_ in ids:
-                #id_ = re.sub(r"Vols[A-Z]*|BK\d+", "", id_)
+                #id_ = re.sub("Vols[A-Z]*|BK\d+", "", id_)
                 bare_id = id_.split("-")[0]
                 if not bare_id in srt_d:
                     srt_d[bare_id] = []
                 srt_d[bare_id].append([runs[fn[:-5]], "/".join([u, fn[:-5], id_])])
 
     # sort by year and month:
-    year_regex = r"(?<=passim\d{4})\d{4}"
-    month_regex = r"(?<=passim\d{2})\d{2}"
+    year_regex = "(?<=passim\d{4})\d{4}"
+    month_regex = "(?<=passim\d{2})\d{2}"
     srt_d = {k: sorted(v, key = lambda x: (re.findall(year_regex, x[1]), re.findall(month_regex, x[1]))) for k,v in srt_d.items()}
     return srt_d
 
@@ -315,11 +311,8 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
             
             #new_id = row['url'].split('/')[-1].split('.')[-1] # may get the extension!
             uri = URI(row['url'])
-            if "version" in uri.uri_type:
-                v_id = uri("version", ext="").split(".")[-1]
-            else:
-                v_id = uri("transcription", ext="").split(".")[-1]
-##            bare_id = re.sub(r"Vols[A-Z]*|BK\d+", "", v_id)
+            v_id = uri("version", ext="").split(".")[-1]
+##            bare_id = re.sub("Vols[A-Z]*|BK\d+", "", v_id)
 ##            bare_id = bare_id.split("-")[0]
 
             srts = []
@@ -330,7 +323,7 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
                 srts += srt_d[bare_id]
             # add srt files connected to previous versions of this text,
             # before it was split into different parts or joined with other texts:
-            bare_id = re.sub(r"Vols[A-Z]*|BK\d+", "", bare_id)
+            bare_id = re.sub("Vols[A-Z]*|BK\d+", "", bare_id)
             if bare_id in srt_d:
                 old_srts = [x for x in srt_d[bare_id] if x not in srts]
                 srts = old_srts + srts
@@ -350,49 +343,27 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
 ##                    record['srts'].append([descr, srt_link])
 
             # get issues related to the current book/version:
-            if "version" in uri.uri_type:
-                uri = URI(row["versionUri"])
-                book_issues = []
-                if uri("book") in issues_uri_dict:
-                    book_issues = issues_uri_dict[uri("book")]
-                    book_issues = [[x.number, x.labels[0].name] for x in book_issues]
-                    print(uri("book"), book_issues)
-                author_issues = []
-                if uri("author") in issues_uri_dict:
-                    author_issues += issues_uri_dict[uri("author")]
-                    author_issues = [[x.number, x.labels[0].name] for x in author_issues]
-                    print(uri("author"), author_issues)
-                version_issues = []
-                if uri("version") in issues_uri_dict:
-                    version_issues = issues_uri_dict[uri("version")]
-                    version_issues = [[x.number, x.labels[0].name] for x in version_issues]
-                    print(uri("version"), version_issues)
-                record["author_issues"] = author_issues
-                record["book_issues"] = book_issues
-                record["version_issues"] = version_issues
-                json_objects.append(record)
-            else:
-                uri = URI(row["versionUri"])
-                manuscr_issues = []
-                if uri("manuscript") in issues_uri_dict:
-                    manuscr_issues = issues_uri_dict[uri("manuscript")]
-                    manuscr_issues = [[x.number, x.labels[0].name] for x in manuscr_issues]
-                    print(uri("manuscript"), manuscr_issues)
-                loc_issues = []
-                if uri("location") in issues_uri_dict:
-                    loc_issues += issues_uri_dict[uri("location")]
-                    loc_issues = [[x.number, x.labels[0].name] for x in loc_issues]
-                    print(uri("location"), loc_issues)
-                transcr_issues = []
-                if uri("transcription") in issues_uri_dict:
-                    transcr_issues = issues_uri_dict[uri("transcription")]
-                    transcr_issues = [[x.number, x.labels[0].name] for x in transcr_issues]
-                    print(uri("transcription"), transcr_issues)
-                record["location_issues"] = loc_issues
-                record["manuscript_issues"] = manuscr_issues
-                record["transcription_issues"] = transcr_issues
-                json_objects.append(record)
-
+            
+            uri = URI(row["versionUri"])
+            book_issues = []
+            if uri("book") in issues_uri_dict:
+                book_issues = issues_uri_dict[uri("book")]
+                book_issues = [[x.number, x.labels[0].name] for x in book_issues]
+                print(uri("book"), book_issues)
+            author_issues = []
+            if uri("author") in issues_uri_dict:
+                author_issues += issues_uri_dict[uri("author")]
+                author_issues = [[x.number, x.labels[0].name] for x in author_issues]
+                print(uri("author"), author_issues)
+            version_issues = []
+            if uri("version") in issues_uri_dict:
+                version_issues = issues_uri_dict[uri("version")]
+                version_issues = [[x.number, x.labels[0].name] for x in version_issues]
+                print(uri("version"), version_issues)
+            record["author_issues"] = author_issues
+            record["book_issues"] = book_issues
+            record["version_issues"] = version_issues
+            json_objects.append(record)
 
 
     # The required format for json file is data:[{jsonobjects}]
@@ -453,18 +424,18 @@ def extract_metadata_from_header(fp):
                 val = ""
             else:
                 # remove line endings within heading categories: 
-                val = re.sub(r" +", "@@@", val)
-                val = re.sub(r"\s+", "¶ ", val)
-                val = re.sub(r"@@@", " ", val).strip()
+                val = re.sub(" +", "@@@", val)
+                val = re.sub("\s+", "¶ ", val)
+                val = re.sub("@@@", " ", val).strip()
                 if val.isnumeric():
                     val = str(int(val))
             if val != "":
-                key = re.sub(r"\# ", "", split_line[0])
+                key = re.sub("\# ", "", split_line[0])
                 all_meta[key] = val
                 # reorganize the relevant headers under overarching categories:
                 if key in headings_dict:
                     cat = headings_dict[key]
-                    val = re.sub(r"¶.+", "", val)
+                    val = re.sub("¶.+", "", val)
                     meta[cat].append(val)
         else:
             unreadable.append(line)
@@ -482,7 +453,7 @@ def extract_metadata_from_header(fp):
 
 def insert_spaces(s):
     """Split the camel-case string s and insert a space before each capital."""
-    return re.sub(r"([a-z])([A-Z])", r"\1 \2", s)
+    return re.sub("([a-z])([A-Z])", r"\1 \2", s)
 
 def get_name_el(d, k):
     if k in d:
@@ -493,8 +464,7 @@ def get_name_el(d, k):
 
 def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
                          output_files_path, start_folder,
-                         status_dic, incl_char_length,
-                         remove_from_path=None):
+                         status_dic, incl_char_length):
     """"""
 
     vers_uri = uri.build_uri("version")
@@ -541,7 +511,7 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
                 length = ar_cnt_file(version_fp, mode="token")
                 length = str(length)
                 vers_yml_d["00#VERS#LENGTH###:"] = length
-                ymlS = dicToYML(vers_yml_d, reflow=False)
+                ymlS = dicToYML(vers_yml_d)
                 with open(vers_yml_pth, mode="w", encoding="utf-8") as file:
                     file.write(ymlS)
                 break
@@ -551,10 +521,10 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
     if ed_info.startswith("perma") or ed_info.upper().startswith("NO"):
         ed_info = []
     else:
-        ed_info = re.split(r"[ \r\n¶]*[,;]+[ \r\n¶]*", ed_info)
+        ed_info = re.split("[ \r\n¶]*[,;]+[ \r\n¶]*", ed_info)
     
     # - version tags (e.g., INCOMPLETE_TEXT, FOOTNOTES, ...):
-    version_tags = re.findall(r"[A-Z_]{5,}",
+    version_tags = re.findall("[A-Z_]{5,}",
                               vers_yml_d["90#VERS#ISSUES###:"])
 
     # - get the most advanced text file of this version
@@ -563,8 +533,7 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
     local_pth, status_score = give_status_score(vers_yml_pth, uri, length)
 
     # - build the link/path to the text file in the output file:
-    fullTextURL = local_pth_to_fullTextURL(local_pth, start_folder,
-                                           output_files_path,remove_from_path=remove_from_path)
+    fullTextURL = local_pth_to_fullTextURL(local_pth, start_folder, output_files_path)
 
     # - add the uri to the status_dic if the file is not missing:
     if os.path.exists(local_pth):
@@ -592,125 +561,7 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
 
     return vers_d, uri, status_dic
 
-
-def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
-                         output_files_path, start_folder,
-                         status_dic, incl_char_length,
-                         remove_from_path=None):
-    """"""
-
-    transcr_uri = uri.build_uri("transcription")
-
-    # - extract issues:
-    excl_regex = r"(?i)^None$|^comma-separated list of issues"
-    comment_tags = get_comma_sep_vals(
-        transcr_yml_d, "90#TRNS#ISSUES###:",
-        excl_regex=excl_regex, splitter=None, joiner=None)
-
-    # - explicit primary version:
-    primary_yml = False
-    if "PRIMARY_VERSION" in comment_tags:
-        primary_yml = True
-    
-    # - length in number of tokens and characters:
-    recalc = False
-    
-    length = transcr_yml_d["00#TRNS#LENGTH###:"].strip()
-    # if length is not a number, recalculate:
-    try:
-        tok_length = str(int(length))
-    except:
-        tok_length = ""
-        recalc = True
-    if not length:
-        recalc = True
-    
-    char_length = ""
-    if incl_char_length:
-        # if char_length is not a number, recalculate
-        try:
-            char_length = transcr_yml_d["00#TRNS#CLENGTH##:"].strip()
-            char_length = str(int(char_length)) 
-            if not char_length:
-                recalc = True
-        except:
-            char_length = ""
-            recalc = True
-
-    # recalculate the token length and character length if needed:
-    if recalc:
-        uri.extension = ""
-        pth = transcr_yml_pth[:-4]
-        for ext in [".mARkdown", ".completed", ".inProgress", ""]:
-            transcr_fp = pth + ext
-            if os.path.exists(transcr_fp):
-                if incl_char_length:
-                    char_length = ar_cnt_file(transcr_fp, mode="char")
-                    transcr_yml_d["00#TRNS#CLENGTH##:"] = str(char_length)
-
-                length = ar_cnt_file(transcr_fp, mode="token")
-                tok_length = str(length)
-                transcr_yml_d["00#TRNS#LENGTH###:"] = str(length)
-
-                ymlS = dicToYML(transcr_yml_d, reflow=False)
-                with open(transcr_yml_pth, mode="w", encoding="utf-8") as file:
-                    file.write(ymlS)
-                
-                break
-
-    # - edition information:
-    key = "80#TRNS#BASED####:"
-    excl_regex = r"(?i)^No$|^perma"
-    ed_info = get_comma_sep_vals(transcr_yml_d, key, excl_regex=excl_regex,
-                                 splitter=None, joiner=None)
-    key = "80#TRNS#LINKS####:"
-    excl_regex = r"(?i)^No$|SOURCE@permalink,"
-    source = get_comma_sep_vals(transcr_yml_d, key, excl_regex=excl_regex,
-                                 splitter=None, joiner=None)
-    source = [s.split("@")[-1] for s in source if "SOURCE@" in s]
-    
-
-    
-
-    
-    
-    # - get the most advanced text file of this version
-    #   (if different text files with the same extension exist in the folder)
-    #   and give it a temporary secondary status:
-    local_pth, status_score = give_status_score(transcr_yml_pth, uri, length)
-
-    # - build the link/path to the text file in the output file:
-    fullTextURL = local_pth_to_fullTextURL(local_pth, start_folder, output_files_path,
-                                           remove_from_path=remove_from_path)
-
-    # - add the uri to the status_dic if the file is not missing:
-    if os.path.exists(local_pth):
-        manuscr_uri = uri.build_uri("manuscript")
-        if manuscr_uri not in status_dic:
-            status_dic[manuscr_uri] = []
-        if primary_yml:
-            status_indication = "pri##"
-        else:
-            status_indication = "%012d##" % int(status_score)
-        status_dic[manuscr_uri].append(status_indication + transcr_uri)
-
-    # gather all extracted metadata in a dictionary:
-    transcr_d = dict()
-    transcr_d["uri"] = transcr_uri
-    transcr_d["id"] = uri.transcription
-    transcr_d["comment_tags"] = comment_tags
-    transcr_d["primary_yml"] = primary_yml
-    transcr_d["tok_length"] = tok_length
-    transcr_d["char_length"] = char_length
-    transcr_d["ed_info"] = list(set(ed_info+source))
-    print(transcr_d["ed_info"])
-    transcr_d["status"] = "sec"   # temporary status, will be changed later
-    transcr_d["local_pth"] = local_pth
-    transcr_d["fullTextURL"] = fullTextURL
-
-    return transcr_d, uri, status_dic
-
-def give_status_score(yml_pth, uri, length):
+def give_status_score(vers_yml_pth, uri, length):
     """Select the text file with the most advanced extension for a specific version
     and define a score for it to later decide
     which version of a book should be the primary version"""
@@ -730,7 +581,7 @@ def give_status_score(yml_pth, uri, length):
     # - make a provisional (i.e., without extension)
     #   local filepath to the current version:
     uri.extension = ""
-    local_pth = re.sub(r"\\", "/", yml_pth[:-4])
+    local_pth = re.sub(r"\\", "/", vers_yml_pth[:-4])
     
     if os.path.isfile(local_pth+".mARkdown"):
         status_score = 10000000000 + int(length)
@@ -759,190 +610,15 @@ def give_status_score(yml_pth, uri, length):
 
     return local_pth, status_score
 
-def local_pth_to_fullTextURL(local_pth, start_folder, output_files_path,
-                             remove_from_path=None):
+def local_pth_to_fullTextURL(local_pth, start_folder, output_files_path):
     if output_files_path:
         fullTextURL = re.sub(start_folder, output_files_path, local_pth)
     else:
         fullTextURL = local_pth
     if "githubusercontent" in fullTextURL:
-        fullTextURL = re.sub(r"data/", "master/data/", fullTextURL)
-    if remove_from_path:
-        for folder in remove_from_path:
-            fullTextURL = re.sub("/"+folder+"/", "/", fullTextURL)
+        fullTextURL = re.sub("data/", "master/data/", fullTextURL)
     return fullTextURL
 
-def get_language_key(d, key_template, language_codes):
-    for lang in language_codes:
-        k = key_template.format(lang)
-        if k in d and d[k] and d[k].strip() != "" and d[k].strip().upper() != "NONE":
-            return k
-
-def get_first_lang_val(d, key_template, language_codes, sep=r"\s*,\s*",
-                       excl_regex=r"(?i)^\s*None\s*$",
-                       splitter=None, split_idx=-1, joiner=" :: ",
-                       transcribe=False):
-    """Get the first value from multilingual keys from a dictionary"""
-    return get_multilingual_vals(d, key_template, language_codes, sep=sep,
-                                 excl_regex=excl_regex, first_only=True,
-                                 splitter=splitter, split_idx=split_idx,
-                                 joiner=joiner, transcribe=transcribe)
-
-def get_multilingual_vals(d, key_template, language_codes, sep=r"\s*,\s*",
-                          excl_regex=r"(?i)^\s*None\s*$", first_only=False,
-                          splitter=None, split_idx=-1, joiner=" :: ",
-                          transcribe=False):
-    """Get the values from multilingual keys from a dictionary
-
-    Args:
-        d (dict): the dictionary from which the values should be extracted
-        key_template (str): key in which the language code is replaced with "{}"
-        language_codes (list): language codes, to be plugged into the key_template
-        sep (str): regex for the separator between sub-values. Defaults to comma
-        excl_regex (str): regex pattern for values that should not be returned
-            (e.g., default values, None values)
-        first_only (bool): if True, return only the first value encountered
-        splitter (str): if values consist of multiple parts separated by `splitter`,
-            split the values on the splitter. If None: don't split.
-        split_idx (int): which part of the split value should be retained.
-            Defaults to -1 (the last part).
-        joiner (str): separate the values by `joiner` in the output string;
-            if None, return a list.
-
-    Returns: str or list
-
-    Examples:
-        >>> d = {"10#LOC#INST#DE###:": "Staatsbibliothek zu Berlin"}
-        >>> get_multilingual_vals(d, "10#LOC#INST#{}###:", ["EN", "DE"], excl_regex="^ *name of the")
-        'Staatsbibliothek zu Berlin'
-        >>> d = {"10#LOC#INST#DE###:": "Staatsbibliothek zu Berlin, Stabi Berlin"}
-        >>> get_multilingual_vals(d, "10#LOC#INST#{}###:", ["EN", "DE"], excl_regex="^ *name of the")
-        'Staatsbibliothek zu Berlin :: Stabi Berlin'
-        >>> d = {"10#LOC#INST#DE###:": "Staatsbibliothek zu Berlin, Stabi Berlin", "10#LOC#INST#EN###:": "Berlin State Library"}
-        >>> get_multilingual_vals(d, "10#LOC#INST#{}###:", ["EN", "DE"], excl_regex="^ *name of the")
-        'Berlin State Library :: Staatsbibliothek zu Berlin :: Stabi Berlin'
-        >>> d = {"10#LOC#INST#DE###:": "None"}
-        >>> get_multilingual_vals(d, "10#LOC#INST#{}###:", ["EN", "DE"], excl_regex="^ *name of the")
-        ''
-        >>> d = {"10#LOC#INST#EN###:": "name of the institution, in English"}
-        >>> get_multilingual_vals(d, "10#LOC#INST#{}###:", ["EN", "DE"], excl_regex="^ *name of the")
-        ''
-    """
-    vals = []
-    for lang in language_codes:
-        k = key_template.format(lang)
-        #if k in d and d[k] and d[k].strip() != "" and not re.findall(excl_regex, d[k]):
-        #    if first_only:
-        #        return d[k]
-        #    vals.append(d[k])
-        lang_vals = get_comma_sep_vals(d, k, sep=sep, excl_regex=excl_regex,
-                                       splitter=splitter, split_idx=split_idx, joiner=None)
-        if transcribe:
-            lang_vals = [betaCodeToArSimple(v, lang_code=lang) for v in lang_vals]
-        if first_only:
-            return lang_vals[0]
-        vals += lang_vals
-    if joiner:
-        return joiner.join(vals)
-    else:
-        return vals
-
-def get_comma_sep_vals(d, key, sep=r"\s*,\s*", excl_regex=r"(?i)^\s*None\s*$",
-                       splitter="@", split_idx=-1, joiner=" :: "):
-    """Get the comma-separated values from a dictionary key.
-    Returns an empty string if the value is a default value or None.
-
-    Args:
-        d (dict): the dictionary from which the values should be extracted
-        key (str): dictionary key
-        sep (str): regex for the separator between sub-values. Defaults to comma
-        excl_regex (str): regex pattern for values that should not be returned
-            (e.g., default values, None values)
-        splitter (str): if values consist of multiple parts separated by `splitter`,
-            split the values on the splitter. If None: don't split. Defaults to "@"
-        split_idx (int): which part of the split value should be retained.
-            Defaults to -1 (the last part).
-        joiner (str): separate the values by `joiner` in the output string;
-            if None, return a list.
-
-    Returns: str or list
-    
-    Examples:
-        >>> d = {"shelfmark": "Abc 123, Def 456"}
-        >>> get_comma_sep_vals(d, "shelfmark", excl_regex=";shelfmark")
-        'Abc 123 :: Def 456'
-        >>> d = {"links": "SCAN@www.example.com"}
-        >>> get_comma_sep_vals(d, "links")
-        'www.example.com'
-        >>> d = {"parts": "0255Jahiz.Hayawan@1A-28B, 0255Jahiz.Bukhala@29A-50B"}
-        >>> get_comma_sep_vals(d, "parts", split_idx=0)
-        '0255Jahiz.Hayawan :: 0255Jahiz.Bukhala'
-        >>> d = {"shelfmark": "NONE"}
-        >>> get_comma_sep_vals(d, "shelfmark")
-        ''
-        >>> d = {"shelfmark": "shelfmark; shelfmark"}
-        >>> get_comma_sep_vals(d, "shelfmark", excl_regex=";shelfmark")
-        ''
-        
-    """
-    result_list = []
-    vals = d.get(key, "").strip()
-    if vals and not re.findall(excl_regex, vals):
-        for val in re.split(sep, vals):
-            val = val.strip()
-            if val:
-                if splitter:
-                    result_list.append(re.split(splitter, val)[split_idx].strip())
-                else:
-                    result_list.append(val.strip())
-    if joiner:
-        return joiner.join(result_list)
-    else:
-        return result_list
-
-
-def extract_location_meta(uri, loc_yml_d, all_loc_meta_d):
-    """"""
-
-    loc_uri = uri.build_uri("location")
-
-    # do not extract the metadata from the yml file
-    # if it has already been extracted before
-    # or if no readable YML file was found:
-
-    if loc_uri in all_loc_meta_d:
-        return all_loc_meta_d[loc_uri]
-
-    if not loc_yml_d:
-        return dict()
-
-    key_template = "10#LOC#CITY#{}###:"
-    excl_regex = r"(?i)^\s*None\s*$|name of the"
-    city_lat = get_multilingual_vals(loc_yml_d, key_template,
-                                      ["EN", "FR", "DE"], excl_regex=excl_regex)
-    city_ar = get_multilingual_vals(loc_yml_d, key_template,
-                                     ["AR", "FA", "UR"], excl_regex)
-
-    key_template = "10#LOC#INST#{}###:"
-    inst_lat = get_multilingual_vals(loc_yml_d, key_template, ["EN", "FR", "DE"])
-    inst_ar = get_multilingual_vals(loc_yml_d, key_template, ["AR", "FA", "UR"])
-
-    excl_regex = r"(?i)^\s*None\s*$|wikidata@id, src@id"
-    external_id = get_comma_sep_vals(loc_yml_d, "70#LOC#EXTID#####:",
-                                     excl_regex=excl_regex, splitter=None)
-
-    # Add the extracted metadata to a dictionary:
-    loc_d = dict()
-    loc_d["uri"] = loc_uri
-    loc_d["country"] = uri.country
-    loc_d["city_lat"] = city_lat
-    loc_d["city_ar"] = city_ar
-    loc_d["institution_lat"] = inst_lat
-    loc_d["institution_ar"] = inst_ar
-    loc_d["external_id"] = external_id
-    loc_d["manuscripts"] = []
-
-    return loc_d
 
 
 def extract_author_meta(uri, auth_yml_d, all_auth_meta_d, name_elements_d):
@@ -976,7 +652,7 @@ def extract_author_meta(uri, auth_yml_d, all_auth_meta_d, name_elements_d):
     if "Fulān" in shuhra or "none" in shuhra.lower():
         shuhra = ""
     if shuhra:
-        shuhra = re.sub(r"[ \r\n¶]+", " ", shuhra).strip()
+        shuhra = re.sub("[ \r\n¶]+", " ", shuhra).strip()
         author_lat.append(shuhra)
         author_ar.append(betaCodeToArSimple(shuhra))
 
@@ -995,7 +671,7 @@ def extract_author_meta(uri, auth_yml_d, all_auth_meta_d, name_elements_d):
     full_name = " ".join(full_name)
 
     if full_name:
-        full_name = re.sub(r"[ \r\n¶]+", " ", full_name).strip()
+        full_name = re.sub("[ \r\n¶]+", " ", full_name).strip()
         author_lat.append(full_name)
         author_ar.append(betaCodeToArSimple(full_name))
 
@@ -1018,7 +694,7 @@ def extract_author_meta(uri, auth_yml_d, all_auth_meta_d, name_elements_d):
         add = False
         for yml_k in ["10#AUTH#SHUHRA#AR:"]+name_comps:
             yml_k = yml_k.replace("#AR:", "#{}:".format(lang))
-            k = re.findall(r"(?<=10#AUTH#)\w+", yml_k)[0].lower()
+            k = re.findall("(?<=10#AUTH#)\w+", yml_k)[0].lower()
             lang_d[k] = get_name_el(auth_yml_d, yml_k)
             
             if lang_d[k]:
@@ -1069,10 +745,6 @@ def extract_author_meta(uri, auth_yml_d, all_auth_meta_d, name_elements_d):
             geo_URIs[p] = set()
         geo_URIs[p].add(auth_yml_fn)    # SIDE_EFFECT!
 
-    excl_regex = r"(?i)^\s*None\s*$|viaf@id, wikidata@id, src@id"
-    external_id = get_comma_sep_vals(auth_yml_d, "70#AUTH#EXTID####:",
-                                     excl_regex=excl_regex, splitter=None)
-
 
     # Add the extracted metadata to a dictionary:
     author_d = dict()
@@ -1086,105 +758,9 @@ def extract_author_meta(uri, auth_yml_d, all_auth_meta_d, name_elements_d):
     author_d["author_name_from_uri"] = author_name_from_uri
     author_d["vers_uri"] = english_name
     author_d["geo"] = geo
-    author_d["external_id"] = external_id
     author_d["books"] = []
 
     return author_d, name_elements_d
-
-
-def extract_manuscr_meta(uri, manuscr_yml_d, tags_dic, all_manuscr_meta_d):
-    """"""
-    manuscr_uri = uri.build_uri("manuscript")
-
-    # do not extract the metadata from the yml file
-    # if it has already been extracted before
-    # or if no readable YML file was found:
-    
-    if manuscr_uri in all_manuscr_meta_d:
-        return all_manuscr_meta_d[manuscr_uri]
-    
-    if not manuscr_yml_d:
-        return dict()
-
-    # - extract shelfmark(s):
-    excl_regex = r"(?i)^None$|shelfmark;"
-    shelfmark = get_comma_sep_vals(
-        manuscr_yml_d, "10#MS#SHELFM#####:", sep=" *; *",
-        excl_regex=excl_regex, splitter=None)
-
-    # - extract genre metadata:
-    key_template = "10#MS#GENRES#####:"
-    excl_regex = r"(?i)^\s*None\s*$|^\s?src@keyword"
-    genres = get_comma_sep_vals(
-        manuscr_yml_d, key_template,
-        excl_regex=excl_regex, splitter=None, joiner=None)
-
-    # - extract title metadata:
-    key_template = "10#MS#TITLE#{}###:"
-    excl_regex = r"(?i)^\s*None\s*$|title\(s\)"
-    language_codes = ["EN", "FR", "DE"]
-    titles_lat = get_multilingual_vals(manuscr_yml_d, key_template,
-                                                language_codes, excl_regex=excl_regex)
-    language_codes = ["AR", "FA", "UR"]
-    titles_ar = get_multilingual_vals(manuscr_yml_d, key_template,
-                                                language_codes, excl_regex=excl_regex)
-
-    # - extract author metadata:
-    key_template = "10#MS#AUTHOR#{}##:"
-    excl_regex = r"(?i)^\s*None\s*$|author\(s\)"
-    language_codes = ["EN", "FR", "DE"]
-    authors_lat = get_multilingual_vals(manuscr_yml_d, key_template,
-                                                 language_codes, excl_regex=excl_regex)
-    language_codes = ["AR", "FA", "UR"]
-    authors_ar = get_multilingual_vals(manuscr_yml_d, key_template,
-                                                language_codes, excl_regex=excl_regex)
-
-    # - extract part URIs:
-    excl_regex = r"(?i)^None$|URI@page_range, URI@page_range"
-    parts = get_comma_sep_vals(
-        manuscr_yml_d, "40#MS#PARTS######:",
-        excl_regex=excl_regex, splitter=None, joiner=None)
-
-    # - extract external ID:
-    excl_regex = r"(?i)^\s*None\s*$|wikidata@id, src@id"
-    external_id = get_comma_sep_vals(manuscr_yml_d, "70#MS#EXTID######:",
-                                                  excl_regex=excl_regex, splitter=None)
-
-    # - extract catalog reference:
-    excl_regex = r"(?i)^None$|^ *reference to a manuscript catalogue *$"
-    catalog_ref = get_comma_sep_vals(
-        manuscr_yml_d, "80#MS#CATREF#####:",
-        excl_regex=excl_regex, splitter=None)
-
-    # - extract links:
-    excl_regex = r"(?i)^None$|^ *SOURCE@permalink, IIIF@permalink"
-    links = get_comma_sep_vals(
-        manuscr_yml_d, "80#MS#LINKS######:",
-        excl_regex=excl_regex, splitter=None)
-
-    # - extract issues:
-    excl_regex = r"(?i)^None$|^ *comma-separated list of issues"
-    issues = get_comma_sep_vals(
-        manuscr_yml_d, "90#MS#ISSUES#####:",
-        excl_regex=excl_regex, splitter=None, joiner=None)
-
-    # Add the extracted metadata to a dictionary:
-    manuscr_d = dict()
-    manuscr_d["uri"] = manuscr_uri
-    manuscr_d["shelfmark"] = shelfmark
-    manuscr_d["genre_tags"] = genres
-    manuscr_d["titles_lat"] = titles_lat
-    manuscr_d["titles_ar"] = titles_ar
-    manuscr_d["authors_lat"] = authors_lat
-    manuscr_d["authors_ar"] = authors_ar
-    manuscr_d["parts"] = parts
-    manuscr_d["external_id"] = external_id
-    manuscr_d["catalog_ref"] = catalog_ref
-    manuscr_d["links"] = links
-    manuscr_d["issues"] = issues
-    manuscr_d["transcriptions"] = []
-
-    return manuscr_d
 
 
 def extract_book_meta(uri, book_yml_d, tags_dic, all_book_meta_d, book_rel_d):
@@ -1207,8 +783,8 @@ def extract_book_meta(uri, book_yml_d, tags_dic, all_book_meta_d, book_rel_d):
         rels = book_yml_d["40#BOOK#RELATED##:"].strip()
         if rels.startswith("URI of"):
             rels = ""
-        rels = re.sub(r"[ \r\n¶]+", " ", rels)
-        rels = re.split(r" *[;:]+ *", rels)
+        rels = re.sub("[ \r\n¶]+", " ", rels)
+        rels = re.split(" *[;:]+ *", rels)
         rels = [rel for rel in rels if rel.strip()]
         for rel in rels:
             if "@" in rel:  # new format: COMM.sharh@0255Jahiz.Hayawan
@@ -1216,22 +792,22 @@ def extract_book_meta(uri, book_yml_d, tags_dic, all_book_meta_d, book_rel_d):
                 rel_book = rel.strip().split("@")[1]
             else:           # old format: 0255Jahiz.Hayawan (COMM.sharh)
                 try:
-                    rel_types = re.findall(r"\(([^\)]+)", rel)[0].strip()
+                    rel_types = re.findall("\(([^\)]+)", rel)[0].strip()
                 except:
                     print(book_uri, ":")
                     print("    no relationship type found in ", [rel])
                     continue
-                rel_book = re.sub(r" *\(.+", "", rel).strip()
+                rel_book = re.sub(" *\(.+", "", rel).strip()
             
             
             if not book_uri in book_rel_d:
                 book_rel_d[book_uri] = []
             if not rel_book in book_rel_d:
                 book_rel_d[rel_book] = []
-            for rel_type in re.split(r" *, *", rel_types):
+            for rel_type in re.split(" *, *", rel_types):
                 if "." in rel_type:
-                    main_rel_type = re.split(r" *\. *", rel_type)[0]
-                    sec_rel_type = re.split(r" *\. *", rel_type)[1]
+                    main_rel_type = re.split(" *\. *", rel_type)[0]
+                    sec_rel_type = re.split(" *\. *", rel_type)[1]
                 else:
                     main_rel_type = rel_type
                     sec_rel_type = ""
@@ -1265,17 +841,12 @@ def extract_book_meta(uri, book_yml_d, tags_dic, all_book_meta_d, book_rel_d):
     if genre_tags.startswith("src"):
         genre_tags = []
     if genre_tags:
-        genre_tags = re.split(r" *[;:,]+ *", genre_tags)
+        genre_tags = re.split(" *[;:,]+ *", genre_tags)
 
     # - add genre tags from Maxim's tag file:
     
     if uri.version in tags_dic:
         genre_tags += tags_dic[uri.version]
-
-    # - get external IDs:
-    excl_regex = r"(?i)^\s*None\s*$|viaf@id, wikidata@id, src@id"
-    external_id = get_comma_sep_vals(book_yml_d, "70#BOOK#EXTID####:",
-                                     excl_regex=excl_regex, splitter=None)
 
     # Add the extracted metadata to a dictionary:
     book_d = dict()
@@ -1283,7 +854,6 @@ def extract_book_meta(uri, book_yml_d, tags_dic, all_book_meta_d, book_rel_d):
     book_d["title_ar"] = title_ar
     book_d["title_lat"] = title_lat
     book_d["genre_tags"] = list(set(genre_tags))
-    book_d["external_id"] = external_id
     book_d["versions"] = []
     book_d["relations"] = []
 
@@ -1301,13 +871,10 @@ def load_yml(yml_pth):
 
 def list2str(arr, sep=" :: "):
     """Turn a list into a string (removing empty elements and using a specified separator between elements)"""
-    if type(arr) == str:
-        return arr
     return sep.join([str(el) for el in arr if str(el).strip()])
 
-def aggregate_arabic_names(all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
-                           all_transcr_meta_d, all_manuscr_meta_d, all_loc_meta_d):
-    # if no Arabic author name is provided in the author yml file,
+def aggregate_arabic_names(all_vers_meta_d, all_book_meta_d, all_auth_meta_d):
+    # if no Arabic author name is provided in the yml file,
     # aggregate the Arabic names found in all text files by the author:
     for auth_uri, auth_d in all_auth_meta_d.items():
         if not auth_d["author_ar"]:
@@ -1319,8 +886,9 @@ def aggregate_arabic_names(all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
                         for name in vers_d["author_ar"]:
                             if name not in auth_d["author_ar"]:
                                 auth_d["author_ar"].append(name)
+        
 
-    # if no Arabic book title is provided in the book yml file,
+    # if no Arabic book title is provided in the yml file,
     # aggregate the Arabic book titles found in all text files of the book:
     for book_uri, book_d in all_book_meta_d.items():
         if "title_ar" in book_d and not book_d["title_ar"]:
@@ -1331,16 +899,7 @@ def aggregate_arabic_names(all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
                         if title not in book_d["title_ar"]:
                             book_d["title_ar"].append(title)
 
-    # if no Arabic author is provided in the manuscript yml file,
-    # check if its URI exists in the author metadata:
-    # TO DO
-
-    # if no Arabic title is provided in the manuscript yml file,
-    # check if its URI exists in the book metadata:
-    # TO DO
-
-
-    return all_vers_meta_d, all_book_meta_d, all_auth_meta_d, all_transcr_meta_d, all_manuscr_meta_d, all_loc_meta_d
+    return all_vers_meta_d, all_book_meta_d, all_auth_meta_d
 
     
         
@@ -1362,153 +921,38 @@ def create_tsv_row(vers_uri, all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
     if not author_ar and "author_ar" in vers_d:
         author_ar = list2str(vers_d["author_ar"])
     author_lat = list2str(auth_d["author_lat"])
-    
     title_ar = list2str(book_d["title_ar"])
     if not title_ar and "title_ar" in vers_d:
         title_ar = list2str(vers_d["title_ar"])
     title_lat = list2str(book_d["title_lat"])
-    
-    ed_info = list2str(vers_d["ed_info"])
-    
+    ed_info = list2str(vers_d["ed_info"])    
     tags = book_d["genre_tags"] + auth_d["geo"] + vers_d["comment_tags"]
     if uri.extension:
         tags.append(uri.extension.upper())
     tags = list2str(tags)
-    
-    language = uri.language
-    subcorpus = language
 
     # build the tsv row:
     
     if not split_ar_lat:
         author = list2str([author_lat, author_ar])
         title = list2str([title_lat, title_ar])
-        city = ""
-        institution = ""
     else:
         author = author_ar + sep + author_lat
         title = title_ar + sep + title_lat
-        city = "" + sep + ""
-        institution = "" + sep + ""
-
-    if incl_char_length:
-        length = vers_d["tok_length"] + sep + vers_d["char_length"]
-    else:
-        length = vers_d["tok_length"]
-
-    shelfmark = ""
-    catalog_ref = ""
-    parts = ""
-    row = [vers_uri, language, subcorpus, auth_d["date"], author,
+    row = [vers_uri, auth_d["date"], author,
            book_uri, title, ed_info, uri.version, vers_d["status"],
-           length, vers_d["fullTextURL"],
+           vers_d["tok_length"], vers_d["fullTextURL"],
            tags, auth_d["author_name_from_uri"],
-           auth_d["shuhra"], auth_d["full_name"],
-           city, institution, shelfmark, catalog_ref, parts]
-    #if incl_char_length:
-    #    row.append(vers_d["char_length"])
-
-    return sep.join([str(cell) for cell in row])
-
-def create_transcr_tsv_row(transcr_uri, all_transcr_meta_d, all_manuscr_meta_d,
-                           all_loc_meta_d, split_ar_lat=True, incl_char_length=True, sep="\t"):
-    # get the relevant dictionaries:
-    
-    transcr_d = all_transcr_meta_d[transcr_uri]
-    uri = URI(transcr_d["fullTextURL"])
-
-    language= ",".join(uri.languages.keys())
-    
-    manuscr_uri = uri.build_uri("manuscript")
-    manuscr_d = all_manuscr_meta_d[manuscr_uri]
-    loc_uri = uri.build_uri("location")
-    loc_d = all_loc_meta_d[loc_uri]
-
-    # prepare values for the tsv row:
-    author_ar = list2str(manuscr_d["authors_ar"])
-    if not author_ar and "author_ar" in transcr_d:
-        author_ar = list2str(transcr_d["author_ar"])
-    author_lat = manuscr_d["authors_lat"]
-    if not author_lat:
-        author_lat = author_ar
-    author_ar = betaCodeToArSimple(author_ar)
-    
-    title_ar = list2str(manuscr_d["titles_ar"])
-    if not title_ar and "title_ar" in transcr_d:
-        title_ar = list2str(transcr_d["title_ar"])
-    title_lat = list2str(manuscr_d["titles_lat"])
-    if not title_lat:
-        title_lat = title_ar
-    title_ar = betaCodeToArSimple(title_ar)
-
-    catalog_ref = manuscr_d["catalog_ref"]
-    
-    ed_info = list2str(transcr_d["ed_info"])    
-    tags = manuscr_d["genre_tags"] + manuscr_d["issues"] + transcr_d["comment_tags"]
-    if uri.extension:
-        tags.append(uri.extension.upper())
-    tags = list2str(tags)
-
-    city_lat = loc_d["city_lat"]
-    city_ar = betaCodeToArSimple(loc_d["city_ar"])
-    institution_lat = loc_d["institution_lat"]
-    institution_ar = betaCodeToArSimple(loc_d["institution_ar"])
-    shelfmark = manuscr_d["shelfmark"]
-    parts = list2str(manuscr_d["parts"])
-
-    book_uris = []
-    for p in manuscr_d["parts"]:
-        book_uri = p.split("@")[0]
-        try:
-            if URI(book_uri).uri_type == "book":
-                book_uris.append(book_uri)
-        except:
-            continue
-    book_uri = " :: ".join(book_uris)
-
-    # build the tsv row:
-    
-    if not split_ar_lat:
-        author = list2str([author_lat, author_ar])
-        title = list2str([title_lat, title_ar])
-        city = list2str([city_lat, city_ar])
-        institution = list2str([institution_lat, institution_ar])
-    else:
-        author = author_ar + sep + author_lat
-        title = title_ar + sep + title_lat
-        city = city_ar + sep + city_lat
-        institution = institution_ar + sep + institution_lat
-
+           auth_d["shuhra"], auth_d["full_name"]]
     if incl_char_length:
-        length = transcr_d["tok_length"] + sep + transcr_d["char_length"]
-    else:
-        length = transcr_d["tok_length"]
-    
-    date = ""
-    author_from_uri = ""
-    
-    
-    
-    author_shuhra = sorted(author_lat.split(" :: "), key=lambda el: len(el))[0]
-    author_full_name = sorted(author_lat.split(" :: "), key=lambda el: len(el))[-1]
-    subcorpus = "MSS"
-              
-    row = [transcr_uri, language, subcorpus, date, author,
-           book_uri, title, ed_info, uri.transcription, transcr_d["status"],
-           length, transcr_d["fullTextURL"],
-           tags, author_from_uri,
-           author_shuhra, author_full_name,
-           city, institution, shelfmark, catalog_ref, parts]
-    #if incl_char_length:
-    #    row.append(transcr_d["char_length"])
+        row.append(vers_d["char_length"])
 
     return sep.join([str(cell) for cell in row])
 
 def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                     book_rel_outpth, name_el_outpth,
                     incl_char_length=False, split_ar_lat=False,
-                    flat_folder=False, output_files_path=None,
-                    remove_from_path=None):
+                    flat_folder=False, output_files_path=None):
     """Collect the metadata from URIs, YML files and text file headers
     and save the metadata in csv and yml files.
 
@@ -1523,25 +967,20 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
             will be included in the metadata
         split_ar_lat (bool): if True, Arabic and transliterated data on
             title and author will be put into separate columns
-        remove_from_path (list): remove the folders in this list from the path
     """
 
     dataYML = []
     dataCSV = {}  
     status_dic = {}
     split_files = dict()
-    start_folder = re.sub(r"\\\\", "/", start_folder)
+    start_folder = re.sub("\\\\", "/", start_folder)
     book_rel_d = dict()
     name_elements_d = dict()
-    all_auth_meta_d = dict()    # will contain all author-level metadata
     all_book_meta_d = dict()    # will contain all book-level metadata
-    all_vers_meta_d = dict()    # will contain all version-level metadata
-    all_loc_meta_d = dict()     # will contain all location-level metadata
-    all_manuscr_meta_d = dict() # will contain all manuscript-level metadata
-    all_transcr_meta_d = dict() # will contain all transcription-level metadata
+    all_auth_meta_d = dict()    # will contain all author-level metadata
+    all_vers_meta_d = dict() # will contain all version-level metadata
 
-    version_yml_regex = r"^\d{4}[A-Za-z]+\.[A-Za-z\d]+\.\w+-[a-z]{3}\d+\.yml$"
-    transcr_yml_regex = r"^MS\d{4}[A-Za-z]+\.[A-Za-z\d_]+\.\w+-(?:[a-z]{3}\d+)+\.yml$"
+    version_yml_regex = "^\d{4}[A-Za-z]+\.[A-Za-z\d]+\.\w+-[a-z]{3}\d+\.yml$"
     for root, dirs, files in os.walk(start_folder):
         dirs[:] = [d for d in sorted(dirs) if d not in exclude]
         
@@ -1576,11 +1015,8 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 book_yml_d = load_yml(book_yml_pth)
                 auth_yml_d = load_yml(auth_yml_pth)
 
-                record = "{}\n{}\n{}\n{}\n".format(
-                    splitter,
-                    dicToYML(vers_yml_d, reflow=False),
-                    dicToYML(book_yml_d, reflow=False),
-                    dicToYML(auth_yml_d, reflow=False))
+                record = "{}\n{}\n{}\n{}\n".format(splitter, dicToYML(vers_yml_d),
+                                                   dicToYML(book_yml_d), dicToYML(auth_yml_d))
                 dataYML.append(record)
 
                 # 1. collect the metadata related to the current version:
@@ -1602,8 +1038,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
                 vers_d, uri, status_dic = extract_version_meta(uri, vers_yml_d, vers_yml_pth,
                                                                output_files_path, start_folder,
-                                                               status_dic, incl_char_length,
-                                                               remove_from_path=remove_from_path)
+                                                               status_dic, incl_char_length)
 
                 # 2. collect additional metadata (mostly in Arabic!)
                 #    from the text file headers:
@@ -1636,7 +1071,7 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
                     # - additional genre tags:
                     
-                    coll_id = re.findall(r"[A-Za-z]+", uri.version)[0]
+                    coll_id = re.findall("[A-Za-z]+", uri.version)[0]
                     for el in header_meta["Genre"]:
                         for t in el.split(" :: "):
                             if coll_id+"@"+t not in book_d["genre_tags"]:
@@ -1645,9 +1080,9 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
 
                 # Deal with files split into multiple parts because
                 # they were too large: 
-                if re.search(r"[A-Z]-", vers_uri):
+                if re.search("[A-Z]-", vers_uri):
                     print("FILE SPLIT because it was too big:", vers_uri)
-                    m = re.sub(r"[A-Z]-", "-", vers_uri)
+                    m = re.sub("[A-Z]-", "-", vers_uri)
                     if m not in split_files:
                         split_files[m] = []
                     split_files[m].append(vers_uri)
@@ -1657,136 +1092,31 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
                 all_book_meta_d[book_uri] = book_d
                 all_vers_meta_d[vers_uri] = vers_d
 
-
-            elif re.search(transcr_yml_regex, fn):
-                # build the relevant URIs:
-                uri = URI(os.path.join(root, fn))
-                transcr_uri = uri.build_uri("transcription")
-                manuscr_uri = uri.build_uri("manuscript")
-                loc_uri = uri.build_uri("location")
-
-                # add the version ID to the version_ids dictionary
-                # to check for duplicate IDs later:
-                if not uri.transcription in version_ids:
-                    version_ids[uri.transcription] = []
-                version_ids[uri.transcription].append(fn)
-
-                # build the filepaths to all yml files related
-                # to the current version yml file:
-                if not flat_folder:
-                    loc_folder = os.path.dirname(root)
-                else:
-                    loc_folder = root
-                transcr_yml_pth = os.path.join(root, fn)
-                manuscr_yml_pth = os.path.join(root, uri.build_uri(uri_type="manuscript")+".yml")
-                loc_yml_pth = os.path.join(loc_folder, uri.build_uri(uri_type="location")+".yml")
-
-                # bring together all yml data related to the current version
-                # and store in the master dataYML variable:
-                transcr_yml_d = load_yml(transcr_yml_pth)
-                manuscr_yml_d = load_yml(manuscr_yml_pth)
-                loc_yml_d = load_yml(loc_yml_pth)
-
-                record = "{}\n{}\n{}\n{}\n".format(splitter,
-                                                   dicToYML(transcr_yml_d, reflow=False),
-                                                   dicToYML(manuscr_yml_d, reflow=False),
-                                                   dicToYML(loc_yml_d, reflow=False)
-                                                   )
-                dataYML.append(record)
-
-                # 1. collect the metadata related to the current version:
-
-                ## A) from the location YML file:
-
-                loc_d = extract_location_meta(uri, loc_yml_d, all_loc_meta_d)
-                
-                if manuscr_uri not in loc_d["manuscripts"]:
-                    loc_d["manuscripts"].append(manuscr_uri)
-
-                ## B) from the manuscript yml file:
-
-                manuscr_d = extract_manuscr_meta(uri, manuscr_yml_d, tags_dic,
-                                                 all_manuscr_meta_d)
-                manuscr_d["transcriptions"].append(transcr_uri)
-
-                ## C) from the transcription YML file:
-
-                transcr_d, uri, status_dic = extract_transcr_meta(
-                    uri, transcr_yml_d, transcr_yml_pth, output_files_path, 
-                    start_folder, status_dic, incl_char_length,
-                    remove_from_path=remove_from_path)
-
-                # 2. collect additional metadata (mostly in Arabic!)
-                #    from the text file headers:
-
-                local_pth = transcr_d["local_pth"]
-                if not os.path.exists(local_pth):
-                    print("MISSING FILE? {} does not exist".format(local_pth))
-                else:
-                    header_meta = extract_metadata_from_header(local_pth)
-
-                    # - author name:
-
-                    transcr_d["author_ar"] = list(set(header_meta["AuthorName"]))
-
-                    # - book title:
-                    
-                    transcr_d["title_ar"] = list(set(header_meta["Title"]))
-
-                    # - information about the current version's edition:
-                    
-                    ed_info = header_meta["Edition:Editor"] +\
-                              header_meta["Edition:Place"] +\
-                              header_meta["Edition:Date"] +\
-                              header_meta["Edition:Publisher"]
-                    transcr_d["ed_info"] += ed_info
-
-                    # - additional genre tags:
-                    
-                    coll_id = re.findall("[A-Za-z]+", uri.transcription)[0]
-                    for el in header_meta["Genre"]:
-                        for t in el.split(" :: "):
-                            if coll_id+"@"+t not in manuscr_d["genre_tags"]:
-                                manuscr_d["genre_tags"].append(coll_id+"@"+t)
-
-
-                # Add the extracted metadata to the relevant aggregating dictionaries:
-                all_loc_meta_d[loc_uri] = loc_d
-                all_manuscr_meta_d[manuscr_uri] = manuscr_d
-                all_transcr_meta_d[transcr_uri] = transcr_d
-
     # define which text file(s) get primary status:
-    for book_or_manuscr_uri, versions in status_dic.items():
+    for book_uri, versions in status_dic.items():
         versions = sorted(versions, reverse=True)
         # give primary status to all text files that have "PRIMARY_VERSION" in version yml file:
         if versions[0].startswith("pri"): 
             primary = [x for x in versions if x.startswith("pri")]
             for x in primary:
-                pri_uri = x.split("##")[1]
-                if pri_uri.startswith("MS"):
-                    all_transcr_meta_d[pri_uri]["status"] = "pri"
-                else:
-                    all_vers_meta_d[pri_uri]["status"] = "pri"
+                vers_uri = x.split("##")[1]
+                all_vers_meta_d[vers_uri]["status"] = "pri"
         # If no yml file has "PRIMARY_VERSION", give primary status to "longest" version:
         else:
-            pri_uri = versions[0].split("##")[1]
-            if pri_uri.startswith("MS"):
-                all_transcr_meta_d[pri_uri]["status"] = "pri"
-            else:
-                all_vers_meta_d[pri_uri]["status"] = "pri"
+            vers_uri = versions[0].split("##")[1]
+            all_vers_meta_d[vers_uri]["status"] = "pri"
 
     # Write a json file containing all texts that have been split
     # into parts because they were too big (URIs with VolsA, VolsB, ...):
-    split_files_fp = re.sub(r"metadata_light.csv", "split_files.json", csv_outpth)
+    split_files_fp = re.sub("metadata_light.csv", "split_files.json", csv_outpth)
     with open(split_files_fp, mode='w', encoding='utf-8') as outfile:
         json.dump(split_files, outfile, indent=4)  
 
     # add compound data for text files split because of their size:
     all_vers_meta_d = add_split_files_meta(split_files, all_vers_meta_d, incl_char_length)
 
-    # save metadata to tsv:
+    # save metadat to tsv:
     save_as_tsv(all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
-                all_transcr_meta_d, all_manuscr_meta_d, all_loc_meta_d,
                 csv_outpth, split_ar_lat=split_ar_lat,
                 incl_char_length=incl_char_length)
 
@@ -1813,35 +1143,21 @@ def collectMetadata(start_folder, exclude, csv_outpth, yml_outpth,
     # aggregate Arabic author and title names from metadata headers
     # if none are given in the yml files:
 
-    r = aggregate_arabic_names(all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
-                               all_transcr_meta_d, all_manuscr_meta_d, all_loc_meta_d)
-    [all_vers_meta_d, all_book_meta_d, all_auth_meta_d, all_transcr_meta_d, all_manuscr_meta_d, all_loc_meta_d] = r
+    r = aggregate_arabic_names(all_vers_meta_d, all_book_meta_d, all_auth_meta_d)
+    [all_vers_meta_d, all_book_meta_d, all_auth_meta_d] = r
 
     # store all version, book and author metadata in json files:
-    book_fp = re.sub(r"metadata_light.csv", "all_book_meta.json", csv_outpth)
+    book_fp = re.sub("metadata_light.csv", "all_book_meta.json", csv_outpth)
     with open(book_fp, mode="w", encoding="utf-8") as outfile:
         json.dump(all_book_meta_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
 
-    auth_fp = re.sub(r"metadata_light.csv", "all_author_meta.json", csv_outpth)
+    auth_fp = re.sub("metadata_light.csv", "all_author_meta.json", csv_outpth)
     with open(auth_fp, mode="w", encoding="utf-8") as outfile:
         json.dump(all_auth_meta_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
 
-    vers_fp = re.sub(r"metadata_light.csv", "all_version_meta.json", csv_outpth)
+    vers_fp = re.sub("metadata_light.csv", "all_version_meta.json", csv_outpth)
     with open(vers_fp, mode="w", encoding="utf-8") as outfile:
         json.dump(all_vers_meta_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
-
-    # store all transcription, manuscript and location metadata in json files:
-    manuscr_fp = re.sub(r"metadata_light.csv", "all_manuscript_meta.json", csv_outpth)
-    with open(manuscr_fp, mode="w", encoding="utf-8") as outfile:
-        json.dump(all_manuscr_meta_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
-
-    loc_fp = re.sub(r"metadata_light.csv", "all_location_meta.json", csv_outpth)
-    with open(loc_fp, mode="w", encoding="utf-8") as outfile:
-        json.dump(all_loc_meta_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
-
-    transcr_fp = re.sub(r"metadata_light.csv", "all_transcription_meta.json", csv_outpth)
-    with open(transcr_fp, mode="w", encoding="utf-8") as outfile:
-        json.dump(all_transcr_meta_d, outfile, indent=2, ensure_ascii=False, sort_keys=True)
 
 
 def add_split_files_meta(split_files, all_vers_meta_d, incl_char_length):
@@ -1869,7 +1185,7 @@ def add_split_files_meta(split_files, all_vers_meta_d, incl_char_length):
         vers_d["id"] = vers_d["id"][:-1] # drop the letter
         vers_d["status"] = "sec"  # give the compound text secondary status so that it is not selected for passim etc.
         vers_d["tok_length"] = file_length
-        vers_d["fullTextURL"] = re.sub(r"[A-Z](-[a-z]{3}\d)", r"\1", vers_d["fullTextURL"])
+        vers_d["fullTextURL"] = re.sub("[A-Z](-[a-z]{3}\d)", r"\1", vers_d["fullTextURL"])
         if incl_char_length:
             vers_d["char_length"] = file_clength
         all_vers_meta_d[file] = vers_d
@@ -1877,7 +1193,6 @@ def add_split_files_meta(split_files, all_vers_meta_d, incl_char_length):
     return all_vers_meta_d
 
 def save_as_tsv(all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
-                all_transcr_meta_d, all_manuscr_meta_d, all_loc_meta_d,
                 csv_outpth, split_ar_lat, incl_char_length, sep="\t"):
 
     # define the tsv file header:
@@ -1886,25 +1201,17 @@ def save_as_tsv(all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
         title = "title"
         author_shuhra = "author_shuhra"
         author_full_name = "author_full_name"
-        city = "city"
-        institution = "institution"
     else:
         author = "author_ar" + sep + "author_lat"
         title = "title_ar" + sep + "title_lat"
         author_shuhra = "author_lat_shuhra"
         author_full_name = "author_lat_full_name"
-        city = "city_ar" + sep + "city_lat"
-        institution = "institution_ar" + sep +"institution_lat"
-    if incl_char_length:
-        length = "tok_length" + sep + "char_length"
-    else:
-        length = "tok_length"
-    header = ["versionUri", "language", "subcorpus", "date", author, "book",
+    header = ["versionUri", "date", author, "book",
               title, "ed_info", "id", "status",
-              length, "url",
-              "tags", "author_from_uri", author_shuhra, author_full_name,
-              city, institution, "shelfmark", "catalog_ref", "parts"]
-    
+              "tok_length", "url",
+              "tags", "author_from_uri", author_shuhra, author_full_name]
+    if incl_char_length:
+        header.append("char_length")
     header = sep.join(header)
 
     tsv = [header, ]
@@ -1916,12 +1223,6 @@ def save_as_tsv(all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
     for vers_uri in sorted(all_vers_meta_d.keys()):
         row = create_tsv_row(vers_uri, all_vers_meta_d,
                              all_book_meta_d, all_auth_meta_d,
-                             split_ar_lat=split_ar_lat,
-                             incl_char_length=incl_char_length)
-        tsv.append(row)
-    for transcr_uri in sorted(all_transcr_meta_d.keys()):
-        row = create_transcr_tsv_row(transcr_uri, all_transcr_meta_d,
-                             all_manuscr_meta_d, all_loc_meta_d,
                              split_ar_lat=split_ar_lat,
                              incl_char_length=incl_char_length)
         tsv.append(row)
@@ -2234,8 +1535,7 @@ Command line arguments for generate-metadata.py:
               "perform_yml_check", "check_token_counts",
               "incl_char_length", "output_path",
               "meta_tsv_fp", "meta_yml_fp", "meta_json_fp", "meta_header_fp",
-              "passim_runs", "silent", "split_ar_lat", "output_files_path",
-              "remove_from_path"]
+              "passim_runs", "silent", "split_ar_lat", "output_files_path"]
     supplement_config_variables(cfg_dict, v_list)
 
     corpus_path = cfg_dict["corpus_path"]
@@ -2254,7 +1554,6 @@ Command line arguments for generate-metadata.py:
     silent = cfg_dict["silent"]
     split_ar_lat = cfg_dict["split_ar_lat"]
     output_files_path = cfg_dict["output_files_path"]
-    remove_from_path = cfg_dict["remove_from_path"]
     flat_folder = False
 
     print("output_files_path", output_files_path)
@@ -2371,7 +1670,7 @@ Command line arguments for generate-metadata.py:
 
 
 
-    pth_string = re.sub(r"\.+[\\/]", "", corpus_path)
+    pth_string = re.sub("\.+[\\/]", "", corpus_path)
     pth_string = re.sub(r"[:\\/]+", "_", pth_string)
     pth_string = os.path.join(output_path, pth_string)
     if meta_yml_fp == None: 
@@ -2428,7 +1727,7 @@ Command line arguments for generate-metadata.py:
     collectMetadata(corpus_path, exclude, meta_tsv_fp, meta_yml_fp,
                     book_rel_fp, name_el_fp, incl_char_length=incl_char_length,
                     split_ar_lat=split_ar_lat, flat_folder=flat_folder,
-                    output_files_path=output_files_path,remove_from_path=remove_from_path)
+                    output_files_path=output_files_path)
     temp = end
     end = time.time()
     print("Processing time: {0:.2f} sec".format(end - start))
@@ -2436,15 +1735,12 @@ Command line arguments for generate-metadata.py:
     # 1c - get github issues:
 
     print("="*80)
-    #print("SKIPPING COLLECTING ISSUES FROM GITHUB")
-    #issues_uri_dict = dict()
     print("Collecting issues from GitHub...")
-    # UNCOMMENT!
     issues_uri_dict = get_github_issues()
     temp = end
     end = time.time()
     print("GitHub fetching time: {0:.2f} sec".format(end - temp))
-    
+
     # 2a - Save main metadata
 
     print("="*80)
