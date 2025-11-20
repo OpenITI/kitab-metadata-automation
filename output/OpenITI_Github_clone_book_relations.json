@@ -318,6 +318,12 @@
     },
     {
       "dest": "0240SahnunIbnSacid.MudawwanaKubra",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "tahdhib",
+      "source": "0438AbuSacidBaradhici.TahdhibMudawwana"
+    },
+    {
+      "dest": "0240SahnunIbnSacid.MudawwanaKubra",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0450Jubbi.SharhMudawwana"
@@ -1612,7 +1618,7 @@
       "dest": "0393AbuTahirMukhallis.Mukhallisiyyat",
       "main_rel_type": "ABR",
       "sec_rel_type": "muntaqa",
-      "source": "0412AbuFathIbnAbiFawaris.MuntaqaMukhallisiyyat"
+      "source": "0412IbnAbiFawaris.MuntaqaMukhallisiyyat"
     }
   ],
   "0393AbuTahirMukhallis.SabcatMajalis": [
@@ -1677,12 +1683,12 @@
       "source": "0410AbuSahlNili.TalkhisTafsirJalinus"
     }
   ],
-  "0412AbuFathIbnAbiFawaris.MuntaqaMukhallisiyyat": [
+  "0412IbnAbiFawaris.MuntaqaMukhallisiyyat": [
     {
       "dest": "0393AbuTahirMukhallis.Mukhallisiyyat",
       "main_rel_type": "ABR",
       "sec_rel_type": "muntaqa",
-      "source": "0412AbuFathIbnAbiFawaris.MuntaqaMukhallisiyyat"
+      "source": "0412IbnAbiFawaris.MuntaqaMukhallisiyyat"
     }
   ],
   "0414AbuHayyanTawhidi": [
@@ -1915,6 +1921,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "radd",
       "source": "0430AswadGhundijani.FarhatAdib"
+    }
+  ],
+  "0438AbuSacidBaradhici.TahdhibMudawwana": [
+    {
+      "dest": "0240SahnunIbnSacid.MudawwanaKubra",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "tahdhib",
+      "source": "0438AbuSacidBaradhici.TahdhibMudawwana"
     }
   ],
   "0441IbnIflili.SharhShicrMutanabbi": [
@@ -2604,7 +2618,7 @@
       "dest": "0581AbuQasimSuhayli.Tacrif",
       "main_rel_type": "COMP",
       "sec_rel_type": "jamc",
-      "source": "0786Balansi.SilatJamc"
+      "source": "0782Balansi.SilatJamc"
     }
   ],
   "0582IbnBarri.Tanbih": [
@@ -2975,14 +2989,6 @@
       "source": "0633IbnSacidRajraji.ManahijTahsil"
     }
   ],
-  "0636AbuCabdAllahIbnCaskar.Iclam": [
-    {
-      "dest": "0639AbuBakrMalaqi",
-      "main_rel_type": "COAUTHOR",
-      "sec_rel_type": "",
-      "source": "0636AbuCabdAllahIbnCaskar.Iclam"
-    }
-  ],
   "0636IbnCaskar.Takmila": [
     {
       "dest": "0581AbuQasimSuhayli.Tacrif",
@@ -2994,7 +3000,7 @@
       "dest": "0636IbnCaskar.Takmila",
       "main_rel_type": "COMP",
       "sec_rel_type": "jamc",
-      "source": "0786Balansi.SilatJamc"
+      "source": "0782Balansi.SilatJamc"
     }
   ],
   "0637IbnDubaythi.DhaylTarikhBaghdad": [
@@ -3017,14 +3023,6 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "radd",
       "source": "0956IbnMuhammadHalabiHanafi.NicmatDharica"
-    }
-  ],
-  "0639AbuBakrMalaqi": [
-    {
-      "dest": "0639AbuBakrMalaqi",
-      "main_rel_type": "COAUTHOR",
-      "sec_rel_type": "",
-      "source": "0636AbuCabdAllahIbnCaskar.Iclam"
     }
   ],
   "0639IbnKhabbaz.TawjihLumac": [
@@ -3346,7 +3344,7 @@
       "dest": "0676IbnHasanMuhaqqiqHilli.SharaicIslam",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
-      "source": "0966ShahidThani.MasalikAfham"
+      "source": "0965ShahidThani.MasalikAfham"
     }
   ],
   "0676Nawawi.ArbacunaNawawiyya": [
@@ -4567,18 +4565,18 @@
       "source": "0778NazirJaysh.TamhidQawacid"
     }
   ],
-  "0786Balansi.SilatJamc": [
+  "0782Balansi.SilatJamc": [
     {
       "dest": "0581AbuQasimSuhayli.Tacrif",
       "main_rel_type": "COMP",
       "sec_rel_type": "jamc",
-      "source": "0786Balansi.SilatJamc"
+      "source": "0782Balansi.SilatJamc"
     },
     {
       "dest": "0636IbnCaskar.Takmila",
       "main_rel_type": "COMP",
       "sec_rel_type": "jamc",
-      "source": "0786Balansi.SilatJamc"
+      "source": "0782Balansi.SilatJamc"
     }
   ],
   "0786IbnMuhammadBabarti.CinayaSharhHidaya": [
@@ -5789,20 +5787,20 @@
       "source": "0961SulaymanMahri.SharhTuhfatFuhul"
     }
   ],
+  "0965ShahidThani.MasalikAfham": [
+    {
+      "dest": "0676IbnHasanMuhaqqiqHilli.SharaicIslam",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "0965ShahidThani.MasalikAfham"
+    }
+  ],
   "0965ShahidThani.RawdaBahiyya": [
     {
       "dest": "0786ShahidAwwal.LumcaDimashqiyya",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0965ShahidThani.RawdaBahiyya"
-    }
-  ],
-  "0966ShahidThani.MasalikAfham": [
-    {
-      "dest": "0676IbnHasanMuhaqqiqHilli.SharaicIslam",
-      "main_rel_type": "COMM",
-      "sec_rel_type": "sharh",
-      "source": "0966ShahidThani.MasalikAfham"
     }
   ],
   "0970IbnIbrahimIbnNujaymMisri.BahrRaiq": [
