@@ -34,7 +34,6 @@ R_O_W	KHUTTAL_697E379N_R	0270IbnCabdAllahKhutali.yml
 R_O_W	KHUTTAL_697E379N_R	0283IbnIbrahimKhuttali.yml
 R_O_W	KHUWARIZM_599E416N_R	0383IbnCabbasKhwarizmi.yml
 R_O_W	KHUWARIZM_599E416N_R	0426IbnMuhammadBarqani.yml
-R_O_W	KHUWARIZM_599E416N_R	0606FakhrDinRazi.yml
 R_O_W	NAFZAWA_092E336N_R	0386IbnAbiZaydQayrawani.yml
 R_O_W	NASA_711E404N_R	0303Nasai.yml
 R_O_W	NAYSABUR_587E361N_R	0450AbuHasanMawardi.yml
@@ -348,7 +347,6 @@ auto	JaziratArab_RE_Auto	0380IbnIbrahimNucmani.yml
 auto	JaziratArab_RE_Auto	0508MuhammadIbnIbrahimKindi.yml
 auto	JaziratArab_RE_Auto	0749ZaynDinIbnWardi.yml
 auto	JaziratArab_RE_Auto	0832TaqiFasi.yml
-auto	JaziratArab_RE_Auto	0854IbnDiyaMakki.yml
 auto	JaziratArab_RE_Auto	0855IbnAhmadShamsDinDimashqi.yml
 auto	JaziratArab_RE_Auto	0871TaqiDinIbnFahd.yml
 auto	JaziratArab_RE_Auto	0875IbnMuhammadShihabDinHijazi.yml
