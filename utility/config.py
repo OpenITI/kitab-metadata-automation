@@ -31,6 +31,11 @@ output_path = "./output/"
 # E.g., "https://raw.githubusercontent.com/OpenITI", ".."
 output_files_path = None  # write path to use instead of corpus_path
 
+# remove these folders from the path:
+# (e.g., if you group your repositories in subfolders "PER" and "ARA",
+# set remove_from_path to `["PER", "ARA"]`):
+remove_from_path = []
+
 # path to the output files (default: in the folder at output_path)
 meta_tsv_fp = None
 meta_yml_fp = None
@@ -38,14 +43,16 @@ meta_json_fp = None
 meta_header_fp = None
 
 # List of lists (description, run_id on server):  
-passim_runs = [['October 2017 (V1)', 'passim1017'],
-               ['February 2019 (V2)', 'passim01022019'],
-#               ['May 2019 (Aggregated)', 'aggregated01052019'],
-               ['February 2020', 'passim01022020'],
-               ['October 2020', 'passim01102020'],
-               ['Feb 2021', 'passim01022021'],
-               ['Feb 2021 (Aggregated)', 'aggregated01022021'],
-               ['Oct 2021', 'passim01102021']]
+passim_runs = [['2017 (V1)', 'passim1017'],
+               ['2019.1.1', 'passim01022019'],
+               ['2020.1.2', 'passim01022020'],
+               ['2020.2.3', 'passim01102020'],
+               ['2020.2.3 (Aggregated)', 'aggregated01102020'],
+               ['2021.1.4', 'passim01022021'],
+               ['2021.1.4 (Aggregated)', 'aggregated01022021'],
+               ['2021.2.5', '2021.2.5-pairwise'],
+               ['2022.1.6', '2022.1.6-pairwise'],
+               ['2023.1.8', '2023.1.8-pairwise']]
 
 # Set to True to allow the script to make changes to yml files without asking:
 silent = False  # True/False
