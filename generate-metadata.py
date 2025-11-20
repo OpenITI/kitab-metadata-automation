@@ -577,6 +577,14 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
             status_indication = "%012d##" % int(status_score)
         status_dic[book_uri].append(status_indication + vers_uri)
 
+    # tag all uncorrected OCR texts
+    if "UNCORRECTED_OCR" in version_tags:
+        uncorrected_OCR = True
+    elif re.findall("\.EScr|Kraken|AOCP", vers_uri, flags=re.I):
+        uncorrected_OCR = True
+    else:
+        uncorrected_OCR = False
+
     # gather all extracted metadata in a dictionary:
     vers_d = dict()
     vers_d["uri"] = vers_uri
@@ -589,6 +597,7 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
     vers_d["comment_tags"] = version_tags
     vers_d["local_pth"] = local_pth
     vers_d["fullTextURL"] = fullTextURL
+    vers_d["uncorrected_OCR"] = uncorrected_OCR
 
     return vers_d, uri, status_dic
 
@@ -694,6 +703,14 @@ def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
             status_indication = "%012d##" % int(status_score)
         status_dic[manuscr_uri].append(status_indication + transcr_uri)
 
+    # tag all uncorrected OCR texts
+    if "UNCORRECTED_OCR" in comment_tags:
+        uncorrected_OCR = True
+    elif re.findall("\.EScr|Kraken|AOCP", transcr_uri, flags=re.I):
+        uncorrected_OCR = True
+    else:
+        uncorrected_OCR = False
+
     # gather all extracted metadata in a dictionary:
     transcr_d = dict()
     transcr_d["uri"] = transcr_uri
@@ -707,6 +724,7 @@ def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
     transcr_d["status"] = "sec"   # temporary status, will be changed later
     transcr_d["local_pth"] = local_pth
     transcr_d["fullTextURL"] = fullTextURL
+    transcr_d["uncorrected_OCR"] = uncorrected_OCR
 
     return transcr_d, uri, status_dic
 
@@ -1377,6 +1395,7 @@ def create_tsv_row(vers_uri, all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
     
     language = uri.language
     subcorpus = language
+    uncorrected_ocr = vers_d["uncorrected_OCR"]
 
     # build the tsv row:
     
@@ -1399,7 +1418,7 @@ def create_tsv_row(vers_uri, all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
     shelfmark = ""
     catalog_ref = ""
     parts = ""
-    row = [vers_uri, language, subcorpus, auth_d["date"], author,
+    row = [vers_uri, language, subcorpus, uncorrected_ocr, auth_d["date"], author,
            book_uri, title, ed_info, uri.version, vers_d["status"],
            length, vers_d["fullTextURL"],
            tags, auth_d["author_name_from_uri"],
@@ -1455,6 +1474,7 @@ def create_transcr_tsv_row(transcr_uri, all_transcr_meta_d, all_manuscr_meta_d,
     institution_ar = betaCodeToArSimple(loc_d["institution_ar"])
     shelfmark = manuscr_d["shelfmark"]
     parts = list2str(manuscr_d["parts"])
+    uncorrected_ocr = transcr_d["uncorrected_OCR"]
 
     book_uris = []
     for p in manuscr_d["parts"]:
@@ -1493,7 +1513,7 @@ def create_transcr_tsv_row(transcr_uri, all_transcr_meta_d, all_manuscr_meta_d,
     author_full_name = sorted(author_lat.split(" :: "), key=lambda el: len(el))[-1]
     subcorpus = "MSS"
               
-    row = [transcr_uri, language, subcorpus, date, author,
+    row = [transcr_uri, language, subcorpus, uncorrected_ocr, date, author,
            book_uri, title, ed_info, uri.transcription, transcr_d["status"],
            length, transcr_d["fullTextURL"],
            tags, author_from_uri,
@@ -1899,7 +1919,7 @@ def save_as_tsv(all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
         length = "tok_length" + sep + "char_length"
     else:
         length = "tok_length"
-    header = ["versionUri", "language", "subcorpus", "date", author, "book",
+    header = ["versionUri", "language", "subcorpus", "uncorrected_OCR", "date", author, "book",
               title, "ed_info", "id", "status",
               length, "url",
               "tags", "author_from_uri", author_shuhra, author_full_name,
