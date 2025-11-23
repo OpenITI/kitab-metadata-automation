@@ -143,6 +143,64 @@ version_ids = dict()
 geo_URIs = dict()
 VERBOSE = False
 
+# define patterns to remove any tags before counting tokens and characters:
+repl_with_nothing = "|".join([
+    # structural tags:
+    r"### \|[A-Z]+\|",
+    r"### [|$]+",
+    # brackets etc.
+    r"[\[\]()<>{}〚〛⟨⟩⸢⸣⸤⸥]+",
+    # combining dot below:
+    r"̣",
+    # numbered lines:
+    r"\(* *\d+ *\)+|\d+ *\.",
+    ])
+repl_with_space = "|".join([
+    # semantic tags:
+    r"@\S+",
+    r"\bY[A-Z]?\d+",
+    # poetry
+    r" *%~% *",
+    # page numbers: 
+    r"(?:Folio|Page)(?:Beg|Beginning|End)?V[^P]+P\d+[A-B]?",
+    r"\bص\.? *\d+(?: *[أابوظ])?",
+    # milestone:
+    r"\bms[A-Z]?\d+",
+    # image link:
+    r"!\[[^\]]*\]\s*\([^)]*\)",
+    # footnote markers:
+    r"[\[(/] *\d+ *[\]0/]", 
+    # whitespace (unnecessary to replace for counting):
+    #r"\n+[~# \n]*": " ",
+    #r"  +": " 
+    ])
+
+repl_patterns = {
+    repl_with_nothing: "",
+    repl_with_space: " "
+    }
+
+def count_elements(text, repl_patterns=repl_patterns, mode="char"):
+    """Count tokens of characters by removing all tags
+    and then counting (sequences of) word characters.
+
+    This is a fallback option for text files in non-Arabic scripts.
+    """
+    if os.path.isfile(text):
+        with open(text, mode="r", encoding="utf-8") as file:
+            text = file.read()
+    
+    for pattern, repl in repl_patterns.items():
+        text = re.sub(pattern, repl, text)
+    
+    if mode.startswith("char"):
+        return len(re.findall(r"\w", text))
+    elif mode.startswith("tok"):
+        return len(re.findall(r"\w+", text))
+    else:
+        raise Exception("Unknown element type: set `mode` to either 'char' or 'tok'")
+
+
 def LoadTags():
     """Load tags from the tags/genre file created by Maxim."""
     mapping_file = "./utility/ID_TAGS.txt"
@@ -536,9 +594,13 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
             if os.path.exists(version_fp):
                 if incl_char_length:
                     char_length = ar_cnt_file(version_fp, mode="char")
+                    if char_length == 0:
+                        char_length = count_elements(version_fp, mode="char")
                     char_length = str(char_length)
                     vers_yml_d["00#VERS#CLENGTH##:"] = char_length
                 length = ar_cnt_file(version_fp, mode="token")
+                if length == 0:
+                    length = count_elements(version_fp, mode="tok")
                 length = str(length)
                 vers_yml_d["00#VERS#LENGTH###:"] = length
                 ymlS = dicToYML(vers_yml_d, reflow=False)
@@ -655,9 +717,13 @@ def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
             if os.path.exists(transcr_fp):
                 if incl_char_length:
                     char_length = ar_cnt_file(transcr_fp, mode="char")
+                    if char_length == 0:
+                        char_length = count_elements(transcr_fp, mode="char")
                     transcr_yml_d["00#TRNS#CLENGTH##:"] = str(char_length)
 
                 length = ar_cnt_file(transcr_fp, mode="token")
+                if length == 0:
+                    length = count_elements(transcr_fp, mode="tok")
                 tok_length = str(length)
                 transcr_yml_d["00#TRNS#LENGTH###:"] = str(length)
 
@@ -1395,7 +1461,7 @@ def create_tsv_row(vers_uri, all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
     
     language = uri.language
     subcorpus = language
-    uncorrected_ocr = vers_d["uncorrected_OCR"]
+    uncorrected_OCR = vers_d["uncorrected_OCR"]
 
     # build the tsv row:
     
@@ -1418,7 +1484,7 @@ def create_tsv_row(vers_uri, all_vers_meta_d, all_book_meta_d, all_auth_meta_d,
     shelfmark = ""
     catalog_ref = ""
     parts = ""
-    row = [vers_uri, language, subcorpus, uncorrected_ocr, auth_d["date"], author,
+    row = [vers_uri, language, subcorpus, uncorrected_OCR, auth_d["date"], author,
            book_uri, title, ed_info, uri.version, vers_d["status"],
            length, vers_d["fullTextURL"],
            tags, auth_d["author_name_from_uri"],
@@ -1474,7 +1540,7 @@ def create_transcr_tsv_row(transcr_uri, all_transcr_meta_d, all_manuscr_meta_d,
     institution_ar = betaCodeToArSimple(loc_d["institution_ar"])
     shelfmark = manuscr_d["shelfmark"]
     parts = list2str(manuscr_d["parts"])
-    uncorrected_ocr = transcr_d["uncorrected_OCR"]
+    uncorrected_OCR = transcr_d["uncorrected_OCR"]
 
     book_uris = []
     for p in manuscr_d["parts"]:
@@ -1513,7 +1579,7 @@ def create_transcr_tsv_row(transcr_uri, all_transcr_meta_d, all_manuscr_meta_d,
     author_full_name = sorted(author_lat.split(" :: "), key=lambda el: len(el))[-1]
     subcorpus = "MSS"
               
-    row = [transcr_uri, language, subcorpus, uncorrected_ocr, date, author,
+    row = [transcr_uri, language, subcorpus, uncorrected_OCR, date, author,
            book_uri, title, ed_info, uri.transcription, transcr_d["status"],
            length, transcr_d["fullTextURL"],
            tags, author_from_uri,
