@@ -1,8 +1,7 @@
 # RESTORED DEFAULTS:
 
 # Path to the input folder:
-corpus_path = "/home/admin-kitab/Documents/OpenITI/Github_clone"
-
+corpus_path = "/home/admin-kitab/Documents/OpenITI/RELEASE_git/working_dir/AH_repos/"
 # list of folder names to be excluded from metadata generation:
 exclude = (["OpenITI.github.io", "Annotation", "maintenance", "i.mech00",
             "i.mech01", "i.mech02", "i.mech03", "i.mech04", "i.mech05",

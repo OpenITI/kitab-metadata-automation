@@ -595,12 +595,13 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
             if os.path.exists(version_fp):
                 if incl_char_length:
                     char_length = ar_cnt_file(version_fp, mode="char")
-                    if char_length == 0:
+                    if str(char_length) == "0":
+                        print("RECALCULATE", version_fp)
                         char_length = count_elements(version_fp, mode="char")
                     char_length = str(char_length)
                     vers_yml_d["00#VERS#CLENGTH##:"] = char_length
                 length = ar_cnt_file(version_fp, mode="token")
-                if length == 0:
+                if str(length) == "0":
                     length = count_elements(version_fp, mode="tok")
                 length = str(length)
                 vers_yml_d["00#VERS#LENGTH###:"] = length
@@ -718,12 +719,13 @@ def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
             if os.path.exists(transcr_fp):
                 if incl_char_length:
                     char_length = ar_cnt_file(transcr_fp, mode="char")
-                    if char_length == 0:
+                    if str(char_length) == "0":
+                        print("RECALCULATE", transcr_fp)
                         char_length = count_elements(transcr_fp, mode="char")
                     transcr_yml_d["00#TRNS#CLENGTH##:"] = str(char_length)
 
                 length = ar_cnt_file(transcr_fp, mode="token")
-                if length == 0:
+                if str(length) == "0":
                     length = count_elements(transcr_fp, mode="tok")
                 tok_length = str(length)
                 transcr_yml_d["00#TRNS#LENGTH###:"] = str(length)
