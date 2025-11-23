@@ -135,7 +135,9 @@ from openiti.helper.uri import URI, check_yml_files
 from openiti.git import get_issues
 from openiti.helper.yml import readYML, dicToYML, fix_broken_yml
 from openiti.helper.ara import deNoise, ar_cnt_file
+from openiti.helper.funcs import read_text
 from utility.betaCode import betaCodeToArSimple
+
 
 splitter = "##RECORD"+"#"*64+"\n"
 all_header_meta = dict()
@@ -187,8 +189,7 @@ def count_elements(text, repl_patterns=repl_patterns, mode="char"):
     This is a fallback option for text files in non-Arabic scripts.
     """
     if os.path.isfile(text):
-        with open(text, mode="r", encoding="utf-8") as file:
-            text = file.read()
+        text = read_text(text, remove_header=True)
     
     for pattern, repl in repl_patterns.items():
         text = re.sub(pattern, repl, text)
