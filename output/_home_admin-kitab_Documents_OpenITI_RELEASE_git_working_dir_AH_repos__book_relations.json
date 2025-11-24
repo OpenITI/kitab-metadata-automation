@@ -1057,6 +1057,14 @@
       "source": "0795IbnRajabHanbali.SharhCilalTirmidhi"
     }
   ],
+  "0279Tirmidhi.Sunan": [
+    {
+      "dest": "0279Tirmidhi.Sunan",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "",
+      "source": "1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi"
+    }
+  ],
   "0288ThabitIbnQurra": [
     {
       "dest": "0288ThabitIbnQurra",
@@ -1501,6 +1509,14 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0384AbuHasanRummani.SharhKitabSibawayhi"
+    }
+  ],
+  "0384MuhassinTanukhi.NishwarMuhadara": [
+    {
+      "dest": "0384MuhassinTanukhi.NishwarMuhadara",
+      "main_rel_type": "QUOT",
+      "sec_rel_type": "",
+      "source": "1416CabbudShaliji.NishwarQuotes"
     }
   ],
   "0385Daraqutni.FawaidMuntaqatDhuhli": [
@@ -6357,6 +6373,22 @@
       "main_rel_type": "EXTR",
       "sec_rel_type": "",
       "source": "1400MuhammadIbrahimSalim.TabaicNisa"
+    }
+  ],
+  "1416CabbudShaliji.NishwarQuotes": [
+    {
+      "dest": "0384MuhassinTanukhi.NishwarMuhadara",
+      "main_rel_type": "QUOT",
+      "sec_rel_type": "",
+      "source": "1416CabbudShaliji.NishwarQuotes"
+    }
+  ],
+  "1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi": [
+    {
+      "dest": "0279Tirmidhi.Sunan",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "",
+      "source": "1420MuhammadNasirDinAlbani.SahihWaDacifSunanTirmidhi"
     }
   ],
   "1424MuhammadCaliAbtahi.TahdhibMaqal": [

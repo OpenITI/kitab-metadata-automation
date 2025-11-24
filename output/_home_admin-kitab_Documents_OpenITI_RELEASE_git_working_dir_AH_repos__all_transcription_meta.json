@@ -1,7 +1,7 @@
 {
   "MS0000Unknown.FieldCT133_4.IEDC1261-mpp1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "110",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1261/"
@@ -12,7 +12,7 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "19",
     "uncorrected_OCR": false,
     "uri": "MS0000Unknown.FieldCT133_4.IEDC1261-mpp1"
   },
@@ -69,7 +69,7 @@
   },
   "MS0000UnknownPrivate.SimsWilliamsJg.IEDC0025-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "461",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/25/"
@@ -80,13 +80,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "83",
     "uncorrected_OCR": false,
     "uri": "MS0000UnknownPrivate.SimsWilliamsJg.IEDC0025-bac1"
   },
   "MS0000UnknownPrivate.SimsWilliamsJj.IEDC0014-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "582",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/14/"
@@ -97,13 +97,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "110",
     "uncorrected_OCR": false,
     "uri": "MS0000UnknownPrivate.SimsWilliamsJj.IEDC0014-bac1"
   },
   "MS0000UnknownPrivate.SimsWilliamsUv.IEDC0013-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "2018",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/13/"
@@ -114,13 +114,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "366",
     "uncorrected_OCR": false,
     "uri": "MS0000UnknownPrivate.SimsWilliamsUv.IEDC0013-bac1"
   },
   "MS0001ChicagoISAC.ISACMA154067FieldCT205_1.IEDC1267-mpp1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "137",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1267/"
@@ -131,13 +131,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "25",
     "uncorrected_OCR": false,
     "uri": "MS0001ChicagoISAC.ISACMA154067FieldCT205_1.IEDC1267-mpp1"
   },
   "MS0001ChicagoISAC.ISACMA154068FieldCT205_4.IEDC1270-mpp1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "217",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1270/"
@@ -148,13 +148,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "32",
     "uncorrected_OCR": false,
     "uri": "MS0001ChicagoISAC.ISACMA154068FieldCT205_4.IEDC1270-mpp1"
   },
   "MS0001ChicagoISAC.ISACMA154069FieldCT205_3a.IEDC1268-mpp1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "123",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1268/"
@@ -165,13 +165,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "21",
     "uncorrected_OCR": false,
     "uri": "MS0001ChicagoISAC.ISACMA154069FieldCT205_3a.IEDC1268-mpp1"
   },
   "MS0001ChicagoISAC.ISACMA154070FieldCT205_3b.IEDC1269-mpp1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "127",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1269/"
@@ -182,13 +182,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "23",
     "uncorrected_OCR": false,
     "uri": "MS0001ChicagoISAC.ISACMA154070FieldCT205_3b.IEDC1269-mpp1"
   },
   "MS0001PhiladelphiaPenn.PM37_33_21FieldCT135_5.IEDC1265-mpp1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "224",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1265/"
@@ -199,13 +199,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "42",
     "uncorrected_OCR": false,
     "uri": "MS0001PhiladelphiaPenn.PM37_33_21FieldCT135_5.IEDC1265-mpp1"
   },
   "MS0001PhiladelphiaPenn.PM37_33_42FieldCT135_6.IEDC1266-mpp1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "82",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1266/"
@@ -216,13 +216,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "13",
     "uncorrected_OCR": false,
     "uri": "MS0001PhiladelphiaPenn.PM37_33_42FieldCT135_6.IEDC1266-mpp1"
   },
   "MS0001PhiladelphiaPenn.PM37_33_50FieldCT135_4.IEDC1264-mpp1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "98",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1264/"
@@ -233,13 +233,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "21",
     "uncorrected_OCR": false,
     "uri": "MS0001PhiladelphiaPenn.PM37_33_50FieldCT135_4.IEDC1264-mpp1"
   },
   "MS0001PhiladelphiaPenn.PM37_33_52FieldCT135_2.IEDC1263-mpp1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "106",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1263/"
@@ -250,13 +250,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "22",
     "uncorrected_OCR": false,
     "uri": "MS0001PhiladelphiaPenn.PM37_33_52FieldCT135_2.IEDC1263-mpp1"
   },
   "MS0001PhiladelphiaPenn.PM37_33_54FieldCT135_1.IEDC1262-mpp1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "90",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1262/"
@@ -267,7 +267,7 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "17",
     "uncorrected_OCR": false,
     "uri": "MS0001PhiladelphiaPenn.PM37_33_54FieldCT135_1.IEDC1262-mpp1"
   },
@@ -294,7 +294,7 @@
   },
   "MS0001VirginiaPrivate.SimsWilliamsO.IEDC0001-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "2186",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1/"
@@ -305,13 +305,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "389",
     "uncorrected_OCR": false,
     "uri": "MS0001VirginiaPrivate.SimsWilliamsO.IEDC0001-bac1"
   },
   "MS0044LondonBL.Or8212_166.IEDC1281-jup1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "1204",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1281/"
@@ -322,13 +322,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "353",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonBL.Or8212_166.IEDC1281-jup1"
   },
   "MS0044LondonKhalili.DOC10.IEDC0008-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "4555",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/8/"
@@ -339,13 +339,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "824",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonKhalili.DOC10.IEDC0008-bac1"
   },
   "MS0044LondonKhalili.DOC112.IEDC0003-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "4316",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/3/"
@@ -356,13 +356,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "861",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonKhalili.DOC112.IEDC0003-bac1"
   },
   "MS0044LondonKhalili.DOC113.IEDC0011-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "2212",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/11/"
@@ -373,13 +373,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "375",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonKhalili.DOC113.IEDC0011-bac1"
   },
   "MS0044LondonKhalili.DOC114.IEDC0017-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "2390",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/17/"
@@ -390,13 +390,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "403",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonKhalili.DOC114.IEDC0017-bac1"
   },
   "MS0044LondonKhalili.DOC115.IEDC0019-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "419",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/19/"
@@ -407,13 +407,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "90",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonKhalili.DOC115.IEDC0019-bac1"
   },
   "MS0044LondonKhalili.DOC116.IEDC0004-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "5990",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/4/"
@@ -424,13 +424,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "1038",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonKhalili.DOC116.IEDC0004-bac1"
   },
   "MS0044LondonKhalili.DOC117.IEDC0005-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "1169",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/5/"
@@ -441,7 +441,7 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "231",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonKhalili.DOC117.IEDC0005-bac1"
   },
@@ -1178,7 +1178,7 @@
   },
   "MS0044LondonKhalili.DOC5.IEDC0024-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "4220",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/24/"
@@ -1189,7 +1189,7 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "791",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonKhalili.DOC5.IEDC0024-bac1"
   },
@@ -1297,7 +1297,7 @@
   },
   "MS0044LondonKhalili.DOC55.IEDC0018-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "6825",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/18/"
@@ -1308,13 +1308,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "1194",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonKhalili.DOC55.IEDC0018-bac1"
   },
   "MS0044LondonKhalili.DOC58.IEDC0012-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "164",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/12/"
@@ -1325,13 +1325,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "35",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonKhalili.DOC58.IEDC0012-bac1"
   },
   "MS0044LondonKhalili.DOC8.IEDC0021-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "3117",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/21/"
@@ -1342,7 +1342,7 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "512",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonKhalili.DOC8.IEDC0021-bac1"
   },
@@ -1433,7 +1433,7 @@
   },
   "MS0044LondonSOAS.YarkandTurki1ContinuedErdalDocV.IEDC0160-ugo1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "98",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/160/"
@@ -1444,13 +1444,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "13",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonSOAS.YarkandTurki1ContinuedErdalDocV.IEDC0160-ugo1"
   },
   "MS0044LondonSOAS.YarkandTurki3ErdalDocIV.IEDC0156-ugo1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "84",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/156/"
@@ -1461,13 +1461,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "11",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonSOAS.YarkandTurki3ErdalDocIV.IEDC0156-ugo1"
   },
   "MS0044LondonSOAS.YarkandTurki4_5ErdalDocI.IEDC0153-ugo1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "154",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/153/"
@@ -1478,13 +1478,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "20",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonSOAS.YarkandTurki4_5ErdalDocI.IEDC0153-ugo1"
   },
   "MS0044LondonSOAS.YarkandTurki6ErdalDocII.IEDC0154-ugo1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "87",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/154/"
@@ -1495,13 +1495,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "12",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonSOAS.YarkandTurki6ErdalDocII.IEDC0154-ugo1"
   },
   "MS0044LondonSOAS.YarkandTurki7ErdalDocIII.IEDC0155-ugo1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "87",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/155/"
@@ -1512,13 +1512,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "12",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonSOAS.YarkandTurki7ErdalDocIII.IEDC0155-ugo1"
   },
   "MS0044LondonSOAS.YarkandUnknownShelfmarkErdalVI.IEDC0161-uga1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "111",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/161/"
@@ -1529,13 +1529,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "12",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonSOAS.YarkandUnknownShelfmarkErdalVI.IEDC0161-uga1"
   },
   "MS0044LondonSamFogg.SimsWilliamsAn.IEDC0016-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "155",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/16/"
@@ -1546,13 +1546,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "29",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonSamFogg.SimsWilliamsAn.IEDC0016-bac1"
   },
   "MS0044LondonSamFogg.SimsWilliamsJd.IEDC0026-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "223",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/26/"
@@ -1563,13 +1563,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "47",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonSamFogg.SimsWilliamsJd.IEDC0026-bac1"
   },
   "MS0044LondonSamFogg.SimsWilliamsJi.IEDC0015-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "530",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/15/"
@@ -1580,13 +1580,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "103",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonSamFogg.SimsWilliamsJi.IEDC0015-bac1"
   },
   "MS0044LondonSamFogg.SimsWilliamsNn.IEDC0023-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "3590",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/23/"
@@ -1597,13 +1597,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "603",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonSamFogg.SimsWilliamsNn.IEDC0023-bac1"
   },
   "MS0044LondonSamFogg.SimsWilliamsR.IEDC0022-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "1043",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/22/"
@@ -1614,13 +1614,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "197",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonSamFogg.SimsWilliamsR.IEDC0022-bac1"
   },
   "MS0044LondonSamFogg.SimsWilliamsSs.IEDC0006-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "638",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/6/"
@@ -1631,13 +1631,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "111",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonSamFogg.SimsWilliamsSs.IEDC0006-bac1"
   },
   "MS0044LondonSamFogg.SimsWilliamsTt.IEDC0020-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "1553",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/20/"
@@ -1648,13 +1648,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "272",
     "uncorrected_OCR": false,
     "uri": "MS0044LondonSamFogg.SimsWilliamsTt.IEDC0020-bac1"
   },
   "MS0047OsloSchoeyen.4580.IEDC0009-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "1499",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/9/"
@@ -1665,13 +1665,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "278",
     "uncorrected_OCR": false,
     "uri": "MS0047OsloSchoeyen.4580.IEDC0009-bac1"
   },
   "MS0047OsloSchoeyen.4581.IEDC0007-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "1819",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/7/"
@@ -1682,7 +1682,7 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "331",
     "uncorrected_OCR": false,
     "uri": "MS0047OsloSchoeyen.4581.IEDC0007-bac1"
   },
@@ -1739,7 +1739,7 @@
   },
   "MS0081TokyoKurita.SimsWilliamsZd.IEDC0010-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "244",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/10/"
@@ -1750,13 +1750,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "50",
     "uncorrected_OCR": false,
     "uri": "MS0081TokyoKurita.SimsWilliamsZd.IEDC0010-bac1"
   },
   "MS0086BeijingCNL.BH1_19.IEDC1282-jup1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "2024",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1282/"
@@ -1767,7 +1767,7 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "564",
     "uncorrected_OCR": false,
     "uri": "MS0086BeijingCNL.BH1_19.IEDC1282-jup1"
   },
@@ -1794,7 +1794,7 @@
   },
   "MS0092IslamabadAmanUrRahman.SimsWilliamsJf.IEDC0002-bac1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "796",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/2/"
@@ -1805,7 +1805,7 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "152",
     "uncorrected_OCR": false,
     "uri": "MS0092IslamabadAmanUrRahman.SimsWilliamsJf.IEDC0002-bac1"
   },
@@ -5504,7 +5504,7 @@
   },
   "MS0972JerusalemNLI.Heb8333_201.IEDC1286-jup1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "1309",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1286/"
@@ -5515,13 +5515,13 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "355",
     "uncorrected_OCR": false,
     "uri": "MS0972JerusalemNLI.Heb8333_201.IEDC1286-jup1"
   },
   "MS0972JerusalemNLI.Heb8333_206Fol11v.IEDC1280-jup1": {
     "author_ar": [],
-    "char_length": "0",
+    "char_length": "852",
     "comment_tags": [],
     "ed_info": [
       "https://www.invisible-east.org/corpus/1280/"
@@ -5532,7 +5532,7 @@
     "primary_yml": false,
     "status": "pri",
     "title_ar": [],
-    "tok_length": "0",
+    "tok_length": "274",
     "uncorrected_OCR": false,
     "uri": "MS0972JerusalemNLI.Heb8333_206Fol11v.IEDC1280-jup1"
   },

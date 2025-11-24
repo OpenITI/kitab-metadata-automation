@@ -1609,24 +1609,6 @@
       "shuhra": "Aḥmad b. ʿĪsá al-Ḫarrāz"
     }
   },
-  "0286DaciQarmatiCabdan": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "الداعي القرمطي عبدان"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "al-Dāʿī al-Qarmaṭī ʿAbdān"
-    }
-  },
   "0287IbnAbiCasim": {
     "AR": {
       "ism": "أحمد",
@@ -3191,24 +3173,6 @@
       "shuhra": "Ibn Abī al-ʿAqab al-Hamadānī"
     }
   },
-  "0353MaslamaQurtubi": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "مسلمة القرطبي"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Maslamaŧ al-Qurṭubī"
-    }
-  },
   "0354IbnCabdAllahBazzaz": {
     "AR": {
       "ism": "",
@@ -3965,24 +3929,6 @@
       "shuhra": "al-Rummānī"
     }
   },
-  "0384IbnJuljul": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "ابن جلجل"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Ibn Juljul"
-    }
-  },
   "0384MuhassinTanukhi": {
     "AR": {
       "ism": "المحسن",
@@ -4053,24 +3999,6 @@
       "nasab": "",
       "nisba": "",
       "shuhra": "Ibn Šāhīn"
-    }
-  },
-  "0386AhmadIbnIbrahimNaysaburi": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "أحمد بن ابراهيم النيسبوري"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Aḥmad b. Ibrāhīm al-Naysabūrī"
     }
   },
   "0386IbnCumarHarbi": {
@@ -7713,24 +7641,6 @@
       "shuhra": "ʿAbd al-Malik b. Abī al-ʿAlāʾ Ibn Zuhr"
     }
   },
-  "0557IbrahimBinHusaynHamidi": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "ابراهيم بن الحسين الحامدي"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Ibrāhīm b. al-Ḥusayn al-Ḥāmidī"
-    }
-  },
   "0560SharifIdrisi": {
     "AR": {
       "ism": "محمد",
@@ -8815,24 +8725,6 @@
       "shuhra": "Ibn Maḥmūd al-Ṭūsī"
     }
   },
-  "0612CaliIbnWalidYamani": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "علي بن الوليد اليمني"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "ʿAlī b. al-Walīd al-Yamanī"
-    }
-  },
   "0613CaliIbnZafir": {
     "AR": {
       "ism": "",
@@ -9145,24 +9037,6 @@
       "nasab": "",
       "nisba": "",
       "shuhra": "Bahāʾ al-Dīn al-Akwaʿ"
-    }
-  },
-  "0626IbnHanzalaWadici": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "ابن حنظلة الوادعي"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Ibn Ḥanẓalaŧ al-Wādiʿī"
     }
   },
   "0626YaqutHamawi": {
@@ -9973,24 +9847,6 @@
       "nasab": "",
       "nisba": "",
       "shuhra": "Aḥmad b. ʿUṯmān b. Hibaŧ Allāh"
-    }
-  },
-  "0658HasanMucaddil": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "الحسن المعدل"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "al-Ḥasan al-Muʿaddil"
     }
   },
   "0658IbnAbbar": {
@@ -11479,24 +11335,6 @@
       "nasab": "b. ʿAbd al-ʿAzīz b. Mūsá",
       "nisba": "al-Sīwāsī",
       "shuhra": "al-Sīwāsī"
-    }
-  },
-  "0725IbnMucallim": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "ابن المعلم"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Ibn al-Muʿallim"
     }
   },
   "0725ShihabDinMahmudAbuThana": {
@@ -13571,24 +13409,6 @@
       "shuhra": "Ibn Ḥijjaŧ al-Ḥamawī"
     }
   },
-  "0837IbnNaji": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "ابن ناجي"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Ibn Nājī"
-    }
-  },
   "0838CabdQadirMaraghai": {
     "AR": {
       "ism": "",
@@ -13785,24 +13605,6 @@
       "nasab": "b. Muḥammad b. ʿAbd Allāh",
       "nisba": "",
       "shuhra": "Ibn ʿArabšāh"
-    }
-  },
-  "0854MuhammadBinSacdRafna": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "محمد بن سعد الرفنة"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Muḥammad b. Saʿd al-Rafnaŧ"
     }
   },
   "0855BadrDinCayni": {
@@ -14127,24 +13929,6 @@
       "nasab": "b. Aḥmad b. ʿAlī",
       "nisba": "al-Asyūṭī",
       "shuhra": ""
-    }
-  },
-  "0883ShihabDinBinNasrDaci": {
-    "AR": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "شهاب الدين بن نصر الداعي"
-    },
-    "LA": {
-      "ism": "",
-      "kunya": "",
-      "laqab": "",
-      "nasab": "",
-      "nisba": "",
-      "shuhra": "Šihāb al-Dīn b. Naṣr al-Dāʿī"
     }
   },
   "0885BurhanDinBiqaci": {
