@@ -572,6 +572,8 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
         int(length) 
     except:
         recalc = True
+    if length == "0":
+        recalc = True
     
     char_length = ""
     if not length:
@@ -580,10 +582,11 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
         try:
             char_length = vers_yml_d["00#VERS#CLENGTH##:"].strip()
             int(char_length) # if char_length is not a number, recalculate
-            if not char_length:
+            if not char_length or char_length == "0":
                 recalc = True
         except:
             recalc = True
+
 
     # recalculate the token length and character length if needed:
     if recalc:
@@ -596,7 +599,6 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
                 if incl_char_length:
                     char_length = ar_cnt_file(version_fp, mode="char")
                     if str(char_length) == "0":
-                        print("RECALCULATE", version_fp)
                         char_length = count_elements(version_fp, mode="char")
                     char_length = str(char_length)
                     vers_yml_d["00#VERS#CLENGTH##:"] = char_length
@@ -644,7 +646,7 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
     # tag all uncorrected OCR texts
     if "UNCORRECTED_OCR" in version_tags:
         uncorrected_OCR = True
-    elif re.findall("\.EScr|Kraken|AOCP", vers_uri, flags=re.I):
+    elif re.findall(r"\.EScr|Kraken|AOCP", vers_uri, flags=re.I):
         uncorrected_OCR = True
     else:
         uncorrected_OCR = False
@@ -655,8 +657,8 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
     vers_d["id"] = uri.version
     vers_d["primary_yml"] = primary_yml
     vers_d["status"] = "sec"   # temporary status, will be changed later
-    vers_d["tok_length"] = length
-    vers_d["char_length"] = char_length
+    vers_d["tok_length"] = str(length)
+    vers_d["char_length"] = str(char_length)
     vers_d["ed_info"] = ed_info
     vers_d["comment_tags"] = version_tags
     vers_d["local_pth"] = local_pth
@@ -692,6 +694,8 @@ def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
     # if length is not a number, recalculate:
     try:
         tok_length = str(int(length))
+        if tok_length == "0":
+            recalc = True
     except:
         tok_length = ""
         recalc = True
@@ -704,7 +708,7 @@ def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
         try:
             char_length = transcr_yml_d["00#TRNS#CLENGTH##:"].strip()
             char_length = str(int(char_length)) 
-            if not char_length:
+            if not char_length or char_length == 0:
                 recalc = True
         except:
             char_length = ""
@@ -720,7 +724,6 @@ def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
                 if incl_char_length:
                     char_length = ar_cnt_file(transcr_fp, mode="char")
                     if str(char_length) == "0":
-                        print("RECALCULATE", transcr_fp)
                         char_length = count_elements(transcr_fp, mode="char")
                     transcr_yml_d["00#TRNS#CLENGTH##:"] = str(char_length)
 
@@ -775,7 +778,7 @@ def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
     # tag all uncorrected OCR texts
     if "UNCORRECTED_OCR" in comment_tags:
         uncorrected_OCR = True
-    elif re.findall("\.EScr|Kraken|AOCP", transcr_uri, flags=re.I):
+    elif re.findall(r"\.EScr|Kraken|AOCP", transcr_uri, flags=re.I):
         uncorrected_OCR = True
     else:
         uncorrected_OCR = False
@@ -786,10 +789,9 @@ def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
     transcr_d["id"] = uri.transcription
     transcr_d["comment_tags"] = comment_tags
     transcr_d["primary_yml"] = primary_yml
-    transcr_d["tok_length"] = tok_length
-    transcr_d["char_length"] = char_length
+    transcr_d["tok_length"] = str(tok_length)
+    transcr_d["char_length"] = str(char_length)
     transcr_d["ed_info"] = list(set(ed_info+source))
-    print(transcr_d["ed_info"])
     transcr_d["status"] = "sec"   # temporary status, will be changed later
     transcr_d["local_pth"] = local_pth
     transcr_d["fullTextURL"] = fullTextURL
@@ -2098,7 +2100,6 @@ def get_github_issues(token_fp="GitHub personalAccessTokenReadOnly.txt"):
                                                  "PRI & SEC Versions"])
     issues = get_issues.define_text_uris(issues)
     issues_uri_dict = get_issues.sort_issues_by_uri(issues)
-    print(issues_uri_dict)
     return issues_uri_dict
 
 def supplement_config_variables(cfg_dict, v_list):
