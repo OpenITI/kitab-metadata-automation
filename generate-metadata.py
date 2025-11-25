@@ -145,62 +145,102 @@ version_ids = dict()
 geo_URIs = dict()
 VERBOSE = False
 
-# define patterns to remove any tags before counting tokens and characters:
-repl_with_nothing = "|".join([
-    # structural tags:
-    r"### \|[A-Z]+\|",
-    r"### [|$]+",
-    # brackets etc.
-    r"[\[\]()<>{}〚〛⟨⟩⸢⸣⸤⸥]+",
-    # combining dot below:
-    r"̣",
-    # numbered lines:
-    r"\(* *\d+ *\)+|\d+ *\.",
-    ])
-repl_with_space = "|".join([
+# regex patterns to ignore tokens that contain letters and numbers
+# but should not be counted as tokens:
+not_tok_regexes = [
+    # structural tags like ### |EDITOR|, ### |PARATEXT|:
+    r"[|$][A-Z]+[|$]",
     # semantic tags:
-    r"@\S+",
-    r"\bY[A-Z]?\d+",
-    # poetry
-    r" *%~% *",
-    # page numbers: 
-    r"(?:Folio|Page)(?:Beg|Beginning|End)?V[^P]+P\d+[A-B]?",
-    r"\bص\.? *\d+(?: *[أابوظ])?",
-    # milestone:
+    r"@",
+    r"\bY[A-Z]?\d+\b",
+    # page number tags: 
+    r"(?:Folio|Page)(?:Beg|Beginning|End)?V",
+    # milestone tags:
     r"\bms[A-Z]?\d+",
-    # image link:
-    r"!\[[^\]]*\]\s*\([^)]*\)",
-    # footnote markers:
-    r"[\[(/] *\d+ *[\]0/]", 
-    # whitespace (unnecessary to replace for counting):
-    #r"\n+[~# \n]*": " ",
-    #r"  +": " 
-    ])
+    # markdown image links and urls:
+    r"!?\[[^\]]*\]\([^)]*\)",
+    # numbers only should be counted as token,
+    # but not number+non-letter character (e.g., 1., (1), ...):
+    r"^\W*\d+\W+$"
+    ]
+do_not_count = "|".join(not_tok_regexes)
 
-repl_patterns = {
-    repl_with_nothing: "",
-    repl_with_space: " "
-    }
+# regular expression to split the text into tokens:
+# NB: "|" is used for "### |PARATEXT|"-style tags and for markdown tables
+tok_splitter = r"((?:\|[A-Z]+\|)|[\s~#|]+)"
 
-def count_elements(text, repl_patterns=repl_patterns, mode="char"):
-    """Count tokens of characters by removing all tags
-    and then counting (sequences of) word characters.
+filename_splitter = r"-(?:[a-z]{3}\d)+(\.(mARkdown|inProgress|completed))?$"
 
-    This is a fallback option for text files in non-Arabic scripts.
+def count_toks(text, incl_chars=False, return_tok_set=False,
+               tok_splitter=tok_splitter, do_not_count=do_not_count):
+    """Count non-tag tokens in text.
+    If `incl_chars`, the function will return both token and character counts.
+
+    Args:
+        text (str): text or path to text
+        incl_chars (bool): if True, both tokens and characters will be counted.
+           Defaults to False (count only tokens).
+        tok_splitter (str): regex pattern on which the text should be split
+           into tokens and non-tokens
+        do_not_count (str): regex pattern to ignore tokens that contain
+           letters and numbers but should not be counted as tokens
+
+    Returns: int or (int, int)
+
+    Examples:
+        >>> text = 'This contains 4 tokens'
+        >>> count_toks(text)
+        4
+        >>> count_toks(text, incl_chars=True)
+        (4, 19)
+        >>> text = 'Tags are not counted: PageV01P234 @P02 @TOP2 YB1234'
+        >>> count_toks(text)
+        4
+        >>> text = '''Neither are markdown links: ![caption](path/to/image.png) [link](https://url.com)'''
+        >>> count_toks(text)
+        4
+        >>> text = '''words split with hy-
+phen are counted as a single token'''
+        >>> count_toks(text)
+        10
+        >>> text = '''1. list numbers and footnote references (2) are not counted [3].'''
+        >>> count_toks(text)
+        8
+        >>> text = '''
+        |Tables|should not|
+        |be a | problem|
+        '''
+        >>> count_toks(text)
+        6
     """
     if os.path.isfile(text):
         text = read_text(text, remove_header=True)
-    
-    for pattern, repl in repl_patterns.items():
-        text = re.sub(pattern, repl, text)
-    
-    if mode.startswith("char"):
-        return len(re.findall(r"\w", text))
-    elif mode.startswith("tok"):
-        return len(re.findall(r"\w+", text))
-    else:
-        raise Exception("Unknown element type: set `mode` to either 'char' or 'tok'")
 
+    all_toks = re.split(tok_splitter, text)
+
+    n_toks = 0
+    n_chars = 0
+    tok_set = set()
+    for tok in all_toks:
+        if re.findall(r"\w", tok) and not re.findall(do_not_count, tok):
+            # do not count first half of hyphenated token at end of line:
+            if not tok.endswith("-"):
+                n_toks += 1
+            if incl_chars:
+                n_chars += len(re.findall(r"\w", tok))
+            if return_tok_set:
+                tok_set.add(tok)
+
+    if incl_chars:
+        if return_tok_set:
+            return n_toks, n_chars, tok_set
+        else:
+            return n_toks, n_chars
+    else:
+        if return_tok_set:
+            return n_toks, tok_set
+        else:
+            return n_toks
 
 def LoadTags():
     """Load tags from the tags/genre file created by Maxim."""
@@ -369,9 +409,9 @@ def createJsonFile(csv_fp, out_fp, passim_runs, issues_uri_dict):
 
         for row in reader:
             record = row
-            
+
             # Create a URL for KITAB Web Server for SRT Files
-            
+
             #new_id = row['url'].split('/')[-1].split('.')[-1] # may get the extension!
             uri = URI(row['url'])
             if "version" in uri.uri_type:
@@ -501,7 +541,7 @@ def extract_metadata_from_header(fp):
     meta = {x : [] for x in categories.split()}
     unreadable = []
     all_meta = dict()
-    
+
     for line in header:
         split_line = line[7:].split("\t::")  # [7:] : start reading after #META# tag
         if len(split_line) == 1:
@@ -553,8 +593,8 @@ def get_name_el(d, k):
 def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
                          output_files_path, start_folder,
                          status_dic, incl_char_length,
-                         remove_from_path=None):
-    """"""
+                         remove_from_path=None, recalculate_lengths=True):
+    """Extract the version-related metadata"""
 
     vers_uri = uri.build_uri("version")
 
@@ -565,6 +605,9 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
 
     # - length in number of characters:
     recalc = False
+
+    if recalculate_lengths:
+        recalc = True
     
     length = vers_yml_d["00#VERS#LENGTH###:"].strip()
     # if length is not a number, recalculate:
@@ -596,17 +639,26 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
         for ext in [".mARkdown", ".completed", ".inProgress", ""]:
             version_fp = pth + ext
             if os.path.exists(version_fp):
+                #if incl_char_length:
+                #    char_length = ar_cnt_file(version_fp, mode="char")
+                #    if str(char_length) == "0":
+                #        char_length = count_elements(version_fp, mode="char")
+                #    char_length = str(char_length)
+                #    vers_yml_d["00#VERS#CLENGTH##:"] = char_length
+                #length = ar_cnt_file(version_fp, mode="token")
+                #if str(length) == "0":
+                #    length = count_elements(version_fp, mode="tok")
+                #length = str(length)
+                #vers_yml_d["00#VERS#LENGTH###:"] = length
                 if incl_char_length:
-                    char_length = ar_cnt_file(version_fp, mode="char")
-                    if str(char_length) == "0":
-                        char_length = count_elements(version_fp, mode="char")
+                    length, char_length = count_toks(version_fp, incl_chars=True)
                     char_length = str(char_length)
                     vers_yml_d["00#VERS#CLENGTH##:"] = char_length
-                length = ar_cnt_file(version_fp, mode="token")
-                if str(length) == "0":
-                    length = count_elements(version_fp, mode="tok")
+                else:
+                    length = count_toks(version_fp, incl_chars=False)
                 length = str(length)
                 vers_yml_d["00#VERS#LENGTH###:"] = length
+
                 ymlS = dicToYML(vers_yml_d, reflow=False)
                 with open(vers_yml_pth, mode="w", encoding="utf-8") as file:
                     file.write(ymlS)
@@ -671,8 +723,8 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
 def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
                          output_files_path, start_folder,
                          status_dic, incl_char_length,
-                         remove_from_path=None):
-    """"""
+                         remove_from_path=None, recalculate_lengths=True):
+    """Extract transcription-related metadata"""
 
     transcr_uri = uri.build_uri("transcription")
 
@@ -689,7 +741,10 @@ def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
     
     # - length in number of tokens and characters:
     recalc = False
-    
+
+    if recalculate_lengths:
+        recalc = True
+
     length = transcr_yml_d["00#TRNS#LENGTH###:"].strip()
     # if length is not a number, recalculate:
     try:
@@ -721,22 +776,30 @@ def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
         for ext in [".mARkdown", ".completed", ".inProgress", ""]:
             transcr_fp = pth + ext
             if os.path.exists(transcr_fp):
-                if incl_char_length:
-                    char_length = ar_cnt_file(transcr_fp, mode="char")
-                    if str(char_length) == "0":
-                        char_length = count_elements(transcr_fp, mode="char")
-                    transcr_yml_d["00#TRNS#CLENGTH##:"] = str(char_length)
+                #if incl_char_length:
+                #    char_length = ar_cnt_file(transcr_fp, mode="char")
+                #    if str(char_length) == "0":
+                #        char_length = count_elements(transcr_fp, mode="char")
+                #    transcr_yml_d["00#TRNS#CLENGTH##:"] = str(char_length)
 
-                length = ar_cnt_file(transcr_fp, mode="token")
-                if str(length) == "0":
-                    length = count_elements(transcr_fp, mode="tok")
+                #length = ar_cnt_file(transcr_fp, mode="token")
+                #if str(length) == "0":
+                #    length = count_elements(transcr_fp, mode="tok")
+                #tok_length = str(length)
+                #transcr_yml_d["00#TRNS#LENGTH###:"] = str(length)
+                if incl_char_length:
+                    length, char_length = count_toks(transcr_fp, incl_chars=True)
+                    char_length = str(char_length)
+                    transc_yml_d["00#TRNS#CLENGTH##:"] = char_length
+                else:
+                    length = count_toks(transcr_fp, incl_chars=False)
                 tok_length = str(length)
-                transcr_yml_d["00#TRNS#LENGTH###:"] = str(length)
+                transcr_yml_d["00#TRNS#LENGTH###:"] = tok_length
+
 
                 ymlS = dicToYML(transcr_yml_d, reflow=False)
                 with open(transcr_yml_pth, mode="w", encoding="utf-8") as file:
                     file.write(ymlS)
-                
                 break
 
     # - edition information:
@@ -745,16 +808,12 @@ def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
     ed_info = get_comma_sep_vals(transcr_yml_d, key, excl_regex=excl_regex,
                                  splitter=None, joiner=None)
     key = "80#TRNS#LINKS####:"
+
     excl_regex = r"(?i)^No$|SOURCE@permalink,"
     source = get_comma_sep_vals(transcr_yml_d, key, excl_regex=excl_regex,
                                  splitter=None, joiner=None)
     source = [s.split("@")[-1] for s in source if "SOURCE@" in s]
-    
 
-    
-
-    
-    
     # - get the most advanced text file of this version
     #   (if different text files with the same extension exist in the folder)
     #   and give it a temporary secondary status:
@@ -991,7 +1050,7 @@ def get_comma_sep_vals(d, key, sep=r"\s*,\s*", excl_regex=r"(?i)^\s*None\s*$",
 
 
 def extract_location_meta(uri, loc_yml_d, all_loc_meta_d):
-    """"""
+    """Extract location-related metadata"""
 
     loc_uri = uri.build_uri("location")
 
@@ -1035,7 +1094,7 @@ def extract_location_meta(uri, loc_yml_d, all_loc_meta_d):
 
 
 def extract_author_meta(uri, auth_yml_d, all_auth_meta_d, name_elements_d):
-    """"""
+    """Extract author-related metadata"""
 
     auth_uri = uri.build_uri("author")
 
@@ -1182,7 +1241,7 @@ def extract_author_meta(uri, auth_yml_d, all_auth_meta_d, name_elements_d):
 
 
 def extract_manuscr_meta(uri, manuscr_yml_d, tags_dic, all_manuscr_meta_d):
-    """"""
+    """Extract manuscript-related metadata"""
     manuscr_uri = uri.build_uri("manuscript")
 
     # do not extract the metadata from the yml file
@@ -1277,7 +1336,7 @@ def extract_manuscr_meta(uri, manuscr_yml_d, tags_dic, all_manuscr_meta_d):
 
 
 def extract_book_meta(uri, book_yml_d, tags_dic, all_book_meta_d, book_rel_d):
-    """"""
+    """Extract book-related metadata"""
     
     book_uri = uri.build_uri("book")
 
