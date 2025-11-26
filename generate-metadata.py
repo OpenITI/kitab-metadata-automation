@@ -593,7 +593,7 @@ def get_name_el(d, k):
 def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
                          output_files_path, start_folder,
                          status_dic, incl_char_length,
-                         remove_from_path=None, recalculate_lengths=True):
+                         remove_from_path=None, recalculate_lengths=False):
     """Extract the version-related metadata"""
 
     vers_uri = uri.build_uri("version")
@@ -723,7 +723,7 @@ def extract_version_meta(uri, vers_yml_d, vers_yml_pth,
 def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
                          output_files_path, start_folder,
                          status_dic, incl_char_length,
-                         remove_from_path=None, recalculate_lengths=True):
+                         remove_from_path=None, recalculate_lengths=False):
     """Extract transcription-related metadata"""
 
     transcr_uri = uri.build_uri("transcription")
@@ -790,7 +790,7 @@ def extract_transcr_meta(uri, transcr_yml_d, transcr_yml_pth,
                 if incl_char_length:
                     length, char_length = count_toks(transcr_fp, incl_chars=True)
                     char_length = str(char_length)
-                    transc_yml_d["00#TRNS#CLENGTH##:"] = char_length
+                    transcr_yml_d["00#TRNS#CLENGTH##:"] = char_length
                 else:
                     length = count_toks(transcr_fp, incl_chars=False)
                 tok_length = str(length)
