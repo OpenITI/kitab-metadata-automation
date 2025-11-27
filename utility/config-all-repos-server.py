@@ -12,10 +12,10 @@ exclude = (["OpenITI.github.io", "Annotation", "maintenance", "i.mech00",
 data_in_25_year_repos = True  # True/False
 
 # Set to True if the script needs to check completeness of the yml files:
-perform_yml_check = True  # True/False
+perform_yml_check = False  # True/False
 
 # Set to True if the script needs to update the token counts in the yml files:
-check_token_counts = True  # True/False
+check_token_counts = False  # True/False
 
 # Set to True if the script needs to include character length in the yml files:
 incl_char_length = True  # True/False
