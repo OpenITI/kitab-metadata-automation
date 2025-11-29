@@ -1345,6 +1345,14 @@
       "source": "0347IbnDurustawayh.TashihFasih"
     }
   ],
+  "0348Narshakhi.TarikhBukhara": [
+    {
+      "dest": "0348Narshakhi.TarikhBukhara",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "0575IbnZufar.TalkhisTarikhBukhara"
+    }
+  ],
   "0353AbuCabbasHasani.Masabih": [
     {
       "dest": "0353AbuCabbasHasani.Masabih",
@@ -2627,6 +2635,14 @@
       "main_rel_type": "VERS",
       "sec_rel_type": "",
       "source": "0573RashidWatwat.MatlubKullTalib"
+    }
+  ],
+  "0575IbnZufar.TalkhisTarikhBukhara": [
+    {
+      "dest": "0348Narshakhi.TarikhBukhara",
+      "main_rel_type": "TRANSL",
+      "sec_rel_type": "",
+      "source": "0575IbnZufar.TalkhisTarikhBukhara"
     }
   ],
   "0577IbnHishamLakhmi.SharhFasih": [

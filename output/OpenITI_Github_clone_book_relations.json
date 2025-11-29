@@ -314,12 +314,6 @@
       "dest": "0240SahnunIbnSacid.MudawwanaKubra",
       "main_rel_type": "ABR",
       "sec_rel_type": "tahdhib",
-      "source": "0372AbuSacidQayruwani.TahdhibMudawwana"
-    },
-    {
-      "dest": "0240SahnunIbnSacid.MudawwanaKubra",
-      "main_rel_type": "ABR",
-      "sec_rel_type": "tahdhib",
       "source": "0438AbuSacidBaradhici.TahdhibMudawwana"
     },
     {
@@ -1439,20 +1433,28 @@
       "source": "0370IbnCaliJassas.SharhMukhtasarTahawi"
     }
   ],
-  "0372AbuSacidQayruwani.TahdhibMudawwana": [
-    {
-      "dest": "0240SahnunIbnSacid.MudawwanaKubra",
-      "main_rel_type": "ABR",
-      "sec_rel_type": "tahdhib",
-      "source": "0372AbuSacidQayruwani.TahdhibMudawwana"
-    }
-  ],
   "0375AnonymousTranslator.TarikhCalamUrusiyus": [
     {
       "dest": "0001Orosius.HistoriaeAdversumPaganos",
       "main_rel_type": "TRANSL",
       "sec_rel_type": "",
       "source": "0375AnonymousTranslator.TarikhCalamUrusiyus"
+    }
+  ],
+  "0375IkhwanSafa.JamicatJamicaBohra": [
+    {
+      "dest": "0375IkhwanSafa.Rasail",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "",
+      "source": "0375IkhwanSafa.JamicatJamicaBohra"
+    }
+  ],
+  "0375IkhwanSafa.Rasail": [
+    {
+      "dest": "0375IkhwanSafa.Rasail",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "",
+      "source": "0375IkhwanSafa.JamicatJamicaBohra"
     }
   ],
   "0377IbnAhmadFarisi.HujjaLiQurraSabca": [
