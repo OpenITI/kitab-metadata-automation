@@ -521,6 +521,24 @@
       "shuhra": "al-Aṣmaʿī"
     }
   },
+  "0218HajjajIbnYusufIbnMatar": {
+    "AR": {
+      "ism": "الحجاج",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "بن يوسف بن مطر",
+      "nisba": "",
+      "shuhra": "الحجاج بن يوسف بن مطر"
+    },
+    "LA": {
+      "ism": "al-Ḥaǧǧāǧ",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "b. Yūsuf b. Maṭar",
+      "nisba": "",
+      "shuhra": "al-Ḥaǧǧāǧ b. Yūsuf b. Maṭar"
+    }
+  },
   "0224QasimIbnSallam": {
     "AR": {
       "ism": "",
@@ -6265,6 +6283,24 @@
       "nasab": "",
       "nisba": "",
       "shuhra": "Imām al-Ḥaramayn al-Juwaynī"
+    }
+  },
+  "0480SalamaIbnIsmacilIbnJamaca": {
+    "AR": {
+      "ism": "سلامة",
+      "kunya": "أبو الخير",
+      "laqab": "",
+      "nasab": "بن اسماعيل بن جماع",
+      "nisba": "المقدسي الشافعي",
+      "shuhra": "سلامة بن اسماعيل بن جماع"
+    },
+    "LA": {
+      "ism": "Salāmaŧ",
+      "kunya": "Abū al-Ḫayr",
+      "laqab": "",
+      "nasab": "b. Ismāʿīl b. Ǧamāʿa",
+      "nisba": "al-Maqdisī al-Šāfiʿī",
+      "shuhra": "Salāmaŧ b. Ismāʿīl b. Ǧamāʿa"
     }
   },
   "0481AnsariHarawi": {
