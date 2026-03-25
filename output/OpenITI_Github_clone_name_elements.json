@@ -15027,6 +15027,24 @@
       "shuhra": "Muḥammad al-Muwayliḥī"
     }
   },
+  "1381MuhammadShafiqGhurbal": {
+    "AR": {
+      "ism": "محمد شفيق",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "غربال",
+      "shuhra": "شفيق غربال"
+    },
+    "LA": {
+      "ism": "Muḥammad Šafīq",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "Ġurbāl",
+      "shuhra": "Šafīq Ġurbāl"
+    }
+  },
   "1386SayyidQutb": {
     "AR": {
       "ism": "سيد",
@@ -15223,6 +15241,42 @@
       "nasab": "b. Hiyās Āl Marzūq",
       "nisba": "al-Zahrānī",
       "shuhra": "Marzūq al-Zahrānī"
+    }
+  },
+  "1450Milani": {
+    "AR": {
+      "ism": "علي أصغر",
+      "kunya": "",
+      "laqab": "آية الله",
+      "nasab": "بن نور الدين بن محمد هادي",
+      "nisba": "الحسيني الميلاني",
+      "shuhra": "علي الميلاني"
+    },
+    "LA": {
+      "ism": "ʿAlī Aṣġar",
+      "kunya": "",
+      "laqab": "Āyaŧ Allāh",
+      "nasab": "b. Nūr al-Dīn b. Muḥammad Hādī",
+      "nisba": "al-Ḥusaynī al-Mīlānī",
+      "shuhra": "ʿAlī al-Mīlānī"
+    }
+  },
+  "1450MurtadaMilani": {
+    "AR": {
+      "ism": "مرتضى",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "الميلاني",
+      "shuhra": "مرتضى الميلاني"
+    },
+    "LA": {
+      "ism": "Murtaḍá",
+      "kunya": "",
+      "laqab": "",
+      "nasab": "",
+      "nisba": "al-Mīlānī",
+      "shuhra": "Murtaḍá al-Mīlānī"
     }
   },
   "1450MutamarImamRida": {
