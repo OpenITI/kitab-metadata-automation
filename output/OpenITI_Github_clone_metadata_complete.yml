@@ -441103,23 +441103,72 @@
     * Kraken version: 3.0.0.0b21.dev6
     * segmentation model: DEFAULT
     * OCR model: 12-24-2021_ArabPersGeneralized.mlmodel
-    All paratextual elements
-    (introductions, footnotes, indices, ...)
-    removed by HRH and MGR (OpenITI Clean operation, 2023)
-    Link to the text file as it was before it was cleaned:
-    https://raw.githubusercontent.com/OpenITI/0750AH/pre-clean/data/0739JalalDinQazwini/0739JalalDinQazwini.TalkhisMiftah/0739JalalDinQazwini.TalkhisMiftah.Kraken220201000819-ara1
 90#VERS#DATE#####: 2022-02-01
-90#VERS#ISSUES###: UNCORRECTED_OCR, PRIMARY_VERSION, CLEANED_VERSION
+90#VERS#ISSUES###: UNCORRECTED_OCR
 00#BOOK#URI######: 0739JalalDinQazwini.TalkhisMiftah
 10#BOOK#GENRES###: src@keyword, src@keyword, src@keyword
-10#BOOK#TITLEA#AR: Kitāb al-Muʾallif
-10#BOOK#TITLEB#AR: Risālaŧ al-Muʾallif
+10#BOOK#TITLEA#AR: Talḫīṣ al-Miftāḥ
+10#BOOK#TITLEB#AR: 
 20#BOOK#WROTE####: URIs from Althurayya, comma separated
 30#BOOK#WROTE##AH: YEAR-MON-DA (X+ for unknown)
-40#BOOK#RELATED##: URI of a book from OpenITI, or [Author's Title],
-    followed by abbreviation for relation type between brackets (see
-    book_relations repo). Only include relations with older books. Separate
-    related books with semicolon.
+40#BOOK#RELATED##: 0626IbnMuhammadKhwarazmiSakkaki.MiftahCulum (ABR.talkhis)
+70#BOOK#EXTID####: viaf@id, wikidata@id, src@id
+80#BOOK#EDITIONS#: permalink, permalink, permalink
+80#BOOK#LINKS####: permalink, permalink, permalink
+80#BOOK#MSS######: permalink, permalink, permalink
+80#BOOK#STUDIES##: permalink, permalink, permalink
+80#BOOK#TRANSLAT#: permalink, permalink, permalink
+90#BOOK#COMMENT##: a free running comment here; you can add as many
+    lines as you see fit; the main goal of this comment section is to have a
+    place to record valuable information, which is difficult to formalize
+    into the above given categories.
+00#AUTH#URI######: 0739JalalDinQazwini
+10#AUTH#ISM####AR: Fulān
+10#AUTH#KUNYA##AR: Abū Fulān, Abū Fulānaŧ
+10#AUTH#LAQAB##AR: Fulān al-dīn, Fulān al-dawlaŧ
+10#AUTH#NASAB##AR: b. Fulān b. Fulān b. Fulān b. Fulān
+10#AUTH#NISBA##AR: al-Fulānī, al-Fāʿil, al-Fulānī, al-Mufaʿʿil
+10#AUTH#SHUHRA#AR: Jalāl al-Dīn al-Qazwīnī
+20#AUTH#BORN#####: Jibal_RE_Auto
+20#AUTH#DIED#####: URIs from Althurayya, comma separated
+20#AUTH#RESIDED##: URIs from Althurayya, comma separated
+20#AUTH#VISITED##: URIs from Althurayya, comma separated
+30#AUTH#BORN###AH: YEAR-MON-DA (X+ for unknown)
+30#AUTH#DIED###AH: YEAR-MON-DA (X+ for unknown)
+40#AUTH#STUDENTS#: AUTH_URI from OpenITI, comma separated
+40#AUTH#TEACHERS#: AUTH_URI from OpenITI, comma separated
+70#AUTH#EXTID####: wikidata@Q12187054
+80#AUTH#BIBLIO###: src@id, src@id, src@id, src@id, src@id
+90#AUTH#COMMENT##: a free running comment here; you can add as many
+    lines as you see fit; the main goal of this comment section is to have a
+    place to record valuable information, which is difficult to formalize
+    into the above given categories.
+
+##RECORD################################################################
+
+00#VERS#CLENGTH##: 71073
+00#VERS#LENGTH###: 16639
+00#VERS#URI######: 0739JalalDinQazwini.TalkhisMiftah.Shamela0042822BK1-ara1
+80#VERS#BASED####: NOT_FOUND
+80#VERS#COLLATED#: 
+80#VERS#LINKS####: https://dn760106.eu.archive.org/0/items/talkhis_al-miftah
+90#VERS#ANNOTATOR: PV
+90#VERS#COMMENT##: The text is no longer available on Shamela; the text file
+    was converted by PV from an epub found at
+    https://shamela.org/pdf/f085126e3e584f041df4376da1ab5c02
+    Edition: Maktabat al-Madīna, Karachi, 2016.
+    The text file originally contained al-Qazwīnī's Talkhīṣ al-Miftāḥ
+    together with a modern sharḥ (Tanwīr al-Miṣbāḥ). PV split off the sharḥ,
+    removed editorial material and fixed the titles.
+90#VERS#DATE#####: 2026-11-12
+90#VERS#ISSUES###: PRIMARY_VERSION, CLEANED_VERSION
+00#BOOK#URI######: 0739JalalDinQazwini.TalkhisMiftah
+10#BOOK#GENRES###: src@keyword, src@keyword, src@keyword
+10#BOOK#TITLEA#AR: Talḫīṣ al-Miftāḥ
+10#BOOK#TITLEB#AR: 
+20#BOOK#WROTE####: URIs from Althurayya, comma separated
+30#BOOK#WROTE##AH: YEAR-MON-DA (X+ for unknown)
+40#BOOK#RELATED##: 0626IbnMuhammadKhwarazmiSakkaki.MiftahCulum (ABR.talkhis)
 70#BOOK#EXTID####: viaf@id, wikidata@id, src@id
 80#BOOK#EDITIONS#: permalink, permalink, permalink
 80#BOOK#LINKS####: permalink, permalink, permalink
@@ -489574,6 +489623,58 @@
 40#AUTH#STUDENTS#: AUTH_URI from OpenITI, comma separated
 40#AUTH#TEACHERS#: AUTH_URI from OpenITI, comma separated
 70#AUTH#EXTID####: viaf@id, wikidata@id, src@id
+80#AUTH#BIBLIO###: src@id, src@id, src@id, src@id, src@id
+90#AUTH#COMMENT##: a free running comment here; you can add as many
+    lines as you see fit; the main goal of this comment section is to have a
+    place to record valuable information, which is difficult to formalize
+    into the above given categories.
+
+##RECORD################################################################
+
+00#VERS#CLENGTH##: 352631
+00#VERS#LENGTH###: 81978
+00#VERS#URI######: 0792IbnCumarTaftazani.MukhtasarMacani.Sham19Y0147062BK1-ara1
+80#VERS#BASED####: permalink, permalink, permalink
+80#VERS#COLLATED#: permalink, permalink, permalink
+80#VERS#LINKS####: https://drive.google.com/drive/folders/190t2TfrqP0sJ-JZJB1Xg7SDN7Qvp1UhT
+90#VERS#ANNOTATOR: PV
+90#VERS#COMMENT##: PV fixed the location of the headings; hierarchy tentative.
+    PV split the Hashiya off from the Mukhtasar.
+90#VERS#DATE#####: 2026-11-11
+90#VERS#ISSUES###: CLEANED_VERSION
+00#BOOK#URI######: 0792IbnCumarTaftazani.MukhtasarMacani
+10#BOOK#GENRES###: src@keyword, src@keyword, src@keyword
+10#BOOK#TITLEA#AR: Kitāb al-Muʾallif
+10#BOOK#TITLEB#AR: Risālaŧ al-Muʾallif
+20#BOOK#WROTE####: URIs from Althurayya, comma separated
+30#BOOK#WROTE##AH: YEAR-MON-DA (X+ for unknown)
+40#BOOK#RELATED##: 0792IbnCumarTaftazani.SharhTalkhisMiftah (ABR.mukhtasar)
+70#BOOK#EXTID####: viaf@id, wikidata@id, src@id
+80#BOOK#EDITIONS#: permalink, permalink, permalink
+80#BOOK#LINKS####: permalink, permalink, permalink
+80#BOOK#MSS######: permalink, permalink, permalink
+80#BOOK#STUDIES##: permalink, permalink, permalink
+80#BOOK#TRANSLAT#: permalink, permalink, permalink
+90#BOOK#COMMENT##: a free running comment here; you can add as many
+    lines as you see fit; the main goal of this comment section is to have a
+    place to record valuable information, which is difficult to formalize
+    into the above given categories.
+00#AUTH#URI######: 0792IbnCumarTaftazani
+10#AUTH#ISM####AR: Fulān
+10#AUTH#KUNYA##AR: Abū Fulān, Abū Fulānaŧ
+10#AUTH#LAQAB##AR: Fulān al-dīn, Fulān al-dawlaŧ
+10#AUTH#NASAB##AR: b. Fulān b. Fulān b. Fulān b. Fulān
+10#AUTH#NISBA##AR: al-Fulānī, al-Fāʿil, al-Fulānī, al-Mufaʿʿil
+10#AUTH#SHUHRA#AR: Ibn Fulān al-Fulānī
+20#AUTH#BORN#####: URIs from Althurayya, comma separated
+20#AUTH#DIED#####: URIs from Althurayya, comma separated
+20#AUTH#RESIDED##: URIs from Althurayya, comma separated
+20#AUTH#VISITED##: URIs from Althurayya, comma separated
+30#AUTH#BORN###AH: YEAR-MON-DA (X+ for unknown)
+30#AUTH#DIED###AH: YEAR-MON-DA (X+ for unknown)
+40#AUTH#STUDENTS#: AUTH_URI from OpenITI, comma separated
+40#AUTH#TEACHERS#: AUTH_URI from OpenITI, comma separated
+70#AUTH#EXTID####: wikidata@Q764947
 80#AUTH#BIBLIO###: src@id, src@id, src@id, src@id, src@id
 90#AUTH#COMMENT##: a free running comment here; you can add as many
     lines as you see fit; the main goal of this comment section is to have a
@@ -631727,25 +631828,21 @@
 
 ##RECORD################################################################
 
-00#VERS#CLENGTH##: 3073562
-00#VERS#LENGTH###: 715821
-00#VERS#URI######: 1230IbnAhmadDasuqi.HashiyaCalaMukhtasarMacani.Sham19Y0147062-ara1
+00#VERS#CLENGTH##: 352631
+00#VERS#LENGTH###: 81978
+00#VERS#URI######: 1230IbnAhmadDasuqi.HashiyaCalaMukhtasarMacani.Sham19Y0147062BK2-ara1
 80#VERS#BASED####: permalink, permalink, permalink
 80#VERS#COLLATED#: permalink, permalink, permalink
-80#VERS#LINKS####: all@id, vol1@id, vol2@id, vol3@id, volX@id
-90#VERS#ANNOTATOR: the name of the annotator (latin characters; please
-    use consistently)
-90#VERS#COMMENT##: All paratextual elements
-    (introductions, footnotes, indices, ...)
-    removed by HRH and MGR (OpenITI Clean operation, 2023)
-    Link to the text file as it was before it was cleaned:
-    https://raw.githubusercontent.com/OpenITI/1250AH/pre-clean/data/1230IbnAhmadDasuqi/1230IbnAhmadDasuqi.HashiyaCalaMukhtasarMacani/1230IbnAhmadDasuqi.HashiyaCalaMukhtasarMacani.Sham19Y0147062-ara1
+80#VERS#LINKS####: https://drive.google.com/drive/folders/190t2TfrqP0sJ-JZJB1Xg7SDN7Qvp1UhT
+90#VERS#ANNOTATOR: PV
+90#VERS#COMMENT##: PV fixed the location of the headings; hierarchy tentative.
+    PV split the Hashiya off from the Mukhtasar.
 90#VERS#DATE#####: YYYY-MM-DD
 90#VERS#ISSUES###: PRIMARY_VERSION, CLEANED_VERSION
 00#BOOK#URI######: 1230IbnAhmadDasuqi.HashiyaCalaMukhtasarMacani
 10#BOOK#GENRES###: src@keyword, src@keyword, src@keyword
-10#BOOK#TITLEA#AR: Kitāb al-Muʾallif
-10#BOOK#TITLEB#AR: Risālaŧ al-Muʾallif
+10#BOOK#TITLEA#AR: Ḥāšiyaŧ ʿalá Muḫtaṣar al-maʿānī
+10#BOOK#TITLEB#AR: 
 20#BOOK#WROTE####: URIs from Althurayya, comma separated
 30#BOOK#WROTE##AH: YEAR-MON-DA (X+ for unknown)
 40#BOOK#RELATED##: 0792IbnCumarTaftazani.MukhtasarMacani (COMM.hashiya)
@@ -779889,6 +779986,63 @@
     place to record valuable information, which is difficult to formalize
     into the above given categories.
 00#AUTH#URI######: 1450MajidIbnHashimMutawakkil
+10#AUTH#ISM####AR: Fulān
+10#AUTH#KUNYA##AR: Abū Fulān, Abū Fulānaŧ
+10#AUTH#LAQAB##AR: Fulān al-dīn, Fulān al-dawlaŧ
+10#AUTH#NASAB##AR: b. Fulān b. Fulān b. Fulān b. Fulān
+10#AUTH#NISBA##AR: al-Fulānī, al-Fāʿil, al-Fulānī, al-Mufaʿʿil
+10#AUTH#SHUHRA#AR: Ibn Fulān al-Fulānī
+20#AUTH#BORN#####: URIs from Althurayya, comma separated
+20#AUTH#DIED#####: URIs from Althurayya, comma separated
+20#AUTH#RESIDED##: URIs from Althurayya, comma separated
+20#AUTH#VISITED##: URIs from Althurayya, comma separated
+30#AUTH#BORN###AH: YEAR-MON-DA (X+ for unknown)
+30#AUTH#DIED###AH: YEAR-MON-DA (X+ for unknown)
+40#AUTH#STUDENTS#: AUTH_URI from OpenITI, comma separated
+40#AUTH#TEACHERS#: AUTH_URI from OpenITI, comma separated
+70#AUTH#EXTID####: viaf@id, wikidata@id, src@id
+80#AUTH#BIBLIO###: src@id, src@id, src@id, src@id, src@id
+90#AUTH#COMMENT##: a free running comment here; you can add as many
+    lines as you see fit; the main goal of this comment section is to have a
+    place to record valuable information, which is difficult to formalize
+    into the above given categories.
+
+##RECORD################################################################
+
+00#VERS#CLENGTH##: 271781
+00#VERS#LENGTH###: 64865
+00#VERS#URI######: 1450MajlisMadinaCilmiyya.TanwirMisbah.Shamela0042822BK2-ara1
+80#VERS#BASED####: NOT_FOUND
+80#VERS#COLLATED#: permalink, permalink, permalink
+80#VERS#LINKS####: https://dn760106.eu.archive.org/0/items/talkhis_al-miftah
+90#VERS#ANNOTATOR: PV
+90#VERS#COMMENT##: The text is no longer available on Shamela; the text file
+    was converted by PV from an epub found at
+    https://shamela.org/pdf/f085126e3e584f041df4376da1ab5c02
+    Edition: Maktabat al-Madīna, Karachi, 2016.
+    The text file originally contained al-Qazwīnī's Talkhīṣ al-Miftāḥ
+    together with a modern sharḥ (Tanwīr al-Miṣbāḥ). PV split off the sharḥ,
+    removed editorial material and fixed the titles.
+90#VERS#DATE#####: 2026-11-12
+90#VERS#ISSUES###: PRIMARY_VERSION, CLEANED_VERSION
+00#BOOK#URI######: 1450MajlisMadinaCilmiyya.TanwirMisbah
+10#BOOK#GENRES###: src@keyword, src@keyword, src@keyword
+10#BOOK#TITLEA#AR: Tanwīr al-miṣbāḥ
+10#BOOK#TITLEB#AR: Risālaŧ al-Muʾallif
+20#BOOK#WROTE####: URIs from Althurayya, comma separated
+30#BOOK#WROTE##AH: YEAR-MON-DA (X+ for unknown)
+40#BOOK#RELATED##: 0739JalalDinQazwini.TalkhisMiftah (COMM.sharh)
+70#BOOK#EXTID####: viaf@id, wikidata@id, src@id
+80#BOOK#EDITIONS#: permalink, permalink, permalink
+80#BOOK#LINKS####: permalink, permalink, permalink
+80#BOOK#MSS######: permalink, permalink, permalink
+80#BOOK#STUDIES##: permalink, permalink, permalink
+80#BOOK#TRANSLAT#: permalink, permalink, permalink
+90#BOOK#COMMENT##: a free running comment here; you can add as many
+    lines as you see fit; the main goal of this comment section is to have a
+    place to record valuable information, which is difficult to formalize
+    into the above given categories.
+00#AUTH#URI######: 1450MajlisMadinaCilmiyya
 10#AUTH#ISM####AR: Fulān
 10#AUTH#KUNYA##AR: Abū Fulān, Abū Fulānaŧ
 10#AUTH#LAQAB##AR: Fulān al-dīn, Fulān al-dawlaŧ

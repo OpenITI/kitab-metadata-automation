@@ -2953,6 +2953,14 @@
       "source": "0624IbnIbrahimBahaDinMaqdisi.CuddaSharhCumda"
     }
   ],
+  "0626IbnMuhammadKhwarazmiSakkaki.MiftahCulum": [
+    {
+      "dest": "0626IbnMuhammadKhwarazmiSakkaki.MiftahCulum",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "talkhis",
+      "source": "0739JalalDinQazwini.TalkhisMiftah"
+    }
+  ],
   "0627ZaynUmanaIbnCasakir.FawaidMuntaqatDhuhli": [
     {
       "dest": "0385Daraqutni.FawaidMuntaqatDhuhli",
@@ -3961,6 +3969,12 @@
       "source": "0739JalalDinQazwini.IdahFiCulumBalagha"
     },
     {
+      "dest": "0626IbnMuhammadKhwarazmiSakkaki.MiftahCulum",
+      "main_rel_type": "ABR",
+      "sec_rel_type": "talkhis",
+      "source": "0739JalalDinQazwini.TalkhisMiftah"
+    },
+    {
       "dest": "0739JalalDinQazwini.TalkhisMiftah",
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
@@ -3971,6 +3985,12 @@
       "main_rel_type": "COMM",
       "sec_rel_type": "sharh",
       "source": "0943CisamDinIsfarayini.Atwal"
+    },
+    {
+      "dest": "0739JalalDinQazwini.TalkhisMiftah",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1450MajlisMadinaCilmiyya.TanwirMisbah"
     }
   ],
   "0740CabdQahirTabrizi.ManzumaTabriziyya": [
@@ -6393,6 +6413,14 @@
       "main_rel_type": "TRANSL",
       "sec_rel_type": "",
       "source": "1450MahmudCabdKarimCali.RawdatUliAlbab"
+    }
+  ],
+  "1450MajlisMadinaCilmiyya.TanwirMisbah": [
+    {
+      "dest": "0739JalalDinQazwini.TalkhisMiftah",
+      "main_rel_type": "COMM",
+      "sec_rel_type": "sharh",
+      "source": "1450MajlisMadinaCilmiyya.TanwirMisbah"
     }
   ],
   "1450MarzuqZahrani.SharhManzumaTabriziyya": [
