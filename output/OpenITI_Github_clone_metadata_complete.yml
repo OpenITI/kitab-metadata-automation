@@ -175786,13 +175786,8 @@
     * Kraken version: 3.0.0.0b21.dev6
     * segmentation model: DEFAULT
     * OCR model: 12-24-2021_ArabPersGeneralized.mlmodel
-    All paratextual elements
-    (introductions, footnotes, indices, ...)
-    removed by HRH and MGR (OpenITI Clean operation, 2023)
-    Link to the text file as it was before it was cleaned:
-    https://raw.githubusercontent.com/OpenITI/0375AH/pre-clean/data/0375AnonymousTranslator/0375AnonymousTranslator.TarikhCalamUrusiyus/0375AnonymousTranslator.TarikhCalamUrusiyus.Kraken220810162528-ara1
 90#VERS#DATE#####: 2022-08-10
-90#VERS#ISSUES###: UNCORRECTED_OCR, PRIMARY_VERSION, CLEANED_VERSION
+90#VERS#ISSUES###: UNCORRECTED_OCR
 00#BOOK#URI######: 0375AnonymousTranslator.TarikhCalamUrusiyus
 10#BOOK#GENRES###: _TARIKH, _DJUGHRAFIYA
 10#BOOK#TITLEA#AR: Taʾrīḫ al-ʿālam
@@ -175849,7 +175844,7 @@
 80#VERS#COLLATED#: 
 80#VERS#LINKS####:
     https://ia803106.us.archive.org/5/items/ktp2019-bskn11790/ktp2019-bskn11790.pdf
-90#VERS#ANNOTATOR: 
+90#VERS#ANNOTATOR: MB
 90#VERS#COMMENT##: OCRed through Kraken:
     * Kraken version: 3.0.0.0b21.dev6
     * segmentation model: DEFAULT
@@ -175861,7 +175856,7 @@
     https://raw.githubusercontent.com/OpenITI/0375AH/pre-clean/data/0375AnonymousTranslator/0375AnonymousTranslator.TarikhCalamUrusiyus/0375AnonymousTranslator.TarikhCalamUrusiyus.Kraken220810162528-ara1
     Collated with Penelas edition for structural annotation. Note: This edition has additions made by editor to bring it closer to original text. These have not been removed and we will need to OCR the Penelas edition. I have removed editorial introductions (but retained appendices - as they are needed for an argument I'm making in an article), and added some markdown to better reflect structure of the text itself (where Badawi has interpolated headings from the text, but they do not mirror the structure of the text, I've ignored them - level 3 headings)). Footnotes have been removed. Some significant OCR errors owing to presence of Latin transcriptions (mistranscribed as Arabic).
 90#VERS#DATE#####: 2022-08-10
-90#VERS#ISSUES###: UNCORRECTED_OCR, PRIMARY_VERSION, CLEANED_VERSION
+90#VERS#ISSUES###: PRIMARY_VERSION, CLEANED_VERSION, UNCORRECTED_OCR
 00#BOOK#URI######: 0375AnonymousTranslator.TarikhCalamUrusiyus
 10#BOOK#GENRES###: _TARIKH, _DJUGHRAFIYA
 10#BOOK#TITLEA#AR: Taʾrīḫ al-ʿālam
@@ -394084,7 +394079,7 @@
     OpenITI AOCP project, generously funded by the Andrew W. Mellon Foundation.
     This file was created on 2025-11-04 12:30:17 UTC
 90#VERS#DATE#####: YYYY-MM-DD
-90#VERS#ISSUES###: UNCORRECTED_OCR, PRIMARY_VERSION
+90#VERS#ISSUES###: UNCORRECTED_OCR
 00#BOOK#URI######: 0673AbuMacaliQunawi.RisalatNusus
 10#BOOK#GENRES###: src@keyword, src@keyword, src@keyword
 10#BOOK#TITLEA#AR: Risālaŧ al-nuṣūṣ
