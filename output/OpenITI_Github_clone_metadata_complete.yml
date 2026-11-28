@@ -576572,13 +576572,8 @@
 90#VERS#ANNOTATOR: 
 90#VERS#COMMENT##: OCRed through Kraken; arabPers-WithDiffTypefaces.mlmodel;
     issues with order in which lines of poetry have been transcribed.
-    All paratextual elements
-    (introductions, footnotes, indices, ...)
-    removed by HRH and MGR (OpenITI Clean operation, 2023)
-    Link to the text file as it was before it was cleaned:
-    https://raw.githubusercontent.com/OpenITI/0975AH/pre-clean/data/0973CabdWahhabShacrani/0973CabdWahhabShacrani.KibritAhmar/0973CabdWahhabShacrani.KibritAhmar.Kraken21040815-ara1
 90#VERS#DATE#####: 
-90#VERS#ISSUES###: UNCORRECTED_OCR, PRIMARY_VERSION, CLEANED_VERSION
+90#VERS#ISSUES###: UNCORRECTED_OCR
 00#BOOK#URI######: 0973CabdWahhabShacrani.KibritAhmar
 10#BOOK#GENRES###: src@keyword, src@keyword, src@keyword
 10#BOOK#TITLEA#AR: Kitāb al-Muʾallif
